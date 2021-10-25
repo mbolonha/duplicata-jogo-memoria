@@ -1,0 +1,53 @@
+@font-face {
+	font-family: 'Braynerd';
+	src: local('Braynerd'),
+		url(../../static/assets/fonts/Braynerd-Regular.ttf) format('truetype');
+}
+@font-face {
+	font-family: 'Gobold_Hollow';
+	src: local('Gobold_Hollow'),
+		url(../../static/assets/fonts/Gobold_Hollow.ttf) format('truetype');
+}
+@font-face {
+	font-family: 'Gobold';
+	src: local('Gobold'),
+		url(../../static/assets/fonts/Gobold_Light_Italic.otf) format('truetype');
+}
+@font-face {
+	font-family: 'Neon80s';
+	src: local('Neon80s'),
+		url(../../static/assets/fonts/Neon80s.woff) format('truetype');
+}
+
+// Typograph Gobold_Light
+$main__font: 'Josefin Sans', Arial, sans-serif;
+$two__font: 'Comfortaa', Arial, sans-serif;
+$three__font: 'Ubuntu Mono', Arial, sans-serif;
+$four__font: 'Bowlby One SC', Arial, sans-serif;
+$five__font: 'Coda:800', Arial, sans-serif;
+$sex__font: 'Braynerd', Arial, sans-serif;
+$seven__font: 'Gobold', Arial, sans-serif;
+$eight__font: 'Neon80s', Arial, sans-serif;
+$nine__font: 'Gobold_Hollow', Arial, sans-serif;
+$alternative__font: 'Arial';
+
+$xxs__fontSize: 10pt;
+$xs__fontSize: 12pt;
+$s__fontSize: 14pt;
+$m__fontSize: 18pt;
+$l__fontSize: 23pt;
+$xl__fontSize: 26pt;
+$xxl__fontSize: 28pt;
+
+$h1__fontSize: 30pt;
+$h2__fontSize: 24pt;
+$h3__fontSize: 22pt;
+$h4__fontSize: 20pt;
+$h5__fontSize: 18pt;
+
+$l__lineHeight: 1.34;
+$h1__lineHeight: 0.77;
+$h2__lineHeight: 1.06;
+$h3__lineHeight: 1.14;
+$h4__lineHeight: 1.25;
+$h5__lineHeight: 1.32;

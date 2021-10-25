@@ -1,0 +1,18 @@
+.subscription-row{
+  color: white;
+
+  .boxed-column{
+    text-align: center;
+
+    h2.subscribe-heading{
+      font-size: 28px;
+      text-transform: uppercase;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+    }
+    p.subscribe-p{
+      display: flex;
+      justify-content: center;
+    }
+  }
+}

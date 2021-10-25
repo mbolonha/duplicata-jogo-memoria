@@ -1,0 +1,32 @@
+.artist-profiles{
+  ul.grid-carousel-list{
+    li.grid-carousel-item{
+      flex-basis: 50%;
+      margin: 0 10px;
+
+      h2.grid-carousel-title,
+      div.grid-carousel-description p,
+      a.read-more{
+        padding: 0 10px;
+      }
+      img.grid-carousel-img{
+        width: 450px;
+        height: 300px;
+      }
+
+      h2.grid-carousel-title{
+        font-size: 38px;
+      }  
+    }
+
+    @media (max-width: $small__size){
+      li.grid-carousel-item{
+        padding: 0;
+        
+        img.grid-carousel-img{
+          height: 150px;
+        }
+      }
+    }
+  }
+}

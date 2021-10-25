@@ -1,0 +1,18 @@
+.logos-box {
+  background-color: #0052cc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  img.hero-imgs {
+    max-width: $widescreen__size;
+  }
+  h3.logo-box-heading {
+    color: white;
+    font-size: 28px;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 20px;
+    line-height: 28px;
+  }
+}

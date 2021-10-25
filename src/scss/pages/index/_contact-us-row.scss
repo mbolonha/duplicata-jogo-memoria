@@ -1,0 +1,37 @@
+.contact-us {
+	.contact-us-name,
+	.contact-us-email,
+	.contact-us-msg {
+		width: 100%;
+		max-width: 500px;
+		margin: 5px 0;
+		min-height: 20px;
+		border-radius: 3px;
+		border: 2px solid white;
+		background-color: white;
+		padding: 10px 10px;
+		font-size: $xs__fontSize;
+		font-family: $main__font, $alternative__font;
+
+		&:focus {
+			border: 2px solid $secondary_golden_rod__color;
+		}
+	}
+	.contact-us-msg {
+		margin-bottom: 30px;
+	}
+	.contact-label {
+		font-size: $xxs__fontSize;
+		font-family: $alternative__font;
+		cursor: pointer;
+		text-align: left;
+		width: 100%;
+		max-width: 520px;
+		display: inline-block;
+		margin: 8px 0 0;
+	}
+	// input[type='button'] {
+	// background: $cta__color;
+	// color: aqua;
+	// }
+}

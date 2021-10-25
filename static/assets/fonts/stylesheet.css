@@ -1,0 +1,63 @@
+@font-face {
+    font-family: 'Braynerd';
+    src: url('Braynerd-Shadow.woff2') format('woff2'),
+        url('Braynerd-Shadow.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Braynerd';
+    src: url('Braynerd-Regular.woff2') format('woff2'),
+        url('Braynerd-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Braynerd';
+    src: url('Braynerd-Inline.woff2') format('woff2'),
+        url('Braynerd-Inline.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Braynerd';
+    src: url('Braynerd-layered.woff2') format('woff2'),
+        url('Braynerd-layered.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'VCR OSD Mono';
+    src: url('VCROSDMono.woff2') format('woff2'),
+        url('VCROSDMono.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Neon 80s';
+    src: url('Neon80s.woff2') format('woff2'),
+        url('Neon80s.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Another';
+    src: url('Another.woff2') format('woff2'),
+        url('Another.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

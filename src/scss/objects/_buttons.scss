@@ -1,0 +1,112 @@
+.contact-button {
+	color: $btn_brown__not_active;
+	font-family: $main__font;
+	font-size: $xs__fontSize;
+	display: flex;
+	line-height: 32px;
+	vertical-align: middle;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-transform: uppercase;
+}
+li.apps-menu-item {
+	margin: 10px 0;
+	.apps-buttons-link {
+		z-index: 1;
+		position: relative;
+		display: block;
+		padding: 18px 5px 10px;
+		height: 25px;
+		width: 45px;
+		font-size: $l__fontSize;
+		margin: 0px auto;
+		border-radius: 50%;
+		font-family: $main__font;
+		// line-height: $xl__fontSize;
+		color: $verylight_brown__bgColor;
+		background-color: $system__color;
+		font-weight: 900;
+		border: 3px solid transparent;
+		border-bottom: 3px solid $additionalDark__color;
+
+		&.dark {
+			background-color: $cta__color;
+			color: $system__color;
+			border-bottom: 3px solid $additional__color;
+			// &:hover {
+			// 	background-color: $system__color;
+			// 	color: $verylight_brown__bgColor;
+			// 	border: 3px solid $additionalDark__color;
+			// }
+		}
+		&:hover {
+			background-color: #7aee9d;
+			color: #0a5f23;
+			border-bottom: 3px solid #48c46d;
+			// border-radius: 0 20px 20px 0;
+			// padding-left: 15px;
+			// position: relative;
+			// left: -5px;
+		}
+		&:active {
+			top: 5px;
+		}
+	}
+}
+.cta-link {
+	z-index: 1;
+	position: relative;
+	display: block;
+	padding: $cta__padding;
+	width: $cta__width;
+	font-size: $m__fontSize;
+	margin: 10px 30px 10px;
+	border-radius: $xs__radius;
+	font-family: $main__font;
+	line-height: $l__fontSize;
+	height: $l__fontSize;
+	color: $verylight_brown__bgColor;
+	background-color: $system__color;
+	font-weight: 900;
+	border: 3px solid transparent;
+	border-bottom: 3px solid $additionalDark__color;
+
+	&.dark {
+		background-color: $cta__color;
+		color: $system__color;
+		border-bottom: 3px solid $additional__color;
+	}
+
+	&:hover {
+		background-color: $verylight_brown__bgColor;
+		color: $system__color;
+		border: 3px solid $secondary_golden_rod__color;
+	}
+
+	&:active {
+		top: 5px;
+	}
+}
+
+form.contact-us input.contact-us-button {
+	text-align: center;
+	border: 3px solid $additional__color;
+	color: $additional__color;
+	background: $verylight_brown__bgColor;
+	border-radius: $s__radius;
+	cursor: pointer;
+	font-size: $m__fontSize;
+
+	font-family: $alternative__font;
+	padding: 5px 0;
+	font-weight: 900;
+	max-width: 300px;
+	width: 100%;
+
+	&:hover {
+		background: $additionalDark__color;
+		border: 3px solid $additionalDark__color;
+		color: $verylight_brown__bgColor;
+	}
+}

@@ -1,0 +1,43 @@
+div.marquee {
+	counter-reset: my-sec-counter;
+	height: 60px;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	width: 60px;
+
+	left: 0;
+	transition: opacity 0.2s;
+	// transition-delay: 0.2s;
+	mix-blend-mode: overlay;
+	opacity: 0;
+	border-radius: $xxl__radius;
+	p.marquee-p {
+		color: white;
+		font-size: 60px;
+		padding-top: 5px;
+		text-shadow: 0 0 black;
+		font-weight: 900;
+		text-transform: uppercase;
+		// width: 100%;
+		// float: left;
+		white-space: nowrap;
+		height: 100%;
+		margin: 0;
+		line-height: 50px;
+		text-align: center;
+
+		transform: translateX(100%);
+
+		animation: scroll-left 18s linear infinite;
+	}
+}
+
+@keyframes scroll-left {
+	0% {
+		transform: translateX(100%);
+	}
+	100% {
+		transform: translateX(-622%);
+	}
+}

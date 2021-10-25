@@ -1,0 +1,51 @@
+// Colors
+$system__color: #ff0060;
+$brand__color: #64fe0b;
+$bodyColor__bgColor: #fff;
+
+$cta__color: #0c0c0c;
+$additional__color: #fff;
+$additionalDark__color: #c52c39;
+
+$gradient_000__color: #fff499;
+$gradient_200__color: #ffd600;
+$gradient_300__color: #ffb600;
+$gradient_400__color: #ffa100;
+$gradient_600__color: #d65926;
+$gradient_800__color: #9e2942;
+$gradient_999__color: #3e215c;
+
+$brand_black__color: #0c0c0c;
+$brand_white__color: #fff;
+$black__color: #1c1c1c;
+
+$grayscale_100__color: #fcfcfc;
+$grayscale_300__color: #e3e3e3;
+$grayscale_400__color: #d2d2d2;
+$grayscale_600__color: #a3a3a3;
+$grayscale_800__color: #7d7d7d;
+
+$that_green__color: #47ff9d;
+$that_green__RGBAcolor: rgb(71, 255, 157, 0.6);
+
+$success__color: #0fe279;
+$error__color: #d80909;
+
+$secondary_blue__color: #00cfff;
+$secondary_light_blue__color: #d8e4ed;
+$secondary_pink__color: #f10fb4;
+$secondary_pink__RGBAcolor: rgba(255, 0, 98, 0.431);
+$secondary_oh_my_eye__color: #ff3a65;
+$secondary_golden_rod__color: #e8922f;
+$secondary_wheat__color: #f2c9b5;
+$secondary_light_purple__color: #c3a8d5;
+$secondary_is_this_green__color: #3c7e9f;
+$secondary_gray__color: #1f1724;
+
+$light_brown__bgColor: #91683e;
+$verylight_brown__bgColor: rgb(235, 26, 218);
+$dark_brown__bgColor: #fff;
+
+.row_color__Additional {
+  background-color: $additional__color;
+}

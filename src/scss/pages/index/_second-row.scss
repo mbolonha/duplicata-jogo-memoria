@@ -1,0 +1,50 @@
+.second-row {
+	overflow: hidden;
+	padding: 0 0 50px;
+	margin: 0;
+	width: 100%;
+	position: relative;
+	div.scene-main {
+		.scene-logo {
+			margin-bottom: 20px;
+		}
+		div.scene-title {
+			margin-top: 40px;
+			// left: 50px;
+			max-width: 40%;
+			// max-width: 400px;
+			font-size: $s__fontSize;
+			// top: 50px;
+			// position: absolute;
+			@media (max-width: $tablet__size) {
+				max-width: 100%;
+			}
+			h2.scene-heading,
+			p.scene-paragraph {
+				color: white;
+				text-align: center;
+				margin: 0 40px;
+			}
+		}
+		min-height: 100px;
+		margin-bottom: 60px;
+		display: flex;
+		justify-content: space-between;
+	}
+	.zerb {
+		display: flex;
+		justify-content: space-between;
+		max-width: 960px;
+		margin: 0 auto;
+	}
+}
+
+.circle-path {
+	width: 100%;
+	& .circle-me {
+		float: right;
+		box-shadow: 0 0px 20px 9px #01050c;
+		border-radius: 0px 0 0 550px;
+		position: relative;
+	}
+}

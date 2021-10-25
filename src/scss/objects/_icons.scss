@@ -1,0 +1,56 @@
+.menu-bar-icon {
+	margin: 0px 20px 0 25px;
+	// float: left;
+	color: $btn_brown__not_active;
+	// text-transform: uppercase;
+	display: flex;
+	text-align: left;
+	// width: 100%;
+
+	.FaChalkboardTeacher {
+		// color: $brand_black__color;
+		height: 26px;
+		width: 26px;
+	}
+}
+.FaPassport {
+	// fill: $brand_black__color;
+	fill: $btn_brown__not_active;
+	margin: 0px 20px 0px 0;
+	display: inline-block;
+	font-size: 22px;
+	height: 26px;
+	width: 26px;
+}
+
+.FaWhatsapp {
+	// margin-right: 5px;
+	margin-top: -7px;
+	vertical-align: top;
+}
+.FaPlay {
+	height: 18px;
+	width: 18px;
+	fill: $secondary_blue__color;
+}
+.FaHighlighIcon {
+	height: 54px;
+	width: 54px;
+	fill: $cta__color;
+	// position: absolute;
+	// position: absolute;
+	// left: 0;
+	// right: 0;
+	// margin: 0 auto;
+	// top: -70px;
+	// right: 20px;
+	// bottom: 10px;
+	// filter: drop-shadow(3px 2px 0px $shadowColor);
+	transition: right 0.2s, opacity 0.2s;
+	&:before {
+		content: '';
+		position: absolute;
+		width: 100%;
+		// background-color: red;
+	}
+}
