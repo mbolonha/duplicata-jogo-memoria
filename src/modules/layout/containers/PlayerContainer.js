@@ -12,10 +12,10 @@ const PlayerContainer = ({ children, url }) => {
 
 export default PlayerContainer;
 
-export const queryVideo = graphql`
-  query heroVideo {
-    promoVideoUrl: file(name: { eq: "promo-edu4dev" }) {
-      publicURL
-    }
-  }
-`;
+// export const queryVideo = graphql`
+//   query heroVideo {
+//     promoVideoUrl: file(name: { eq: "promo-edu4dev" }) {
+//       publicURL
+//     }
+//   }
+// `;

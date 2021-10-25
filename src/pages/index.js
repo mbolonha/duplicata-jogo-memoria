@@ -34,7 +34,7 @@ const IndexPage = ({ data, location }) => {
           bgColor: "#000",
         }}
       >
-        <Layout type='HEADER' logo={data.edu4Dev} />
+        <Layout type='HEADER' /*logo={data.edu4Dev}*/ />
       </Layout>
 
       {/* <Layout type='FULLSCREEN'>
@@ -70,39 +70,39 @@ const IndexPage = ({ data, location }) => {
   );
 };
 
-export const queryBg = graphql`
-  query heroBg {
-    heroImg: file(name: { eq: "hero-img" }) {
-      childImageSharp {
-        gatsbyImageData
-      }
-    }
-    nutkls: file(name: { eq: "nutkls-img-hero" }) {
-      childImageSharp {
-        gatsbyImageData
-      }
-    }
-    porto: file(name: { eq: "porto.jpg" }) {
-      childImageSharp {
-        gatsbyImageData
-      }
-    }
-    edu4Dev: file(name: { eq: "edu4dev-logo" }) {
-      childImageSharp {
-        gatsbyImageData
-      }
-      extension
-      publicURL
-    }
-    promoVideo: file(name: { eq: "promo-edu4dev" }) {
-      publicURL
-    }
-    logo4dev: file(relativePath: { eq: "edu4dev-logo-2-menor.png" }) {
-      childrenImageSharp {
-        gatsbyImageData(layout: FIXED, width: 200)
-      }
-    }
-  }
-`;
+// export const queryBg = graphql`
+//   query heroBg {
+//     # heroImg: file(name: { eq: "hero-img" }) {
+//     #   childImageSharp {
+//     #     gatsbyImageData
+//     #   }
+//     # }
+//     # nutkls: file(name: { eq: "nutkls-img-hero" }) {
+//     #   childImageSharp {
+//     #     gatsbyImageData
+//     #   }
+//     # }
+//     # porto: file(name: { eq: "porto.jpg" }) {
+//     #   childImageSharp {
+//     #     gatsbyImageData
+//     #   }
+//     # }
+//     # edu4Dev: file(name: { eq: "edu4dev-logo" }) {
+//     #   childImageSharp {
+//     #     gatsbyImageData
+//     #   }
+//     #   extension
+//     #   publicURL
+//     # }
+//     # promoVideo: file(name: { eq: "promo-edu4dev" }) {
+//     #   publicURL
+//     # }
+//     # logo4dev: file(relativePath: { eq: "edu4dev-logo-2-menor.png" }) {
+//     #   childrenImageSharp {
+//     #     gatsbyImageData(layout: FIXED, width: 200)
+//     #   }
+//     # }
+//   }
+// `;
 
 export default IndexPage;
