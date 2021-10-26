@@ -1,6 +1,6 @@
 // Colors
 $system__color: #eb412c;
-$brand__color: #64fe0b;
+$brand__color: #eb412c;
 $bodyColor__bgColor: #fff;
 
 $cta__color: #0c0c0c;
@@ -29,7 +29,7 @@ $that_green__color: #47ff9d;
 $that_green__RGBAcolor: rgb(71, 255, 157, 0.6);
 
 $success__color: #0fe279;
-$error__color: #d80909;
+$error__color: #eb412c;
 
 $secondary_blue__color: #00cfff;
 $secondary_light_blue__color: #d8e4ed;
@@ -47,7 +47,9 @@ $verylight_brown__bgColor: rgb(235, 26, 218);
 $dark_brown__bgColor: #fff;
 
 $btn_brown__active: #e0c6ac;
-$btn_brown__not_active: #d80909;
+$btn_brown__not_active: #eb412c;
+
+$ribbon_top__color: #eb412c;
 
 .row_color__Additional {
 	background-color: $additional__color;

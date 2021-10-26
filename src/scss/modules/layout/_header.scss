@@ -2,17 +2,16 @@ header {
 	// font-size: 13px;
 	// padding-bottom: $header__height;
 	width: 100%;
-
+	border-top: 3px solid $ribbon_top__color;
 	div.main-header {
 		flex-direction: row;
 		flex-wrap: wrap;
-		border-top: 3px solid $additionalDark__color;
-		// border-bottom: 3px solid $additionalDark__color;
-		// background-color: $additional__color;
-		height: $header__height;
+		height: 121px;
 		display: flex;
-		// position: fixed;
-		width: 100%;
+		width: 92%;
+		align-content: center;
+		justify-content: space-between;
+		margin: 0 auto;
 
 		& > .header-columns {
 			vertical-align: middle;
@@ -36,9 +35,9 @@ header {
 		}
 
 		& > .toggle-menu {
-			order: 0;
-			flex: 0 1 15%;
-			align-self: stretch;
+			// order: 0;
+			// flex: 0 1 15%;
+			// align-self: stretch;
 
 			&.toggle-menu {
 				position: relative;
@@ -88,11 +87,11 @@ header {
 			}
 		}
 
-		& > :nth-child(2) {
-			order: 0;
-			flex: 1 1 30%;
-			align-self: stretch;
-		}
+		// & > :nth-child(2) {
+		// 	order: 0;
+		// 	flex: 1 1 30%;
+		// 	align-self: stretch;
+		// }
 
 		& > :nth-child(3) {
 			order: 0;

@@ -19,12 +19,17 @@ import {
 	FaGitAlt,
 	FaGitSquare,
 } from 'react-icons/fa'
-
+import ArrowRightIcon from '../../../../static/assets/images/icon-arrow-right.svg'
 const Main = () => (
 	<>
 		<div className="main-content">
 			<div className="container">
-				<h1 className="main-h1">Tratamento</h1>
+				<div className="second-row-for-now">
+					<div className="circle-shadow">
+						<ArrowRightIcon />
+					</div>
+					<h1 className="main-h1">Tratamento</h1>
+				</div>
 
 				<section className="score-panel hidden">
 					<ul className="stars">

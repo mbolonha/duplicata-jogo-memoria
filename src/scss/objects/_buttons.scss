@@ -25,17 +25,17 @@ li.apps-menu-item {
 		font-family: $main__font;
 		// line-height: $xl__fontSize;
 		color: $verylight_brown__bgColor;
-		background-color: $system__color;
+		background-color: $brand__color;
 		font-weight: 900;
 		border: 3px solid transparent;
 		border-bottom: 3px solid $additionalDark__color;
 
 		&.dark {
 			background-color: $cta__color;
-			color: $system__color;
+			color: $brand__color;
 			border-bottom: 3px solid $additional__color;
 			// &:hover {
-			// 	background-color: $system__color;
+
 			// 	color: $verylight_brown__bgColor;
 			// 	border: 3px solid $additionalDark__color;
 			// }
@@ -67,20 +67,20 @@ li.apps-menu-item {
 	line-height: $l__fontSize;
 	height: $l__fontSize;
 	color: $verylight_brown__bgColor;
-	background-color: $system__color;
+	background-color: $brand__color;
 	font-weight: 900;
 	border: 3px solid transparent;
 	border-bottom: 3px solid $additionalDark__color;
 
 	&.dark {
 		background-color: $cta__color;
-		color: $system__color;
+		color: $brand__color;
 		border-bottom: 3px solid $additional__color;
 	}
 
 	&:hover {
 		background-color: $verylight_brown__bgColor;
-		color: $system__color;
+		color: $brand__color;
 		border: 3px solid $secondary_golden_rod__color;
 	}
 
