@@ -1,60 +1,68 @@
-import React, { useState } from "react";
-import { Link } from "gatsby";
-import { useFullScreenHandle } from "react-full-screen";
-import { graphql } from "gatsby";
+import React, { useState } from 'react'
+import { Link } from 'gatsby'
+import { useFullScreenHandle } from 'react-full-screen'
+import { graphql } from 'gatsby'
 
-import { StaticImage } from "gatsby-plugin-image";
+import ReactDOM from 'react-dom'
+import $ from 'jquery'
 
-import Layout from "@Layout";
+import { StaticImage } from 'gatsby-plugin-image'
+
+import Layout from '@Layout'
+
+$(document).bind('click', function (e) {
+	console.log(e.target)
+	alert(e.target)
+})
 
 const IndexPage = ({ data, location }) => {
-  const sentences = ["Ensino Disruptivo de Vdd !"];
-  const [refState] = useState(
-    sentences[Math.floor(Math.random() * sentences.length)]
-  );
+	const sentences = ['Ensino Disruptivo de Vdd !']
+	const [refState] = useState(
+		sentences[Math.floor(Math.random() * sentences.length)]
+	)
 
-  const handle = useFullScreenHandle();
+	const handle = useFullScreenHandle()
 
-  const seo = {
-    frontmatter: {
-      slug: location.pathname.replace(/[^\w\d-]/g, ""),
-      ...data.frontmatter,
-    },
-  };
-  // console.log(data.nutkls);
-  return (
-    <Layout type='BODY' opt={{ titleSeo: refState }}>
-      <Layout
-        type='ROW'
-        opt={{
-          // bgColor: '#d352cc',
-          isBoxed: true,
-          classes: "",
-          alignTo: "left",
-          bgColor: "#000",
-        }}
-      >
-        <Layout type='HEADER' /*logo={data.edu4Dev}*/ />
-      </Layout>
+	// const seo = {
+	// 	frontmatter: {
+	// 		slug: location.pathname.replace(/[^\w\d-]/g, ''),
+	// 		...data.frontmatter,
+	// 	},
+	// }
+	// console.log(data.nutkls);
+	return (
+		<Layout type="BODY" opt={{ titleSeo: refState }}>
+			<Layout
+				type="ROW"
+				opt={{
+					// bgColor: '#d352cc',
+					isBoxed: true,
+					classes: '',
+					alignTo: 'left',
+					bgColor: '#000',
+				}}
+			>
+				<Layout type="HEADER" /*logo={data.edu4Dev}*/ />
+			</Layout>
 
-      {/* <Layout type='FULLSCREEN'>
+			{/* <Layout type='FULLSCREEN'>
         <Layout type='VIDEOPLAYER' url={data.promoVideo.publicURL} />
       </Layout> */}
 
-      <Layout
-        type='ROW'
-        opt={{
-          // bgColor: '#d352cc',
-          isBoxed: true,
-          classes: "",
-          alignTo: "left",
-          bgColor: "#47ff9d",
-        }}
-      >
-        <Layout type='FOOTER' />
-      </Layout>
+			<Layout
+				type="ROW"
+				opt={{
+					// bgColor: '#d352cc',
+					isBoxed: true,
+					classes: '',
+					alignTo: 'left',
+					bgColor: '#47ff9d',
+				}}
+			>
+				<Layout type="FOOTER" />
+			</Layout>
 
-      {/* <Layout
+			{/* <Layout
         type='ROW'
         opt={{
           // bgColor: '#d352cc',
@@ -66,9 +74,9 @@ const IndexPage = ({ data, location }) => {
         <Layout type='MAIN' opt={"nothing here"} />
 
       </Layout> */}
-    </Layout>
-  );
-};
+		</Layout>
+	)
+}
 
 // export const queryBg = graphql`
 //   query heroBg {
@@ -105,4 +113,4 @@ const IndexPage = ({ data, location }) => {
 //   }
 // `;
 
-export default IndexPage;
+export default IndexPage
