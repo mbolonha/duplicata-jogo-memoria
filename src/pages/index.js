@@ -1,17 +1,16 @@
 import React, { useState, useEffect } from 'react'
 import Swal from 'sweetalert2'
 import withReactContent from 'sweetalert2-react-content'
+import 'animate.css'
+import $ from 'jquery'
+import { StaticImage } from 'gatsby-plugin-image'
+import Layout from '@Layout'
 // import { useFullScreenHandle } from 'react-full-screen'
 // import { Link } from 'gatsby'
 // import { graphql } from 'gatsby'
 
-import 'animate.css'
 // import ReactDOM from 'react-dom'
-import $ from 'jquery'
 
-import { StaticImage } from 'gatsby-plugin-image'
-
-import Layout from '@Layout'
 const MySwal = withReactContent(Swal)
 
 const IndexPage = ({ data, location }) => {
@@ -140,13 +139,13 @@ const IndexPage = ({ data, location }) => {
 			}
 
 			reset() {
-				location.reload(currentTimer)
+				window.location.reload(currentTimer)
 			}
 
 			finalizarJogo() {
 				let stars = $('.fa-star')
 				clearInterval(currentTimer)
-				MySwal({
+				MySwal.fire({
 					title: 'Parabéns',
 					text: `Você terminou o jogo em  ${seg} segundos e com ${stars.length} de 3 estrelas.
             Deseja jogar novamente? `,
