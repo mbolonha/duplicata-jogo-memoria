@@ -4,10 +4,12 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import { StaticQuery, graphql } from 'gatsby'
 // import Logo from 'svg-react-loader?name=Logo!../../../../static/assets/images/edu4dev-logo-ULTIMATE.svg'
 import Logo from '../../../../static/assets/images/diabetes-brasil-logo.svg'
+import MenuHamburgerIcon from '../../../../static/assets/images/menu-hamburger.svg'
+
 // import DarkMode from '../containers/darkmode'
 // import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import MenuContainer from '../containers/MenuContainer'
-import { GiHamburgerMenu } from 'react-icons/gi'
+// import { GiHamburgerMenu } from 'react-icons/gi'
 import { StaticImage } from 'gatsby-plugin-image'
 
 const Header = ({
@@ -37,7 +39,8 @@ const Header = ({
 						className={`menu-wrapper ${refState ? 'active' : 'not-active'}`}
 					>
 						<div className="menu-bar-icon">
-							<GiHamburgerMenu className="FaChalkboardTeacher icon-main-menu-left" />
+							{/* <GiHamburgerMenu className="FaChalkboardTeacher icon-main-menu-left" /> */}
+							<MenuHamburgerIcon className="hamburger-icon" />
 						</div>
 						{/* <div className="icon-text desktop-only">
 							<strong>Menu</strong>

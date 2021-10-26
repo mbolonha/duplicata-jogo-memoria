@@ -24,11 +24,9 @@ const Main = () => (
 	<>
 		<div className="main-content">
 			<div className="container">
-				<header>
-					<h1>Jogo Da Memória</h1>
-				</header>
+				<h1 className="main-h1">Tratamento</h1>
 
-				<section className="score-panel">
+				<section className="score-panel hidden">
 					<ul className="stars">
 						<li>
 							<FaStar />

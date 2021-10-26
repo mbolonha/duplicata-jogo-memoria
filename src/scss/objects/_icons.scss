@@ -1,12 +1,11 @@
 .menu-bar-icon {
-	margin: 0px 20px 0 25px;
-	// float: left;
-	color: $btn_brown__not_active;
-	// text-transform: uppercase;
+	background: #e1e8ed;
 	display: flex;
-	text-align: left;
-	// width: 100%;
-
+	align-items: center;
+	width: 20px;
+	height: 20px;
+	padding: 8px;
+	border-radius: 8px;
 	.FaChalkboardTeacher {
 		// color: $brand_black__color;
 		height: 26px;
