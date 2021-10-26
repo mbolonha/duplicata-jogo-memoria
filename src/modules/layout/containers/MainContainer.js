@@ -1,10 +1,10 @@
-import React from "react";
-import Main from "../components/Main";
+import React from 'react'
+import Main from '../components/Main'
 
 const MainContainer = () => (
-  <>
-    <Main />
-  </>
-);
+	<>
+		<Main />
+	</>
+)
 
-export default MainContainer;
+export default MainContainer

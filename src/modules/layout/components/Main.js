@@ -1,85 +1,121 @@
-import React from "react";
-import { Link } from "gatsby";
-import { StaticImage } from "gatsby-plugin-image";
+import React from 'react'
+import { Link } from 'gatsby'
+import { StaticImage } from 'gatsby-plugin-image'
+import {
+	FaStar,
+	FaAccessibleIcon,
+	FaAdn,
+	FaAdversal,
+	FaAlgolia,
+	FaAmazon,
+	FaAngellist,
+	FaAtlassian,
+	FaDailymotion,
+	FaEllo,
+	FaFirefox,
+	FaFontAwesomeFlag,
+	FaFreebsd,
+	FaFly,
+	FaGitAlt,
+	FaGitSquare,
+} from 'react-icons/fa'
+
 const Main = () => (
-  <>
-    <div className='main-content'>
-      <div class='container'>
-        <header>
-          <h1>Jogo Da Memória</h1>
-        </header>
+	<>
+		<div className="main-content">
+			<div className="container">
+				<header>
+					<h1>Jogo Da Memória</h1>
+				</header>
 
-        <section class='score-panel'>
-          <ul class='stars'>
-            <li>
-              <i class='fa fa-star'></i>
-            </li>
-            <li>
-              <i class='fa fa-star'></i>
-            </li>
-            <li>
-              <i class='fa fa-star'></i>
-            </li>
-          </ul>
-          <span class='moves'>0</span> Moves |<span id='timer'>0</span>s
-          <div class='restart'>
-            <i class='fa fa-repeat'></i>
-          </div>
-        </section>
+				<section className="score-panel">
+					<ul className="stars">
+						<li>
+							<FaStar />
+						</li>
+						<li>
+							<FaStar />
+						</li>
+						<li>
+							<FaStar />
+						</li>
+					</ul>
+					<span className="moves">0</span> Moves |
+					<span className="timer-app">0</span>s
+					<div className="restart">
+						<i className="fa fa-repeat"></i>
+					</div>
+				</section>
 
-        <ul class='deck'>
-          <li class='card'>
-            <i class='fa fa-diamond'></i>
-          </li>
-          <li class='card'>
-            <i class='fa fa-paper-plane-o'></i>
-          </li>
-          <li class='card'>
-            <i class='fa fa-anchor'></i>
-          </li>
-          <li class='card'>
-            <i class='fa fa-bolt'></i>
-          </li>
-          <li class='card'>
-            <i class='fa fa-cube'></i>
-          </li>
-          <li class='card'>
-            <i class='fa fa-anchor'></i>
-          </li>
-          <li class='card'>
-            <i class='fa fa-leaf'></i>
-          </li>
-          <li class='card'>
-            <i class='fa fa-bicycle'></i>
-          </li>
-          <li class='card'>
-            <i class='fa fa-diamond'></i>
-          </li>
-          <li class='card'>
-            <i class='fa fa-bomb'></i>
-          </li>
-          <li class='card'>
-            <i class='fa fa-leaf'></i>
-          </li>
-          <li class='card'>
-            <i class='fa fa-bomb'></i>
-          </li>
-          <li class='card'>
-            <i class='fa fa-bolt'></i>
-          </li>
-          <li class='card'>
-            <i class='fa fa-bicycle'></i>
-          </li>
-          <li class='card'>
-            <i class='fa fa-paper-plane-o'></i>
-          </li>
-          <li class='card'>
-            <i class='fa fa-cube'></i>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </>
-);
+				<ul className="deck">
+					<li className="card">
+						<i className="fa fa-diamond"></i>
+						<FaStar />
+					</li>
+					<li className="card">
+						<i className="fa fa-diamond"></i>
+						<FaAdversal />
+					</li>
+					<li className="card">
+						<i className="fa fa-diamond"></i>
+						<FaAtlassian />
+					</li>
+					<li className="card">
+						<i className="fa fa-diamond"></i>
+						<FaAdn />
+					</li>
+					<li className="card">
+						<i className="fa fa-diamond"></i>
+						<FaAccessibleIcon />
+					</li>
+					<li className="card">
+						<i className="fa fa-diamond"></i>
+						<FaAtlassian />
+					</li>
+					<li className="card">
+						<i className="fa fa-diamond"></i>
+						<FaAngellist />
+					</li>
+					<li className="card">
+						<i className="fa fa-diamond"></i>
+						<FaAmazon />
+					</li>
+					<li className="card">
+						<i className="fa fa-diamond"></i>
+						<FaStar />
+					</li>
+					<li className="card">
+						<i className="fa fa-diamond"></i>
+						<FaAlgolia />
+					</li>
+					<li className="card">
+						<i className="fa fa-diamond"></i>
+						<FaAngellist />
+					</li>
+					<li className="card">
+						<i className="fa fa-diamond"></i>
+						<FaAlgolia />
+					</li>
+					<li className="card">
+						<i className="fa fa-diamond"></i>
+						<FaAdn />
+					</li>
+					<li className="card">
+						<i className="fa fa-diamond"></i>
+						<FaAmazon />
+					</li>
+					<li className="card">
+						<i className="fa fa-diamond"></i>
+						<FaAdversal />
+					</li>
+					<li className="card">
+						<i className="fa fa-diamond"></i>
+						<FaAccessibleIcon />
+					</li>
+				</ul>
+			</div>
+		</div>
+	</>
+)
 
-export default Main;
+export default Main
