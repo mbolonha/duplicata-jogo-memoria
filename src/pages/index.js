@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link } from 'gatsby'
 import { useFullScreenHandle } from 'react-full-screen'
 import { graphql } from 'gatsby'
@@ -10,12 +10,13 @@ import { StaticImage } from 'gatsby-plugin-image'
 
 import Layout from '@Layout'
 
-$(document).bind('click', function (e) {
-	console.log(e.target)
-	alert(e.target)
-})
-
 const IndexPage = ({ data, location }) => {
+	useEffect(() => {
+		$(document).bind('click', function (e) {
+			console.log(e.target)
+			alert(e.target)
+		})
+	})
 	const sentences = ['Ensino Disruptivo de Vdd !']
 	const [refState] = useState(
 		sentences[Math.floor(Math.random() * sentences.length)]
