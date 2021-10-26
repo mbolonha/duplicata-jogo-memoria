@@ -1,11 +1,11 @@
 // Colors
-$system__color: #ff0060;
+$system__color: #eb412c;
 $brand__color: #64fe0b;
 $bodyColor__bgColor: #fff;
 
 $cta__color: #0c0c0c;
 $additional__color: #fff;
-$additionalDark__color: #c52c39;
+$additionalDark__color: #eb412c;
 
 $gradient_000__color: #fff499;
 $gradient_200__color: #ffd600;
@@ -46,6 +46,9 @@ $light_brown__bgColor: #91683e;
 $verylight_brown__bgColor: rgb(235, 26, 218);
 $dark_brown__bgColor: #fff;
 
+$btn_brown__active: #e0c6ac;
+$btn_brown__not_active: #d80909;
+
 .row_color__Additional {
-  background-color: $additional__color;
+	background-color: $additional__color;
 }

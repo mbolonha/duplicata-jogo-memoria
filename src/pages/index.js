@@ -216,7 +216,7 @@ const IndexPage = ({ data, location }) => {
 					isBoxed: true,
 					classes: '',
 					alignTo: 'left',
-					bgColor: '#ddd',
+					bgColor: '#fff',
 				}}
 			>
 				<Layout type="HEADER" /*logo={data.edu4Dev}*/ />
