@@ -42,6 +42,7 @@ const IndexPage = ({ data, location }) => {
 				//  let cardsVirados = [];
 				let card1 = game.obterImagemDoCard(cardsVirados[0])
 				let card2 = game.obterImagemDoCard(cardsVirados[1])
+				console.log('card1:::' + cardsVirados)
 
 				if (card1 === card2) {
 					cardsEncontrados++
@@ -78,7 +79,7 @@ const IndexPage = ({ data, location }) => {
 					;[].forEach.call(cards, function (item) {
 						document.querySelector('.deck').appendChild(item)
 					})
-					//cards[i].classList.remove("show", "open", "match", "disabled");
+					cards[i].classList.remove('show', 'open', 'match', 'disabled')
 				}
 			}
 
@@ -105,7 +106,7 @@ const IndexPage = ({ data, location }) => {
 
 			selecionarCard() {
 				let card = $(this)
-
+				// console.log(card)
 				if (card.hasClass('open show') || card.hasClass('match')) {
 					return
 				}
@@ -115,11 +116,17 @@ const IndexPage = ({ data, location }) => {
 				}
 
 				if (cardsVirados.length < 2) {
+					// console.log('Menor q dois')
+					// console.log(cardsVirados.length)
+					console.log(cardsVirados + 'MENOR DOIS CARDS')
+
 					$(this).toggleClass('open show')
 					cardsVirados.push($(this))
 				}
 
 				if (cardsVirados.length === 2) {
+					// console.log('IGUAL DOIS CARDS')
+					console.log(cardsVirados + 'IGUAL DOIS CARDS')
 					game.verificaCardsVirados(cardsVirados)
 					cardsVirados = []
 				}
@@ -128,6 +135,8 @@ const IndexPage = ({ data, location }) => {
 			}
 
 			obterImagemDoCard(card) {
+				console.log('zinin')
+				console.log(card) /*xxx*/
 				return card[0].firstChild.nextSibling.classList[1]
 			}
 
@@ -181,7 +190,7 @@ const IndexPage = ({ data, location }) => {
 		})
 
 		let game = new Game()
-		console.log(card[0])
+		// console.log(card[0])
 	})
 
 	const sentences = ['Ensino Disruptivo de Vdd !']
