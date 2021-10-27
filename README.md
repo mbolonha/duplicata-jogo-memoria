@@ -14,7 +14,9 @@
     - vps;
     - docker;
     - docker-compose;
+    - javascript;
     - npm;
+    - nodejs;
     - gatsby-cli;
     - reactjs;
     - sass;
