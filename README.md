@@ -9,8 +9,15 @@
 
     As seguintes tecnologias lideram este desenvolvimento:
 
+    - shell;
+    - git;
+    - vps;
+    - docker;
+    - docker-compose;
     - npm;
     - gatsby-cli;
+    - reactjs;
+    - sass;
 
 1.  **Crie um site em Gatsby usando o git da Studio Visual.**
 
@@ -72,7 +79,9 @@
     Edite o arquivo `src/pages/index.js` e veja o site sendo atualizado em tempo real.
 
     !!!!!!!!!!!!!!!!
+
     !!!importante!!!
+
     !!!!!!!!!!!!!!!!
 
     Está sendo refatorado, não se assute se ver console.log para todo lado. :D :D :D
@@ -89,9 +98,9 @@
 
     - um VPS (Virtual Private Server) / Servidor Virtual Privado
 
-      - Docker e Docker Compose ([ver aqui como instalar no Ubuntu](https://docs.docker.com/engine/install/ubuntu/#install-docker-engine))
+    - Docker e Docker Compose ([ver aqui como instalar no Ubuntu](https://docs.docker.com/engine/install/ubuntu/#install-docker-engine))
 
-      ## 1. Configure DNS
+    ## 1. Configure DNS
 
     Configure os registros DNS para apontar para seu VPS. Você deve configurar os domínios principal e o curinga. Supondo que o IP do seu VPS seja 1.2.3.4:
 
@@ -107,7 +116,7 @@
         	*.poupaluz.meudominio.dev IN A 1.2.3.4
         ```
 
-    ## Deploy do Meli na VPS pelo Docker
+    ## 2. Deploy do Meli na VPS pelo Docker
 
     Crie um arquivo com o nome docker-compose.yml em algum lugar:
 
@@ -149,7 +158,7 @@
         					- ./data/mongo:/data/db
         ```
 
-    ## Compondo o Docker
+    ## 3. Compondo o Docker
 
     ```shell
 
@@ -158,39 +167,59 @@
     		docker-compose up -d
     ```
 
-    ## Acessando o Poupa Luz
+    ## 4. Acessando o Poupa Luz
 
     Acesse poupaluz.meudominio.dev e coloque suas credenciais na página de login
 
-    ## Criando um website e fazendo o deploy
+    ## 5. Criando um website e fazendo o deploy manual
 
     Para fazer o deploy manual você deve criar um site e depois gerar um token no seu Poupa Luz.
+
+    Depois de tê-lo feito rode os seguintes comandos:
 
     ```shell
 
        # Faça o build do seu app/site em Gatsby
        # digite o comando
-           gatsby build
+          gatsby build
 
        # Envie o seu site para o seu servidor Poupa Luz
        # digite o comando
        # AVISO: este comando está fazendo deploy  da branch master
-    		npx -p "@getmeli/cli" meli upload \
-    		/home/SEUUSERAQUI/SUAPASTA/PASTADOPROJETOEMGASTBY/public \
-    		--url https://poupaluz.seudominio.dev \
-    		--site xxxxxxxxxxxxxxx \
-    		--token xxxxxxxxxxxxxx \
-    		--branch "master"
+          npx -p "@getmeli/cli" meli upload \
+          /home/SEUUSERAQUI/SUAPASTA/PASTADOPROJETOEMGASTBY/public \
+          --url https://poupaluz.seudominio.dev \
+          --site xxxxxxxxxxxxxxx \
+          --token xxxxxxxxxxxxxx \
+          --branch "master"
     ```
+
+    ## 6. Deploy automático
+
+    Deploy automático com gitea: [aqui](https://docs.meli.sh/get-started/pr-previews?highlight=deplo#gitea)
+
+    ## 7. Definindo variáveis e Habilitando SPA
+
+    Você deve:
+
+    - Definir a sua branch (que irá buildar)
+    - Habiltar a função Single page application (SPA) mode
+    - Inserir o domínio final
+    - Deixar acionado Automatic SSL (ACME)
 
     ## Bibliografia
 
     Testando o Gatsby zerado: [aqui](https://www.gatsbyjs.com/docs/quick-start/)
     Gatsby Oficial Cloud: [aqui](https://www.gatsbyjs.com/products/cloud/)
+
     Curso de Gatsby: [aqui](https://www.udemy.com/course/gatsby-crie-um-site-pwa-com-react-graphql-e-netlify-cms/)
+
     Ou: [aqui](http://bj-share.info/)
 
     Instalação do Meli: [aqui](https://docs.meli.sh/get-started/installation)
+
     Documentação do Meli: [aqui](https://docs.meli.sh/)
+
     Proxy Reverse do Meli: [aqui](https://docs.meli.sh/configuration/reverse-proxy?highlight=proxy#nginx)
+
     Let's Encrypt instruções: [aqui](https://docs.meli.sh/configuration/reverse-proxy?highlight=proxy#wildcard-certificates-from-lets-encrypt)
