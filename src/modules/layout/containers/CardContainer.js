@@ -16,16 +16,18 @@ const CardContainer = ({
 		!isFlipped && !isDisabled && onClick(index)
 	}
 	// console.log(card.type)
+	let x = card.type
 	return (
 		<>
 			{/* <h6>{card.type}</h6>
 			<br /> */}
 			<div
 				className={classnames('card', {
-					'is-flipped': isFlipped,
+					'is-flipped': isInactive ? true : isFlipped,
 					'is-inactive': isInactive,
+					[`${x}`]: true,
 				})}
-				onClick={handleClick}
+				onClick={isInactive ? null : handleClick}
 			>
 				<div className="card-face card-font-face">
 					<Pokeball />

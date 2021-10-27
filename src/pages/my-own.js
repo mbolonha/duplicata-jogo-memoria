@@ -14,31 +14,74 @@ import {
 	DialogTitle,
 } from '@material-ui/core'
 import CardContainer from '../modules/layout/containers/CardContainer'
-import Diab from '../../static/assets/images/diabetes-brasil-logo.svg'
+import Card01a from '../../static/assets/images/glicemia-card-01-a.svg'
+import Card01b from '../../static/assets/images/glicemia-card-01-b.svg'
+import Card02a from '../../static/assets/images/glicemia-card-02-a.svg'
+import Card02b from '../../static/assets/images/glicemia-card-02-b.svg'
+import Card03a from '../../static/assets/images/glicemia-card-03-a.svg'
+import Card03b from '../../static/assets/images/glicemia-card-03-b.svg'
+import Card04a from '../../static/assets/images/glicemia-card-04-a.svg'
+import Card04b from '../../static/assets/images/glicemia-card-04-b.svg'
+import Card05a from '../../static/assets/images/glicemia-card-05-a.svg'
+import Card05b from '../../static/assets/images/glicemia-card-05-b.svg'
+import Card06a from '../../static/assets/images/glicemia-card-06-a.svg'
+import Card06b from '../../static/assets/images/glicemia-card-06-b.svg'
+import Card07a from '../../static/assets/images/glicemia-card-07-a.svg'
+import Card07b from '../../static/assets/images/glicemia-card-07-b.svg'
+import Card08a from '../../static/assets/images/glicemia-card-08-a.svg'
+import Card08b from '../../static/assets/images/glicemia-card-08-b.svg'
+
 const uniqueElementsArray = [
 	{
 		type: 'Pikachu',
-		image: <Diab />,
+		image: <Card01a />,
 	},
 	{
 		type: 'ButterFree',
-		image: <Diab />,
+		image: <Card02a />,
 	},
 	{
 		type: 'Charmander',
-		image: <Diab />,
+		image: <Card03a />,
 	},
 	{
 		type: 'Squirtle',
-		image: <Diab />,
+		image: <Card04a />,
 	},
 	{
 		type: 'Pidgetto',
-		image: <Diab />,
+		image: <Card05a />,
 	},
 	{
 		type: 'Bulbasaur',
-		image: <Diab />,
+		image: <Card06a />,
+	},
+]
+
+const secondElementsArray = [
+	{
+		type: 'Pikachu',
+		image: <Card01b />,
+	},
+	{
+		type: 'ButterFree',
+		image: <Card02b />,
+	},
+	{
+		type: 'Charmander',
+		image: <Card03b />,
+	},
+	{
+		type: 'Squirtle',
+		image: <Card04b />,
+	},
+	{
+		type: 'Pidgetto',
+		image: <Card05b />,
+	},
+	{
+		type: 'Bulbasaur',
+		image: <Card06b />,
 	},
 ]
 
@@ -86,7 +129,7 @@ const IndexPage = ({ data, location }) => {
 	const [open, setOpen] = useState(true)
 
 	const [cards, setCards] = useState(
-		shuffleCards.bind(null, uniqueElementsArray.concat(uniqueElementsArray))
+		shuffleCards.bind(null, uniqueElementsArray.concat(secondElementsArray))
 	)
 	const [openCards, setOpenCards] = useState([])
 	const [clearedCards, setClearedCards] = useState({})
