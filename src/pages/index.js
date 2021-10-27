@@ -15,11 +15,10 @@ const MySwal = withReactContent(Swal)
 
 const IndexPage = ({ data, location }) => {
 	useEffect(() => {
-		// let swal = null
 		let card = $('.card')
 		let cards = [...card]
 		let iniciarJogo = false
-		let cardsVirados = [] //
+		let cardsVirados = []
 		let numeroJogadas = 0
 		let seg = 0
 		let cardsEncontrados = 0
@@ -37,18 +36,13 @@ const IndexPage = ({ data, location }) => {
 			initGame() {
 				game.populateCards()
 			}
-
 			verificaCardsVirados(cardsVirados) {
-				//  let cardsVirados = []; aqui está o problema pt 1
 				let card1 = game.obterImagemDoCard(cardsVirados[0])
 				let card2 = game.obterImagemDoCard(cardsVirados[1])
 				console.log('card1:::' + cardsVirados[0])
-				cardsVirados.forEach(function (cardZ) {
-					console.log('cardZ is >>>')
-					console.log(card1)
-				})
+				cardsVirados.forEach(function (cardZ) {})
 				if (card1 === card2) {
-					// cardsEncontrados++
+					cardsEncontrados++
 					cardsVirados.forEach(function (card) {
 						card.animateCss('tada', function () {
 							card.toggleClass('open show match')
@@ -110,7 +104,6 @@ const IndexPage = ({ data, location }) => {
 
 			selecionarCard() {
 				let card = $(this)
-				// console.log(card)
 				if (card.hasClass('open show') || card.hasClass('match')) {
 					return
 				}
@@ -120,17 +113,11 @@ const IndexPage = ({ data, location }) => {
 				}
 
 				if (cardsVirados.length < 2) {
-					// console.log('Menor q dois')
-					// console.log(cardsVirados.length)
-					console.log(cardsVirados + 'MENOR DOIS CARDS')
-
 					$(this).toggleClass('open show')
 					cardsVirados.push($(this))
 				}
 
 				if (cardsVirados.length === 2) {
-					// console.log('IGUAL DOIS CARDS')
-					console.log(cardsVirados + 'IGUAL DOIS CARDS')
 					game.verificaCardsVirados(cardsVirados)
 					cardsVirados = []
 				}
@@ -192,9 +179,7 @@ const IndexPage = ({ data, location }) => {
 				return this
 			},
 		})
-
 		let game = new Game()
-		// console.log(card[0])
 	})
 
 	const sentences = ['Ensino Disruptivo de Vdd !']
