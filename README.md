@@ -63,7 +63,7 @@
         gatsby develop
     	# você pode usar também o npm run develop, mas recomendo o padrão
 
-    # para buildar o App
+    # para buildar o App na pasta public
         gatsby build
 
     # para limpar o cache
@@ -186,6 +186,9 @@
        # Envie o seu site para o seu servidor Poupa Luz
        # digite o comando
        # AVISO: este comando está fazendo deploy  da branch master
+       # AVISO: somente a pasta public será enviada
+       # AVISO: ela contém uma SPA Single Page App
+       # AVISO: você deve configurar a esteira de deploy
           npx -p "@getmeli/cli" meli upload \
           /home/SEUUSERAQUI/SUAPASTA/PASTADOPROJETOEMGASTBY/public \
           --url https://poupaluz.seudominio.dev \
@@ -194,11 +197,7 @@
           --branch "master"
     ```
 
-    ## 6. Deploy automático
-
-    Deploy automático com gitea: [aqui](https://docs.meli.sh/get-started/pr-previews?highlight=deplo#gitea)
-
-    ## 7. Definindo variáveis e Habilitando SPA
+    ## 6. Definindo variáveis e Habilitando SPA
 
     Você deve:
 
@@ -206,6 +205,10 @@
     - Habiltar a função Single page application (SPA) mode
     - Inserir o domínio final
     - Deixar acionado Automatic SSL (ACME)
+
+    ## 7. Deploy automático
+
+    Deploy automático com gitea: [aqui](https://docs.meli.sh/get-started/pr-previews?highlight=deplo#gitea)
 
     ## Bibliografia
 
