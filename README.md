@@ -168,11 +168,11 @@
 
     ```shell
 
-    	 # Faça o build do seu app/site em Gatsby
+       # Faça o build do seu app/site em Gatsby
        # digite o comando
            gatsby build
 
-    	 # Faça o build do seu app/site em Gatsby
+       # Envie o seu site para o seu servidor Poupa Luz
        # digite o comando
        # AVISO: este comando está fazendo deploy  da branch master
     		npx -p "@getmeli/cli" meli upload \
