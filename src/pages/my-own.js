@@ -102,6 +102,7 @@ const IndexPage = ({ data, location }) => {
 				<Layout type="HEADER" /*logo={data.edu4Dev}*/ />
 				{/* <h1>{cardState}</h1> */}
 				{/* <h1>{counter}</h1> */}
+
 				<Layout
 					type="MEMORYGAME"
 					opt={{

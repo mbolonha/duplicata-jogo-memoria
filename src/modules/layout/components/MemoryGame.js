@@ -12,7 +12,7 @@ import {
 	open,
 } from '@material-ui/core'
 import CardContainer from '../containers/CardContainer'
-
+import CloseButton from '../../../../static/assets/images/close-button.svg'
 const MemoryGame = ({
 	cards,
 	DialogMigrate,
@@ -27,6 +27,7 @@ const MemoryGame = ({
 	setShowModal,
 }) => (
 	<>
+		<button onClick={() => setShowModal(true)}>Fechar Aqui</button>
 		<div className="second-row-for-now">
 			<div className="circle-shadow">
 				<ArrowRightIcon />
@@ -77,7 +78,9 @@ const MemoryGame = ({
 					aria-labelledby="alert-dialog-title"
 					aria-describedby="alert-dialog-description"
 				>
-					<button onClick={() => setShowModal(!true)}>Fechar Aqui</button>
+					<button onClick={() => setShowModal(!true)} className="close-button">
+						<CloseButton />
+					</button>
 
 					<DialogTitle id="alert-dialog-title">
 						Hurray!!! You completed the challenge
