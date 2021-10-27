@@ -74,7 +74,7 @@
 				flex-direction: column;
 				align-self: center;
 				p {
-					font-family: $three__font;
+					font-family: $second__font;
 					color: $success__color;
 					font-size: $xs__fontSize;
 					small {
@@ -94,7 +94,7 @@
 					font-weight: 900;
 					font-size: 32px;
 					letter-spacing: 0.6px;
-					font-family: $two__font;
+					font-family: $second__font;
 				}
 				// .hero-heading-h1,
 				// .hero-heading-h2 {
@@ -105,11 +105,11 @@
 					letter-spacing: 0.6px;
 					text-transform: uppercase;
 					font-size: 17px;
-					font-family: $two__font;
+					font-family: $second__font;
 					margin-bottom: 15px;
 				}
 				.hero-heading-p {
-					font-family: $two__font;
+					font-family: $second__font;
 					font-size: 16px;
 					font-weight: 500;
 					margin: 15px 0;
@@ -140,7 +140,7 @@
 							text-align: center;
 							padding: 3px 15px 3px 3px;
 							border-radius: 4px;
-							font-family: $sex__font;
+							font-family: $second__font;
 							text-transform: uppercase;
 							font-weight: 100;
 							z-index: 1;
@@ -148,7 +148,7 @@
 						}
 						&.head-2 {
 							// background-color: palegoldenrod;
-							font-family: $sex__font;
+							font-family: $second__font;
 							color: white;
 							font-size: 28px;
 							position: absolute;
@@ -172,7 +172,7 @@
 							color: #000;
 							white-space: nowrap;
 
-							font-family: $sex__font;
+							font-family: $second__font;
 							font-size: 18px;
 							padding: 0 10px 0 5px;
 							.FaPlay {
@@ -216,7 +216,7 @@
 				// 	grid-area: wrapper-bottom-hero;
 				li a {
 					color: white;
-					font-family: $sex__font;
+					font-family: $second__font;
 					font-size: 17px;
 				}
 				li.nav-item a.nav-link {

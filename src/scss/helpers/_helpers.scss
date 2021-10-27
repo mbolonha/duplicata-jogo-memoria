@@ -244,12 +244,12 @@
 				color: yellow;
 				font-size: 32px;
 				line-height: 32px;
-				font-family: $sex__font;
+				font-family: $second__font;
 				position: relative;
 				text-shadow: 1px 2px 3px $that_green__RGBAcolor;
 				text-align: center;
 				&.small-q {
-					font-family: $seven__font;
+					font-family: $second__font;
 					font-size: 18px;
 					text-shadow: 1px 1px 2px $secondary_is_this_green__color;
 					color: $secondary_blue__color;
@@ -304,7 +304,7 @@
 				font-size: 48px;
 				line-height: 26px;
 				text-shadow: 2px 2px 3px $secondary_pink__RGBAcolor;
-				font-family: $sex__font;
+				font-family: $second__font;
 			}
 			h3.seven-title-green {
 				color: $brand__color;
@@ -313,7 +313,7 @@
 				font-size: 18px;
 				line-height: 26px;
 				text-shadow: 2px 2px 3px $that_green__RGBAcolor;
-				font-family: $seven__font;
+				font-family: $second__font;
 				display: flex;
 				height: 100%;
 				align-items: center;
@@ -327,10 +327,9 @@
 			.seven-list-item {
 				color: #fff;
 				// font-style: italic;
-				// font-family: $eight__font;
 			}
 			h3.seven-subtitle {
-				font-family: $sex__font;
+				font-family: $second__font;
 				font-size: 24px;
 				position: relative;
 				color: $secondary_pink__color;
@@ -338,11 +337,11 @@
 				// box-shadow: 3px 3px 3px $that_green__color;
 				text-shadow: 1px 2px 3px $secondary_pink__RGBAcolor;
 				font-weight: 300;
-				// font-family: $seven__font;
+				// font-family: $second__font;
 			}
 			h2.seven-title {
 				font-weight: 600;
-				font-family: $nine__font;
+				font-family: $main__font;
 
 				font-size: 30px;
 				position: relative;
