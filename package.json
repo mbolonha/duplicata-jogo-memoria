@@ -1,8 +1,8 @@
 {
-  "name": "edu4dev",
+  "name": "jogo-da-memoria",
   "version": "1.0.0",
   "private": true,
-  "description": "Edu4Dev",
+  "description": "Jogo da memória",
   "author": "bolonhadev",
   "keywords": [
     "gatsby"
