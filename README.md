@@ -79,7 +79,9 @@
 
 4.  **Servidor Serverless**
 
+    Sabe o [Netlify](https://netlify.com/)? Então...
     Sugerimos que use um servidor baseado em Caddy, que é o [Meli.sh](http://meli.sh/).
+    É baseado no Netlify.
 
     ![Meli Logotipo](https://docs.meli.sh/img/logo.svg)
 
@@ -160,6 +162,27 @@
 
     Acesse poupaluz.meudominio.dev e coloque suas credenciais na página de login
 
+    ## Criando um website e fazendo o deploy
+
+    Para fazer o deploy manual você deve criar um site e depois gerar um token no seu Poupa Luz.
+
+    ```shell
+
+    	 # Faça o build do seu app/site em Gatsby
+       # digite o comando
+           gatsby build
+
+    	 # Faça o build do seu app/site em Gatsby
+       # digite o comando
+       # AVISO: este comando está fazendo deploy  da branch master
+    		npx -p "@getmeli/cli" meli upload \
+    		/home/SEUUSERAQUI/SUAPASTA/PASTADOPROJETOEMGASTBY/public \
+    		--url https://poupaluz.seudominio.dev \
+    		--site xxxxxxxxxxxxxxx \
+    		--token xxxxxxxxxxxxxx \
+    		--branch "master"
+    ```
+
     ## Bibliografia
 
     Testando o Gatsby zerado: [aqui](https://www.gatsbyjs.com/docs/quick-start/)
@@ -171,14 +194,3 @@
     Documentação do Meli: [aqui](https://docs.meli.sh/)
     Proxy Reverse do Meli: [aqui](https://docs.meli.sh/configuration/reverse-proxy?highlight=proxy#nginx)
     Let's Encrypt instruções: [aqui](https://docs.meli.sh/configuration/reverse-proxy?highlight=proxy#wildcard-certificates-from-lets-encrypt)
-
-    asd
-
-    ```shell
-    		npx -p "@getmeli/cli" meli upload \
-    		/home/milton/www/edu4dev/public \
-    		--url https://poupaluz.edu4.dev \
-    		--site xxxxxxxxxxxxxxx \
-    		--token xxxxxxxxxxxxxx \
-    		--branch "master"
-    ```
