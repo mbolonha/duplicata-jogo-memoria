@@ -20,6 +20,8 @@ import {
 	FaGitSquare,
 } from 'react-icons/fa'
 import ArrowRightIcon from '../../../../static/assets/images/icon-arrow-right.svg'
+import TesteGlicemia from '../../../../static/assets/images/teste-glicemia.svg'
+
 const Main = () => (
 	<>
 		<div className="main-content">
@@ -52,66 +54,82 @@ const Main = () => (
 
 				<ul className="deck">
 					<li className="card">
+						<TesteGlicemia />
 						<i className="fa fa-diamond"></i>
 						<FaStar />
 					</li>
 					<li className="card">
+						<TesteGlicemia />
 						<i className="fa fa-diamond"></i>
 						<FaAdversal />
 					</li>
 					<li className="card">
+						<TesteGlicemia />
 						<i className="fa fa-diamond"></i>
 						<FaAtlassian />
 					</li>
 					<li className="card">
+						<TesteGlicemia />
 						<i className="fa fa-diamond"></i>
 						<FaAdn />
 					</li>
 					<li className="card">
+						<TesteGlicemia />
 						<i className="fa fa-diamond"></i>
 						<FaAccessibleIcon />
 					</li>
 					<li className="card">
+						<TesteGlicemia />
 						<i className="fa fa-diamond"></i>
 						<FaAtlassian />
 					</li>
 					<li className="card">
+						<TesteGlicemia />
 						<i className="fa fa-diamond"></i>
 						<FaAngellist />
 					</li>
 					<li className="card">
+						<TesteGlicemia />
 						<i className="fa fa-diamond"></i>
 						<FaAmazon />
 					</li>
 					<li className="card">
+						<TesteGlicemia />
 						<i className="fa fa-diamond"></i>
 						<FaStar />
 					</li>
 					<li className="card">
+						<TesteGlicemia />
 						<i className="fa fa-diamond"></i>
 						<FaAlgolia />
 					</li>
 					<li className="card">
+						<TesteGlicemia />
 						<i className="fa fa-diamond"></i>
 						<FaAngellist />
 					</li>
 					<li className="card">
+						<TesteGlicemia />
 						<i className="fa fa-diamond"></i>
 						<FaAlgolia />
 					</li>
 					<li className="card">
+						<TesteGlicemia />
 						<i className="fa fa-diamond"></i>
 						<FaAdn />
 					</li>
 					<li className="card">
+						<TesteGlicemia />
 						<i className="fa fa-diamond"></i>
 						<FaAmazon />
 					</li>
 					<li className="card">
+						<TesteGlicemia />
 						<i className="fa fa-diamond"></i>
 						<FaAdversal />
 					</li>
 					<li className="card">
+						<TesteGlicemia />
 						<i className="fa fa-diamond"></i>
 						<FaAccessibleIcon />
 					</li>

@@ -39,13 +39,16 @@ const IndexPage = ({ data, location }) => {
 			}
 
 			verificaCardsVirados(cardsVirados) {
-				//  let cardsVirados = [];
+				//  let cardsVirados = []; aqui está o problema pt 1
 				let card1 = game.obterImagemDoCard(cardsVirados[0])
 				let card2 = game.obterImagemDoCard(cardsVirados[1])
-				console.log('card1:::' + cardsVirados)
-
+				console.log('card1:::' + cardsVirados[0])
+				cardsVirados.forEach(function (cardZ) {
+					console.log('cardZ is >>>')
+					console.log(card1)
+				})
 				if (card1 === card2) {
-					cardsEncontrados++
+					// cardsEncontrados++
 					cardsVirados.forEach(function (card) {
 						card.animateCss('tada', function () {
 							card.toggleClass('open show match')
@@ -53,6 +56,7 @@ const IndexPage = ({ data, location }) => {
 					})
 				} else {
 					cardsVirados.forEach(function (card) {
+						console.log('card is:::>>>>' + card)
 						card.animateCss('shake', function () {
 							card.toggleClass('open show')
 						})
