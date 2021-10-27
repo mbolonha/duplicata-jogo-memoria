@@ -233,3 +233,13 @@
     Proxy Reverse do Meli: [aqui](https://docs.meli.sh/configuration/reverse-proxy?highlight=proxy#nginx)
 
     Let's Encrypt instruções: [aqui](https://docs.meli.sh/configuration/reverse-proxy?highlight=proxy#wildcard-certificates-from-lets-encrypt)
+
+    ## Direitos Autorais
+
+    As únicas entidades a terem o direito sobre o mesmo é o autor e a beneficiada direta (Studio Visual e seus clientes), sendo vedado o uso sobre qualquer maneira do mesmo por terceiros.
+
+    É expressamente proibido divulgar este código em repositório público.
+
+    É expressamente proibido usar este código para fins didáticos pedagógicos.
+
+    É expressamente bem-vindo todo e qualquer contato de interesse ou esclarecimentos.
