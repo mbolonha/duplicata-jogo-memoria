@@ -12,14 +12,20 @@
     - shell;
     - git;
     - vps;
-    - docker;
-    - docker-compose;
     - javascript;
     - npm;
     - nodejs;
     - gatsby-cli;
     - reactjs;
-    - sass;
+    - sass.
+
+    Tecnologias opcionais:
+
+    - nginx;
+    - docker;
+    - docker-compose;
+    - meli/caddy;
+    - gitea;
 
 1.  **Crie um site em Gatsby usando o git da Studio Visual.**
 
