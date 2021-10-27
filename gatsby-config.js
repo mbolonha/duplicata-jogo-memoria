@@ -53,13 +53,6 @@ module.exports = {
 			},
 		},
 		{
-			resolve: `gatsby-source-filesystem`,
-			options: {
-				name: `videos`,
-				path: `${__dirname}/static/assets/videos`,
-			},
-		},
-		{
 			resolve: 'gatsby-plugin-react-svg',
 			options: {
 				rule: {
@@ -130,12 +123,13 @@ module.exports = {
 			resolve: `gatsby-plugin-google-fonts`,
 			options: {
 				fonts: [
-					`Comfortaa:300,400,500,600,700`,
-					`Ubuntu Mono`,
-					`Bowlby One SC`,
-					`Josefin Sans`,
-					`Coda`,
+					// `Comfortaa:300,400,500,600,700`,
+					// `Ubuntu Mono`,
+					// `Bowlby One SC`,
+					// `Josefin Sans`,
+					// `Coda`,
 					`Mulish`,
+					`Alegreya Sans`,
 				],
 				display: 'swap',
 			},

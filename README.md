@@ -1,21 +1,49 @@
 <p align="center">
-  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
+🎲
 </p>
 <h1 align="center">
-  Gatsby minimal starter s
+🃏 Jogo da Memória
 </h1>
 
-## 🚀 Quick start
+## 🚀 Para iniciar localmente
 
-1.  **Create a Gatsby site.**
+0.  **Pré-requisitos.**
 
-    Use the Gatsby CLI to create a new site, specifying the minimal starter.
+    Este jogo da memória foi construído usando o boilerplate do autor Milton Bolonha,
+    usado para fins comerciais explorados pela Studio Visual.
+
+    As seguintes tecnologias lideram este desenvolvimento:
+
+    - npm;
+    - gatsby-cli;
+
+1.  **Crie um site em Gatsby usando o git da Studio Visual.**
+
+    Use a CLI do Gatsby para gerar um novo site/jogo da memória.
 
     ```shell
-    # create a new Gatsby site using the minimal starter
-    npm init gatsby
+    # certifique-se de ter o Gatsby instalado e atualizado
+    # digite o comando
+    	npm install -g gatsby-cli
+    # neste ponto você está apto a baixar o projeto localmente
+    # digite o comando
+    	gatsby new jogo-da-memoria https://github.com/studiovisual/jogo-da-memoria
+
+    # acesse os arquivos que estão no diretório /jogo-da-memoria/
+    # digite o comando
+    		cd jogo-da-memoria/
+
+    # instale os pacotes npm
+    		npm i
+
+    # para iniciar o App localmente
+    		gatsby develop
+
+    # para buildar o App
+    		gatsby build
+
+    # para limpar o cache
+    		gatsby clean
     ```
 
 2.  **Start developing.**
