@@ -210,11 +210,10 @@
     ## Bibliografia
 
     Testando o Gatsby zerado: [aqui](https://www.gatsbyjs.com/docs/quick-start/)
+
     Gatsby Oficial Cloud: [aqui](https://www.gatsbyjs.com/products/cloud/)
 
-    Curso de Gatsby: [aqui](https://www.udemy.com/course/gatsby-crie-um-site-pwa-com-react-graphql-e-netlify-cms/)
-
-    Ou: [aqui](http://bj-share.info/)
+    Curso de Gatsby: [aqui](https://www.udemy.com/course/gatsby-crie-um-site-pwa-com-react-graphql-e-netlify-cms/) ou [aqui](http://bj-share.info/)
 
     Instalação do Meli: [aqui](https://docs.meli.sh/get-started/installation)
 
