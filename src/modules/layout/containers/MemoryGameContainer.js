@@ -1,16 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react'
-// import { React } from '../dependencies'
-// import Container from '@material-ui/core/Container'
-// import ArrowRightIcon from '../../../../static/assets/images/icon-arrow-right.svg'
-import {
-	Dialog,
-	// DialogActions,
-	// DialogContent,
-	// DialogContentText,
-	// Button,
-	// DialogTitle,
-} from '@material-ui/core'
-// import CardContainer from './CardContainer'
+import { Dialog } from '@material-ui/core'
+
 import MemoryGame from '../components/MemoryGame'
 function shuffleCards(array) {
 	const length = array.length
@@ -44,7 +34,6 @@ function DialogMigrate({
 			onClose()
 		}
 	}
-
 	return (
 		<Dialog onClose={handleClose} {...rest}>
 			{children}
@@ -58,7 +47,7 @@ const MemoryGameContainer = ({ opt }) => {
 	const [cards, setCards] = useState(
 		shuffleCards.bind(
 			null,
-			opt.uniqueElementsArray.concat(opt.secondElementsArray)
+			opt.firstElementsArray.concat(opt.secondElementsArray)
 		)
 	)
 	const [openCards, setOpenCards] = useState([])
@@ -69,19 +58,15 @@ const MemoryGameContainer = ({ opt }) => {
 	const [bestScore, setBestScore] = useState(
 		JSON.parse(localStorage.getItem('bestScore')) || Number.POSITIVE_INFINITY
 	)
-	// console.log('opt---------->')
-	// console.log(opt)
 	const timeout = useRef(null)
-
 	const disable = () => {
 		setShouldDisableAllCards(true)
 	}
 	const enable = () => {
 		setShouldDisableAllCards(false)
 	}
-
 	const checkCompletion = () => {
-		if (Object.keys(clearedCards).length === opt.uniqueElementsArray.length) {
+		if (Object.keys(clearedCards).length === opt.firstElementsArray.length) {
 			setShowModal(true)
 			const highScore = Math.min(moves, bestScore)
 			setBestScore(highScore)
@@ -111,7 +96,6 @@ const MemoryGameContainer = ({ opt }) => {
 			setOpenCards([index])
 		}
 	}
-
 	useEffect(() => {
 		let timeout = null
 		if (openCards.length === 2) {
@@ -128,11 +112,9 @@ const MemoryGameContainer = ({ opt }) => {
 	const checkIsFlipped = (index) => {
 		return openCards.includes(index)
 	}
-
 	const checkIsInactive = (card) => {
 		return Boolean(clearedCards[card.type])
 	}
-
 	const handleRestart = () => {
 		setClearedCards({})
 		setOpenCards([])
@@ -141,7 +123,7 @@ const MemoryGameContainer = ({ opt }) => {
 		setShouldDisableAllCards(false)
 		// set a shuffled deck of cards
 		setCards(
-			shuffleCards(opt.uniqueElementsArray.concat(opt.secondElementsArray))
+			shuffleCards(opt.firstElementsArray.concat(opt.secondElementsArray))
 		)
 	}
 	return (
@@ -159,6 +141,7 @@ const MemoryGameContainer = ({ opt }) => {
 				cards={cards}
 				setCards={setCards}
 				moves={moves}
+				setShowModal={setShowModal}
 			/>
 		</>
 	)

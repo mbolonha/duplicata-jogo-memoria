@@ -9,6 +9,7 @@ import {
 	DialogContentText,
 	Button,
 	DialogTitle,
+	open,
 } from '@material-ui/core'
 import CardContainer from '../containers/CardContainer'
 
@@ -23,6 +24,7 @@ const MemoryGame = ({
 	handleRestart,
 	setOpen,
 	moves,
+	setShowModal,
 }) => (
 	<>
 		<div className="second-row-for-now">
@@ -31,7 +33,6 @@ const MemoryGame = ({
 			</div>
 			<h1 className="main-h1">Tratamento</h1>
 		</div>
-
 		<div className="App">
 			<div className="container">
 				{cards.map((card, index) => {
@@ -68,7 +69,7 @@ const MemoryGame = ({
 			<Container>
 				<DialogMigrate
 					open={showModal}
-					disableEscapeKeyDown
+					// disableEscapeKeyDown
 					onClose={() => {
 						// Whatever you want to run here on close.
 						setOpen(false)
@@ -76,6 +77,8 @@ const MemoryGame = ({
 					aria-labelledby="alert-dialog-title"
 					aria-describedby="alert-dialog-description"
 				>
+					<button onClick={() => setShowModal(!true)}>Fechar Aqui</button>
+
 					<DialogTitle id="alert-dialog-title">
 						Hurray!!! You completed the challenge
 					</DialogTitle>

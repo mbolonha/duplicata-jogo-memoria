@@ -17,57 +17,73 @@ import Cardgb from '../../static/assets/images/glicemia-card-07-b.svg'
 import Cardha from '../../static/assets/images/glicemia-card-08-a.svg'
 import Cardhb from '../../static/assets/images/glicemia-card-08-b.svg'
 
-const uniqueElementsArray = [
+const firstElementsArray = [
 	{
-		type: 'Pikachu',
+		type: 'Carda',
 		image: <Cardaa />,
 	},
 	{
-		type: 'ButterFree',
+		type: 'Cardb',
 		image: <Cardba />,
 	},
 	{
-		type: 'Charmander',
+		type: 'Cardc',
 		image: <Cardca />,
 	},
 	{
-		type: 'Squirtle',
+		type: 'Cardd',
 		image: <Cardda />,
 	},
 	{
-		type: 'Pidgetto',
+		type: 'Carde',
 		image: <Cardea />,
 	},
 	{
-		type: 'Bulbasaur',
+		type: 'Cardf',
 		image: <Cardfa />,
+	},
+	{
+		type: 'Cardg',
+		image: <Cardga />,
+	},
+	{
+		type: 'Cardh',
+		image: <Cardha />,
 	},
 ]
 
 const secondElementsArray = [
 	{
-		type: 'Pikachu',
+		type: 'Carda',
 		image: <Cardab />,
 	},
 	{
-		type: 'ButterFree',
+		type: 'Cardb',
 		image: <Cardbb />,
 	},
 	{
-		type: 'Charmander',
+		type: 'Cardc',
 		image: <Cardcb />,
 	},
 	{
-		type: 'Squirtle',
+		type: 'Cardd',
 		image: <Carddb />,
 	},
 	{
-		type: 'Pidgetto',
+		type: 'Carde',
 		image: <Cardeb />,
 	},
 	{
-		type: 'Bulbasaur',
+		type: 'Cardf',
 		image: <Cardfb />,
+	},
+	{
+		type: 'Cardg',
+		image: <Cardgb />,
+	},
+	{
+		type: 'Cardh',
+		image: <Cardhb />,
 	},
 ]
 
@@ -77,7 +93,6 @@ const IndexPage = ({ data, location }) => {
 			<Layout
 				type="ROW"
 				opt={{
-					// bgColor: '#d352cc',
 					isBoxed: true,
 					classes: '',
 					alignTo: 'left',
@@ -90,7 +105,7 @@ const IndexPage = ({ data, location }) => {
 				<Layout
 					type="MEMORYGAME"
 					opt={{
-						uniqueElementsArray,
+						firstElementsArray,
 						secondElementsArray,
 					}} /*logo={data.edu4Dev}*/
 				/>
