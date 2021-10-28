@@ -84,6 +84,20 @@
 
     Edite o arquivo `src/pages/index.js` e veja o site sendo atualizado em tempo real.
 
+    ## Organização das Pastas
+
+    ./jogo-da-memoria
+    ├── 📂/src
+    ├──── 📂/scss
+    ├─────── style.scss
+    ├─────── 📂/global
+    ├─────── 📂/helpers
+    ├─────── 📂/modules
+    ├───────── 📂/layout
+    ├─────── 📂/objects
+    ├─────── 📂/pages
+    └──📂/static
+
 4.  **Servidor Serverless**
 
     Sabe o [Netlify](https://netlify.com/)? Então...
