@@ -5,7 +5,7 @@ $bodyColor__bgColor: #fff;
 
 $cta__color: #0c0c0c;
 $additional__color: #fff;
-$additionalDark__color: #eb412c;
+$additionalDark__color: $brand__color;
 
 $brand_black__color: #0c0c0c;
 $brand_white__color: #fff;
@@ -18,9 +18,9 @@ $grayscale_600__color: #a3a3a3;
 $secondary_pink__color: #ff4d59;
 
 $btn_brown__active: #e0c6ac;
-$btn_brown__not_active: #eb412c;
+$btn_brown__not_active: $brand__color;
 
-$ribbon_top__color: #eb412c;
+$ribbon_top__color: $brand__color;
 
 $brown__shadowBox: 0px 10px 15px 0px rgba(51, 14, 3, 0.5);
 $border_tick: #8a6248;
