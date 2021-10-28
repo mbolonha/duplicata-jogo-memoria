@@ -43,17 +43,18 @@ jobs:
           key: ${{ secrets.SSH_DEV_DEPLOY_KEY }}
           port: 22
           script: |
+            IMG_SHA=$(echo $GITHUB_SHA | head -c7)
             echo "Obtendo imagem atualizada do repositório"
             docker login -u ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }} -p ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }} registry.digitalocean.com
 
-            docker pull ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:$(echo $GITHUB_SHA | head -c7)
+            docker pull ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:$IMG_SHA
 
             docker logout registry.digitalocean.com
 
             echo "Removendo container existente"
             docker rm -f diabetes-brasil-dia-do-diabetes
 
-            echo "Criando novo container para a imagem ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:$(echo $GITHUB_SHA | head -c7)"
+            echo "Criando novo container para a imagem ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:$IMG_SHA"
             docker run -d -p 9000 \
               --name="diabetes-brasil-dia-do-diabetes" \
               --restart=unless-stopped \
@@ -63,7 +64,8 @@ jobs:
               -e LETSENCRYPT_HOST=diadodiabetes.intest.com.br \
               -e LETSENCRYPT_EMAIL=dominios@studiovisual.com.br \
               --network webproxy \
-             ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:$(echo $GITHUB_SHA | head -c7) ${{ env.COMMAND }}
+             ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:$IMG_SHA \
+             ${{ env.COMMAND }}
 
             echo "Reiniciando servidor de proxy"
             docker restart nginx-web nginx-gen
