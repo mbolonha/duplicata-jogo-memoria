@@ -1,6 +1,8 @@
 header {
 	// font-size: 13px;
 	// padding-bottom: $header__height;
+	z-index: 9;
+	position: relative;
 	width: 100%;
 	border-top: 3px solid $ribbon_top__color;
 	div.main-header {

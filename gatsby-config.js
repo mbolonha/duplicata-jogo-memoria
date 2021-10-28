@@ -104,7 +104,7 @@ module.exports = {
 		{
 			resolve: `gatsby-plugin-google-fonts`,
 			options: {
-				fonts: [`Mulish`, `Alegreya Sans`, `Roboto`],
+				fonts: [`Mulish`, `Alegreya Sans\:300,400,500,700,800,900`, `Roboto`],
 				display: 'swap',
 			},
 		},

@@ -25,7 +25,7 @@ const MemoryGame = ({
 }) => (
 	<>
 		{/* Botão para abrir o modal */}
-		{/* <button onClick={() => setShowModal(true)}>Abrir Aqui</button> */}
+		<button onClick={() => setShowModal(true)}>Abrir Aqui</button>
 		<div className="second-row-for-now">
 			<div className="circle-shadow">
 				<ArrowRightIcon />
@@ -79,24 +79,40 @@ const MemoryGame = ({
 					}}
 					aria-labelledby="alert-dialog-title"
 					aria-describedby="alert-dialog-description"
+					className="mymodalhere"
 				>
 					<button onClick={() => setShowModal(!true)} className="close-button">
 						<CloseButton />
 					</button>
+					<div className="wrapper-modal">
+						<DialogTitle className="modal-heading">
+							<span>Parabéns,</span> <br />
+							você completou <br /> o jogo da memória!
+						</DialogTitle>
+						<DialogContent>
+							<DialogContentText className="modal-paragraph">
+								Você terminou o jogo em {moves} fake/moves/segundos.
+							</DialogContentText>
+							<DialogContentText className="modal-paragraph bolder">
+								Se você gostou do jogo, compartilhe com seus amigos.
+							</DialogContentText>
 
-					<DialogTitle id="alert-dialog-title">
-						Hurray!!! You completed the challenge
-					</DialogTitle>
-					<DialogContent>
-						<DialogContentText id="alert-dialog-description">
-							You completed the game in {moves} moves.
-						</DialogContentText>
-					</DialogContent>
-					<DialogActions>
-						<Button onClick={handleRestart} className="button-restart">
-							Jogar novamente
-						</Button>
-					</DialogActions>
+							<DialogContentText className="modal-paragraph">
+								Compartilhe
+							</DialogContentText>
+						</DialogContent>
+						<DialogActions>
+							<Button onClick={handleRestart} className="button-restart">
+								Jogar novamente
+							</Button>
+							<Button onClick={handleRestart} className="button-restart">
+								Jogar novamente
+							</Button>
+							<Button onClick={handleRestart} className="button-restart">
+								Jogar novamente
+							</Button>
+						</DialogActions>
+					</div>
 				</DialogMigrate>
 			</Container>
 		</div>
