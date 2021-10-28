@@ -124,8 +124,8 @@
                 meli:
                     image: getmeli/meli:beta
                     ports:
-                        - 80:80 # sequsetrando portas principais
-                        - 443:443 # sequsetrando portas principais
+                        - 80:80 # sequestrando portas principais
+                        - 443:443 # sequestrando portas principais
                     environment:
                         # no trailing slash !
                         MELI_URL: https://poupaluz.meudominio.dev
