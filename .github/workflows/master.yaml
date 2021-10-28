@@ -12,21 +12,11 @@ jobs:
       - name: Checkout do repositório
         uses: actions/checkout@v2
 
-      - name: Verificando o cache dos pacotes do Composer
+      - name: Verificando o cache dos pacotes do Node
         uses: actions/cache@v2
         with:
-          path: /tmp/composer-cache
-          key: ${{ runner.os }}-${{ hashFiles('**/composer.lock') }}
-
-      - name: Executando composer install para dependências do Wordpress
-        env:
-          COMPOSER_AUTH: '{"github-oauth": {"github.com": "${{ secrets.GITHUB_TOKEN }}"}}'
-        uses: php-actions/composer@v5
-        with:
-          php_version: 8.0
-          version: 2
-          dev: no
-          args: -o --ignore-platform-reqs -d ./
+          path: /tmp/node-cache
+          key: ${{ runner.os }}-${{ hashFiles('**/package.json') }}
 
       - name: Setup do NodeJS para o tema
         uses: actions/setup-node@v2
@@ -34,7 +24,7 @@ jobs:
           node-version: '14'
 
       - name: Instalando o CLI do gatsby
-        run: yarn install -g gatsby-cli
+        run: yarn global add gatsby-cli
 
       - name: Executando yarn install
         run: yarn

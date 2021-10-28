@@ -24,7 +24,7 @@ jobs:
           node-version: '14'
 
       - name: Instalando o CLI do gatsby
-        run: yarn install -g gatsby-cli
+        run: yarn global add gatsby-cli
 
       - name: Executando yarn install
         run: yarn
