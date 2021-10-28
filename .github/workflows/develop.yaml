@@ -64,11 +64,9 @@ jobs:
               -e VIRTUAL_HOST=diadodiabetes.intest.com.br \
               -e LETSENCRYPT_HOST=diadodiabetes.intest.com.br \
               -e LETSENCRYPT_EMAIL=dominios@studiovisual.com.br \
-             ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.IMAGE_SHA }} \
-             ${{ env.COMMAND }}
-
-            echo "Conectando container manualmente a rede do Nginx Proxy"
-            docker network connect webproxy diabetes-brasil-dia-do-diabetes
+              --network webproxy
+              ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.IMAGE_SHA }} \
+              ${{ env.COMMAND }}
 
             echo "Reiniciando servidor de proxy"
             docker restart nginx-web nginx-gen
