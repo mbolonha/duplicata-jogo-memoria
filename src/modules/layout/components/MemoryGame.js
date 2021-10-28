@@ -1,5 +1,4 @@
 import React from 'react'
-
 import Container from '@material-ui/core/Container'
 import ArrowRightIcon from '../../../../static/assets/images/icon-arrow-right.svg'
 import {
@@ -25,7 +24,8 @@ const MemoryGame = ({
 	setShowModal,
 }) => (
 	<>
-		<button onClick={() => setShowModal(true)}>Fechar Aqui</button>
+		{/* Botão para abrir o modal */}
+		{/* <button onClick={() => setShowModal(true)}>Abrir Aqui</button> */}
 		<div className="second-row-for-now">
 			<div className="circle-shadow">
 				<ArrowRightIcon />
@@ -50,9 +50,9 @@ const MemoryGame = ({
 			</div>
 			<div>
 				<div className="score">
-					<div className="moves">
+					{/* <div className="moves">
 						<span className="bold">Moves:</span> {moves}
-					</div>
+					</div> */}
 					{/* {localStorage.getItem('bestScore') && (
 							<div className="high-score">
 								<span className="bold">Best Score:</span> {bestScore}
@@ -60,8 +60,12 @@ const MemoryGame = ({
 						)} */}
 				</div>
 				<div className="restart">
-					<Button onClick={handleRestart} color="primary" variant="contained">
-						Restart
+					<Button
+						onClick={handleRestart}
+						className="button-restart"
+						// variant="contained"
+					>
+						Jogar novamente
 					</Button>
 				</div>
 			</div>
@@ -89,8 +93,8 @@ const MemoryGame = ({
 						</DialogContentText>
 					</DialogContent>
 					<DialogActions>
-						<Button onClick={handleRestart} color="primary">
-							Restart
+						<Button onClick={handleRestart} className="button-restart">
+							Jogar novamente
 						</Button>
 					</DialogActions>
 				</DialogMigrate>
