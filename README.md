@@ -81,8 +81,6 @@
 3.  **Servindo na 8000**
 
     O Seu site está rodando no endereço http://localhost:8000
-    A index não está rodando né?
-    Visite http://localhost:8000/my-own
 
     Edite o arquivo `src/pages/index.js` e veja o site sendo atualizado em tempo real.
 
