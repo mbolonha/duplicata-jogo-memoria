@@ -43,6 +43,13 @@ jobs:
           key: ${{ secrets.SSH_DEV_DEPLOY_KEY }}
           port: 22
           script: |
+            echo "Obtendo imagem atualizada do repositório"
+            docker login -u ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }} -p ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }} registry.digitalocean.com
+
+            docker pull ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:$(echo $GITHUB_SHA | head -c7)
+
+            docker logout registry.digitalocean.com
+
             echo "Removendo container existente"
             docker rm -f diabetes-brasil-dia-do-diabetes
 
