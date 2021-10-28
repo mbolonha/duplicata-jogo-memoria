@@ -1,7 +1,10 @@
-import React, { useEffect, useState, useRef } from 'react'
+import React from 'react'
 import Layout from '@Layout'
+
+// Dupla de cartas invocadas aqui
 import Cardaa from '../../static/assets/images/glicemia-card-01-a.svg'
 import Cardab from '../../static/assets/images/glicemia-card-01-b.svg'
+// separadas por $A/B = AA...AB...BA...BB...CA...CB...DA...DB...
 import Cardba from '../../static/assets/images/glicemia-card-02-a.svg'
 import Cardbb from '../../static/assets/images/glicemia-card-02-b.svg'
 import Cardca from '../../static/assets/images/glicemia-card-03-a.svg'
@@ -17,6 +20,9 @@ import Cardgb from '../../static/assets/images/glicemia-card-07-b.svg'
 import Cardha from '../../static/assets/images/glicemia-card-08-a.svg'
 import Cardhb from '../../static/assets/images/glicemia-card-08-b.svg'
 
+// Para fazer a concatenação de duplas distintas, mas semelhantes
+// Nosso jogo permite o uso de cartas diferentes se assim o desejar
+// caso não, coloque a mesma carta em ambas as listas, sob o mesmo tipo
 const firstElementsArray = [
 	{
 		type: 'Carda',
@@ -51,7 +57,7 @@ const firstElementsArray = [
 		image: <Cardha />,
 	},
 ]
-
+// segunda lista de cartas
 const secondElementsArray = [
 	{
 		type: 'Carda',
@@ -86,11 +92,14 @@ const secondElementsArray = [
 		image: <Cardhb />,
 	},
 ]
-
-const IndexPage = ({ data, location }) => {
+// Construindo a página
+const IndexPage = () => {
 	return (
+		// titleSeo = Título da página atual - $title::gatsby-config
+		// titleSeo é seguido por title::gatsby-config
 		<Layout type="BODY" opt={{ titleSeo: `DMDD` }}>
 			<Layout
+				// é um construtor tipo os do WP mas aqui
 				type="ROW"
 				opt={{
 					isBoxed: true,
@@ -99,19 +108,14 @@ const IndexPage = ({ data, location }) => {
 					bgColor: '#fff',
 				}}
 			>
-				<Layout type="HEADER" /*logo={data.edu4Dev}*/ />
-				{/* <h1>{cardState}</h1> */}
-				{/* <h1>{counter}</h1> */}
-
+				<Layout type="HEADER" />
 				<Layout
 					type="MEMORYGAME"
 					opt={{
 						firstElementsArray,
 						secondElementsArray,
-					}} /*logo={data.edu4Dev}*/
+					}}
 				/>
-
-				{/* <Layout type="MAIN" opt={'nothing here'} /> */}
 			</Layout>
 		</Layout>
 	)

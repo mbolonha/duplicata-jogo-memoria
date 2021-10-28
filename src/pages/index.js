@@ -1,109 +1,123 @@
-import React, { useState, useEffect } from 'react'
-import Swal from 'sweetalert2'
-import withReactContent from 'sweetalert2-react-content'
-// import 'animate.css'
-// import $ from 'jquery'
-import { StaticImage } from 'gatsby-plugin-image'
+import React from 'react'
 import Layout from '@Layout'
 
-const MySwal = withReactContent(Swal)
+// Dupla de cartas invocadas aqui
+import Cardaa from '../../static/assets/images/glicemia-card-01-a.svg'
+import Cardab from '../../static/assets/images/glicemia-card-01-b.svg'
+// separadas por $A/B = AA...AB...BA...BB...CA...CB...DA...DB...
+import Cardba from '../../static/assets/images/glicemia-card-02-a.svg'
+import Cardbb from '../../static/assets/images/glicemia-card-02-b.svg'
+import Cardca from '../../static/assets/images/glicemia-card-03-a.svg'
+import Cardcb from '../../static/assets/images/glicemia-card-03-b.svg'
+import Cardda from '../../static/assets/images/glicemia-card-04-a.svg'
+import Carddb from '../../static/assets/images/glicemia-card-04-b.svg'
+import Cardea from '../../static/assets/images/glicemia-card-05-a.svg'
+import Cardeb from '../../static/assets/images/glicemia-card-05-b.svg'
+import Cardfa from '../../static/assets/images/glicemia-card-06-a.svg'
+import Cardfb from '../../static/assets/images/glicemia-card-06-b.svg'
+import Cardga from '../../static/assets/images/glicemia-card-07-a.svg'
+import Cardgb from '../../static/assets/images/glicemia-card-07-b.svg'
+import Cardha from '../../static/assets/images/glicemia-card-08-a.svg'
+import Cardhb from '../../static/assets/images/glicemia-card-08-b.svg'
 
-const IndexPage = ({ data, location }) => {
-	const sentences = ['Ensino Disruptivo de Vdd !']
-	const [refState] = useState(
-		sentences[Math.floor(Math.random() * sentences.length)]
-	)
-
-	// const handle = useFullScreenHandle()
-
-	// const seo = {
-	// 	frontmatter: {
-	// 		slug: location.pathname.replace(/[^\w\d-]/g, ''),
-	// 		...data.frontmatter,
-	// 	},
-	// }
-	// console.log(data.nutkls);
+// Para fazer a concatenação de duplas distintas, mas semelhantes
+// Nosso jogo permite o uso de cartas diferentes se assim o desejar
+// caso não, coloque a mesma carta em ambas as listas, sob o mesmo tipo
+const firstElementsArray = [
+	{
+		type: 'Carda',
+		image: <Cardaa />,
+	},
+	{
+		type: 'Cardb',
+		image: <Cardba />,
+	},
+	{
+		type: 'Cardc',
+		image: <Cardca />,
+	},
+	{
+		type: 'Cardd',
+		image: <Cardda />,
+	},
+	{
+		type: 'Carde',
+		image: <Cardea />,
+	},
+	{
+		type: 'Cardf',
+		image: <Cardfa />,
+	},
+	{
+		type: 'Cardg',
+		image: <Cardga />,
+	},
+	{
+		type: 'Cardh',
+		image: <Cardha />,
+	},
+]
+// segunda lista de cartas
+const secondElementsArray = [
+	{
+		type: 'Carda',
+		image: <Cardab />,
+	},
+	{
+		type: 'Cardb',
+		image: <Cardbb />,
+	},
+	{
+		type: 'Cardc',
+		image: <Cardcb />,
+	},
+	{
+		type: 'Cardd',
+		image: <Carddb />,
+	},
+	{
+		type: 'Carde',
+		image: <Cardeb />,
+	},
+	{
+		type: 'Cardf',
+		image: <Cardfb />,
+	},
+	{
+		type: 'Cardg',
+		image: <Cardgb />,
+	},
+	{
+		type: 'Cardh',
+		image: <Cardhb />,
+	},
+]
+// Construindo a página
+const IndexPage = () => {
 	return (
-		<Layout type="BODY" opt={{ titleSeo: refState }}>
+		// titleSeo = Título da página atual - $title::gatsby-config
+		// titleSeo é seguido por title::gatsby-config
+		<Layout type="BODY" opt={{ titleSeo: `DMDD` }}>
 			<Layout
+				// é um construtor tipo os do WP mas aqui
 				type="ROW"
 				opt={{
-					// bgColor: '#d352cc',
 					isBoxed: true,
 					classes: '',
 					alignTo: 'left',
 					bgColor: '#fff',
 				}}
 			>
-				<Layout type="HEADER" /*logo={data.edu4Dev}*/ />
-				<Layout type="MAIN" opt={'nothing here'} />
+				<Layout type="HEADER" />
+				<Layout
+					type="MEMORYGAME"
+					opt={{
+						firstElementsArray,
+						secondElementsArray,
+					}}
+				/>
 			</Layout>
-
-			{/* <Layout type='FULLSCREEN'>
-        <Layout type='VIDEOPLAYER' url={data.promoVideo.publicURL} />
-      </Layout> */}
-
-			<Layout
-				type="ROW"
-				opt={{
-					// bgColor: '#d352cc',
-					isBoxed: true,
-					classes: '',
-					alignTo: 'left',
-					bgColor: '#47ff9d',
-				}}
-			>
-				<Layout type="FOOTER" />
-			</Layout>
-
-			{/* <Layout
-        type='ROW'
-        opt={{
-          // bgColor: '#d352cc',
-          isBoxed: false,
-          classes: "wrapper-overflow",
-          alignTo: "center",
-        }}
-      >
-
-		</Layout> */}
 		</Layout>
 	)
 }
-
-// export const queryBg = graphql`
-//   query heroBg {
-//     # heroImg: file(name: { eq: "hero-img" }) {
-//     #   childImageSharp {
-//     #     gatsbyImageData
-//     #   }
-//     # }
-//     # nutkls: file(name: { eq: "nutkls-img-hero" }) {
-//     #   childImageSharp {
-//     #     gatsbyImageData
-//     #   }
-//     # }
-//     # porto: file(name: { eq: "porto.jpg" }) {
-//     #   childImageSharp {
-//     #     gatsbyImageData
-//     #   }
-//     # }
-//     # edu4Dev: file(name: { eq: "edu4dev-logo" }) {
-//     #   childImageSharp {
-//     #     gatsbyImageData
-//     #   }
-//     #   extension
-//     #   publicURL
-//     # }
-//     # promoVideo: file(name: { eq: "promo-edu4dev" }) {
-//     #   publicURL
-//     # }
-//     # logo4dev: file(relativePath: { eq: "edu4dev-logo-2-menor.png" }) {
-//     #   childrenImageSharp {
-//     #     gatsbyImageData(layout: FIXED, width: 200)
-//     #   }
-//     # }
-//   }
-// `;
-
 export default IndexPage
