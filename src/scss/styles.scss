@@ -16,60 +16,58 @@ Version: 1.0
 4.0 Helpers & Fixes
 --------------------------------------------------------------*/
 
-@import "global/vars-colors";
-@import "global/vars-spaces";
-@import "global/vars-typograph";
-@import "global/vars-fx";
+@import 'global/vars-colors';
+@import 'global/vars-spaces';
+@import 'global/vars-typograph';
 
 /*--------------------------------------------------------------
 1.0 Basic settings
 --------------------------------------------------------------*/
 
-@import "global/_generic";
-@import "global/_base";
+@import 'global/_generic';
+@import 'global/_base';
 
 /*--------------------------------------------------------------
 1.0 Basic global settings
 --------------------------------------------------------------*/
 
-@import "generic";
-@import "base";
+@import 'generic';
+@import 'base';
 
 /*--------------------------------------------------------------
 2.0 Pages & Templates
 --------------------------------------------------------------*/
 
-@import "pages/index";
-@import "pages/card";
-@import "objects/_buttons";
+@import 'pages/index';
+@import 'pages/card';
+@import 'objects/_buttons';
 
 /*--------------------------------------------------------------
 3.0 Modules
 --------------------------------------------------------------*/
 
-@import "modules/buttons";
+@import 'modules/buttons';
 
 /*--------------------------------------------------------------
 3.1 Modules / Layout
 --------------------------------------------------------------*/
 
-@import "modules/layout/_main-menu";
-@import "modules/layout/menus";
-@import "modules/layout/_header";
-@import "modules/layout/_footer";
-@import "modules/layout/_row";
-@import "modules/layout/_row-bgColors";
-
+@import 'modules/layout/_main-menu';
+@import 'modules/layout/menus';
+@import 'modules/layout/_header';
+@import 'modules/layout/_footer';
+@import 'modules/layout/_row';
+@import 'modules/layout/_row-bgColors';
 
 /*--------------------------------------------------------------
 3.3 XXX
 --------------------------------------------------------------*/
 
-@import "objects/icons";
+@import 'objects/icons';
 
 /*--------------------------------------------------------------
 4.0 Helpers & Fixes
 --------------------------------------------------------------*/
 
-@import "helpers/responsive";
-@import "helpers/helpers";
+@import 'helpers/responsive';
+@import 'helpers/helpers';

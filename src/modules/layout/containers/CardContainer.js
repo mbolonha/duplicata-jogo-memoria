@@ -1,8 +1,6 @@
 import React from 'react'
-// import Card from '../components/Card'
 import classnames from 'classnames'
-// import pokeball from '../../../../static/assets/images/pokeball.png'
-import Pokeball from '../../../../static/assets/images/teste-glicemia.svg'
+import CardVerse from '../../../../static/assets/images/teste-glicemia.svg'
 
 const CardContainer = ({
 	onClick,
@@ -25,7 +23,7 @@ const CardContainer = ({
 				onClick={isInactive ? null : handleClick}
 			>
 				<div className="card-face card-font-face">
-					<Pokeball />
+					<CardVerse />
 				</div>
 				<div className="card-face card-back-face">{card.image}</div>
 			</div>
