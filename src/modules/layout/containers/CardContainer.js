@@ -15,17 +15,12 @@ const CardContainer = ({
 	const handleClick = () => {
 		!isFlipped && !isDisabled && onClick(index)
 	}
-	// console.log(card.type)
-	let x = card.type
 	return (
 		<>
-			{/* <h6>{card.type}</h6>
-			<br /> */}
 			<div
 				className={classnames('card', {
 					'is-flipped': isInactive ? true : isFlipped,
 					'is-inactive': isInactive,
-					[`${x}`]: true,
 				})}
 				onClick={isInactive ? null : handleClick}
 			>

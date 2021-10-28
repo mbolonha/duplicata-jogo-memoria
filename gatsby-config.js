@@ -36,13 +36,13 @@ module.exports = {
 		`gatsby-plugin-offline`,
 		`gatsby-plugin-react-helmet`,
 		`gatsby-plugin-catch-links`,
-		{
-			resolve: `gatsby-source-filesystem`,
-			options: {
-				name: `posts`,
-				path: `${__dirname}/posts`,
-			},
-		},
+		// {
+		// 	resolve: `gatsby-source-filesystem`,
+		// 	options: {
+		// 		name: `posts`,
+		// 		path: `${__dirname}/posts`,
+		// 	},
+		// },
 		{
 			resolve: `gatsby-source-filesystem`,
 			options: {

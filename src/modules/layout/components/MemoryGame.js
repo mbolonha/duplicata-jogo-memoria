@@ -1,15 +1,13 @@
-import React, { useEffect, useState, useRef } from 'react'
+import React from 'react'
 
 import Container from '@material-ui/core/Container'
 import ArrowRightIcon from '../../../../static/assets/images/icon-arrow-right.svg'
 import {
-	Dialog,
 	DialogActions,
 	DialogContent,
 	DialogContentText,
 	Button,
 	DialogTitle,
-	open,
 } from '@material-ui/core'
 import CardContainer from '../containers/CardContainer'
 import CloseButton from '../../../../static/assets/images/close-button.svg'

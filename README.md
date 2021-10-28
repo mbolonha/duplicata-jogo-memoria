@@ -84,14 +84,6 @@
 
     Edite o arquivo `src/pages/index.js` e veja o site sendo atualizado em tempo real.
 
-    !!!!!!!!!!!!!!!!
-
-    !!!importante!!!
-
-    !!!!!!!!!!!!!!!!
-
-    Está sendo refatorado, não se assute se ver console.log para todo lado. :D :D :D
-
 4.  **Servidor Serverless**
 
     Sabe o [Netlify](https://netlify.com/)? Então...
