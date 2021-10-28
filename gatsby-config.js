@@ -98,7 +98,7 @@ module.exports = {
 				background_color: `#fff`,
 				theme_color: `#eb412c`,
 				display: `fullscreen`,
-				icon: `${__dirname}/static/assets/images/diabetes-brasil-logo.svg`, // This path is relative to the root of the site.
+				icon: `${__dirname}/static/assets/images/diabetes-brasil-favicon.svg`, // This path is relative to the root of the site.
 			},
 		},
 		{
