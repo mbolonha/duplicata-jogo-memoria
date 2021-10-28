@@ -26,7 +26,7 @@ header {
 			}
 
 			.logo-link h1 {
-				color: $verylight_brown__bgColor;
+				// color: $verylight_brown__bgColor;
 				font-family: $main__font;
 			}
 
@@ -72,9 +72,9 @@ header {
 					color: $btn_brown__not_active;
 					font-size: $xs__fontSize;
 
-					&:hover {
-						color: $secondary_golden_rod__color;
-					}
+					// &:hover {
+					// color: $secondary_golden_rod__color;
+					// }
 
 					div.toggle-icon {
 						width: 30px;
