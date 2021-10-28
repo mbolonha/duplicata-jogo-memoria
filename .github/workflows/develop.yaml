@@ -68,6 +68,9 @@ jobs:
              ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.IMAGE_SHA }} \
              ${{ env.COMMAND }}
 
+            echo "Conectando container manualmente a rede do Nginx Proxy"
+            docker network connect webproxy diabetes-brasil-dia-do-diabetes
+
             echo "Reiniciando servidor de proxy"
             docker restart nginx-web nginx-gen
 
