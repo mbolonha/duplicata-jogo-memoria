@@ -1,6 +1,7 @@
 require('dotenv').config({
 	path: `.env.${process.env.NODE_ENV}`,
 })
+
 const path = require('path')
 const { credits } = require('./files-credits')
 
@@ -36,13 +37,6 @@ module.exports = {
 		`gatsby-plugin-offline`,
 		`gatsby-plugin-react-helmet`,
 		`gatsby-plugin-catch-links`,
-		// {
-		// 	resolve: `gatsby-source-filesystem`,
-		// 	options: {
-		// 		name: `posts`,
-		// 		path: `${__dirname}/posts`,
-		// 	},
-		// },
 		{
 			resolve: `gatsby-source-filesystem`,
 			options: {
@@ -54,7 +48,7 @@ module.exports = {
 			resolve: 'gatsby-plugin-react-svg',
 			options: {
 				rule: {
-					include: /images/, // See below to configure properly
+					include: /images/,
 				},
 			},
 		},
