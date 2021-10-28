@@ -1,0 +1,19 @@
+@media (max-width: $tablet__size) {
+	.desktop-only {
+		display: none !important;
+	}
+}
+@media (min-width: $tabletHack__size) {
+	.mobile-only {
+		display: none !important;
+	}
+}
+.responsive-padding {
+	@media (max-width: $widescreen__size) {
+		margin: 0 auto;
+		.boxed-column-child {
+			max-width: 90%;
+			margin: 0 auto;
+		}
+	}
+}

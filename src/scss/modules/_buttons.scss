@@ -1,0 +1,15 @@
+.button-black-gray{
+  color: white;
+  background-color: black;
+  padding: 2% 10%;
+  text-transform: uppercase;
+  font-weight: 700;
+  border: 1px solid #979797;
+  letter-spacing: 3.5px;
+
+  &:hover{
+    background: #fff;
+    color: #000;
+    border: 1px solid #000;
+  }
+}
