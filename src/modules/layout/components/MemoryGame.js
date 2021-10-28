@@ -97,7 +97,13 @@ const MemoryGame = ({
 						</DialogTitle>
 						<DialogContent>
 							<DialogContentText className="modal-paragraph">
-								Você terminou o jogo em {moves} fake/moves/segundos.
+								Você terminou o jogo em{` `}
+								<span className="bolder">
+									{moves}
+									{` `}
+									moves
+								</span>
+								.
 							</DialogContentText>
 							<DialogContentText className="modal-paragraph bolder">
 								Se você gostou do jogo,
