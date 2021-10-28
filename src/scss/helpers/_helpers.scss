@@ -293,7 +293,7 @@ body {
 }
 
 .button-restart {
-	border: 1px solid $secondary_pink__color;
+	border: 2px solid $secondary_pink__color;
 	// box-shadow: unset;
 	color: $secondary_pink__color;
 	background-color: #fff;
@@ -309,7 +309,6 @@ body {
 	padding: 16px;
 	font-family: $third__font;
 	text-transform: none;
-	margin: 0 auto;
 	margin-top: 27px;
 }
 
@@ -343,7 +342,8 @@ body {
 	max-width: $boxed__maxWidth;
 	margin: 0 auto;
 }
-.MuiDialog-paperWidthSm {
+
+.mymodalhere > .MuiDialog-container > div.MuiPaper-root {
 	margin: 0;
 }
 .wrapper-modal {
@@ -358,4 +358,30 @@ body {
 	height: 20px;
 	padding: 8px;
 	border-radius: 8px;
+}
+
+.modal-group-buttons {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.wrapper-buttons {
+	display: flex;
+	align-items: center;
+	span {
+		max-width: 87px;
+		width: 100%;
+		font-size: 14px;
+		font-family: $second__font;
+		text-transform: uppercase;
+	}
+	.modal-group-buttons {
+		width: 100%;
+	}
+}
+
+.modal-share-button {
+	width: 100%;
+	display: flex;
+	justify-content: space-evenly;
 }

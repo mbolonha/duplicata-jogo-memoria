@@ -1,6 +1,12 @@
 import React from 'react'
 import Container from '@material-ui/core/Container'
 import ArrowRightIcon from '../../../../static/assets/images/icon-arrow-right.svg'
+import CloseButton from '../../../../static/assets/images/close-button.svg'
+import FacebookIcon from '../../../../static/assets/images/face-icon.svg'
+import TwitterIcon from '../../../../static/assets/images/twitter-icon.svg'
+import WhatsIcon from '../../../../static/assets/images/whats-icon.svg'
+import InstagramIcon from '../../../../static/assets/images/instagram-icon.svg'
+import ShareIcon from '../../../../static/assets/images/share-icon.svg'
 import {
 	DialogActions,
 	DialogContent,
@@ -9,7 +15,7 @@ import {
 	DialogTitle,
 } from '@material-ui/core'
 import CardContainer from '../containers/CardContainer'
-import CloseButton from '../../../../static/assets/images/close-button.svg'
+
 const MemoryGame = ({
 	cards,
 	DialogMigrate,
@@ -94,14 +100,23 @@ const MemoryGame = ({
 								Você terminou o jogo em {moves} fake/moves/segundos.
 							</DialogContentText>
 							<DialogContentText className="modal-paragraph bolder">
-								Se você gostou do jogo, compartilhe com seus amigos.
-							</DialogContentText>
-
-							<DialogContentText className="modal-paragraph">
-								Compartilhe
+								Se você gostou do jogo,
+								<br />
+								compartilhe com seus amigos.
+								<div className="wrapper-buttons">
+									<span>Compartilhe</span>
+									<div className="modal-share-button">
+										<FacebookIcon />
+										<TwitterIcon />
+										<WhatsIcon />
+										<InstagramIcon />
+										<ShareIcon />
+									</div>
+								</div>
 							</DialogContentText>
 						</DialogContent>
-						<DialogActions>
+
+						<DialogActions className="modal-group-buttons">
 							<Button onClick={handleRestart} className="button-restart">
 								Jogar novamente
 							</Button>
