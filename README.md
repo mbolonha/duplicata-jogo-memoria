@@ -1,4 +1,6 @@
-# 🃏 Jogo da Memória
+# Dia do Diabetes🃏 Jogo da Memória - Studio Visual
+
+[![Ambiente de testes - diadodiabetes.intest.com.br](https://github.com/studiovisual/diabetes-brasil-jogo-da-memoria/actions/workflows/develop.yaml/badge.svg?branch=develop)](https://github.com/studiovisual/diabetes-brasil-jogo-da-memoria/actions/workflows/develop.yaml)
 
 ## 🚀 Para iniciar localmente
 
