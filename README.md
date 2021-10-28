@@ -118,43 +118,41 @@
 
     Crie um arquivo com o nome docker-compose.yml em algum lugar:
 
-        ```shell
-        		version: "3"
+    ```shell
+        version: "3"
+            services:
+                meli:
+                    image: getmeli/meli:beta
+                    ports:
+                        - 80:80 # sequsetrando portas principais
+                        - 443:443 # sequsetrando portas principais
+                    environment:
+                        # no trailing slash !
+                        MELI_URL: https://poupaluz.meudominio.dev
+                        MELI_MONGO_URI: mongodb://mongo:27017/meli
+                        # openssl rand -hex 32
+                        MELI_JWT_SECRET: senhazinhaAQUI
+                        # https://docs.meli.sh/authentication
+                        MELI_USER: olhaoSEUuserAqui
+                        MELI_PASSWORD: senhazinhaAQUI
+                            # Máximo de sites por usuário
+                            # Padrão: um site por usuário
+                            # Zero: desativa a opção e torna ilimitado
+                            # MELI_MAX_ORGS=0
+                    volumes:
+                        - ./data/sites:/sites
+                        - ./data/files:/files
+                        - ./data/caddy/data:/data
+                        - ./data/caddy/config:/config
+                    depends_on:
+                        - mongo
 
-        		services:
-
-        			meli:
-        				image: getmeli/meli:beta
-        				ports:
-        					- 80:80 # sequsetrando portas principais
-        					- 443:443 # sequsetrando portas principais
-        				environment:
-        					# no trailing slash !
-        					MELI_URL: https://poupaluz.meudominio.dev
-        					MELI_MONGO_URI: mongodb://mongo:27017/meli
-        					# openssl rand -hex 32
-        					MELI_JWT_SECRET: senhazinhaAQUI
-        					# https://docs.meli.sh/authentication
-        					MELI_USER: olhaoSEUuserAqui
-        					MELI_PASSWORD: senhazinhaAQUI
-        							# Máximo de sites por usuário
-        							# Padrão: um site por usuário
-        							# Zero: desativa a opção e torna ilimitado
-        							# MELI_MAX_ORGS=0
-        				volumes:
-        					- ./data/sites:/sites
-        					- ./data/files:/files
-        					- ./data/caddy/data:/data
-        					- ./data/caddy/config:/config
-        				depends_on:
-        					- mongo
-
-        			mongo:
-        				image: mongo:4.2-bionic
-        				restart: unless-stopped
-        				volumes:
-        					- ./data/mongo:/data/db
-        ```
+    			mongo:
+                    image: mongo:4.2-bionic
+                    restart: unless-stopped
+                    volumes:
+                        - ./data/mongo:/data/db
+    ```
 
     ## 3. Compondo o Docker
 
@@ -162,7 +160,7 @@
 
      # Vai dar certo de primeira
      # digite o código
-    		docker-compose up -d
+       docker-compose up -d
     ```
 
     ## 4. Acessando o Poupa Luz
