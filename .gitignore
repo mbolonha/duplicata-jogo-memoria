@@ -8,3 +8,9 @@ public
 # Local Netlify folder
 # .netlify
 # !/.netlify/functions/
+.DS_Store
+.htmlhintrc
+.stylelintrc
+.eslintrc.json
+.idea
+.vscode
