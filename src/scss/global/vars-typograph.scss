@@ -1,34 +1,6 @@
-@font-face {
-	font-family: 'Braynerd';
-	src: local('Braynerd'),
-		url(../../static/assets/fonts/Braynerd-Regular.ttf) format('truetype');
-}
-@font-face {
-	font-family: 'Gobold_Hollow';
-	src: local('Gobold_Hollow'),
-		url(../../static/assets/fonts/Gobold_Hollow.ttf) format('truetype');
-}
-@font-face {
-	font-family: 'Gobold';
-	src: local('Gobold'),
-		url(../../static/assets/fonts/Gobold_Light_Italic.otf) format('truetype');
-}
-@font-face {
-	font-family: 'Neon80s';
-	src: local('Neon80s'),
-		url(../../static/assets/fonts/Neon80s.woff) format('truetype');
-}
-
 // Typograph Gobold_Light
 $main__font: 'Mulish', Arial, sans-serif;
 $second__font: 'Alegreya Sans', Arial, sans-serif;
-// $third__font: 'Ubuntu Mono', Arial, sans-serif;
-// $fourth__font: 'Bowlby One SC', Arial, sans-serif;
-// $fifth__font: 'Coda:800', Arial, sans-serif;
-// $fourth__font: 'Braynerd', Arial, sans-serif;
-// $seven__font: 'Gobold', Arial, sans-serif;
-// $eight__font: 'Neon80s', Arial, sans-serif;
-// $nine__font: 'Gobold_Hollow', Arial, sans-serif;
 $alternative__font: 'Arial';
 
 $xxs__fontSize: 10pt;

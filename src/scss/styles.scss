@@ -16,16 +16,15 @@ Version: 1.0
 4.0 Helpers & Fixes
 --------------------------------------------------------------*/
 
-@import "variables-site/colors";
-@import "variables-site/settings";
-
 @import "global/vars-colors";
 @import "global/vars-spaces";
 @import "global/vars-typograph";
 @import "global/vars-fx";
+
 /*--------------------------------------------------------------
 1.0 Basic settings
 --------------------------------------------------------------*/
+
 @import "global/_generic";
 @import "global/_base";
 
@@ -43,7 +42,7 @@ Version: 1.0
 @import "pages/index";
 @import "pages/card";
 @import "objects/_buttons";
-@import "objects/_marquee";
+
 /*--------------------------------------------------------------
 3.0 Modules
 --------------------------------------------------------------*/
@@ -60,26 +59,7 @@ Version: 1.0
 @import "modules/layout/_footer";
 @import "modules/layout/_row";
 @import "modules/layout/_row-bgColors";
-@import "modules/layout/_hero";
 
-/*--------------------------------------------------------------
-3.2 Modules / Page Builder
---------------------------------------------------------------*/
-
-@import "modules/block-builder/article-preview";
-@import "modules/block-builder/content-boxes";
-@import "modules/block-builder/hero";
-@import "modules/block-builder/popup";
-@import "modules/block-builder/logos-box";
-@import "modules/block-builder/quote";
-@import "modules/block-builder/slider";
-@import "modules/block-builder/subscribe";
-@import "modules/block-builder/products-list";
-@import "modules/block-builder/grid-boxes";
-@import "modules/block-builder/grid-carousel";
-@import "modules/block-builder/grid-column";
-@import "modules/block-builder/grid-content";
-@import "modules/block-builder/artist-profiles";
 
 /*--------------------------------------------------------------
 3.3 XXX
