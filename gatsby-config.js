@@ -13,19 +13,19 @@ module.exports = {
 		siteUrl: `https://seudominio.dev`,
 		image: `https://seudominio.dev/theimage.jpg`,
 		author: {
-			name: 'Visual Studio - Milton Bolonha',
+			name: 'Visual Studio',
 			minibio: `A Visual Studio é a melhor empresa do Brasil.`,
 		},
 		organization: {
-			name: 'Diabetes Brasil',
-			url: 'https://diabetes.org.br/',
+			name: 'ADJ - Diabetes Brasil',
+			url: 'https://adj.org.br/',
 			logo: `${__dirname}/static/assets/images/diabetes-brasil-logo.svg`,
 		},
 		social: {
-			instagram: 'https://www.instagram.com/diabetessbd/',
-			facebook: 'https://www.facebook.com/SBD.Diabetes',
-			twitter: 'https://twitter.com/diabetes_sbd',
-			youtube: 'https://www.youtube.com/user/socbrasdiabetes',
+			instagram: 'https://www.instagram.com/adjdiabetesbrasil/',
+			facebook: 'https://www.facebook.com/ADJDiabetesBrasil/',
+			twitter: 'https://twitter.com/ADJ_Diabetes_BR',
+			youtube: 'https://www.youtube.com/channel/UCj5rxMlBYLDiRSVdy2FprMA',
 		},
 		attrCredits: { credits },
 	},
@@ -104,7 +104,7 @@ module.exports = {
 		{
 			resolve: `gatsby-plugin-google-fonts`,
 			options: {
-				fonts: [`Mulish`, `Alegreya Sans`],
+				fonts: [`Mulish`, `Alegreya Sans\:300,400,500,700,800,900`, `Roboto`],
 				display: 'swap',
 			},
 		},

@@ -58,6 +58,7 @@ const firstElementsArray = [
 	},
 ]
 // segunda lista de cartas
+// essas são as cartas que darão Match com os tipos da outra lista
 const secondElementsArray = [
 	{
 		type: 'Carda',
@@ -92,12 +93,12 @@ const secondElementsArray = [
 		image: <Cardhb />,
 	},
 ]
-// Construindo a página
+// Formatando a página
 const IndexPage = () => {
 	return (
 		// titleSeo = Título da página atual - $title::gatsby-config
 		// titleSeo é seguido por title::gatsby-config
-		<Layout type="BODY" opt={{ titleSeo: `DMDD` }}>
+		<Layout type="BODY" opt={{ titleSeo: `DMDD título aqui` }}>
 			<Layout
 				// é um construtor tipo os do WP mas aqui
 				type="ROW"
