@@ -6,6 +6,7 @@ on:
 env:
   REGISTRY: "registry.digitalocean.com/intest"
   IMAGE_NAME: "diabetes-brasil-dia-do-diabetes"
+  IMAGE_SHA: "latest"
   CONTAINER_CMD: "gatsby serve"
 
 jobs:
@@ -17,7 +18,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Construindo imagem do projeto
-        run: docker build -t ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:$(echo $GITHUB_SHA | head -c7) .
+        run: docker build -t ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.IMAGE_SHA }} .
 
       - name: Instalando o CLI da DigitalOcean
         uses: digitalocean/action-doctl@v2
@@ -28,7 +29,7 @@ jobs:
         run: doctl registry login --expiry-seconds 600
 
       - name: Envia a imagem para o repositório de imagens
-        run: docker push ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:$(echo $GITHUB_SHA | head -c7)
+        run: docker push ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.IMAGE_SHA }}
 
   release:
     name: Acessa o servidor de testes e configura o container da aplicação
@@ -47,14 +48,14 @@ jobs:
             echo "Obtendo imagem atualizada do repositório"
             docker login -u ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }} -p ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }} registry.digitalocean.com
 
-            docker pull ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:$IMG_SHA
+            docker pull ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.IMAGE_SHA }}
 
             docker logout registry.digitalocean.com
 
             echo "Removendo container existente"
             docker rm -f diabetes-brasil-dia-do-diabetes
 
-            echo "Criando novo container para a imagem ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:$IMG_SHA"
+            echo "Criando novo container para a imagem ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.IMAGE_SHA }}"
             docker run -d -p 9000 \
               --name="diabetes-brasil-dia-do-diabetes" \
               --restart=unless-stopped \
@@ -64,7 +65,7 @@ jobs:
               -e LETSENCRYPT_HOST=diadodiabetes.intest.com.br \
               -e LETSENCRYPT_EMAIL=dominios@studiovisual.com.br \
               --network webproxy \
-             ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:$IMG_SHA \
+             ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.IMAGE_SHA }} \
              ${{ env.COMMAND }}
 
             echo "Reiniciando servidor de proxy"
