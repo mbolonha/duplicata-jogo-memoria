@@ -7,7 +7,6 @@ env:
   REGISTRY: "registry.digitalocean.com/intest"
   IMAGE_NAME: "diabetes-brasil-dia-do-diabetes"
   IMAGE_SHA: "latest"
-  CONTAINER_CMD: "gatsby serve"
 
 jobs:
   build:
@@ -60,13 +59,14 @@ jobs:
               --name="diabetes-brasil-dia-do-diabetes" \
               --restart=unless-stopped \
               --volume=/mnt/intest-volume/diabetes-brasil-dia-do-diabetes/public:/app \
+              --workdir="/app" \
               -e VIRTUAL_PORT=9000 \
               -e VIRTUAL_HOST=diadodiabetes.intest.com.br \
               -e LETSENCRYPT_HOST=diadodiabetes.intest.com.br \
               -e LETSENCRYPT_EMAIL=dominios@studiovisual.com.br \
-             --network="webproxy" \
-             ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.IMAGE_SHA }} \
-             ${{ env.COMMAND }}
+              --network webproxy \
+              "${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.IMAGE_SHA }}" \
+              "gatsby serve"
 
             echo "Reiniciando servidor de proxy"
             docker restart nginx-web nginx-gen
