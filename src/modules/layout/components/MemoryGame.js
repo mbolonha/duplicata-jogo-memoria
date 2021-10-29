@@ -1,5 +1,7 @@
 import React from 'react'
 import Container from '@material-ui/core/Container'
+import { navigate } from 'gatsby'
+
 import ArrowRightIcon from '../../../../static/assets/images/icon-arrow-right.svg'
 import CloseButton from '../../../../static/assets/images/close-button.svg'
 import FacebookIcon from '../../../../static/assets/images/face-icon.svg'
@@ -8,12 +10,19 @@ import WhatsIcon from '../../../../static/assets/images/whats-icon.svg'
 import InstagramIcon from '../../../../static/assets/images/instagram-icon.svg'
 import ShareIcon from '../../../../static/assets/images/share-icon.svg'
 import {
-	DialogActions,
+	// DialogActions,
 	DialogContent,
-	DialogContentText,
-	Button,
+	// p,
+	// Button,
 	DialogTitle,
 } from '@material-ui/core'
+// import {
+// 	DialogActions,
+// 	DialogContent,
+// 	p,
+// 	Button,
+// 	DialogTitle,
+// } from '@material-ui/core'
 import CardContainer from '../containers/CardContainer'
 
 const MemoryGame = ({
@@ -32,17 +41,20 @@ const MemoryGame = ({
 	stopTimer,
 	playTimer,
 	finalCounter,
+	title,
+	cardVerse,
 }) => (
 	<>
 		{/* Botão para abrir o modal */}
 		{/* <button onClick={() => playTimer()}>Play Aqui</button>
 		<button onClick={() => stopTimer()}>Stop Aqui</button>
-		<button onClick={() => setShowModal(true)}>Abrir Aqui</button> */}
+*/}
+		{/* <button onClick={() => setShowModal(true)}>Abrir Aqui</button> */}
 		<div className="second-row-for-now">
-			<div className="circle-shadow">
+			<button className="circle-shadow" onClick={() => navigate(-1)}>
 				<ArrowRightIcon />
-			</div>
-			<h1 className="main-h1">Título</h1>
+			</button>
+			<h1 className="main-h1">{title}</h1>
 		</div>
 
 		<div className="App">
@@ -52,6 +64,7 @@ const MemoryGame = ({
 						<CardContainer
 							key={index}
 							card={card}
+							cardVerse={cardVerse}
 							index={index}
 							isDisabled={shouldDisableAllCards}
 							isInactive={checkIsInactive(card)}
@@ -64,9 +77,9 @@ const MemoryGame = ({
 			<div>
 				<div className="score"></div>
 				<div className="restart wrapper-button">
-					<Button onClick={handleRestart} className="button-restart outside">
+					<button onClick={handleRestart} className="button-restart outside">
 						Jogar novamente
-					</Button>
+					</button>
 				</div>
 			</div>
 			<Container>
@@ -90,7 +103,7 @@ const MemoryGame = ({
 							você completou <br /> o jogo da memória!
 						</DialogTitle>
 						<DialogContent>
-							<DialogContentText className="modal-paragraph">
+							<p className="modal-paragraph">
 								Você terminou o jogo em{` `}
 								<span className="bolder">
 									{finalCounter}
@@ -98,8 +111,8 @@ const MemoryGame = ({
 									segundos
 								</span>
 								.
-							</DialogContentText>
-							<DialogContentText className="modal-paragraph bolder">
+							</p>
+							<p className="modal-paragraph bolder">
 								Se você gostou do jogo,
 								<br />
 								compartilhe com seus amigos.
@@ -113,26 +126,26 @@ const MemoryGame = ({
 										<ShareIcon />
 									</div>
 								</div>
-							</DialogContentText>
+							</p>
 						</DialogContent>
 
-						<DialogActions className="modal-group-buttons">
-							<Button onClick={handleRestart} className="button-restart">
+						<div className="modal-group-buttons">
+							<button onClick={handleRestart} className="button-restart">
 								Jogar novamente
-							</Button>
-							<Button
+							</button>
+							<button
 								onClick={handleRestart}
 								className="button-restart black-button"
 							>
 								Jogar próximo tema
-							</Button>
-							<Button
+							</button>
+							<button
 								onClick={handleRestart}
 								className="button-restart pink-button"
 							>
 								Visualizar todos os temas
-							</Button>
-						</DialogActions>
+							</button>
+						</div>
 					</div>
 				</DialogMigrate>
 			</Container>

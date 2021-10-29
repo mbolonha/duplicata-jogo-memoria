@@ -4,7 +4,7 @@ Theme URI: https://www.studiovisual.com.br/
 Description: Jogo da Memória
 Author: Milton Bolonha
 Template: AtomicTheme - Memory Game
-Version: 1.0
+Version: 2.0
 */
 
 /*--------------------------------------------------------------
@@ -22,18 +22,18 @@ Version: 1.0
 1.0 Basic settings
 --------------------------------------------------------------*/
 
-@import 'global/_generic';
-@import 'global/_base';
+@import 'global/generic';
+@import 'global/base';
 
 /*--------------------------------------------------------------
 3.1 Modules / Layout
 --------------------------------------------------------------*/
 
 @import 'modules/layout/menus';
-@import 'modules/layout/_header';
-@import 'modules/layout/_footer';
-@import 'modules/layout/_row';
-@import 'modules/layout/_row-bgColors';
+@import 'modules/layout/header';
+@import 'modules/layout/footer';
+@import 'modules/layout/row';
+@import 'modules/layout/row-bgColors';
 
 /*--------------------------------------------------------------
 4.0 Helpers & Fixes

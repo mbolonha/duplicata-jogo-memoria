@@ -1,100 +1,114 @@
 import React from 'react'
+import { graphql } from 'gatsby'
 import Layout from '@Layout'
 
-// Dupla de cartas invocadas aqui
-import Cardaa from '../../static/assets/images/glicemia-card-01-a.svg'
-import Cardab from '../../static/assets/images/glicemia-card-01-b.svg'
-// separadas por $A/B = AA...AB...BA...BB...CA...CB...DA...DB...
-import Cardba from '../../static/assets/images/glicemia-card-02-a.svg'
-import Cardbb from '../../static/assets/images/glicemia-card-02-b.svg'
-import Cardca from '../../static/assets/images/glicemia-card-03-a.svg'
-import Cardcb from '../../static/assets/images/glicemia-card-03-b.svg'
-import Cardda from '../../static/assets/images/glicemia-card-04-a.svg'
-import Carddb from '../../static/assets/images/glicemia-card-04-b.svg'
-import Cardea from '../../static/assets/images/glicemia-card-05-a.svg'
-import Cardeb from '../../static/assets/images/glicemia-card-05-b.svg'
-import Cardfa from '../../static/assets/images/glicemia-card-06-a.svg'
-import Cardfb from '../../static/assets/images/glicemia-card-06-b.svg'
-import Cardga from '../../static/assets/images/glicemia-card-07-a.svg'
-import Cardgb from '../../static/assets/images/glicemia-card-07-b.svg'
-import Cardha from '../../static/assets/images/glicemia-card-08-a.svg'
-import Cardhb from '../../static/assets/images/glicemia-card-08-b.svg'
+// Verso da carta
+import CardVerse from '../../static/assets/images/card-bem-estar.svg'
 
-// Para fazer a concatenação de duplas distintas, mas semelhantes
-// Nosso jogo permite o uso de cartas diferentes se assim o desejar
-// caso não, coloque a mesma carta em ambas as listas, sob o mesmo tipo
-const firstElementsArray = [
-	{
-		type: 'Carda',
-		image: <Cardaa />,
-	},
-	{
-		type: 'Cardb',
-		image: <Cardba />,
-	},
-	{
-		type: 'Cardc',
-		image: <Cardca />,
-	},
-	{
-		type: 'Cardd',
-		image: <Cardda />,
-	},
-	{
-		type: 'Carde',
-		image: <Cardea />,
-	},
-	{
-		type: 'Cardf',
-		image: <Cardfa />,
-	},
-	{
-		type: 'Cardg',
-		image: <Cardga />,
-	},
-	{
-		type: 'Cardh',
-		image: <Cardha />,
-	},
-]
-// segunda lista de cartas
-// essas são as cartas que darão Match com os tipos da outra lista
-const secondElementsArray = [
-	{
-		type: 'Carda',
-		image: <Cardab />,
-	},
-	{
-		type: 'Cardb',
-		image: <Cardbb />,
-	},
-	{
-		type: 'Cardc',
-		image: <Cardcb />,
-	},
-	{
-		type: 'Cardd',
-		image: <Carddb />,
-	},
-	{
-		type: 'Carde',
-		image: <Cardeb />,
-	},
-	{
-		type: 'Cardf',
-		image: <Cardfb />,
-	},
-	{
-		type: 'Cardg',
-		image: <Cardgb />,
-	},
-	{
-		type: 'Cardh',
-		image: <Cardhb />,
-	},
-]
 // Formatando a página
-const IndexPage = () => {
+const IndexPage = ({ data }) => {
+	const firstElementsArray = [
+		{
+			type: 'Carda',
+			image: (
+				<Layout type="BLOCK_IMAGE" opt={{ queryCard: data.glicemia01a }} />
+			),
+		},
+		{
+			type: 'Cardb',
+			image: (
+				<Layout type="BLOCK_IMAGE" opt={{ queryCard: data.glicemia02a }} />
+			),
+		},
+		{
+			type: 'Cardc',
+			image: (
+				<Layout type="BLOCK_IMAGE" opt={{ queryCard: data.glicemia03a }} />
+			),
+		},
+		{
+			type: 'Cardd',
+			image: (
+				<Layout type="BLOCK_IMAGE" opt={{ queryCard: data.glicemia04a }} />
+			),
+		},
+		{
+			type: 'Carde',
+			image: (
+				<Layout type="BLOCK_IMAGE" opt={{ queryCard: data.glicemia05a }} />
+			),
+		},
+		{
+			type: 'Cardf',
+			image: (
+				<Layout type="BLOCK_IMAGE" opt={{ queryCard: data.glicemia06a }} />
+			),
+		},
+		{
+			type: 'Cardg',
+			image: (
+				<Layout type="BLOCK_IMAGE" opt={{ queryCard: data.glicemia07a }} />
+			),
+		},
+		{
+			type: 'Cardh',
+			image: (
+				<Layout type="BLOCK_IMAGE" opt={{ queryCard: data.glicemia08a }} />
+			),
+		},
+	]
+	// segunda lista de cartas
+	// essas são as cartas que darão Match com os tipos da outra lista
+	const secondElementsArray = [
+		{
+			type: 'Carda',
+			image: (
+				<Layout type="BLOCK_IMAGE" opt={{ queryCard: data.glicemia01b }} />
+			),
+		},
+		{
+			type: 'Cardb',
+			image: (
+				<Layout type="BLOCK_IMAGE" opt={{ queryCard: data.glicemia02b }} />
+			),
+		},
+		{
+			type: 'Cardc',
+			image: (
+				<Layout type="BLOCK_IMAGE" opt={{ queryCard: data.glicemia03b }} />
+			),
+		},
+		{
+			type: 'Cardd',
+			image: (
+				<Layout type="BLOCK_IMAGE" opt={{ queryCard: data.glicemia04b }} />
+			),
+		},
+		{
+			type: 'Carde',
+			image: (
+				<Layout type="BLOCK_IMAGE" opt={{ queryCard: data.glicemia05b }} />
+			),
+		},
+		{
+			type: 'Cardf',
+			image: (
+				<Layout type="BLOCK_IMAGE" opt={{ queryCard: data.glicemia06b }} />
+			),
+		},
+		{
+			type: 'Cardg',
+			image: (
+				<Layout type="BLOCK_IMAGE" opt={{ queryCard: data.glicemia07b }} />
+			),
+		},
+		{
+			type: 'Cardh',
+			image: (
+				<Layout type="BLOCK_IMAGE" opt={{ queryCard: data.glicemia08b }} />
+			),
+		},
+	]
 	return (
 		// titleSeo = Título da página atual - $title::gatsby-config
 		// titleSeo é seguido por title::gatsby-config
@@ -113,6 +127,10 @@ const IndexPage = () => {
 				<Layout
 					type="MEMORYGAME"
 					opt={{
+						title: 'Glicemia',
+						cardVerse: (
+							<Layout type="BLOCK_IMAGE" opt={{ queryCard: data.cardVerse }} />
+						),
 						firstElementsArray,
 						secondElementsArray,
 					}}
@@ -122,3 +140,100 @@ const IndexPage = () => {
 	)
 }
 export default IndexPage
+
+export const queryGlicemia = graphql`
+	query imgsGlicemia {
+		glicemia01a: file(relativePath: { eq: "glicemia-01-a.png" }) {
+			childrenImageSharp {
+				gatsbyImageData(layout: FIXED, width: 165, height: 165)
+			}
+		}
+		glicemia01b: file(relativePath: { eq: "glicemia-01-b.png" }) {
+			childrenImageSharp {
+				gatsbyImageData(layout: FIXED, width: 165, height: 165)
+			}
+		}
+
+		glicemia02a: file(relativePath: { eq: "glicemia-02-a.png" }) {
+			childrenImageSharp {
+				gatsbyImageData(layout: FIXED, width: 165, height: 165)
+			}
+		}
+		glicemia02b: file(relativePath: { eq: "glicemia-02-b.png" }) {
+			childrenImageSharp {
+				gatsbyImageData(layout: FIXED, width: 165, height: 165)
+			}
+		}
+
+		glicemia03a: file(relativePath: { eq: "glicemia-03-a.png" }) {
+			childrenImageSharp {
+				gatsbyImageData(layout: FIXED, width: 165, height: 165)
+			}
+		}
+		glicemia03b: file(relativePath: { eq: "glicemia-03-b.png" }) {
+			childrenImageSharp {
+				gatsbyImageData(layout: FIXED, width: 165, height: 165)
+			}
+		}
+
+		glicemia04a: file(relativePath: { eq: "glicemia-04-a.png" }) {
+			childrenImageSharp {
+				gatsbyImageData(layout: FIXED, width: 165, height: 165)
+			}
+		}
+		glicemia04b: file(relativePath: { eq: "glicemia-04-b.png" }) {
+			childrenImageSharp {
+				gatsbyImageData(layout: FIXED, width: 165, height: 165)
+			}
+		}
+
+		glicemia05a: file(relativePath: { eq: "glicemia-05-a.png" }) {
+			childrenImageSharp {
+				gatsbyImageData(layout: FIXED, width: 165, height: 165)
+			}
+		}
+		glicemia05b: file(relativePath: { eq: "glicemia-05-b.png" }) {
+			childrenImageSharp {
+				gatsbyImageData(layout: FIXED, width: 165, height: 165)
+			}
+		}
+
+		glicemia06a: file(relativePath: { eq: "glicemia-06-a.png" }) {
+			childrenImageSharp {
+				gatsbyImageData(layout: FIXED, width: 165, height: 165)
+			}
+		}
+		glicemia06b: file(relativePath: { eq: "glicemia-06-b.png" }) {
+			childrenImageSharp {
+				gatsbyImageData(layout: FIXED, width: 165, height: 165)
+			}
+		}
+
+		glicemia07a: file(relativePath: { eq: "glicemia-07-a.png" }) {
+			childrenImageSharp {
+				gatsbyImageData(layout: FIXED, width: 165, height: 165)
+			}
+		}
+		glicemia07b: file(relativePath: { eq: "glicemia-07-b.png" }) {
+			childrenImageSharp {
+				gatsbyImageData(layout: FIXED, width: 165, height: 165)
+			}
+		}
+
+		glicemia08a: file(relativePath: { eq: "glicemia-08-a.png" }) {
+			childrenImageSharp {
+				gatsbyImageData(layout: FIXED, width: 165, height: 165)
+			}
+		}
+		glicemia08b: file(relativePath: { eq: "glicemia-08-b.png" }) {
+			childrenImageSharp {
+				gatsbyImageData(layout: FIXED, width: 165, height: 165)
+			}
+		}
+		cardVerse: file(relativePath: { eq: "card-glicemia.png" }) {
+			childrenImageSharp {
+				gatsbyImageData(layout: FIXED, width: 165, height: 165)
+			}
+		}
+	}
+`

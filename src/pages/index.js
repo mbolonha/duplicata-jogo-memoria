@@ -1,6 +1,9 @@
 import React from 'react'
 import Layout from '@Layout'
+import { Link } from 'gatsby'
 
+// Verso da carta
+import CardVerse from '../../static/assets/images/card-prevencao.svg'
 // Dupla de cartas invocadas aqui
 import Cardaa from '../../static/assets/images/glicemia-card-01-a.svg'
 import Cardab from '../../static/assets/images/glicemia-card-01-b.svg'
@@ -110,13 +113,71 @@ const IndexPage = () => {
 				}}
 			>
 				<Layout type="HEADER" />
+
+				<Layout
+					type="ROW"
+					sectionTitle="FEATURED WORKS"
+					opt={{
+						bgColor: '#fff',
+						isBoxed: true,
+					}}
+					setLocation="home-popup-button"
+				>
+					<br />
+					{/* <BlockBuilder component="PRODUCTSLIST" /> */}
+					{/*
+        <BlockBuilder
+          component="POPUP"
+          querySelector="Home Popup"
+        /> */}
+
+					{/*
+        <BlockBuilder
+          component="GRIDCONTENT"
+          querySelector="Home Popup"
+          blockOptions={{
+            'alignTo': 'center'
+          }}
+        />
+         */}
+					{/* <BlockBuilder
+          component="GRIDCONTENT"
+          querySelector="New Popup"
+        /> */}
+
+					{/* <AtomicBlock type="POPUP" querySelector="New Popup" /> */}
+				</Layout>
+				<Link to="/alimentacao" className="">
+					Alimentação
+				</Link>
+				<Link to="/atividade" className="">
+					Atividade
+				</Link>
+				<Link to="/bem-estar" className="">
+					Bem-Estar
+				</Link>
+				<Link to="/glicemia" className="">
+					Glicemia
+				</Link>
+				<Link to="/habitos" className="">
+					Hábitos
+				</Link>
+				<Link to="/prevencao" className="">
+					Prevenção
+				</Link>
+				<Link to="/tratamento" className="">
+					Tratamento
+				</Link>
+				{/*
 				<Layout
 					type="MEMORYGAME"
 					opt={{
+						title: 'Index',
+						cardVerse: <CardVerse />,
 						firstElementsArray,
 						secondElementsArray,
 					}}
-				/>
+				/> */}
 			</Layout>
 		</Layout>
 	)

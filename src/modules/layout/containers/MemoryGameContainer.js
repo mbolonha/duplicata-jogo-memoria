@@ -172,6 +172,8 @@ const MemoryGameContainer = ({ opt }) => {
 				stopTimer={stopTimer}
 				playTimer={playTimer}
 				finalCounter={finalCounter}
+				title={opt.title}
+				cardVerse={opt.cardVerse}
 			/>
 		</>
 	)

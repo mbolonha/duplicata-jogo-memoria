@@ -3,6 +3,7 @@ import BodyContainer from './BodyContainer'
 import HeaderContainer from './HeaderContainer'
 import FooterContainer from './FooterContainer'
 import RowContainer from './RowContainer'
+import BlockImageContainer from './BlockImageContainer'
 // import MainContainer from './MainContainer'
 import MemoryGameContainer from './MemoryGameContainer'
 const LayoutResolver = ({
@@ -21,8 +22,11 @@ const LayoutResolver = ({
 				return <BodyContainer children={children} opt={opt} />
 			case 'FOOTER':
 				return <FooterContainer />
+			case 'BLOCK_IMAGE':
+				return <BlockImageContainer opt={opt} />
 			case 'HEADER':
 				return <HeaderContainer heroData={opt} logo={logo} />
+
 			case 'ROW':
 				return (
 					<RowContainer
