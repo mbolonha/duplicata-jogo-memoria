@@ -56,7 +56,7 @@ jobs:
             docker rm -f diabetes-brasil-dia-do-diabetes
 
             echo "Criando novo container para a imagem ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.IMAGE_SHA }}"
-            docker run -d -p 9000 \
+            docker run -d \
               --name="diabetes-brasil-dia-do-diabetes" \
               --restart=unless-stopped \
               --volume=/mnt/intest-volume/diabetes-brasil-dia-do-diabetes/public:/app \
