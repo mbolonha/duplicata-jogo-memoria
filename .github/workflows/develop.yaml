@@ -9,30 +9,30 @@ env:
   IMAGE_SHA: "latest"
 
 jobs:
-  build:
-    name: Obtém o código-fonte e realiza a construção da aplicação.
-    runs-on: ubuntu-20.04
-    steps:
-      - name: Checkout do repositório
-        uses: actions/checkout@v2
-
-      - name: Construindo imagem do projeto
-        run: docker build -t ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.IMAGE_SHA }} .
-
-      - name: Instalando o CLI da DigitalOcean
-        uses: digitalocean/action-doctl@v2
-        with:
-          token: ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
-
-      - name: Realizando login temporário no repositório de imagens
-        run: doctl registry login --expiry-seconds 600
-
-      - name: Envia a imagem para o repositório de imagens
-        run: docker push ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.IMAGE_SHA }}
+  #build:
+  #  name: Obtém o código-fonte e realiza a construção da aplicação.
+  #  runs-on: ubuntu-20.04
+  #  steps:
+  #    - name: Checkout do repositório
+  #      uses: actions/checkout@v2
+  #
+  #    - name: Construindo imagem do projeto
+  #      run: docker build -t ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.IMAGE_SHA }} .
+  #
+  #    - name: Instalando o CLI da DigitalOcean
+  #      uses: digitalocean/action-doctl@v2
+  #      with:
+  #        token: ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
+  #
+  #    - name: Realizando login temporário no repositório de imagens
+  #      run: doctl registry login --expiry-seconds 600
+  #
+  #    - name: Envia a imagem para o repositório de imagens
+  #      run: docker push ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.IMAGE_SHA }}
 
   release:
     name: Acessa o servidor de testes e configura o container da aplicação
-    needs: build
+    #needs: build
     runs-on: ubuntu-20.04
     steps:
       - name: Verifica o status do container existente
