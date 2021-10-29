@@ -64,9 +64,9 @@ jobs:
               -e VIRTUAL_HOST=diadodiabetes.intest.com.br \
               -e LETSENCRYPT_HOST=diadodiabetes.intest.com.br \
               -e LETSENCRYPT_EMAIL=dominios@studiovisual.com.br \
-              --network webproxy
-              ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.IMAGE_SHA }} \
-              ${{ env.COMMAND }}
+             --network webproxy \
+             ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.IMAGE_SHA }} \
+             ${{ env.COMMAND }}
 
             echo "Reiniciando servidor de proxy"
             docker restart nginx-web nginx-gen
