@@ -10,4 +10,6 @@ RUN yarn install
 
 RUN gatsby build
 
+RUN gatsby clean
+
 EXPOSE 9000
