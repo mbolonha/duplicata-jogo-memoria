@@ -43,7 +43,6 @@ jobs:
           key: ${{ secrets.SSH_DEV_DEPLOY_KEY }}
           port: 22
           script: |
-            IMG_SHA=$(echo $GITHUB_SHA | head -c7)
             echo "Obtendo imagem atualizada do repositório"
             docker login -u ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }} -p ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }} registry.digitalocean.com
 
@@ -57,17 +56,11 @@ jobs:
             echo "Criando novo container para a imagem ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.IMAGE_SHA }}"
             docker run -d -p 9000 \
               --name="diabetes-brasil-dia-do-diabetes" \
-              --restart=unless-stopped \
-              --volume=/mnt/intest-volume/diabetes-brasil-dia-do-diabetes/public:/app \
               --workdir="/app" \
-              -e VIRTUAL_PORT=9000 \
-              -e VIRTUAL_HOST=diadodiabetes.intest.com.br \
-              -e LETSENCRYPT_HOST=diadodiabetes.intest.com.br \
-              -e LETSENCRYPT_EMAIL=dominios@studiovisual.com.br \
-              --network webproxy \
-              "${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.IMAGE_SHA }}" \
-              "gatsby serve"
-
-            echo "Reiniciando servidor de proxy"
-            docker restart nginx-web nginx-gen
-
+              --label "traefik.http.routers.diabetes-brasil-dia-do-diabetes.rule=Host(\`diadodiabetes.intest.com.br\`)" \
+              --label "traefik.http.routers.diabetes-brasil-dia-do-diabetes.tls=true" \
+              --label "traefik.http.routers.diabetes-brasil-dia-do-diabetes.tls.certresolver=lets-encrypt" \
+              --label "traefik.http.services.diabetes-brasil-dia-do-diabetes.loadbalancer.server.port=9000" \
+              --network traefik_web \
+              --ip="172.21.0.12" \
+              "${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.IMAGE_SHA }}"
