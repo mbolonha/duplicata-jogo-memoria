@@ -56,7 +56,7 @@ jobs:
             docker rm -f diabetes-brasil-dia-do-diabetes
 
             echo "Criando novo container para a imagem ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.IMAGE_SHA }}"
-            docker run -d \
+            docker run -d -p 9000 \
               --name="diabetes-brasil-dia-do-diabetes" \
               --restart=unless-stopped \
               --volume=/mnt/intest-volume/diabetes-brasil-dia-do-diabetes/public:/app \
@@ -64,7 +64,7 @@ jobs:
               -e VIRTUAL_HOST=diadodiabetes.intest.com.br \
               -e LETSENCRYPT_HOST=diadodiabetes.intest.com.br \
               -e LETSENCRYPT_EMAIL=dominios@studiovisual.com.br \
-             --network webproxy \
+             --network="webproxy" \
              ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.IMAGE_SHA }} \
              ${{ env.COMMAND }}
 
