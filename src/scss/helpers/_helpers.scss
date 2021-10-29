@@ -300,19 +300,45 @@ body {
 	background-color: #fff;
 	width: 245px;
 	height: 48px;
+	padding: 16px;
 	border-radius: 8px;
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
 	align-items: center;
-	font-size: $xs__fontSize;
+	font-size: $s__fontSize;
 	font-weight: 700;
-	padding: 16px;
 	font-family: $third__font;
 	text-transform: none;
 
 	margin-left: unset !important;
 	margin-bottom: 16px;
+	&:hover {
+		background-color: $secondary_pink__color;
+		border-color: $secondary_pink__color;
+		color: #fff;
+	}
+	&.black-button {
+		background-color: $black__color;
+		border-color: $black__color;
+		color: #fff;
+		&:hover {
+			background-color: #fff;
+			border-color: $black__color;
+			color: $black__color;
+		}
+	}
+	&.pink-button {
+		background-color: $secondary_pink__color;
+		border-color: $secondary_pink__color;
+		color: #fff;
+
+		&:hover {
+			background-color: #fff;
+			border-color: $secondary_pink__color;
+			color: $secondary_pink__color;
+		}
+	}
 }
 
 .MuiPaper-root {
@@ -395,4 +421,11 @@ body {
 	width: 100%;
 	display: flex;
 	justify-content: space-evenly;
+}
+
+.wrapper-button {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 40px;
 }

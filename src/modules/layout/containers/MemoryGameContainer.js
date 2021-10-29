@@ -54,12 +54,28 @@ const MemoryGameContainer = ({ opt }) => {
 	const [clearedCards, setClearedCards] = useState({})
 	const [shouldDisableAllCards, setShouldDisableAllCards] = useState(false)
 	const [moves, setMoves] = useState(0)
+	const [counter, setCounter] = useState(0)
+	const [finalCounter, setFinalCounter] = useState(0)
 	const [showModal, setShowModal] = useState(false)
 	const [bestScore, setBestScore] = useState(
 		typeof window !== 'undefined'
 			? JSON.parse(localStorage.getItem('bestScore'))
 			: Number.POSITIVE_INFINITY
 	)
+
+	useEffect(() => {
+		const timer =
+			counter > 0 && setInterval(() => setCounter(counter + 1), 1000)
+		return () => clearInterval(timer)
+	}, [counter])
+
+	function stopTimer() {
+		setCounter(0)
+	}
+
+	function playTimer() {
+		setCounter(1)
+	}
 	const timeout = useRef(null)
 	const disable = () => {
 		setShouldDisableAllCards(true)
@@ -73,6 +89,7 @@ const MemoryGameContainer = ({ opt }) => {
 			const highScore = Math.min(moves, bestScore)
 			setBestScore(highScore)
 			localStorage.setItem('bestScore', highScore)
+			setFinalCounter(counter)
 		}
 	}
 	const evaluate = () => {
@@ -88,7 +105,11 @@ const MemoryGameContainer = ({ opt }) => {
 			setOpenCards([])
 		}, 500)
 	}
+	function checkCounter() {
+		return counter === 0 ? setCounter(1) : null
+	}
 	const handleCardClick = (index) => {
+		checkCounter()
 		if (openCards.length === 1) {
 			setOpenCards((prev) => [...prev, index])
 			setMoves((moves) => moves + 1)
@@ -122,6 +143,9 @@ const MemoryGameContainer = ({ opt }) => {
 		setOpenCards([])
 		setShowModal(false)
 		setMoves(0)
+		// checkStartTimer()
+		setCounter(0)
+		setFinalCounter(0)
 		setShouldDisableAllCards(false)
 		// set a shuffled deck of cards
 		setCards(
@@ -144,6 +168,10 @@ const MemoryGameContainer = ({ opt }) => {
 				setCards={setCards}
 				moves={moves}
 				setShowModal={setShowModal}
+				counter={counter}
+				stopTimer={stopTimer}
+				playTimer={playTimer}
+				finalCounter={finalCounter}
 			/>
 		</>
 	)

@@ -18,6 +18,7 @@ import CardContainer from '../containers/CardContainer'
 
 const MemoryGame = ({
 	cards,
+	counter,
 	DialogMigrate,
 	shouldDisableAllCards,
 	showModal,
@@ -28,16 +29,22 @@ const MemoryGame = ({
 	setOpen,
 	moves,
 	setShowModal,
+	stopTimer,
+	playTimer,
+	finalCounter,
 }) => (
 	<>
 		{/* Botão para abrir o modal */}
-		<button onClick={() => setShowModal(true)}>Abrir Aqui</button>
+		{/* <button onClick={() => playTimer()}>Play Aqui</button>
+		<button onClick={() => stopTimer()}>Stop Aqui</button>
+		<button onClick={() => setShowModal(true)}>Abrir Aqui</button> */}
 		<div className="second-row-for-now">
 			<div className="circle-shadow">
 				<ArrowRightIcon />
 			</div>
-			<h1 className="main-h1">Tratamento</h1>
+			<h1 className="main-h1">Título</h1>
 		</div>
+
 		<div className="App">
 			<div className="container">
 				{cards.map((card, index) => {
@@ -55,22 +62,9 @@ const MemoryGame = ({
 				})}
 			</div>
 			<div>
-				<div className="score">
-					{/* <div className="moves">
-						<span className="bold">Moves:</span> {moves}
-					</div> */}
-					{/* {localStorage.getItem('bestScore') && (
-							<div className="high-score">
-								<span className="bold">Best Score:</span> {bestScore}
-							</div>
-						)} */}
-				</div>
-				<div className="restart">
-					<Button
-						onClick={handleRestart}
-						className="button-restart"
-						// variant="contained"
-					>
+				<div className="score"></div>
+				<div className="restart wrapper-button">
+					<Button onClick={handleRestart} className="button-restart outside">
 						Jogar novamente
 					</Button>
 				</div>
@@ -99,9 +93,9 @@ const MemoryGame = ({
 							<DialogContentText className="modal-paragraph">
 								Você terminou o jogo em{` `}
 								<span className="bolder">
-									{moves}
+									{finalCounter}
 									{` `}
-									moves
+									segundos
 								</span>
 								.
 							</DialogContentText>
@@ -126,11 +120,17 @@ const MemoryGame = ({
 							<Button onClick={handleRestart} className="button-restart">
 								Jogar novamente
 							</Button>
-							<Button onClick={handleRestart} className="button-restart">
-								Jogar novamente
+							<Button
+								onClick={handleRestart}
+								className="button-restart black-button"
+							>
+								Jogar próximo tema
 							</Button>
-							<Button onClick={handleRestart} className="button-restart">
-								Jogar novamente
+							<Button
+								onClick={handleRestart}
+								className="button-restart pink-button"
+							>
+								Visualizar todos os temas
 							</Button>
 						</DialogActions>
 					</div>
