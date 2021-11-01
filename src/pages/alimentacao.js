@@ -162,7 +162,7 @@ export const queryAlimentacao = graphql`
 					width: 165
 					height: 165
 					quality: 100
-					formats: [AUTO, WEBP, PNG]
+					formats: [PNG]
 				)
 			}
 		}
@@ -172,7 +172,7 @@ export const queryAlimentacao = graphql`
 					layout: FIXED
 					width: 165
 					height: 165
-					formats: [AUTO, WEBP, PNG]
+					formats: [PNG]
 					quality: 100
 				)
 			}
@@ -185,7 +185,7 @@ export const queryAlimentacao = graphql`
 					width: 165
 					height: 165
 					quality: 100
-					formats: [AUTO, WEBP, PNG]
+					formats: [PNG]
 				)
 			}
 		}
@@ -196,7 +196,7 @@ export const queryAlimentacao = graphql`
 					width: 165
 					quality: 100
 					height: 165
-					formats: [AUTO, WEBP, PNG]
+					formats: [PNG]
 				)
 			}
 		}
@@ -208,7 +208,7 @@ export const queryAlimentacao = graphql`
 					width: 165
 					height: 165
 					quality: 100
-					formats: [AUTO, WEBP, PNG]
+					formats: [PNG]
 				)
 			}
 		}
@@ -219,7 +219,7 @@ export const queryAlimentacao = graphql`
 					width: 165
 					quality: 100
 					height: 165
-					formats: [AUTO, WEBP, PNG]
+					formats: [PNG]
 				)
 			}
 		}
@@ -231,7 +231,7 @@ export const queryAlimentacao = graphql`
 					width: 165
 					quality: 100
 					height: 165
-					formats: [AUTO, WEBP, PNG]
+					formats: [PNG]
 				)
 			}
 		}
@@ -242,7 +242,7 @@ export const queryAlimentacao = graphql`
 					quality: 100
 					width: 165
 					height: 165
-					formats: [AUTO, WEBP, PNG]
+					formats: [PNG]
 				)
 			}
 		}
@@ -254,7 +254,7 @@ export const queryAlimentacao = graphql`
 					quality: 100
 					width: 165
 					height: 165
-					formats: [AUTO, WEBP, PNG]
+					formats: [PNG]
 				)
 			}
 		}
@@ -265,7 +265,7 @@ export const queryAlimentacao = graphql`
 					width: 165
 					quality: 100
 					height: 165
-					formats: [AUTO, WEBP, PNG]
+					formats: [PNG]
 				)
 			}
 		}
@@ -277,7 +277,7 @@ export const queryAlimentacao = graphql`
 					quality: 100
 					width: 165
 					height: 165
-					formats: [AUTO, WEBP, PNG]
+					formats: [PNG]
 				)
 			}
 		}
@@ -288,7 +288,7 @@ export const queryAlimentacao = graphql`
 					quality: 100
 					width: 165
 					height: 165
-					formats: [AUTO, WEBP, PNG]
+					formats: [PNG]
 				)
 			}
 		}
@@ -300,7 +300,7 @@ export const queryAlimentacao = graphql`
 					quality: 100
 					width: 165
 					height: 165
-					formats: [AUTO, WEBP, PNG]
+					formats: [PNG]
 				)
 			}
 		}
@@ -311,7 +311,7 @@ export const queryAlimentacao = graphql`
 					width: 165
 					quality: 100
 					height: 165
-					formats: [AUTO, WEBP, PNG]
+					formats: [PNG]
 				)
 			}
 		}
@@ -323,7 +323,7 @@ export const queryAlimentacao = graphql`
 					quality: 100
 					width: 165
 					height: 165
-					formats: [AUTO, WEBP, PNG]
+					formats: [PNG]
 				)
 			}
 		}
@@ -334,7 +334,7 @@ export const queryAlimentacao = graphql`
 					quality: 100
 					width: 165
 					height: 165
-					formats: [AUTO, WEBP, PNG]
+					formats: [PNG]
 				)
 			}
 		}
@@ -345,7 +345,7 @@ export const queryAlimentacao = graphql`
 					quality: 100
 					width: 165
 					height: 165
-					formats: [AUTO, WEBP, PNG]
+					formats: [PNG]
 				)
 			}
 		}
