@@ -38,6 +38,7 @@ module.exports = {
 				defaults: {
 					quality: 100,
 					formats: [`auto`],
+					failOnError: false,
 				},
 			},
 		},
