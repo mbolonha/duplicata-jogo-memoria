@@ -457,7 +457,7 @@ body {
 	background-color: #eee;
 	border-radius: 8px;
 	height: 92px;
-	margin: 8px;
+	margin: 8px auto;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -488,4 +488,54 @@ body {
 	margin: 0 8px;
 	align-items: center;
 	text-align: center;
+}
+
+.index-share-btn {
+	font-family: $second__font;
+	margin-top: 13px;
+	padding: 0 33px;
+	font-weight: 800;
+}
+.carousel-logos {
+	width: 100%;
+	h2.heading-logos {
+		font-family: $main__font;
+		font-size: 16px;
+		text-align: center;
+		margin: 40px 0 22px;
+	}
+	.carousel.carousel-slider {
+		.carousel-status {
+			display: none;
+		}
+		.gatsby-image-wrapper {
+			margin: 0 auto;
+		}
+		.control-arrow {
+			width: 50%;
+			opacity: 0;
+			height: 75px;
+			&:hover {
+				opacity: 0;
+			}
+		}
+		.carousel-root {
+			display: flex;
+			flex-wrap: wrap;
+		}
+		padding-bottom: 70px;
+		.control-dots {
+			.dot {
+				box-shadow: unset;
+				background: #c1c1c1;
+				opacity: unset;
+				width: 16px;
+				height: 16px;
+
+				&.selected {
+					background-color: #eb4757;
+				}
+			}
+		}
+	}
 }
