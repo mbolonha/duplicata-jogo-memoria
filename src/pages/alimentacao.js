@@ -136,6 +136,18 @@ const IndexPage = ({ data }) => {
 					}}
 				/>
 			</Layout>
+			<Layout
+				// é um construtor tipo os do WP mas aqui
+				type="ROW"
+				opt={{
+					isBoxed: true,
+					classes: 'footer-gray',
+					alignTo: 'center',
+					bgColor: '#2f2f2f',
+				}}
+			>
+				<Layout type="FOOTER" />
+			</Layout>
 		</Layout>
 	)
 }
