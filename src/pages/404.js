@@ -63,7 +63,7 @@ export default IndexPage
 
 export const errorIndex = graphql`
 	query errorIndex {
-		logotipo: file(relativePath: { eq: "jogodamemoria-logo.png" }) {
+		logotipo: file(relativePath: { eq: "jogodamemoria-logo.jpg" }) {
 			childrenImageSharp {
 				gatsbyImageData(layout: FIXED, width: 224, quality: 100)
 			}
