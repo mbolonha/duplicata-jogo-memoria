@@ -32,8 +32,15 @@ module.exports = {
 	plugins: [
 		'gatsby-plugin-sass',
 		'gatsby-plugin-image',
-		'gatsby-plugin-sharp',
-		'gatsby-transformer-sharp',
+		{
+			resolve: `gatsby-plugin-sharp`,
+			options: {
+				defaults: {
+					quality: 100,
+				},
+			},
+		},
+		`gatsby-transformer-sharp`,
 		`gatsby-plugin-offline`,
 		`gatsby-plugin-react-helmet`,
 		`gatsby-plugin-catch-links`,
@@ -53,27 +60,6 @@ module.exports = {
 			},
 		},
 		{
-			resolve: `gatsby-transformer-remark`,
-			options: {
-				plugins: [
-					{
-						resolve: `gatsby-remark-relative-images`,
-						options: {
-							name: `uploads`,
-						},
-					},
-					{
-						resolve: `gatsby-remark-images`,
-						options: {
-							maxWidth: 1380,
-							linkImagesToOriginal: false,
-						},
-					},
-					`gatsby-remark-lazy-load`,
-				],
-			},
-		},
-		{
 			resolve: `gatsby-plugin-alias-imports`,
 			options: {
 				alias: {
@@ -89,18 +75,18 @@ module.exports = {
 				extensions: ['js', 'scss'],
 			},
 		},
-		{
-			resolve: `gatsby-plugin-manifest`,
-			options: {
-				name: `Diabetes Brasil`,
-				short_name: `Diabetes Brasil`,
-				start_url: `/`,
-				background_color: `#fff`,
-				theme_color: `#eb412c`,
-				display: `fullscreen`,
-				icon: `${__dirname}/static/assets/images/diabetes-brasil-favicon.svg`, // This path is relative to the root of the site.
-			},
-		},
+		// {
+		// 	resolve: `gatsby-plugin-manifest`,
+		// 	options: {
+		// 		name: `Diabetes Brasil`,
+		// 		short_name: `Diabetes Brasil`,
+		// 		start_url: `/`,
+		// 		background_color: `#fff`,
+		// 		theme_color: `#eb412c`,
+		// 		display: `fullscreen`,
+		// 		icon: `${__dirname}/static/assets/images/diabetes-brasil-favicon.svg`, // This path is relative to the root of the site.
+		// 	},
+		// },
 		{
 			resolve: `gatsby-plugin-google-fonts`,
 			options: {

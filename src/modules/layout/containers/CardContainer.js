@@ -1,6 +1,6 @@
 import React from 'react'
 import classnames from 'classnames'
-import CardVerse from '../../../../static/assets/images/teste-glicemia.svg'
+// import CardVerse from '../../../../static/assets/images/teste-glicemia.svg'
 
 const CardContainer = ({
 	onClick,
@@ -9,6 +9,7 @@ const CardContainer = ({
 	isInactive,
 	isFlipped,
 	isDisabled,
+	cardVerse,
 }) => {
 	const handleClick = () => {
 		!isFlipped && !isDisabled && onClick(index)
@@ -22,9 +23,7 @@ const CardContainer = ({
 				})}
 				onClick={isInactive ? null : handleClick}
 			>
-				<div className="card-face card-font-face">
-					<CardVerse />
-				</div>
+				<div className="card-face card-font-face">{cardVerse}</div>
 				<div className="card-face card-back-face">{card.image}</div>
 			</div>
 		</>
