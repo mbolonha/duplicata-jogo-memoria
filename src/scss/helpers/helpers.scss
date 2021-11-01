@@ -442,3 +442,50 @@ body {
 .mymodalhere {
 	left: -5px !important;
 }
+
+.index-link-wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	padding: 16px 0;
+	align-content: center;
+}
+
+.index-link {
+	width: 100%;
+	max-width: 295px;
+	background-color: #eee;
+	border-radius: 8px;
+	height: 92px;
+	margin: 8px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0 24px;
+	justify-content: space-between;
+	font-family: $main__font;
+	font-weight: 700;
+	font-size: 16px;
+	color: #1b1b1b;
+	&:hover {
+		background-color: $brand__color;
+		color: #fff;
+	}
+}
+
+.index-first-row p.index-paragraph {
+	font-family: $second__font;
+	font-weight: 500;
+	font-size: 16px;
+	margin-top: 16px;
+	padding: 0 25px;
+}
+
+.index-first-row {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	margin: 0 8px;
+	align-items: center;
+	text-align: center;
+}
