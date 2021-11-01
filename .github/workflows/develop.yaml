@@ -24,13 +24,19 @@ jobs:
           node-version: '14'
 
       - name: Instalando o CLI do gatsby
-        run: yarn global add gatsby-cli
-
-      - name: Executando yarn install
-        run: yarn
+        run: npm i gatsby-cli -g
 
       - name: Executando a limpeza do cache dos assets
         run: gatsby clean
+
+      - name: Atualizando pacotes node
+        run: npm cache clear --force
+
+      - name: Executando yarn install
+        run: npm i
+
+      - name: Atualizando pacotes node
+        run: npm update
 
       - name: Executando a construção dos assets
         run: gatsby build
