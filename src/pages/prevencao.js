@@ -2,9 +2,6 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import Layout from '@Layout'
 
-// Verso da carta
-import CardVerse from '../../static/assets/images/card-prevencao.svg'
-
 // Formatando a página
 const IndexPage = ({ data }) => {
 	const firstElementsArray = [
