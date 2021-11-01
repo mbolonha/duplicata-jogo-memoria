@@ -104,7 +104,7 @@
     ├──── 📂/tools
     └──📂/static
 
-4.  **Servidor Serverless**
+4.  **Servidor Serverless Meli.sh**
 
     Sabe o [Netlify](https://netlify.com/)? Então...
     Sugerimos que use um servidor baseado em Caddy, que é o [Meli.sh](http://meli.sh/).
