@@ -34,7 +34,7 @@ const IndexPage = ({ data }) => {
 			>
 				<Layout type="HEADER" />
 				<div className="index-first-row">
-					<Layout type="BLOCK_IMAGE" opt={{ queryCard: data.logotipo }} />
+					<Layout type="BLOCK_IMAGE" opt={{ queryCard: data.logotipoIndex }} />
 					<p className="index-paragraph">
 						Acesse abaixo os jogos da memória e aprenda tópicos relacionados à
 						Diabetes.
@@ -131,7 +131,7 @@ export default IndexPage
 
 export const queryIndex = graphql`
 	query imgsIndex {
-		logotipo: file(relativePath: { eq: "jogodamemoria-logo.png" }) {
+		logotipoIndex: file(relativePath: { eq: "jogodamemoria-logo.png" }) {
 			childrenImageSharp {
 				gatsbyImageData(layout: FIXED, width: 224, quality: 100)
 			}
