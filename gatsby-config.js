@@ -37,9 +37,10 @@ module.exports = {
 			options: {
 				defaults: {
 					quality: 100,
-					formats: [`auto`],
-					failOnError: false,
 				},
+				failOnError: false,
+				stripMetadata: true,
+				defaultQuality: 100,
 			},
 		},
 		`gatsby-transformer-sharp`,
