@@ -26,14 +26,14 @@ jobs:
       - name: Instalando o CLI do gatsby
         run: npm i gatsby-cli -g
 
-      - name: Executando a limpeza do cache dos assets
-        run: gatsby clean
-
       - name: Atualizando pacotes node
         run: npm cache clear --force
 
       - name: Executando yarn install
         run: npm i
+
+      - name: Executando a limpeza do cache dos assets
+        run: gatsby clean
 
       - name: Atualizando pacotes node
         run: npm update
