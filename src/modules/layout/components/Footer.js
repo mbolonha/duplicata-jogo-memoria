@@ -21,12 +21,17 @@ const Footer = ({ socialIcons, logoImg, refState, handleRefState }) => {
 								<a
 									href="https://www.facebook.com/ADJDiabetesBrasil/"
 									target="_blank"
+									rel="noreferrer"
 								>
 									<i className="fa fa-facebook"></i>
 								</a>
 							</li>
 							<li>
-								<a href="https://twitter.com/ADJ_Diabetes_BR" target="_blank">
+								<a
+									href="https://twitter.com/ADJ_Diabetes_BR"
+									target="_blank"
+									rel="noreferrer"
+								>
 									<i className="fa fa-twitter"></i>
 								</a>
 							</li>
@@ -34,6 +39,7 @@ const Footer = ({ socialIcons, logoImg, refState, handleRefState }) => {
 								<a
 									href="http://www.instagram.com/adjdiabetesbrasil/?hl=pt-br"
 									target="_blank"
+									rel="noreferrer"
 								>
 									<i className="fa fa-instagram"></i>
 								</a>
@@ -42,6 +48,7 @@ const Footer = ({ socialIcons, logoImg, refState, handleRefState }) => {
 								<a
 									href="https://www.youtube.com/channel/UCj5rxMlBYLDiRSVdy2FprMA?view_as=subscriber"
 									target="_blank"
+									rel="noreferrer"
 								>
 									<i className="fa fa-youtube"></i>
 								</a>

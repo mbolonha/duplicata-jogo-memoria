@@ -502,7 +502,7 @@ body {
 		font-family: $main__font;
 		font-size: 16px;
 		text-align: center;
-		margin: 40px 0 22px;
+		margin: 40px 0 0;
 	}
 	.carousel.carousel-slider {
 		.carousel-status {
@@ -523,7 +523,7 @@ body {
 			display: flex;
 			flex-wrap: wrap;
 		}
-		padding-bottom: 70px;
+		padding-bottom: 35px;
 		.control-dots {
 			.dot {
 				box-shadow: unset;
@@ -555,4 +555,8 @@ body {
 	font-size: 10px;
 	line-height: 12px;
 	font-family: $main__font;
+}
+
+.carousel .slider-wrapper.axis-horizontal .slider .slide {
+	align-self: center;
 }
