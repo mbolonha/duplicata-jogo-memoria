@@ -158,6 +158,7 @@ export const queryAlimentacao = graphql`
 					layout: FIXED
 					width: 165
 					height: 165
+					quality: 100
 					formats: [AUTO, WEBP, PNG]
 				)
 			}
@@ -169,6 +170,7 @@ export const queryAlimentacao = graphql`
 					width: 165
 					height: 165
 					formats: [AUTO, WEBP, PNG]
+					quality: 100
 				)
 			}
 		}
@@ -179,6 +181,7 @@ export const queryAlimentacao = graphql`
 					layout: FIXED
 					width: 165
 					height: 165
+					quality: 100
 					formats: [AUTO, WEBP, PNG]
 				)
 			}
@@ -188,6 +191,7 @@ export const queryAlimentacao = graphql`
 				gatsbyImageData(
 					layout: FIXED
 					width: 165
+					quality: 100
 					height: 165
 					formats: [AUTO, WEBP, PNG]
 				)
@@ -200,6 +204,7 @@ export const queryAlimentacao = graphql`
 					layout: FIXED
 					width: 165
 					height: 165
+					quality: 100
 					formats: [AUTO, WEBP, PNG]
 				)
 			}
@@ -209,6 +214,7 @@ export const queryAlimentacao = graphql`
 				gatsbyImageData(
 					layout: FIXED
 					width: 165
+					quality: 100
 					height: 165
 					formats: [AUTO, WEBP, PNG]
 				)
@@ -220,6 +226,7 @@ export const queryAlimentacao = graphql`
 				gatsbyImageData(
 					layout: FIXED
 					width: 165
+					quality: 100
 					height: 165
 					formats: [AUTO, WEBP, PNG]
 				)
@@ -229,6 +236,7 @@ export const queryAlimentacao = graphql`
 			childrenImageSharp {
 				gatsbyImageData(
 					layout: FIXED
+					quality: 100
 					width: 165
 					height: 165
 					formats: [AUTO, WEBP, PNG]
@@ -240,6 +248,7 @@ export const queryAlimentacao = graphql`
 			childrenImageSharp {
 				gatsbyImageData(
 					layout: FIXED
+					quality: 100
 					width: 165
 					height: 165
 					formats: [AUTO, WEBP, PNG]
@@ -251,6 +260,7 @@ export const queryAlimentacao = graphql`
 				gatsbyImageData(
 					layout: FIXED
 					width: 165
+					quality: 100
 					height: 165
 					formats: [AUTO, WEBP, PNG]
 				)
@@ -261,6 +271,7 @@ export const queryAlimentacao = graphql`
 			childrenImageSharp {
 				gatsbyImageData(
 					layout: FIXED
+					quality: 100
 					width: 165
 					height: 165
 					formats: [AUTO, WEBP, PNG]
@@ -271,6 +282,7 @@ export const queryAlimentacao = graphql`
 			childrenImageSharp {
 				gatsbyImageData(
 					layout: FIXED
+					quality: 100
 					width: 165
 					height: 165
 					formats: [AUTO, WEBP, PNG]
@@ -282,6 +294,7 @@ export const queryAlimentacao = graphql`
 			childrenImageSharp {
 				gatsbyImageData(
 					layout: FIXED
+					quality: 100
 					width: 165
 					height: 165
 					formats: [AUTO, WEBP, PNG]
@@ -293,6 +306,7 @@ export const queryAlimentacao = graphql`
 				gatsbyImageData(
 					layout: FIXED
 					width: 165
+					quality: 100
 					height: 165
 					formats: [AUTO, WEBP, PNG]
 				)
@@ -303,6 +317,7 @@ export const queryAlimentacao = graphql`
 			childrenImageSharp {
 				gatsbyImageData(
 					layout: FIXED
+					quality: 100
 					width: 165
 					height: 165
 					formats: [AUTO, WEBP, PNG]
@@ -313,6 +328,7 @@ export const queryAlimentacao = graphql`
 			childrenImageSharp {
 				gatsbyImageData(
 					layout: FIXED
+					quality: 100
 					width: 165
 					height: 165
 					formats: [AUTO, WEBP, PNG]
@@ -323,6 +339,7 @@ export const queryAlimentacao = graphql`
 			childrenImageSharp {
 				gatsbyImageData(
 					layout: FIXED
+					quality: 100
 					width: 165
 					height: 165
 					formats: [AUTO, WEBP, PNG]
