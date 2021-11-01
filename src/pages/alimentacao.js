@@ -126,7 +126,10 @@ const IndexPage = ({ data }) => {
 					opt={{
 						title: 'Alimentação',
 						cardVerse: (
-							<Layout type="BLOCK_IMAGE" opt={{ queryCard: data.cardVerse }} />
+							<Layout
+								type="BLOCK_IMAGE"
+								opt={{ queryCard: data.cardVerseAlimentacao }}
+							/>
 						),
 						firstElementsArray,
 						secondElementsArray,
@@ -335,7 +338,7 @@ export const queryAlimentacao = graphql`
 				)
 			}
 		}
-		cardVerse: file(relativePath: { eq: "card-alimentacao.png" }) {
+		cardVerseAlimentacao: file(relativePath: { eq: "card-alimentacao.png" }) {
 			childrenImageSharp {
 				gatsbyImageData(
 					layout: FIXED
