@@ -131,7 +131,7 @@ export default IndexPage
 
 export const queryIndex = graphql`
 	query imgsIndex {
-		logotipoIndex: file(relativePath: { eq: "jogodamemoria-logo.png" }) {
+		logotipoIndex: file(relativePath: { eq: "logotipo-jogo-memoria.png" }) {
 			childrenImageSharp {
 				gatsbyImageData(
 					layout: FIXED
