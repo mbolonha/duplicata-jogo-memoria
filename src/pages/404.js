@@ -10,7 +10,6 @@ import PrevencaoIcon from '../../static/assets/images/prevencao-icon.svg'
 import TratamentoIcon from '../../static/assets/images/tratamento-icon.svg'
 
 const IndexPage = ({ data }) => {
-	console.log(data.logotipo)
 	return (
 		// titleSeo = Título da página atual - $title::gatsby-config
 		// titleSeo é seguido por title::gatsby-config
@@ -27,7 +26,6 @@ const IndexPage = ({ data }) => {
 			>
 				<Layout type="HEADER" />
 				<div className="index-first-row">
-					<Layout type="BLOCK_IMAGE" opt={{ queryCard: data.logotipo }} />
 					<p className="index-paragraph">
 						Acesse abaixo os jogos da memória e aprenda tópicos relacionados à
 						Diabetes.
@@ -61,18 +59,3 @@ const IndexPage = ({ data }) => {
 	)
 }
 export default IndexPage
-
-export const errorIndex = graphql`
-	query errorIndex {
-		logotipo: file(relativePath: { eq: "logotipo-jogo-memoria.png" }) {
-			childrenImageSharp {
-				gatsbyImageData(
-					layout: FIXED
-					width: 224
-					quality: 100
-					formats: [AUTO, WEBP, JPG]
-				)
-			}
-		}
-	}
-`
