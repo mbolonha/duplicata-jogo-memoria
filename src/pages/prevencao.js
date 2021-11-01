@@ -152,96 +152,181 @@ export default IndexPage
 
 export const queryPrevencao = graphql`
 	query imgsPrevencao {
-		prevencao01a: file(relativePath: { eq: "prevencao-01-a" }) {
+		prevencao01a: file(relativePath: { eq: "prevencao-01-a.png" }) {
 			childrenImageSharp {
-				gatsbyImageData(layout: FIXED, width: 165, height: 165)
+				gatsbyImageData(
+					layout: FIXED
+					width: 165
+					height: 165
+					formats: [AUTO, WEBP, PNG]
+				)
 			}
 		}
-		prevencao01b: file(relativePath: { eq: "prevencao-01-b" }) {
+		prevencao01b: file(relativePath: { eq: "prevencao-01-b.png" }) {
 			childrenImageSharp {
-				gatsbyImageData(layout: FIXED, width: 165, height: 165)
-			}
-		}
-
-		prevencao02a: file(relativePath: { eq: "prevencao-02-a" }) {
-			childrenImageSharp {
-				gatsbyImageData(layout: FIXED, width: 165, height: 165)
-			}
-		}
-		prevencao02b: file(relativePath: { eq: "prevencao-02-b" }) {
-			childrenImageSharp {
-				gatsbyImageData(layout: FIXED, width: 165, height: 165)
-			}
-		}
-
-		prevencao03a: file(relativePath: { eq: "prevencao-03-a" }) {
-			childrenImageSharp {
-				gatsbyImageData(layout: FIXED, width: 165, height: 165)
-			}
-		}
-		prevencao03b: file(relativePath: { eq: "prevencao-03-b" }) {
-			childrenImageSharp {
-				gatsbyImageData(layout: FIXED, width: 165, height: 165)
+				gatsbyImageData(
+					layout: FIXED
+					width: 165
+					height: 165
+					formats: [AUTO, WEBP, PNG]
+				)
 			}
 		}
 
-		prevencao04a: file(relativePath: { eq: "prevencao-04-a" }) {
+		prevencao02a: file(relativePath: { eq: "prevencao-02-a.png" }) {
 			childrenImageSharp {
-				gatsbyImageData(layout: FIXED, width: 165, height: 165)
+				gatsbyImageData(
+					layout: FIXED
+					width: 165
+					height: 165
+					formats: [AUTO, WEBP, PNG]
+				)
 			}
 		}
-		prevencao04b: file(relativePath: { eq: "prevencao-04-b" }) {
+		prevencao02b: file(relativePath: { eq: "prevencao-02-b.png" }) {
 			childrenImageSharp {
-				gatsbyImageData(layout: FIXED, width: 165, height: 165)
-			}
-		}
-
-		prevencao05a: file(relativePath: { eq: "prevencao-05-a" }) {
-			childrenImageSharp {
-				gatsbyImageData(layout: FIXED, width: 165, height: 165)
-			}
-		}
-		prevencao05b: file(relativePath: { eq: "prevencao-05-b" }) {
-			childrenImageSharp {
-				gatsbyImageData(layout: FIXED, width: 165, height: 165)
-			}
-		}
-
-		prevencao06a: file(relativePath: { eq: "prevencao-06-a" }) {
-			childrenImageSharp {
-				gatsbyImageData(layout: FIXED, width: 165, height: 165)
-			}
-		}
-		prevencao06b: file(relativePath: { eq: "prevencao-06-b" }) {
-			childrenImageSharp {
-				gatsbyImageData(layout: FIXED, width: 165, height: 165)
+				gatsbyImageData(
+					layout: FIXED
+					width: 165
+					height: 165
+					formats: [AUTO, WEBP, PNG]
+				)
 			}
 		}
 
-		prevencao07a: file(relativePath: { eq: "prevencao-07-a" }) {
+		prevencao03a: file(relativePath: { eq: "prevencao-03-a.png" }) {
 			childrenImageSharp {
-				gatsbyImageData(layout: FIXED, width: 165, height: 165)
+				gatsbyImageData(
+					layout: FIXED
+					width: 165
+					height: 165
+					formats: [AUTO, WEBP, PNG]
+				)
 			}
 		}
-		prevencao07b: file(relativePath: { eq: "prevencao-07-b" }) {
+		prevencao03b: file(relativePath: { eq: "prevencao-03-b.png" }) {
 			childrenImageSharp {
-				gatsbyImageData(layout: FIXED, width: 165, height: 165)
+				gatsbyImageData(
+					layout: FIXED
+					width: 165
+					height: 165
+					formats: [AUTO, WEBP, PNG]
+				)
 			}
 		}
 
-		prevencao08a: file(relativePath: { eq: "prevencao-08-a" }) {
+		prevencao04a: file(relativePath: { eq: "prevencao-04-a.png" }) {
 			childrenImageSharp {
-				gatsbyImageData(layout: FIXED, width: 165, height: 165)
+				gatsbyImageData(
+					layout: FIXED
+					width: 165
+					height: 165
+					formats: [AUTO, WEBP, PNG]
+				)
 			}
 		}
-		prevencao08b: file(relativePath: { eq: "prevencao-08-b" }) {
+		prevencao04b: file(relativePath: { eq: "prevencao-04-b.png" }) {
 			childrenImageSharp {
-				gatsbyImageData(layout: FIXED, width: 165, height: 165)
+				gatsbyImageData(
+					layout: FIXED
+					width: 165
+					height: 165
+					formats: [AUTO, WEBP, PNG]
+				)
 			}
 		}
-		cardVerse: file(relativePath: { eq: "card-prevencao" }) {
+
+		prevencao05a: file(relativePath: { eq: "prevencao-05-a.png" }) {
 			childrenImageSharp {
-				gatsbyImageData(layout: FIXED, width: 165, height: 165)
+				gatsbyImageData(
+					layout: FIXED
+					width: 165
+					height: 165
+					formats: [AUTO, WEBP, PNG]
+				)
+			}
+		}
+		prevencao05b: file(relativePath: { eq: "prevencao-05-b.png" }) {
+			childrenImageSharp {
+				gatsbyImageData(
+					layout: FIXED
+					width: 165
+					height: 165
+					formats: [AUTO, WEBP, PNG]
+				)
+			}
+		}
+
+		prevencao06a: file(relativePath: { eq: "prevencao-06-a.png" }) {
+			childrenImageSharp {
+				gatsbyImageData(
+					layout: FIXED
+					width: 165
+					height: 165
+					formats: [AUTO, WEBP, PNG]
+				)
+			}
+		}
+		prevencao06b: file(relativePath: { eq: "prevencao-06-b.png" }) {
+			childrenImageSharp {
+				gatsbyImageData(
+					layout: FIXED
+					width: 165
+					height: 165
+					formats: [AUTO, WEBP, PNG]
+				)
+			}
+		}
+
+		prevencao07a: file(relativePath: { eq: "prevencao-07-a.png" }) {
+			childrenImageSharp {
+				gatsbyImageData(
+					layout: FIXED
+					width: 165
+					height: 165
+					formats: [AUTO, WEBP, PNG]
+				)
+			}
+		}
+		prevencao07b: file(relativePath: { eq: "prevencao-07-b.png" }) {
+			childrenImageSharp {
+				gatsbyImageData(
+					layout: FIXED
+					width: 165
+					height: 165
+					formats: [AUTO, WEBP, PNG]
+				)
+			}
+		}
+
+		prevencao08a: file(relativePath: { eq: "prevencao-08-a.png" }) {
+			childrenImageSharp {
+				gatsbyImageData(
+					layout: FIXED
+					width: 165
+					height: 165
+					formats: [AUTO, WEBP, PNG]
+				)
+			}
+		}
+		prevencao08b: file(relativePath: { eq: "prevencao-08-b.png" }) {
+			childrenImageSharp {
+				gatsbyImageData(
+					layout: FIXED
+					width: 165
+					height: 165
+					formats: [AUTO, WEBP, PNG]
+				)
+			}
+		}
+		cardVerse: file(relativePath: { eq: "card-prevencao.png" }) {
+			childrenImageSharp {
+				gatsbyImageData(
+					layout: FIXED
+					width: 165
+					height: 165
+					formats: [AUTO, WEBP, PNG]
+				)
 			}
 		}
 	}

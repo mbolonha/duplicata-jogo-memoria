@@ -131,49 +131,96 @@ export default IndexPage
 
 export const queryIndex = graphql`
 	query imgsIndex {
-		logotipoIndex: file(relativePath: { eq: "jogodamemoria-logo" }) {
+		logotipoIndex: file(relativePath: { eq: "jogodamemoria-logo.png" }) {
 			childrenImageSharp {
-				gatsbyImageData(layout: FIXED, width: 224, quality: 100)
+				gatsbyImageData(
+					layout: FIXED
+					width: 224
+					quality: 100
+					formats: [AUTO, WEBP, PNG]
+				)
 			}
 		}
-		astrazeneca: file(relativePath: { eq: "astrazeneca-diabetes-logotipo" }) {
+		astrazeneca: file(
+			relativePath: { eq: "astrazeneca-diabetes-logotipo.png" }
+		) {
 			childrenImageSharp {
-				gatsbyImageData(layout: FIXED, height: 80, quality: 100)
+				gatsbyImageData(
+					layout: FIXED
+					height: 80
+					quality: 100
+					formats: [AUTO, WEBP, PNG]
+				)
 			}
 		}
-		bayer: file(relativePath: { eq: "bayer-logotipo" }) {
+		bayer: file(relativePath: { eq: "bayer-logotipo.png" }) {
 			childrenImageSharp {
-				gatsbyImageData(layout: FIXED, height: 70, quality: 100)
+				gatsbyImageData(
+					layout: FIXED
+					height: 70
+					quality: 100
+					formats: [AUTO, WEBP, PNG]
+				)
 			}
 		}
-		bd: file(relativePath: { eq: "bd-logotipo" }) {
+		bd: file(relativePath: { eq: "bd-logotipo.png" }) {
 			childrenImageSharp {
-				gatsbyImageData(layout: FIXED, height: 80, quality: 100)
+				gatsbyImageData(
+					layout: FIXED
+					height: 80
+					quality: 100
+					formats: [AUTO, WEBP, PNG]
+				)
 			}
 		}
-		boehringer: file(relativePath: { eq: "boehringer-logotipo" }) {
+		boehringer: file(relativePath: { eq: "boehringer-logotipo.jpg" }) {
 			childrenImageSharp {
-				gatsbyImageData(layout: FIXED, height: 130, quality: 100)
+				gatsbyImageData(
+					layout: FIXED
+					height: 130
+					quality: 100
+					formats: [AUTO, WEBP, JPG]
+				)
 			}
 		}
-		novartis: file(relativePath: { eq: "novartis-logotipo" }) {
+		novartis: file(relativePath: { eq: "novartis-logotipo.jpg" }) {
 			childrenImageSharp {
-				gatsbyImageData(layout: FIXED, height: 30, quality: 100)
+				gatsbyImageData(
+					layout: FIXED
+					height: 30
+					quality: 100
+					formats: [AUTO, WEBP, JPG]
+				)
 			}
 		}
-		nordisk: file(relativePath: { eq: "novo-nordisk-logotipo" }) {
+		nordisk: file(relativePath: { eq: "novo-nordisk-logotipo.jpg" }) {
 			childrenImageSharp {
-				gatsbyImageData(layout: FIXED, height: 70, quality: 100)
+				gatsbyImageData(
+					layout: FIXED
+					height: 70
+					quality: 100
+					formats: [AUTO, WEBP, JPG]
+				)
 			}
 		}
-		roche: file(relativePath: { eq: "roche-logotipo" }) {
+		roche: file(relativePath: { eq: "roche-logotipo.jpg" }) {
 			childrenImageSharp {
-				gatsbyImageData(layout: FIXED, height: 45, quality: 100)
+				gatsbyImageData(
+					layout: FIXED
+					height: 45
+					quality: 100
+					formats: [AUTO, WEBP, JPG]
+				)
 			}
 		}
-		sanofi: file(relativePath: { eq: "sanofi-logotipo" }) {
+		sanofi: file(relativePath: { eq: "sanofi-logotipo.jpg" }) {
 			childrenImageSharp {
-				gatsbyImageData(layout: FIXED, height: 80, quality: 100)
+				gatsbyImageData(
+					layout: FIXED
+					height: 80
+					quality: 100
+					formats: [AUTO, WEBP, JPG]
+				)
 			}
 		}
 	}

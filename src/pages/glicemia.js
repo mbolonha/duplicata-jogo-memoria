@@ -152,96 +152,181 @@ export default IndexPage
 
 export const queryGlicemia = graphql`
 	query imgsGlicemia {
-		glicemia01a: file(relativePath: { eq: "glicemia-01-a" }) {
+		glicemia01a: file(relativePath: { eq: "glicemia-01-a.png" }) {
 			childrenImageSharp {
-				gatsbyImageData(layout: FIXED, width: 165, height: 165)
+				gatsbyImageData(
+					layout: FIXED
+					width: 165
+					height: 165
+					formats: [AUTO, WEBP, PNG]
+				)
 			}
 		}
-		glicemia01b: file(relativePath: { eq: "glicemia-01-b" }) {
+		glicemia01b: file(relativePath: { eq: "glicemia-01-b.png" }) {
 			childrenImageSharp {
-				gatsbyImageData(layout: FIXED, width: 165, height: 165)
-			}
-		}
-
-		glicemia02a: file(relativePath: { eq: "glicemia-02-a" }) {
-			childrenImageSharp {
-				gatsbyImageData(layout: FIXED, width: 165, height: 165)
-			}
-		}
-		glicemia02b: file(relativePath: { eq: "glicemia-02-b" }) {
-			childrenImageSharp {
-				gatsbyImageData(layout: FIXED, width: 165, height: 165)
-			}
-		}
-
-		glicemia03a: file(relativePath: { eq: "glicemia-03-a" }) {
-			childrenImageSharp {
-				gatsbyImageData(layout: FIXED, width: 165, height: 165)
-			}
-		}
-		glicemia03b: file(relativePath: { eq: "glicemia-03-b" }) {
-			childrenImageSharp {
-				gatsbyImageData(layout: FIXED, width: 165, height: 165)
+				gatsbyImageData(
+					layout: FIXED
+					width: 165
+					height: 165
+					formats: [AUTO, WEBP, PNG]
+				)
 			}
 		}
 
-		glicemia04a: file(relativePath: { eq: "glicemia-04-a" }) {
+		glicemia02a: file(relativePath: { eq: "glicemia-02-a.png" }) {
 			childrenImageSharp {
-				gatsbyImageData(layout: FIXED, width: 165, height: 165)
+				gatsbyImageData(
+					layout: FIXED
+					width: 165
+					height: 165
+					formats: [AUTO, WEBP, PNG]
+				)
 			}
 		}
-		glicemia04b: file(relativePath: { eq: "glicemia-04-b" }) {
+		glicemia02b: file(relativePath: { eq: "glicemia-02-b.png" }) {
 			childrenImageSharp {
-				gatsbyImageData(layout: FIXED, width: 165, height: 165)
-			}
-		}
-
-		glicemia05a: file(relativePath: { eq: "glicemia-05-a" }) {
-			childrenImageSharp {
-				gatsbyImageData(layout: FIXED, width: 165, height: 165)
-			}
-		}
-		glicemia05b: file(relativePath: { eq: "glicemia-05-b" }) {
-			childrenImageSharp {
-				gatsbyImageData(layout: FIXED, width: 165, height: 165)
-			}
-		}
-
-		glicemia06a: file(relativePath: { eq: "glicemia-06-a" }) {
-			childrenImageSharp {
-				gatsbyImageData(layout: FIXED, width: 165, height: 165)
-			}
-		}
-		glicemia06b: file(relativePath: { eq: "glicemia-06-b" }) {
-			childrenImageSharp {
-				gatsbyImageData(layout: FIXED, width: 165, height: 165)
+				gatsbyImageData(
+					layout: FIXED
+					width: 165
+					height: 165
+					formats: [AUTO, WEBP, PNG]
+				)
 			}
 		}
 
-		glicemia07a: file(relativePath: { eq: "glicemia-07-a" }) {
+		glicemia03a: file(relativePath: { eq: "glicemia-03-a.png" }) {
 			childrenImageSharp {
-				gatsbyImageData(layout: FIXED, width: 165, height: 165)
+				gatsbyImageData(
+					layout: FIXED
+					width: 165
+					height: 165
+					formats: [AUTO, WEBP, PNG]
+				)
 			}
 		}
-		glicemia07b: file(relativePath: { eq: "glicemia-07-b" }) {
+		glicemia03b: file(relativePath: { eq: "glicemia-03-b.png" }) {
 			childrenImageSharp {
-				gatsbyImageData(layout: FIXED, width: 165, height: 165)
+				gatsbyImageData(
+					layout: FIXED
+					width: 165
+					height: 165
+					formats: [AUTO, WEBP, PNG]
+				)
 			}
 		}
 
-		glicemia08a: file(relativePath: { eq: "glicemia-08-a" }) {
+		glicemia04a: file(relativePath: { eq: "glicemia-04-a.png" }) {
 			childrenImageSharp {
-				gatsbyImageData(layout: FIXED, width: 165, height: 165)
+				gatsbyImageData(
+					layout: FIXED
+					width: 165
+					height: 165
+					formats: [AUTO, WEBP, PNG]
+				)
 			}
 		}
-		glicemia08b: file(relativePath: { eq: "glicemia-08-b" }) {
+		glicemia04b: file(relativePath: { eq: "glicemia-04-b.png" }) {
 			childrenImageSharp {
-				gatsbyImageData(layout: FIXED, width: 165, height: 165)
+				gatsbyImageData(
+					layout: FIXED
+					width: 165
+					height: 165
+					formats: [AUTO, WEBP, PNG]
+				)
 			}
 		}
-		cardVerse: file(relativePath: { eq: "card-glicemia" }) {
+
+		glicemia05a: file(relativePath: { eq: "glicemia-05-a.png" }) {
 			childrenImageSharp {
-				gatsbyImageData(layout: FIXED, width: 165, height: 165)
+				gatsbyImageData(
+					layout: FIXED
+					width: 165
+					height: 165
+					formats: [AUTO, WEBP, PNG]
+				)
+			}
+		}
+		glicemia05b: file(relativePath: { eq: "glicemia-05-b.png" }) {
+			childrenImageSharp {
+				gatsbyImageData(
+					layout: FIXED
+					width: 165
+					height: 165
+					formats: [AUTO, WEBP, PNG]
+				)
+			}
+		}
+
+		glicemia06a: file(relativePath: { eq: "glicemia-06-a.png" }) {
+			childrenImageSharp {
+				gatsbyImageData(
+					layout: FIXED
+					width: 165
+					height: 165
+					formats: [AUTO, WEBP, PNG]
+				)
+			}
+		}
+		glicemia06b: file(relativePath: { eq: "glicemia-06-b.png" }) {
+			childrenImageSharp {
+				gatsbyImageData(
+					layout: FIXED
+					width: 165
+					height: 165
+					formats: [AUTO, WEBP, PNG]
+				)
+			}
+		}
+
+		glicemia07a: file(relativePath: { eq: "glicemia-07-a.png" }) {
+			childrenImageSharp {
+				gatsbyImageData(
+					layout: FIXED
+					width: 165
+					height: 165
+					formats: [AUTO, WEBP, PNG]
+				)
+			}
+		}
+		glicemia07b: file(relativePath: { eq: "glicemia-07-b.png" }) {
+			childrenImageSharp {
+				gatsbyImageData(
+					layout: FIXED
+					width: 165
+					height: 165
+					formats: [AUTO, WEBP, PNG]
+				)
+			}
+		}
+
+		glicemia08a: file(relativePath: { eq: "glicemia-08-a.png" }) {
+			childrenImageSharp {
+				gatsbyImageData(
+					layout: FIXED
+					width: 165
+					height: 165
+					formats: [AUTO, WEBP, PNG]
+				)
+			}
+		}
+		glicemia08b: file(relativePath: { eq: "glicemia-08-b.png" }) {
+			childrenImageSharp {
+				gatsbyImageData(
+					layout: FIXED
+					width: 165
+					height: 165
+					formats: [AUTO, WEBP, PNG]
+				)
+			}
+		}
+		cardVerse: file(relativePath: { eq: "card-glicemia.png" }) {
+			childrenImageSharp {
+				gatsbyImageData(
+					layout: FIXED
+					width: 165
+					height: 165
+					formats: [AUTO, WEBP, PNG]
+				)
 			}
 		}
 	}

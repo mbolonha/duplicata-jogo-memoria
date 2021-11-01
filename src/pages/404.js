@@ -10,6 +10,7 @@ import PrevencaoIcon from '../../static/assets/images/prevencao-icon.svg'
 import TratamentoIcon from '../../static/assets/images/tratamento-icon.svg'
 
 const IndexPage = ({ data }) => {
+	console.log(data.logotipo)
 	return (
 		// titleSeo = Título da página atual - $title::gatsby-config
 		// titleSeo é seguido por title::gatsby-config
@@ -63,9 +64,14 @@ export default IndexPage
 
 export const errorIndex = graphql`
 	query errorIndex {
-		logotipo: file(relativePath: { eq: "jogodamemoria-logo" }) {
+		logotipo: file(relativePath: { eq: "jogodamemoria-logo.png" }) {
 			childrenImageSharp {
-				gatsbyImageData(layout: FIXED, width: 224, quality: 100)
+				gatsbyImageData(
+					layout: FIXED
+					width: 224
+					quality: 100
+					formats: [AUTO, WEBP, JPG]
+				)
 			}
 		}
 	}
