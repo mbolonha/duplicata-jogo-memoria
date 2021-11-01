@@ -76,7 +76,7 @@ const IndexPage = ({ data }) => {
 					</div>
 					<div className="carousel-logos">
 						<h2 className="heading-logos">Nossos Parceiros</h2>
-						<Carousel>
+						<Carousel showThumbs={false}>
 							<div>
 								<Layout
 									type="BLOCK_IMAGE"
@@ -117,98 +117,12 @@ const IndexPage = ({ data }) => {
 				type="ROW"
 				opt={{
 					isBoxed: true,
-					classes: '',
-					alignTo: 'left',
-					bgColor: '#fff',
+					classes: 'footer-gray',
+					alignTo: 'center',
+					bgColor: '#2f2f2f',
 				}}
 			>
-				<div className="container">
-					<div className="text-center">
-						<ul className="social-links social-links__dark">
-							<li>
-								<a
-									href="https://www.facebook.com/ADJDiabetesBrasil/"
-									target="_blank"
-								>
-									<i className="fa fa-facebook"></i>
-								</a>
-							</li>
-							<li>
-								<a href="https://twitter.com/ADJ_Diabetes_BR" target="_blank">
-									<i className="fa fa-twitter"></i>
-								</a>
-							</li>
-							<li>
-								<a
-									href="http://www.instagram.com/adjdiabetesbrasil/?hl=pt-br"
-									target="_blank"
-								>
-									<i className="fa fa-instagram"></i>
-								</a>
-							</li>
-							<li>
-								<a
-									href="https://www.youtube.com/channel/UCj5rxMlBYLDiRSVdy2FprMA?view_as=subscriber"
-									target="_blank"
-								>
-									<i className="fa fa-youtube"></i>
-								</a>
-							</li>
-						</ul>
-
-						<p>
-							Copyright 2017, todos os direitos reservados. ADJ – ASSOCIAÇÃO DE
-							DIABETES JUVENIL
-							<br />
-							R. Padre Antônio Tomás, 213 - Água Branca, São Paulo - SP,
-							05003-010.
-							<br />
-							(11) 3675-3266 – ramal 11
-							<br />
-							<img
-								className="wp-image-707 alignnone"
-								src="https://adj.org.br/wp-content/uploads/2017/12/WhatsApp-icone.png"
-								alt="WhatsApp-icone"
-								width="16"
-								height="16"
-							/>
-							(11)9 7148-0465
-						</p>
-						<p>
-							Ninguém está autorizado a utilizar o logo e nome da Associação de
-							Diabetes Juvenil - ADJ, principalmente para fins comerciais.
-							<br />O uso indevido e sem autorização acarretará a tomada das
-							medidas legais cabíveis.
-							<br />É vedada a publicação do conteúdo deste site, no todo ou em
-							parte, sem prévia autorização, por escrito, da ADJ Diabetes
-							Brasil. <br />
-							Solicite autorização pelo e-mail:{' '}
-							<span>
-								<a href="mailto:revistaadj@adj.org.br">revistaadj@adj.org.br</a>
-							</span>
-						</p>
-						<p>
-							<img
-								className="wp-image-474 alignnone"
-								src="https://adj.org.br/wp-content/uploads/2017/10/Importante.png"
-								alt="Importante"
-								width="16"
-								height="16"
-							/>
-							INFORMAÇÃO IMPORTANTE
-							<br />
-							<em>
-								O conteúdo desse site tem finalidade exclusivamente informativa
-								e educativa e não substitui, em nenhuma hipótese,
-								<br />a necessidade de seguir as orientações de seu médico e/ou
-								de outros profissionais de saúde,
-								<br />
-								únicos habilitados a prescrever o tratamento mais adequado às
-								suas necessidades.
-							</em>
-						</p>
-					</div>
-				</div>
+				<Layout type="FOOTER" />
 			</Layout>
 		</Layout>
 	)

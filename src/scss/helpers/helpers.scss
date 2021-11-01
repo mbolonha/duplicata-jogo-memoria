@@ -539,3 +539,20 @@ body {
 		}
 	}
 }
+
+.footer-gray {
+	.container {
+		padding: 20px;
+	}
+	p,
+	a {
+		color: #a3a3a3;
+	}
+	img {
+		vertical-align: bottom;
+		padding-right: 5px;
+	}
+	font-size: 10px;
+	line-height: 12px;
+	font-family: $main__font;
+}
