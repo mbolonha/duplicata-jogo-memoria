@@ -9,7 +9,7 @@ import HabitosIcon from '../../static/assets/images/habitos-icon.svg'
 import PrevencaoIcon from '../../static/assets/images/prevencao-icon.svg'
 import TratamentoIcon from '../../static/assets/images/tratamento-icon.svg'
 
-const IndexPage = ({ data }) => {
+const IndexPage = () => {
 	return (
 		// titleSeo = Título da página atual - $title::gatsby-config
 		// titleSeo é seguido por title::gatsby-config
