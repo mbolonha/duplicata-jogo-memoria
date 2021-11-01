@@ -152,94 +152,94 @@ export default IndexPage
 
 export const queryGlicemia = graphql`
 	query imgsGlicemia {
-		glicemia01a: file(relativePath: { eq: "glicemia-01-a.png" }) {
+		glicemia01a: file(relativePath: { eq: "glicemia-01-a" }) {
 			childrenImageSharp {
 				gatsbyImageData(layout: FIXED, width: 165, height: 165)
 			}
 		}
-		glicemia01b: file(relativePath: { eq: "glicemia-01-b.png" }) {
-			childrenImageSharp {
-				gatsbyImageData(layout: FIXED, width: 165, height: 165)
-			}
-		}
-
-		glicemia02a: file(relativePath: { eq: "glicemia-02-a.png" }) {
-			childrenImageSharp {
-				gatsbyImageData(layout: FIXED, width: 165, height: 165)
-			}
-		}
-		glicemia02b: file(relativePath: { eq: "glicemia-02-b.png" }) {
+		glicemia01b: file(relativePath: { eq: "glicemia-01-b" }) {
 			childrenImageSharp {
 				gatsbyImageData(layout: FIXED, width: 165, height: 165)
 			}
 		}
 
-		glicemia03a: file(relativePath: { eq: "glicemia-03-a.png" }) {
+		glicemia02a: file(relativePath: { eq: "glicemia-02-a" }) {
 			childrenImageSharp {
 				gatsbyImageData(layout: FIXED, width: 165, height: 165)
 			}
 		}
-		glicemia03b: file(relativePath: { eq: "glicemia-03-b.png" }) {
-			childrenImageSharp {
-				gatsbyImageData(layout: FIXED, width: 165, height: 165)
-			}
-		}
-
-		glicemia04a: file(relativePath: { eq: "glicemia-04-a.png" }) {
-			childrenImageSharp {
-				gatsbyImageData(layout: FIXED, width: 165, height: 165)
-			}
-		}
-		glicemia04b: file(relativePath: { eq: "glicemia-04-b.png" }) {
+		glicemia02b: file(relativePath: { eq: "glicemia-02-b" }) {
 			childrenImageSharp {
 				gatsbyImageData(layout: FIXED, width: 165, height: 165)
 			}
 		}
 
-		glicemia05a: file(relativePath: { eq: "glicemia-05-a.png" }) {
+		glicemia03a: file(relativePath: { eq: "glicemia-03-a" }) {
 			childrenImageSharp {
 				gatsbyImageData(layout: FIXED, width: 165, height: 165)
 			}
 		}
-		glicemia05b: file(relativePath: { eq: "glicemia-05-b.png" }) {
-			childrenImageSharp {
-				gatsbyImageData(layout: FIXED, width: 165, height: 165)
-			}
-		}
-
-		glicemia06a: file(relativePath: { eq: "glicemia-06-a.png" }) {
-			childrenImageSharp {
-				gatsbyImageData(layout: FIXED, width: 165, height: 165)
-			}
-		}
-		glicemia06b: file(relativePath: { eq: "glicemia-06-b.png" }) {
+		glicemia03b: file(relativePath: { eq: "glicemia-03-b" }) {
 			childrenImageSharp {
 				gatsbyImageData(layout: FIXED, width: 165, height: 165)
 			}
 		}
 
-		glicemia07a: file(relativePath: { eq: "glicemia-07-a.png" }) {
+		glicemia04a: file(relativePath: { eq: "glicemia-04-a" }) {
 			childrenImageSharp {
 				gatsbyImageData(layout: FIXED, width: 165, height: 165)
 			}
 		}
-		glicemia07b: file(relativePath: { eq: "glicemia-07-b.png" }) {
+		glicemia04b: file(relativePath: { eq: "glicemia-04-b" }) {
 			childrenImageSharp {
 				gatsbyImageData(layout: FIXED, width: 165, height: 165)
 			}
 		}
 
-		glicemia08a: file(relativePath: { eq: "glicemia-08-a.png" }) {
+		glicemia05a: file(relativePath: { eq: "glicemia-05-a" }) {
 			childrenImageSharp {
 				gatsbyImageData(layout: FIXED, width: 165, height: 165)
 			}
 		}
-		glicemia08b: file(relativePath: { eq: "glicemia-08-b.png" }) {
+		glicemia05b: file(relativePath: { eq: "glicemia-05-b" }) {
 			childrenImageSharp {
 				gatsbyImageData(layout: FIXED, width: 165, height: 165)
 			}
 		}
-		cardVerse: file(relativePath: { eq: "card-glicemia.png" }) {
+
+		glicemia06a: file(relativePath: { eq: "glicemia-06-a" }) {
+			childrenImageSharp {
+				gatsbyImageData(layout: FIXED, width: 165, height: 165)
+			}
+		}
+		glicemia06b: file(relativePath: { eq: "glicemia-06-b" }) {
+			childrenImageSharp {
+				gatsbyImageData(layout: FIXED, width: 165, height: 165)
+			}
+		}
+
+		glicemia07a: file(relativePath: { eq: "glicemia-07-a" }) {
+			childrenImageSharp {
+				gatsbyImageData(layout: FIXED, width: 165, height: 165)
+			}
+		}
+		glicemia07b: file(relativePath: { eq: "glicemia-07-b" }) {
+			childrenImageSharp {
+				gatsbyImageData(layout: FIXED, width: 165, height: 165)
+			}
+		}
+
+		glicemia08a: file(relativePath: { eq: "glicemia-08-a" }) {
+			childrenImageSharp {
+				gatsbyImageData(layout: FIXED, width: 165, height: 165)
+			}
+		}
+		glicemia08b: file(relativePath: { eq: "glicemia-08-b" }) {
+			childrenImageSharp {
+				gatsbyImageData(layout: FIXED, width: 165, height: 165)
+			}
+		}
+		cardVerse: file(relativePath: { eq: "card-glicemia" }) {
 			childrenImageSharp {
 				gatsbyImageData(layout: FIXED, width: 165, height: 165)
 			}

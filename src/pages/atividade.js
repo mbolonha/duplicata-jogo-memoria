@@ -152,94 +152,94 @@ export default IndexPage
 
 export const queryAtividade = graphql`
 	query imgsAtividade {
-		atividade01a: file(relativePath: { eq: "atividade-01-a.png" }) {
+		atividade01a: file(relativePath: { eq: "atividade-01-a" }) {
 			childrenImageSharp {
 				gatsbyImageData(layout: FIXED, width: 165, height: 165)
 			}
 		}
-		atividade01b: file(relativePath: { eq: "atividade-01-b.png" }) {
-			childrenImageSharp {
-				gatsbyImageData(layout: FIXED, width: 165, height: 165)
-			}
-		}
-
-		atividade02a: file(relativePath: { eq: "atividade-02-a.png" }) {
-			childrenImageSharp {
-				gatsbyImageData(layout: FIXED, width: 165, height: 165)
-			}
-		}
-		atividade02b: file(relativePath: { eq: "atividade-02-b.png" }) {
+		atividade01b: file(relativePath: { eq: "atividade-01-b" }) {
 			childrenImageSharp {
 				gatsbyImageData(layout: FIXED, width: 165, height: 165)
 			}
 		}
 
-		atividade03a: file(relativePath: { eq: "atividade-03-a.png" }) {
+		atividade02a: file(relativePath: { eq: "atividade-02-a" }) {
 			childrenImageSharp {
 				gatsbyImageData(layout: FIXED, width: 165, height: 165)
 			}
 		}
-		atividade03b: file(relativePath: { eq: "atividade-03-b.png" }) {
-			childrenImageSharp {
-				gatsbyImageData(layout: FIXED, width: 165, height: 165)
-			}
-		}
-
-		atividade04a: file(relativePath: { eq: "atividade-04-a.png" }) {
-			childrenImageSharp {
-				gatsbyImageData(layout: FIXED, width: 165, height: 165)
-			}
-		}
-		atividade04b: file(relativePath: { eq: "atividade-04-b.png" }) {
+		atividade02b: file(relativePath: { eq: "atividade-02-b" }) {
 			childrenImageSharp {
 				gatsbyImageData(layout: FIXED, width: 165, height: 165)
 			}
 		}
 
-		atividade05a: file(relativePath: { eq: "atividade-05-a.png" }) {
+		atividade03a: file(relativePath: { eq: "atividade-03-a" }) {
 			childrenImageSharp {
 				gatsbyImageData(layout: FIXED, width: 165, height: 165)
 			}
 		}
-		atividade05b: file(relativePath: { eq: "atividade-05-b.png" }) {
-			childrenImageSharp {
-				gatsbyImageData(layout: FIXED, width: 165, height: 165)
-			}
-		}
-
-		atividade06a: file(relativePath: { eq: "atividade-06-a.png" }) {
-			childrenImageSharp {
-				gatsbyImageData(layout: FIXED, width: 165, height: 165)
-			}
-		}
-		atividade06b: file(relativePath: { eq: "atividade-06-b.png" }) {
+		atividade03b: file(relativePath: { eq: "atividade-03-b" }) {
 			childrenImageSharp {
 				gatsbyImageData(layout: FIXED, width: 165, height: 165)
 			}
 		}
 
-		atividade07a: file(relativePath: { eq: "atividade-07-a.png" }) {
+		atividade04a: file(relativePath: { eq: "atividade-04-a" }) {
 			childrenImageSharp {
 				gatsbyImageData(layout: FIXED, width: 165, height: 165)
 			}
 		}
-		atividade07b: file(relativePath: { eq: "atividade-07-b.png" }) {
+		atividade04b: file(relativePath: { eq: "atividade-04-b" }) {
 			childrenImageSharp {
 				gatsbyImageData(layout: FIXED, width: 165, height: 165)
 			}
 		}
 
-		atividade08a: file(relativePath: { eq: "atividade-08-a.png" }) {
+		atividade05a: file(relativePath: { eq: "atividade-05-a" }) {
 			childrenImageSharp {
 				gatsbyImageData(layout: FIXED, width: 165, height: 165)
 			}
 		}
-		atividade08b: file(relativePath: { eq: "atividade-08-b.png" }) {
+		atividade05b: file(relativePath: { eq: "atividade-05-b" }) {
 			childrenImageSharp {
 				gatsbyImageData(layout: FIXED, width: 165, height: 165)
 			}
 		}
-		cardVerse: file(relativePath: { eq: "card-atividade.png" }) {
+
+		atividade06a: file(relativePath: { eq: "atividade-06-a" }) {
+			childrenImageSharp {
+				gatsbyImageData(layout: FIXED, width: 165, height: 165)
+			}
+		}
+		atividade06b: file(relativePath: { eq: "atividade-06-b" }) {
+			childrenImageSharp {
+				gatsbyImageData(layout: FIXED, width: 165, height: 165)
+			}
+		}
+
+		atividade07a: file(relativePath: { eq: "atividade-07-a" }) {
+			childrenImageSharp {
+				gatsbyImageData(layout: FIXED, width: 165, height: 165)
+			}
+		}
+		atividade07b: file(relativePath: { eq: "atividade-07-b" }) {
+			childrenImageSharp {
+				gatsbyImageData(layout: FIXED, width: 165, height: 165)
+			}
+		}
+
+		atividade08a: file(relativePath: { eq: "atividade-08-a" }) {
+			childrenImageSharp {
+				gatsbyImageData(layout: FIXED, width: 165, height: 165)
+			}
+		}
+		atividade08b: file(relativePath: { eq: "atividade-08-b" }) {
+			childrenImageSharp {
+				gatsbyImageData(layout: FIXED, width: 165, height: 165)
+			}
+		}
+		cardVerse: file(relativePath: { eq: "card-atividade" }) {
 			childrenImageSharp {
 				gatsbyImageData(layout: FIXED, width: 165, height: 165)
 			}

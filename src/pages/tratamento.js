@@ -152,94 +152,94 @@ export default IndexPage
 
 export const queryTratamento = graphql`
 	query imgsTratamento {
-		tratamento01a: file(relativePath: { eq: "tratamento-01-a.png" }) {
+		tratamento01a: file(relativePath: { eq: "tratamento-01-a" }) {
 			childrenImageSharp {
 				gatsbyImageData(layout: FIXED, width: 165, height: 165)
 			}
 		}
-		tratamento01b: file(relativePath: { eq: "tratamento-01-b.png" }) {
-			childrenImageSharp {
-				gatsbyImageData(layout: FIXED, width: 165, height: 165)
-			}
-		}
-
-		tratamento02a: file(relativePath: { eq: "tratamento-02-a.png" }) {
-			childrenImageSharp {
-				gatsbyImageData(layout: FIXED, width: 165, height: 165)
-			}
-		}
-		tratamento02b: file(relativePath: { eq: "tratamento-02-b.png" }) {
+		tratamento01b: file(relativePath: { eq: "tratamento-01-b" }) {
 			childrenImageSharp {
 				gatsbyImageData(layout: FIXED, width: 165, height: 165)
 			}
 		}
 
-		tratamento03a: file(relativePath: { eq: "tratamento-03-a.png" }) {
+		tratamento02a: file(relativePath: { eq: "tratamento-02-a" }) {
 			childrenImageSharp {
 				gatsbyImageData(layout: FIXED, width: 165, height: 165)
 			}
 		}
-		tratamento03b: file(relativePath: { eq: "tratamento-03-b.png" }) {
-			childrenImageSharp {
-				gatsbyImageData(layout: FIXED, width: 165, height: 165)
-			}
-		}
-
-		tratamento04a: file(relativePath: { eq: "tratamento-04-a.png" }) {
-			childrenImageSharp {
-				gatsbyImageData(layout: FIXED, width: 165, height: 165)
-			}
-		}
-		tratamento04b: file(relativePath: { eq: "tratamento-04-b.png" }) {
+		tratamento02b: file(relativePath: { eq: "tratamento-02-b" }) {
 			childrenImageSharp {
 				gatsbyImageData(layout: FIXED, width: 165, height: 165)
 			}
 		}
 
-		tratamento05a: file(relativePath: { eq: "tratamento-05-a.png" }) {
+		tratamento03a: file(relativePath: { eq: "tratamento-03-a" }) {
 			childrenImageSharp {
 				gatsbyImageData(layout: FIXED, width: 165, height: 165)
 			}
 		}
-		tratamento05b: file(relativePath: { eq: "tratamento-05-b.png" }) {
-			childrenImageSharp {
-				gatsbyImageData(layout: FIXED, width: 165, height: 165)
-			}
-		}
-
-		tratamento06a: file(relativePath: { eq: "tratamento-06-a.png" }) {
-			childrenImageSharp {
-				gatsbyImageData(layout: FIXED, width: 165, height: 165)
-			}
-		}
-		tratamento06b: file(relativePath: { eq: "tratamento-06-b.png" }) {
+		tratamento03b: file(relativePath: { eq: "tratamento-03-b" }) {
 			childrenImageSharp {
 				gatsbyImageData(layout: FIXED, width: 165, height: 165)
 			}
 		}
 
-		tratamento07a: file(relativePath: { eq: "tratamento-07-a.png" }) {
+		tratamento04a: file(relativePath: { eq: "tratamento-04-a" }) {
 			childrenImageSharp {
 				gatsbyImageData(layout: FIXED, width: 165, height: 165)
 			}
 		}
-		tratamento07b: file(relativePath: { eq: "tratamento-07-b.png" }) {
+		tratamento04b: file(relativePath: { eq: "tratamento-04-b" }) {
 			childrenImageSharp {
 				gatsbyImageData(layout: FIXED, width: 165, height: 165)
 			}
 		}
 
-		tratamento08a: file(relativePath: { eq: "tratamento-08-a.png" }) {
+		tratamento05a: file(relativePath: { eq: "tratamento-05-a" }) {
 			childrenImageSharp {
 				gatsbyImageData(layout: FIXED, width: 165, height: 165)
 			}
 		}
-		tratamento08b: file(relativePath: { eq: "tratamento-08-b.png" }) {
+		tratamento05b: file(relativePath: { eq: "tratamento-05-b" }) {
 			childrenImageSharp {
 				gatsbyImageData(layout: FIXED, width: 165, height: 165)
 			}
 		}
-		cardVerse: file(relativePath: { eq: "card-tratamento.png" }) {
+
+		tratamento06a: file(relativePath: { eq: "tratamento-06-a" }) {
+			childrenImageSharp {
+				gatsbyImageData(layout: FIXED, width: 165, height: 165)
+			}
+		}
+		tratamento06b: file(relativePath: { eq: "tratamento-06-b" }) {
+			childrenImageSharp {
+				gatsbyImageData(layout: FIXED, width: 165, height: 165)
+			}
+		}
+
+		tratamento07a: file(relativePath: { eq: "tratamento-07-a" }) {
+			childrenImageSharp {
+				gatsbyImageData(layout: FIXED, width: 165, height: 165)
+			}
+		}
+		tratamento07b: file(relativePath: { eq: "tratamento-07-b" }) {
+			childrenImageSharp {
+				gatsbyImageData(layout: FIXED, width: 165, height: 165)
+			}
+		}
+
+		tratamento08a: file(relativePath: { eq: "tratamento-08-a" }) {
+			childrenImageSharp {
+				gatsbyImageData(layout: FIXED, width: 165, height: 165)
+			}
+		}
+		tratamento08b: file(relativePath: { eq: "tratamento-08-b" }) {
+			childrenImageSharp {
+				gatsbyImageData(layout: FIXED, width: 165, height: 165)
+			}
+		}
+		cardVerse: file(relativePath: { eq: "card-tratamento" }) {
 			childrenImageSharp {
 				gatsbyImageData(layout: FIXED, width: 165, height: 165)
 			}

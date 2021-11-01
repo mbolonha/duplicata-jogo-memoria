@@ -120,94 +120,94 @@ export default IndexPage
 
 export const queryHabitos = graphql`
 	query imgsHabitos {
-		habitos01a: file(relativePath: { eq: "habitos-01-a.png" }) {
+		habitos01a: file(relativePath: { eq: "habitos-01-a" }) {
 			childrenImageSharp {
 				gatsbyImageData(layout: FIXED, width: 165, height: 165)
 			}
 		}
-		habitos01b: file(relativePath: { eq: "habitos-01-b.png" }) {
-			childrenImageSharp {
-				gatsbyImageData(layout: FIXED, width: 165, height: 165)
-			}
-		}
-
-		habitos02a: file(relativePath: { eq: "habitos-02-a.png" }) {
-			childrenImageSharp {
-				gatsbyImageData(layout: FIXED, width: 165, height: 165)
-			}
-		}
-		habitos02b: file(relativePath: { eq: "habitos-02-b.png" }) {
+		habitos01b: file(relativePath: { eq: "habitos-01-b" }) {
 			childrenImageSharp {
 				gatsbyImageData(layout: FIXED, width: 165, height: 165)
 			}
 		}
 
-		habitos03a: file(relativePath: { eq: "habitos-03-a.png" }) {
+		habitos02a: file(relativePath: { eq: "habitos-02-a" }) {
 			childrenImageSharp {
 				gatsbyImageData(layout: FIXED, width: 165, height: 165)
 			}
 		}
-		habitos03b: file(relativePath: { eq: "habitos-03-b.png" }) {
-			childrenImageSharp {
-				gatsbyImageData(layout: FIXED, width: 165, height: 165)
-			}
-		}
-
-		habitos04a: file(relativePath: { eq: "habitos-04-a.png" }) {
-			childrenImageSharp {
-				gatsbyImageData(layout: FIXED, width: 165, height: 165)
-			}
-		}
-		habitos04b: file(relativePath: { eq: "habitos-04-b.png" }) {
+		habitos02b: file(relativePath: { eq: "habitos-02-b" }) {
 			childrenImageSharp {
 				gatsbyImageData(layout: FIXED, width: 165, height: 165)
 			}
 		}
 
-		habitos05a: file(relativePath: { eq: "habitos-05-a.png" }) {
+		habitos03a: file(relativePath: { eq: "habitos-03-a" }) {
 			childrenImageSharp {
 				gatsbyImageData(layout: FIXED, width: 165, height: 165)
 			}
 		}
-		habitos05b: file(relativePath: { eq: "habitos-05-b.png" }) {
-			childrenImageSharp {
-				gatsbyImageData(layout: FIXED, width: 165, height: 165)
-			}
-		}
-
-		habitos06a: file(relativePath: { eq: "habitos-06-a.png" }) {
-			childrenImageSharp {
-				gatsbyImageData(layout: FIXED, width: 165, height: 165)
-			}
-		}
-		habitos06b: file(relativePath: { eq: "habitos-06-b.png" }) {
+		habitos03b: file(relativePath: { eq: "habitos-03-b" }) {
 			childrenImageSharp {
 				gatsbyImageData(layout: FIXED, width: 165, height: 165)
 			}
 		}
 
-		habitos07a: file(relativePath: { eq: "habitos-07-a.png" }) {
+		habitos04a: file(relativePath: { eq: "habitos-04-a" }) {
 			childrenImageSharp {
 				gatsbyImageData(layout: FIXED, width: 165, height: 165)
 			}
 		}
-		habitos07b: file(relativePath: { eq: "habitos-07-b.png" }) {
+		habitos04b: file(relativePath: { eq: "habitos-04-b" }) {
 			childrenImageSharp {
 				gatsbyImageData(layout: FIXED, width: 165, height: 165)
 			}
 		}
 
-		habitos08a: file(relativePath: { eq: "habitos-08-a.png" }) {
+		habitos05a: file(relativePath: { eq: "habitos-05-a" }) {
 			childrenImageSharp {
 				gatsbyImageData(layout: FIXED, width: 165, height: 165)
 			}
 		}
-		habitos08b: file(relativePath: { eq: "habitos-08-b.png" }) {
+		habitos05b: file(relativePath: { eq: "habitos-05-b" }) {
 			childrenImageSharp {
 				gatsbyImageData(layout: FIXED, width: 165, height: 165)
 			}
 		}
-		cardVerse: file(relativePath: { eq: "card-habitos.png" }) {
+
+		habitos06a: file(relativePath: { eq: "habitos-06-a" }) {
+			childrenImageSharp {
+				gatsbyImageData(layout: FIXED, width: 165, height: 165)
+			}
+		}
+		habitos06b: file(relativePath: { eq: "habitos-06-b" }) {
+			childrenImageSharp {
+				gatsbyImageData(layout: FIXED, width: 165, height: 165)
+			}
+		}
+
+		habitos07a: file(relativePath: { eq: "habitos-07-a" }) {
+			childrenImageSharp {
+				gatsbyImageData(layout: FIXED, width: 165, height: 165)
+			}
+		}
+		habitos07b: file(relativePath: { eq: "habitos-07-b" }) {
+			childrenImageSharp {
+				gatsbyImageData(layout: FIXED, width: 165, height: 165)
+			}
+		}
+
+		habitos08a: file(relativePath: { eq: "habitos-08-a" }) {
+			childrenImageSharp {
+				gatsbyImageData(layout: FIXED, width: 165, height: 165)
+			}
+		}
+		habitos08b: file(relativePath: { eq: "habitos-08-b" }) {
+			childrenImageSharp {
+				gatsbyImageData(layout: FIXED, width: 165, height: 165)
+			}
+		}
+		cardVerse: file(relativePath: { eq: "card-habitos" }) {
 			childrenImageSharp {
 				gatsbyImageData(layout: FIXED, width: 165, height: 165)
 			}
