@@ -492,9 +492,12 @@ body {
 
 .index-share-btn {
 	font-family: $second__font;
-	margin-top: 13px;
 	padding: 0 33px;
 	font-weight: 800;
+
+	max-width: 402px;
+	margin: 13px auto 0;
+	width: 100%;
 }
 .carousel-logos {
 	width: 100%;

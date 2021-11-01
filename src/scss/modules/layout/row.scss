@@ -17,7 +17,7 @@
 
 	.boxed-column-child,
 	& > h2.row-heading {
-		max-width: $boxed__maxWidth;
+		max-width: $boxedDesktop__maxWidth;
 		margin: 0 auto;
 		// letter-spacing: 3.5px;
 	}
