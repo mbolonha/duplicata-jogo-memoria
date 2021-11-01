@@ -1,4 +1,6 @@
 import { React } from '../dependencies'
+import { Link } from 'gatsby'
+
 // import { StaticImage } from 'gatsby-plugin-image'
 // import FooterMainMenuContainer from '../containers/FooterMainMenuContainer'
 
@@ -12,167 +14,112 @@ const Footer = ({ socialIcons, logoImg, refState, handleRefState }) => {
 	return (
 		<>
 			<footer>
-				<div className="social-icons">
-					<a href="https://google.com">
-						Face
-						{/* <Img
-              fixed={instagram.childImageSharp.fixed}
-              width={instagram.childImageSharp.fixed.width}
-              height={instagram.childImageSharp.fixed.height}
-              alt="Develop with Gatsby"
-              title="Gatsby"
-            /> */}
-					</a>
-					<a href="https://google.com">
-						Face
-						{/* <Img
-              fixed={facebook.childImageSharp.fixed}
-              width={facebook.childImageSharp.fixed.width}
-              height={facebook.childImageSharp.fixed.height}
-              alt="Develop with Gatsby"
-              title="Gatsby"
-            /> */}
-					</a>
-					<a href="https://google.com">
-						Face
-						{/* <Img
-              fixed={linkedin.childImageSharp.fixed}
-              width={linkedin.childImageSharp.fixed.width}
-              height={linkedin.childImageSharp.fixed.height}
-              alt="Develop with Gatsby"
-              title="Gatsby"
-            /> */}
-					</a>
-					<a href="https://google.com">
-						Face
-						{/* <Img
-              fixed={pinterest.childImageSharp.fixed}
-              width={pinterest.childImageSharp.fixed.width}
-              height={pinterest.childImageSharp.fixed.height}
-              alt="Develop with Gatsby"
-              title="Gatsby"
-            /> */}
-					</a>
-				</div>
-				<div className="main-footer">
-					{/* <div className="footer-columns">
-						<a href="https://google.com" className="footer-subscribe">
-							<strong>Torne-se um Membro</strong>
-						</a>
-					</div> */}
-					<div className="footer-columns">
-						<ul className="footer-menu">
-							<li className="footer-links">
-								<a href="https://google.com" className="footer-link">
-									Info
+				<div className="container">
+					<div className="text-center">
+						<ul className="social-links social-links__dark">
+							<li>
+								<a
+									href="https://www.facebook.com/ADJDiabetesBrasil/"
+									target="_blank"
+									rel="noreferrer"
+								>
+									<i className="fa fa-facebook"></i>
 								</a>
 							</li>
-							<li className="footer-links">
-								<a href="https://google.com" className="footer-link">
-									Contato
+							<li>
+								<a
+									href="https://twitter.com/ADJ_Diabetes_BR"
+									target="_blank"
+									rel="noreferrer"
+								>
+									<i className="fa fa-twitter"></i>
 								</a>
 							</li>
-							<li className="footer-links">
-								<a href="https://google.com" className="footer-link">
-									FAQ
+							<li>
+								<a
+									href="http://www.instagram.com/adjdiabetesbrasil/?hl=pt-br"
+									target="_blank"
+									rel="noreferrer"
+								>
+									<i className="fa fa-instagram"></i>
 								</a>
 							</li>
-							<li className="footer-links">
-								<a href="https://google.com" className="footer-link">
-									Link Item
-								</a>
-							</li>
-							<li className="footer-links">
-								<a href="https://google.com" className="footer-link">
-									Link Item
-								</a>
-							</li>
-							<li className="footer-links">
-								<a href="https://google.com" className="footer-link">
-									Link Item
-								</a>
-							</li>
-							<li className="footer-links">
-								<a href="https://google.com" className="footer-link">
-									Link Item
+							<li>
+								<a
+									href="https://www.youtube.com/channel/UCj5rxMlBYLDiRSVdy2FprMA?view_as=subscriber"
+									target="_blank"
+									rel="noreferrer"
+								>
+									<i className="fa fa-youtube"></i>
 								</a>
 							</li>
 						</ul>
-					</div>
-					<div className="footer-columns">
-						<ul className="footer-menu">
-							<li className="footer-links">
-								<a href="https://google.com" className="footer-link">
-									Sobre
-								</a>
-							</li>
-							<li className="footer-links">
-								<a href="https://google.com" className="footer-link">
-									Nossa História
-								</a>
-							</li>
-							<li className="footer-links">
-								<a href="/wiki/alesp" className="footer-link">
-									Link
-								</a>
-							</li>
-							<li className="footer-links">
-								<a href="https://google.com" className="footer-link">
-									Facebook
-								</a>
-							</li>
-							<li className="footer-links">
-								<a href="https://google.com" className="footer-link">
-									Pinterest
-								</a>
-							</li>
-							<li className="footer-links">
-								<a href="https://google.com" className="footer-link">
-									Instagram
-								</a>
-							</li>
-							<li className="footer-links">
-								<a href="https://google.com" className="footer-link">
-									© {new Date().getFullYear()}, Edu4Dev mudar
-								</a>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</footer>
-			{/*
-			<div className="footer-menu-fixed-bottom mobile-only">
-				<div className="footer-main-header">
-					<div className="footer-header-columns toggle-menu">
-						<input
-							type="checkbox"
-							id="footer-check-toggle-icon"
-							onChange={handleRefState}
-						/>
-						<label
-							htmlFor="footer-check-toggle-icon"
-							className="menu-wrapper contact-button"
-						>
-							<strong>Suprimentos</strong>
-						</label>
-					</div>
 
-					<div className="footer-header-columns">
 						<p>
-							<strong>
-								<a href="/credits/image-credits/" className="cart-link">
-									<strong className="contact-button"> Fale Conosco{` `}</strong>
-								</a>
-							</strong>
+							Copyright 2017, todos os direitos reservados.
+							<br />
+							ADJ – ASSOCIAÇÃO DE DIABETES JUVENIL
+							<br />
+							R. Padre Antônio Tomás, 213 - Água Branca,
+							<br />
+							São Paulo - SP, 05003-010.
+							<br />
+							<br />
+							(11) 3675-3266 – ramal 11
+							<br />
+							<img
+								className="wp-image-707 alignnone"
+								src="https://adj.org.br/wp-content/uploads/2017/12/WhatsApp-icone.png"
+								alt="WhatsApp-icone"
+								width="16"
+								height="16"
+							/>
+							(11)9 7148-0465
+						</p>
+
+						<br />
+						<p>
+							Ninguém está autorizado a utilizar o logo e nome da Associação de
+							Diabetes Juvenil - ADJ, principalmente para fins comerciais.
+							<br />O uso indevido e sem autorização acarretará a tomada das
+							medidas legais cabíveis.
+							<br />
+							<br />É vedada a publicação do conteúdo deste site, no todo ou em
+							parte, sem prévia autorização, por escrito, da ADJ Diabetes
+							Brasil. <br />
+							Solicite autorização pelo e-mail:{' '}
+							<span>
+								<Link to="mailto:revistaadj@adj.org.br" className="footer-link">
+									revistaadj@adj.org.br
+								</Link>
+							</span>
+						</p>
+						<br />
+
+						<p>
+							<img
+								className="wp-image-474 alignnone"
+								src="https://adj.org.br/wp-content/uploads/2017/10/Importante.png"
+								alt="Importante"
+								width="16"
+								height="16"
+							/>
+							INFORMAÇÃO IMPORTANTE
+							<br />
+							<br />
+							<em>
+								O conteúdo desse site tem finalidade exclusivamente informativa
+								e educativa e não substitui, em nenhuma hipótese,
+								<br />a necessidade de seguir as orientações de seu médico e/ou
+								de outros profissionais de saúde,
+								<br />
+								únicos habilitados a prescrever o tratamento mais adequado às
+								suas necessidades.
+							</em>
 						</p>
 					</div>
 				</div>
-
-				<FooterMainMenuContainer
-					refState={refState}
-					handleRefState={handleRefState}
-				/>
-			</div> */}
+			</footer>
 		</>
 	)
 }

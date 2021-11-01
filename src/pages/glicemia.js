@@ -112,7 +112,7 @@ const IndexPage = ({ data }) => {
 	return (
 		// titleSeo = Título da página atual - $title::gatsby-config
 		// titleSeo é seguido por title::gatsby-config
-		<Layout type="BODY" opt={{ titleSeo: `DMDD título aqui` }}>
+		<Layout type="BODY" opt={{ titleSeo: `Glicemia` }}>
 			<Layout
 				// é um construtor tipo os do WP mas aqui
 				type="ROW"
@@ -135,6 +135,18 @@ const IndexPage = ({ data }) => {
 						secondElementsArray,
 					}}
 				/>
+			</Layout>
+			<Layout
+				// é um construtor tipo os do WP mas aqui
+				type="ROW"
+				opt={{
+					isBoxed: true,
+					classes: 'footer-gray',
+					alignTo: 'center',
+					bgColor: '#2f2f2f',
+				}}
+			>
+				<Layout type="FOOTER" />
 			</Layout>
 		</Layout>
 	)

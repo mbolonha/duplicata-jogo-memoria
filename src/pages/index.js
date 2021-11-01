@@ -8,12 +8,20 @@ import GlicemiaIcon from '../../static/assets/images/glicemia-icon.svg'
 import HabitosIcon from '../../static/assets/images/habitos-icon.svg'
 import PrevencaoIcon from '../../static/assets/images/prevencao-icon.svg'
 import TratamentoIcon from '../../static/assets/images/tratamento-icon.svg'
+import FacebookIcon from '../../static/assets/images/face-icon.svg'
+import TwitterIcon from '../../static/assets/images/twitter-icon.svg'
+import WhatsIcon from '../../static/assets/images/whats-icon.svg'
+import InstagramIcon from '../../static/assets/images/instagram-icon.svg'
+import ShareIcon from '../../static/assets/images/share-icon.svg'
+
+import 'react-responsive-carousel/lib/styles/carousel.min.css' // requires a loader
+import { Carousel } from 'react-responsive-carousel'
 
 const IndexPage = ({ data }) => {
 	return (
 		// titleSeo = Título da página atual - $title::gatsby-config
 		// titleSeo é seguido por title::gatsby-config
-		<Layout type="BODY" opt={{ titleSeo: `DMDD título aqui` }}>
+		<Layout type="BODY" opt={{ titleSeo: `Página Inicial` }}>
 			<Layout
 				// é um construtor tipo os do WP mas aqui
 				type="ROW"
@@ -54,7 +62,67 @@ const IndexPage = ({ data }) => {
 					<Link to="/tratamento" className="index-link">
 						Tratamento <TratamentoIcon />
 					</Link>
+					<div className="index-share-btn">
+						<div className="wrapper-buttons">
+							<span>Compartilhe</span>
+							<div className="modal-share-button">
+								<FacebookIcon />
+								<TwitterIcon />
+								<WhatsIcon />
+								<InstagramIcon />
+								<ShareIcon />
+							</div>
+						</div>
+					</div>
+					<div className="carousel-logos">
+						<h2 className="heading-logos">Nossos Parceiros</h2>
+						<Carousel showThumbs={false}>
+							<div>
+								<Layout
+									type="BLOCK_IMAGE"
+									opt={{ queryCard: data.astrazeneca }}
+								/>
+							</div>
+							<div>
+								<Layout type="BLOCK_IMAGE" opt={{ queryCard: data.bayer }} />
+							</div>
+							<div>
+								<Layout type="BLOCK_IMAGE" opt={{ queryCard: data.bd }} />
+							</div>
+							<div>
+								<Layout
+									type="BLOCK_IMAGE"
+									opt={{ queryCard: data.boehringer }}
+								/>
+							</div>
+							<div>
+								<Layout type="BLOCK_IMAGE" opt={{ queryCard: data.novartis }} />
+							</div>
+							<div>
+								<Layout type="BLOCK_IMAGE" opt={{ queryCard: data.nordisk }} />
+							</div>
+							<div>
+								<Layout type="BLOCK_IMAGE" opt={{ queryCard: data.roche }} />
+							</div>
+							<div>
+								<Layout type="BLOCK_IMAGE" opt={{ queryCard: data.sanofi }} />
+							</div>
+						</Carousel>
+					</div>
 				</div>
+			</Layout>
+
+			<Layout
+				// é um construtor tipo os do WP mas aqui
+				type="ROW"
+				opt={{
+					isBoxed: true,
+					classes: 'footer-gray',
+					alignTo: 'center',
+					bgColor: '#2f2f2f',
+				}}
+			>
+				<Layout type="FOOTER" />
 			</Layout>
 		</Layout>
 	)
@@ -66,6 +134,48 @@ export const queryIndex = graphql`
 		logotipo: file(relativePath: { eq: "jogodamemoria-logo.png" }) {
 			childrenImageSharp {
 				gatsbyImageData(layout: FIXED, width: 224, quality: 100)
+			}
+		}
+		astrazeneca: file(
+			relativePath: { eq: "astrazeneca-diabetes-logotipo.png" }
+		) {
+			childrenImageSharp {
+				gatsbyImageData(layout: FIXED, height: 80, quality: 100)
+			}
+		}
+		bayer: file(relativePath: { eq: "bayer-logotipo.png" }) {
+			childrenImageSharp {
+				gatsbyImageData(layout: FIXED, height: 70, quality: 100)
+			}
+		}
+		bd: file(relativePath: { eq: "bd-logotipo.png" }) {
+			childrenImageSharp {
+				gatsbyImageData(layout: FIXED, height: 80, quality: 100)
+			}
+		}
+		boehringer: file(relativePath: { eq: "boehringer-logotipo.jpg" }) {
+			childrenImageSharp {
+				gatsbyImageData(layout: FIXED, height: 130, quality: 100)
+			}
+		}
+		novartis: file(relativePath: { eq: "novartis-logotipo.jpg" }) {
+			childrenImageSharp {
+				gatsbyImageData(layout: FIXED, height: 30, quality: 100)
+			}
+		}
+		nordisk: file(relativePath: { eq: "novo-nordisk-logotipo.jpg" }) {
+			childrenImageSharp {
+				gatsbyImageData(layout: FIXED, height: 70, quality: 100)
+			}
+		}
+		roche: file(relativePath: { eq: "roche-logotipo.jpg" }) {
+			childrenImageSharp {
+				gatsbyImageData(layout: FIXED, height: 45, quality: 100)
+			}
+		}
+		sanofi: file(relativePath: { eq: "sanofi-logotipo.jpg" }) {
+			childrenImageSharp {
+				gatsbyImageData(layout: FIXED, height: 80, quality: 100)
 			}
 		}
 	}

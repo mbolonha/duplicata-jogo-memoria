@@ -3,9 +3,7 @@ import { React } from '../dependencies'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 
 const BlockImage = ({ opt }) => {
-	console.log(opt.queryCard)
 	const image = getImage(opt.queryCard.childrenImageSharp[0])
-
 	return (
 		<>
 			{/* <h1>Image Here</h1> */}
