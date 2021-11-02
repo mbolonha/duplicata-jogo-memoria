@@ -19,7 +19,7 @@ module.exports = {
 		organization: {
 			name: 'ADJ - Diabetes Brasil',
 			url: 'https://adj.org.br/',
-			logo: `${__dirname}/static/images/diabetes-brasil-logo.svg`,
+			// logo: `${__dirname}/static/images/diabetes-brasil-logo.svg`,
 		},
 		social: {
 			instagram: 'https://www.instagram.com/adjdiabetesbrasil/',

@@ -18,7 +18,6 @@ function SeoContainer({ frontmatter = {}, description, lang, meta, title }) {
 						organization {
 							name
 							url
-							logo
 						}
 						social {
 							twitter
