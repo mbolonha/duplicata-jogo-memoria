@@ -3,51 +3,60 @@ on:
   push:
     branches:
       - develop
+env:
+  REGISTRY: 'registry.digitalocean.com/intest'
+  IMAGE_NAME: 'diabetes-brasil-dia-do-diabetes'
+  IMAGE_SHA: 'latest'
 
 jobs:
-  release:
+  build:
     name: Obtém o código-fonte e realiza a construção da aplicação.
     runs-on: ubuntu-20.04
     steps:
       - name: Checkout do repositório
         uses: actions/checkout@v2
 
-      - name: Verificando o cache dos pacotes do Node
-        uses: actions/cache@v2
+      - name: Construindo imagem do projeto
+        run: docker build -t ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.IMAGE_SHA }} .
+
+      - name: Instalando o CLI da DigitalOcean
+        uses: digitalocean/action-doctl@v2
         with:
-          path: /tmp/node-cache
-          key: ${{ runner.os }}-${{ hashFiles('**/package.json') }}
+          token: ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
 
-      - name: Setup do NodeJS para o tema
-        uses: actions/setup-node@v2
+      - name: Realizando login temporário no repositório de imagens
+        run: doctl registry login --expiry-seconds 600
+
+      - name: Envia a imagem para o repositório de imagens
+        run: docker push ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.IMAGE_SHA }}
+
+  release:
+    name: Acessa o servidor de testes e configura o container da aplicação
+    needs: build
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Verifica o status do container existente
+        uses: appleboy/ssh-action@master
         with:
-          node-version: '14'
-
-      - name: Instalando o CLI do gatsby
-        run: npm i gatsby-cli -g
-
-      - name: Atualizando pacotes node
-        run: npm cache clear --force
-
-      - name: Executando yarn install
-        run: npm i
-
-      - name: Executando a limpeza do cache dos assets
-        run: gatsby clean
-
-      - name: Atualizando pacotes node
-        run: npm update
-
-      - name: Executando a construção dos assets
-        run: gatsby build
-
-      - name: Copiando arquivos do tema para ambiente de testes
-        uses: burnett01/rsync-deployments@4.1
-        with:
-          switches: --no-perms -O --exclude=.git/ --exclude=node_modules/ --exclude=.env --delete -Prltvz
-          path: ./
-          remote_path: /mnt/intest-volume/diabetes-brasil-dia-do-diabetes/diabetes-brasil-jogo-da-memoria/public
-          remote_host: ${{ secrets.SSH_DEV_DEPLOY_HOST }}
-          remote_port: 22
-          remote_user: ${{ secrets.SSH_DEV_DEPLOY_USER }}
-          remote_key: ${{ secrets.SSH_DEV_DEPLOY_KEY }}
+          host: ${{ secrets.SSH_DEV_DEPLOY_HOST }}
+          username: ${{ secrets.SSH_DEV_DEPLOY_USER }}
+          key: ${{ secrets.SSH_DEV_DEPLOY_KEY }}
+          port: 22
+          script: |
+            echo "Obtendo imagem atualizada do repositório"
+            docker login -u ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }} -p ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }} registry.digitalocean.com
+            docker pull ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.IMAGE_SHA }}
+            docker logout registry.digitalocean.com
+            echo "Removendo container existente"
+            docker rm -f diabetes-brasil-dia-do-diabetes
+            echo "Criando novo container para a imagem ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.IMAGE_SHA }}"
+            docker run -d -p 9000 \
+              --name="diabetes-brasil-dia-do-diabetes" \
+              --workdir="/app" \
+              --label "traefik.http.routers.diabetes-brasil-dia-do-diabetes.rule=Host(\`diadodiabetes.intest.com.br\`)" \
+              --label "traefik.http.routers.diabetes-brasil-dia-do-diabetes.tls=true" \
+              --label "traefik.http.routers.diabetes-brasil-dia-do-diabetes.tls.certresolver=lets-encrypt" \
+              --label "traefik.http.services.diabetes-brasil-dia-do-diabetes.loadbalancer.server.port=9000" \
+              --network traefik_web \
+              --ip="172.21.0.12" \
+              "${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.IMAGE_SHA }}"
