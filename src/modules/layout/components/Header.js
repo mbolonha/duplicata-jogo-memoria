@@ -1,6 +1,6 @@
 import { React } from '../dependencies'
-import Logo from '../../../../static/assets/images/diabetes-brasil-logo.svg'
-import MenuHamburgerIcon from '../../../../static/assets/images/menu-hamburger.svg'
+import Logo from '../../../../static/images/diabetes-brasil-logo.svg'
+import MenuHamburgerIcon from '../../../../static/images/menu-hamburger.svg'
 import MenuContainer from '../containers/MenuContainer'
 const Header = ({ refState, handleRefState }) => {
 	return (

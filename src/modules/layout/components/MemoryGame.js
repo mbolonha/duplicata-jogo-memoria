@@ -2,13 +2,13 @@ import React from 'react'
 import Container from '@material-ui/core/Container'
 import { navigate } from 'gatsby'
 
-import ArrowRightIcon from '../../../../static/assets/images/icon-arrow-right.svg'
-import CloseButton from '../../../../static/assets/images/close-button.svg'
-import FacebookIcon from '../../../../static/assets/images/face-icon.svg'
-import TwitterIcon from '../../../../static/assets/images/twitter-icon.svg'
-import WhatsIcon from '../../../../static/assets/images/whats-icon.svg'
-import InstagramIcon from '../../../../static/assets/images/instagram-icon.svg'
-import ShareIcon from '../../../../static/assets/images/share-icon.svg'
+import ArrowRightIcon from '../../../../static/images/icon-arrow-right.svg'
+import CloseButton from '../../../../static/images/close-button.svg'
+import FacebookIcon from '../../../../static/images/face-icon.svg'
+import TwitterIcon from '../../../../static/images/twitter-icon.svg'
+import WhatsIcon from '../../../../static/images/whats-icon.svg'
+import InstagramIcon from '../../../../static/images/instagram-icon.svg'
+import ShareIcon from '../../../../static/images/share-icon.svg'
 import {
 	// DialogActions,
 	DialogContent,

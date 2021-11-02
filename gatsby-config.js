@@ -19,7 +19,7 @@ module.exports = {
 		organization: {
 			name: 'ADJ - Diabetes Brasil',
 			url: 'https://adj.org.br/',
-			logo: `${__dirname}/static/assets/images/diabetes-brasil-logo.svg`,
+			logo: `${__dirname}/static/images/diabetes-brasil-logo.svg`,
 		},
 		social: {
 			instagram: 'https://www.instagram.com/adjdiabetesbrasil/',
@@ -48,7 +48,7 @@ module.exports = {
 			resolve: `gatsby-source-filesystem`,
 			options: {
 				name: `images`,
-				path: `${__dirname}/static/assets/images`,
+				path: `${__dirname}/static/images`,
 			},
 		},
 		{
@@ -68,7 +68,7 @@ module.exports = {
 					'@CQM': path.resolve(__dirname, 'src/modules/cqm'),
 					'@Null': path.resolve(__dirname, 'src/modules/null'),
 					'@Layout': path.resolve(__dirname, 'src/modules/layout'),
-					'@assets': path.resolve(__dirname, 'static/assets'),
+					'@assets': path.resolve(__dirname, 'static'),
 					'@tools': path.resolve(__dirname, 'src/tools'),
 					'@styles': path.resolve(__dirname, 'src/styles'),
 				},
@@ -84,7 +84,7 @@ module.exports = {
 				background_color: `#fff`,
 				theme_color: `#eb412c`,
 				display: `fullscreen`,
-				icon: `${__dirname}/static/assets/images/diabetes-brasil-favicon.svg`, // This path is relative to the root of the site.
+				icon: `${__dirname}/static/images/diabetes-brasil-favicon.svg`, // This path is relative to the root of the site.
 			},
 		},
 		{

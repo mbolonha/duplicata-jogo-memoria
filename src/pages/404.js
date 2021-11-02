@@ -1,13 +1,13 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
 import Layout from '@Layout'
-import AlimentacaoIcon from '../../static/assets/images/alimentacao-icon.svg'
-import AtividadeIcon from '../../static/assets/images/atividade-icon.svg'
-import BemEstarIcon from '../../static/assets/images/bem-estar-icon.svg'
-import GlicemiaIcon from '../../static/assets/images/glicemia-icon.svg'
-import HabitosIcon from '../../static/assets/images/habitos-icon.svg'
-import PrevencaoIcon from '../../static/assets/images/prevencao-icon.svg'
-import TratamentoIcon from '../../static/assets/images/tratamento-icon.svg'
+import AlimentacaoIcon from '../../static/images/alimentacao-icon.svg'
+import AtividadeIcon from '../../static/images/atividade-icon.svg'
+import BemEstarIcon from '../../static/images/bem-estar-icon.svg'
+import GlicemiaIcon from '../../static/images/glicemia-icon.svg'
+import HabitosIcon from '../../static/images/habitos-icon.svg'
+import PrevencaoIcon from '../../static/images/prevencao-icon.svg'
+import TratamentoIcon from '../../static/images/tratamento-icon.svg'
 
 const IndexPage = () => {
 	return (
