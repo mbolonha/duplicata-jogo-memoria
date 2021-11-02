@@ -126,8 +126,8 @@ const InsertHTML = ({ type, params, opt, children, bgOpt, bgImg }) => {
 							refImage = getImage(bgOpt.background.datas)
 						}
 						elementClass = elementClass ? elementClass : ''
-						console.log('opt.boxed')
-						console.log(opt.boxed)
+						// console.log('opt.boxed')
+						// console.log(opt.boxed)
 						return (
 							<div
 								className={`${rowWidth} ${elementClass} align-to-${
