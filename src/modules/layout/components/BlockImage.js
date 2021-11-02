@@ -1,4 +1,4 @@
-import { React } from '../dependencies'
+import React from 'react'
 // import { StaticImage } from 'gatsby-plugin-image'
 // import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 

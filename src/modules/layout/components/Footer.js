@@ -1,4 +1,4 @@
-import { React } from '../dependencies'
+import React from 'react'
 import { Link } from 'gatsby'
 
 // import { StaticImage } from 'gatsby-plugin-image'
@@ -67,13 +67,6 @@ const Footer = ({ socialIcons, logoImg, refState, handleRefState }) => {
 							<br />
 							(11) 3675-3266 – ramal 11
 							<br />
-							<img
-								className="wp-image-707 alignnone"
-								src="https://adj.org.br/wp-content/uploads/2017/12/WhatsApp-icone.png"
-								alt="WhatsApp-icone"
-								width="16"
-								height="16"
-							/>
 							(11)9 7148-0465
 						</p>
 
@@ -97,13 +90,6 @@ const Footer = ({ socialIcons, logoImg, refState, handleRefState }) => {
 						<br />
 
 						<p>
-							<img
-								className="wp-image-474 alignnone"
-								src="https://adj.org.br/wp-content/uploads/2017/10/Importante.png"
-								alt="Importante"
-								width="16"
-								height="16"
-							/>
 							INFORMAÇÃO IMPORTANTE
 							<br />
 							<br />

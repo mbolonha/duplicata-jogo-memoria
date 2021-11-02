@@ -1,4 +1,4 @@
-import { React } from './dependencies'
+import React from 'react'
 import LayoutResolver from './containers/'
 
 const Layout = ({

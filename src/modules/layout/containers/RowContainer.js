@@ -1,4 +1,4 @@
-import { React } from '../dependencies'
+import React from 'react'
 
 import LayoutContext, { LayoutProvider } from '@Layout/services/LayoutContext'
 import Row from '../components/Row'

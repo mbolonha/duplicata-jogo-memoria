@@ -1,4 +1,4 @@
-import { React } from '../dependencies'
+import React from 'react'
 
 const FooterMainMenu = ({ wrapperRef, isVisibleClass }) => (
 	<nav

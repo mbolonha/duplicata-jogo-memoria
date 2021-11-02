@@ -1,4 +1,4 @@
-import { React } from '../dependencies'
+import React from 'react'
 import BodyContainer from './BodyContainer'
 import HeaderContainer from './HeaderContainer'
 import FooterContainer from './FooterContainer'

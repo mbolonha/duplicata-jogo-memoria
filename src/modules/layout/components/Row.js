@@ -1,4 +1,4 @@
-import { React } from '../dependencies'
+import React from 'react'
 import InsertHTML from '../../../tools/InsertHTML'
 
 const Row = ({ children, params, opt, bgOpt, bgImg }) => (

@@ -1,5 +1,5 @@
 // eslint-disable-next-line
-import { React } from '../dependencies.js'
+import React from 'react'
 
 const Body = ({ children }) => <>{children}</>
 export default Body

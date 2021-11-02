@@ -1,4 +1,4 @@
-import { React } from '../dependencies'
+import React from 'react'
 
 import BlockImage from '../components/BlockImage'
 

@@ -1,4 +1,4 @@
-import { React } from '../dependencies'
+import React from 'react'
 
 const MainMenu = ({ wrapperRef, isVisibleClass }) => (
 	<nav ref={wrapperRef} className={' main-nav menu-state-' + isVisibleClass}>
