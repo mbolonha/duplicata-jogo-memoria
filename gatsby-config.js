@@ -37,10 +37,17 @@ module.exports = {
 		// `gatsby-plugin-offline`,
 		`gatsby-plugin-react-helmet`,
 		`gatsby-plugin-catch-links`,
+		// {
+		// 	resolve: `gatsby-source-filesystem`,
+		// 	options: {
+		// 		name: `uploads`,
+		// 		path: `${__dirname}/static/assets/images`,
+		// 	},
+		// },
 		{
 			resolve: `gatsby-source-filesystem`,
 			options: {
-				name: `uploads`,
+				name: `images`,
 				path: `${__dirname}/static/assets/images`,
 			},
 		},
