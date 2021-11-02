@@ -110,7 +110,6 @@ const IndexPage = ({ data }) => {
 		// titleSeo = Título da página atual - $title::gatsby-config
 		// titleSeo é seguido por title::gatsby-config
 		<Layout type="BODY" opt={{ titleSeo: `Alimentação` }}>
-			{/*
 			<Layout
 				// é um construtor tipo os do WP mas aqui
 				type="ROW"
@@ -136,7 +135,7 @@ const IndexPage = ({ data }) => {
 						secondElementsArray,
 					}}
 				/>
-			</Layout> */}
+			</Layout>
 
 			<Layout
 				// é um construtor tipo os do WP mas aqui
@@ -157,37 +156,37 @@ export default IndexPage
 
 export const queryAlimentacao = graphql`
 	query imgsAlimentacao {
-		alimentacao01a: file(relativePath: { eq: "alimentacao-01-a.jpg" }) {
+		alimentacao01a: file(relativePath: { eq: "alimentacao-01-a.png" }) {
 			childrenImageSharp {
 				gatsbyImageData(
 					layout: FIXED
 					width: 165
 					height: 165
 					quality: 100
-					formats: [JPG]
+					formats: [PNG]
 				)
 			}
 		}
-		alimentacao01b: file(relativePath: { eq: "alimentacao-01-b.jpg" }) {
+		alimentacao01b: file(relativePath: { eq: "alimentacao-01-b.png" }) {
 			childrenImageSharp {
 				gatsbyImageData(
 					layout: FIXED
 					width: 165
 					height: 165
-					formats: [JPG]
+					formats: [PNG]
 					quality: 100
 				)
 			}
 		}
 
-		alimentacao02a: file(relativePath: { eq: "alimentacao-02-a.jpg" }) {
+		alimentacao02a: file(relativePath: { eq: "alimentacao-02-a.png" }) {
 			childrenImageSharp {
 				gatsbyImageData(
 					layout: FIXED
 					width: 165
 					height: 165
 					quality: 100
-					formats: [JPG]
+					formats: [PNG]
 				)
 			}
 		}

@@ -10,8 +10,8 @@ module.exports = {
 		title: 'Jogo da Memória',
 		description: `O Jogo da Memória é um app desenvolvido para você SEO aqui.`,
 		author: `@VisualStudio`,
-		siteUrl: `https://seudominio.dev`,
-		image: `https://seudominio.dev/theimage.jpg`,
+		siteUrl: `https://diadodiabetes.intest.com.br/`,
+		image: `https://diadodiabetes.intest.com.br/theimage.jpg`,
 		author: {
 			name: 'Visual Studio',
 			minibio: `A Visual Studio é a melhor empresa do Brasil.`,
@@ -34,7 +34,7 @@ module.exports = {
 		'gatsby-plugin-image',
 		'gatsby-plugin-sharp',
 		`gatsby-transformer-sharp`,
-		`gatsby-plugin-offline`,
+		// `gatsby-plugin-offline`,
 		`gatsby-plugin-react-helmet`,
 		`gatsby-plugin-catch-links`,
 		{
