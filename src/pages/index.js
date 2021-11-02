@@ -131,7 +131,7 @@ export default IndexPage
 
 export const queryIndex = graphql`
 	query imgsIndex {
-		logotipoIndex: file(relativePath: { eq: "logotipo-jogo-memoria-02.png" }) {
+		logotipoIndex: file(relativePath: { eq: "logotipo-jogo-memoria-02.jpg" }) {
 			childrenImageSharp {
 				gatsbyImageData(
 					layout: FIXED
@@ -142,7 +142,7 @@ export const queryIndex = graphql`
 			}
 		}
 		astrazeneca: file(
-			relativePath: { eq: "astrazeneca-diabetes-logotipo.png" }
+			relativePath: { eq: "astrazeneca-diabetes-logotipo.jpg" }
 		) {
 			childrenImageSharp {
 				gatsbyImageData(
@@ -153,7 +153,7 @@ export const queryIndex = graphql`
 				)
 			}
 		}
-		bayer: file(relativePath: { eq: "bayer-logotipo.png" }) {
+		bayer: file(relativePath: { eq: "bayer-logotipo.jpg" }) {
 			childrenImageSharp {
 				gatsbyImageData(
 					layout: FIXED
@@ -163,7 +163,7 @@ export const queryIndex = graphql`
 				)
 			}
 		}
-		bd: file(relativePath: { eq: "bd-logotipo.png" }) {
+		bd: file(relativePath: { eq: "bd-logotipo.jpg" }) {
 			childrenImageSharp {
 				gatsbyImageData(
 					layout: FIXED

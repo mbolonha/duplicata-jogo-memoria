@@ -152,7 +152,7 @@ export default IndexPage
 
 export const queryBemEstar = graphql`
 	query imgsBemEstar {
-		bemestar01a: file(relativePath: { eq: "bem-estar-01-a.png" }) {
+		bemestar01a: file(relativePath: { eq: "bem-estar-01-a.jpg" }) {
 			childrenImageSharp {
 				gatsbyImageData(
 					layout: FIXED
@@ -162,28 +162,7 @@ export const queryBemEstar = graphql`
 				)
 			}
 		}
-		bemestar01b: file(relativePath: { eq: "bem-estar-01-b.png" }) {
-			childrenImageSharp {
-				gatsbyImageData(
-					layout: FIXED
-					width: 165
-					height: 165
-					formats: [AUTO, WEBP, PNG]
-				)
-			}
-		}
-
-		bemestar02a: file(relativePath: { eq: "bem-estar-02-a.png" }) {
-			childrenImageSharp {
-				gatsbyImageData(
-					layout: FIXED
-					width: 165
-					height: 165
-					formats: [AUTO, WEBP, PNG]
-				)
-			}
-		}
-		bemestar02b: file(relativePath: { eq: "bem-estar-02-b.png" }) {
+		bemestar01b: file(relativePath: { eq: "bem-estar-01-b.jpg" }) {
 			childrenImageSharp {
 				gatsbyImageData(
 					layout: FIXED
@@ -194,7 +173,7 @@ export const queryBemEstar = graphql`
 			}
 		}
 
-		bemestar03a: file(relativePath: { eq: "bem-estar-03-a.png" }) {
+		bemestar02a: file(relativePath: { eq: "bem-estar-02-a.jpg" }) {
 			childrenImageSharp {
 				gatsbyImageData(
 					layout: FIXED
@@ -204,28 +183,7 @@ export const queryBemEstar = graphql`
 				)
 			}
 		}
-		bemestar03b: file(relativePath: { eq: "bem-estar-03-b.png" }) {
-			childrenImageSharp {
-				gatsbyImageData(
-					layout: FIXED
-					width: 165
-					height: 165
-					formats: [AUTO, WEBP, PNG]
-				)
-			}
-		}
-
-		bemestar04a: file(relativePath: { eq: "bem-estar-04-a.png" }) {
-			childrenImageSharp {
-				gatsbyImageData(
-					layout: FIXED
-					width: 165
-					height: 165
-					formats: [AUTO, WEBP, PNG]
-				)
-			}
-		}
-		bemestar04b: file(relativePath: { eq: "bem-estar-04-b.png" }) {
+		bemestar02b: file(relativePath: { eq: "bem-estar-02-b.jpg" }) {
 			childrenImageSharp {
 				gatsbyImageData(
 					layout: FIXED
@@ -236,7 +194,7 @@ export const queryBemEstar = graphql`
 			}
 		}
 
-		bemestar05a: file(relativePath: { eq: "bem-estar-05-a.png" }) {
+		bemestar03a: file(relativePath: { eq: "bem-estar-03-a.jpg" }) {
 			childrenImageSharp {
 				gatsbyImageData(
 					layout: FIXED
@@ -246,28 +204,7 @@ export const queryBemEstar = graphql`
 				)
 			}
 		}
-		bemestar05b: file(relativePath: { eq: "bem-estar-05-b.png" }) {
-			childrenImageSharp {
-				gatsbyImageData(
-					layout: FIXED
-					width: 165
-					height: 165
-					formats: [AUTO, WEBP, PNG]
-				)
-			}
-		}
-
-		bemestar06a: file(relativePath: { eq: "bem-estar-06-a.png" }) {
-			childrenImageSharp {
-				gatsbyImageData(
-					layout: FIXED
-					width: 165
-					height: 165
-					formats: [AUTO, WEBP, PNG]
-				)
-			}
-		}
-		bemestar06b: file(relativePath: { eq: "bem-estar-06-b.png" }) {
+		bemestar03b: file(relativePath: { eq: "bem-estar-03-b.jpg" }) {
 			childrenImageSharp {
 				gatsbyImageData(
 					layout: FIXED
@@ -278,7 +215,7 @@ export const queryBemEstar = graphql`
 			}
 		}
 
-		bemestar07a: file(relativePath: { eq: "bem-estar-07-a.png" }) {
+		bemestar04a: file(relativePath: { eq: "bem-estar-04-a.jpg" }) {
 			childrenImageSharp {
 				gatsbyImageData(
 					layout: FIXED
@@ -288,7 +225,7 @@ export const queryBemEstar = graphql`
 				)
 			}
 		}
-		bemestar07b: file(relativePath: { eq: "bem-estar-07-b.png" }) {
+		bemestar04b: file(relativePath: { eq: "bem-estar-04-b.jpg" }) {
 			childrenImageSharp {
 				gatsbyImageData(
 					layout: FIXED
@@ -299,7 +236,7 @@ export const queryBemEstar = graphql`
 			}
 		}
 
-		bemestar08a: file(relativePath: { eq: "bem-estar-08-a.png" }) {
+		bemestar05a: file(relativePath: { eq: "bem-estar-05-a.jpg" }) {
 			childrenImageSharp {
 				gatsbyImageData(
 					layout: FIXED
@@ -309,7 +246,7 @@ export const queryBemEstar = graphql`
 				)
 			}
 		}
-		bemestar08b: file(relativePath: { eq: "bem-estar-08-b.png" }) {
+		bemestar05b: file(relativePath: { eq: "bem-estar-05-b.jpg" }) {
 			childrenImageSharp {
 				gatsbyImageData(
 					layout: FIXED
@@ -319,7 +256,70 @@ export const queryBemEstar = graphql`
 				)
 			}
 		}
-		cardVerse: file(relativePath: { eq: "card-bem-estar.png" }) {
+
+		bemestar06a: file(relativePath: { eq: "bem-estar-06-a.jpg" }) {
+			childrenImageSharp {
+				gatsbyImageData(
+					layout: FIXED
+					width: 165
+					height: 165
+					formats: [AUTO, WEBP, PNG]
+				)
+			}
+		}
+		bemestar06b: file(relativePath: { eq: "bem-estar-06-b.jpg" }) {
+			childrenImageSharp {
+				gatsbyImageData(
+					layout: FIXED
+					width: 165
+					height: 165
+					formats: [AUTO, WEBP, PNG]
+				)
+			}
+		}
+
+		bemestar07a: file(relativePath: { eq: "bem-estar-07-a.jpg" }) {
+			childrenImageSharp {
+				gatsbyImageData(
+					layout: FIXED
+					width: 165
+					height: 165
+					formats: [AUTO, WEBP, PNG]
+				)
+			}
+		}
+		bemestar07b: file(relativePath: { eq: "bem-estar-07-b.jpg" }) {
+			childrenImageSharp {
+				gatsbyImageData(
+					layout: FIXED
+					width: 165
+					height: 165
+					formats: [AUTO, WEBP, PNG]
+				)
+			}
+		}
+
+		bemestar08a: file(relativePath: { eq: "bem-estar-08-a.jpg" }) {
+			childrenImageSharp {
+				gatsbyImageData(
+					layout: FIXED
+					width: 165
+					height: 165
+					formats: [AUTO, WEBP, PNG]
+				)
+			}
+		}
+		bemestar08b: file(relativePath: { eq: "bem-estar-08-b.jpg" }) {
+			childrenImageSharp {
+				gatsbyImageData(
+					layout: FIXED
+					width: 165
+					height: 165
+					formats: [AUTO, WEBP, PNG]
+				)
+			}
+		}
+		cardVerse: file(relativePath: { eq: "card-bem-estar.jpg" }) {
 			childrenImageSharp {
 				gatsbyImageData(
 					layout: FIXED

@@ -156,7 +156,7 @@ export default IndexPage
 
 export const queryAlimentacao = graphql`
 	query imgsAlimentacao {
-		alimentacao01a: file(relativePath: { eq: "alimentacao-01-a.png" }) {
+		alimentacao01a: file(relativePath: { eq: "alimentacao-01-a.jpg" }) {
 			childrenImageSharp {
 				gatsbyImageData(
 					layout: FIXED
@@ -167,7 +167,7 @@ export const queryAlimentacao = graphql`
 				)
 			}
 		}
-		alimentacao01b: file(relativePath: { eq: "alimentacao-01-b.png" }) {
+		alimentacao01b: file(relativePath: { eq: "alimentacao-01-b.jpg" }) {
 			childrenImageSharp {
 				gatsbyImageData(
 					layout: FIXED
@@ -175,34 +175,11 @@ export const queryAlimentacao = graphql`
 					height: 165
 					formats: [PNG]
 					quality: 100
-				)
-			}
-		}
-
-		alimentacao02a: file(relativePath: { eq: "alimentacao-02-a.png" }) {
-			childrenImageSharp {
-				gatsbyImageData(
-					layout: FIXED
-					width: 165
-					height: 165
-					quality: 100
-					formats: [PNG]
-				)
-			}
-		}
-		alimentacao02b: file(relativePath: { eq: "alimentacao-02-b.png" }) {
-			childrenImageSharp {
-				gatsbyImageData(
-					layout: FIXED
-					width: 165
-					quality: 100
-					height: 165
-					formats: [PNG]
 				)
 			}
 		}
 
-		alimentacao03a: file(relativePath: { eq: "alimentacao-03-a.png" }) {
+		alimentacao02a: file(relativePath: { eq: "alimentacao-02-a.jpg" }) {
 			childrenImageSharp {
 				gatsbyImageData(
 					layout: FIXED
@@ -213,7 +190,7 @@ export const queryAlimentacao = graphql`
 				)
 			}
 		}
-		alimentacao03b: file(relativePath: { eq: "alimentacao-03-b.png" }) {
+		alimentacao02b: file(relativePath: { eq: "alimentacao-02-b.jpg" }) {
 			childrenImageSharp {
 				gatsbyImageData(
 					layout: FIXED
@@ -225,41 +202,18 @@ export const queryAlimentacao = graphql`
 			}
 		}
 
-		alimentacao04a: file(relativePath: { eq: "alimentacao-04-a.png" }) {
+		alimentacao03a: file(relativePath: { eq: "alimentacao-03-a.jpg" }) {
 			childrenImageSharp {
 				gatsbyImageData(
 					layout: FIXED
 					width: 165
-					quality: 100
 					height: 165
+					quality: 100
 					formats: [PNG]
 				)
 			}
 		}
-		alimentacao04b: file(relativePath: { eq: "alimentacao-04-b.png" }) {
-			childrenImageSharp {
-				gatsbyImageData(
-					layout: FIXED
-					quality: 100
-					width: 165
-					height: 165
-					formats: [PNG]
-				)
-			}
-		}
-
-		alimentacao05a: file(relativePath: { eq: "alimentacao-05-a.png" }) {
-			childrenImageSharp {
-				gatsbyImageData(
-					layout: FIXED
-					quality: 100
-					width: 165
-					height: 165
-					formats: [PNG]
-				)
-			}
-		}
-		alimentacao05b: file(relativePath: { eq: "alimentacao-05-b.png" }) {
+		alimentacao03b: file(relativePath: { eq: "alimentacao-03-b.jpg" }) {
 			childrenImageSharp {
 				gatsbyImageData(
 					layout: FIXED
@@ -271,18 +225,18 @@ export const queryAlimentacao = graphql`
 			}
 		}
 
-		alimentacao06a: file(relativePath: { eq: "alimentacao-06-a.png" }) {
+		alimentacao04a: file(relativePath: { eq: "alimentacao-04-a.jpg" }) {
 			childrenImageSharp {
 				gatsbyImageData(
 					layout: FIXED
-					quality: 100
 					width: 165
+					quality: 100
 					height: 165
 					formats: [PNG]
 				)
 			}
 		}
-		alimentacao06b: file(relativePath: { eq: "alimentacao-06-b.png" }) {
+		alimentacao04b: file(relativePath: { eq: "alimentacao-04-b.jpg" }) {
 			childrenImageSharp {
 				gatsbyImageData(
 					layout: FIXED
@@ -294,7 +248,7 @@ export const queryAlimentacao = graphql`
 			}
 		}
 
-		alimentacao07a: file(relativePath: { eq: "alimentacao-07-a.png" }) {
+		alimentacao05a: file(relativePath: { eq: "alimentacao-05-a.jpg" }) {
 			childrenImageSharp {
 				gatsbyImageData(
 					layout: FIXED
@@ -305,7 +259,7 @@ export const queryAlimentacao = graphql`
 				)
 			}
 		}
-		alimentacao07b: file(relativePath: { eq: "alimentacao-07-b.png" }) {
+		alimentacao05b: file(relativePath: { eq: "alimentacao-05-b.jpg" }) {
 			childrenImageSharp {
 				gatsbyImageData(
 					layout: FIXED
@@ -317,7 +271,7 @@ export const queryAlimentacao = graphql`
 			}
 		}
 
-		alimentacao08a: file(relativePath: { eq: "alimentacao-08-a.png" }) {
+		alimentacao06a: file(relativePath: { eq: "alimentacao-06-a.jpg" }) {
 			childrenImageSharp {
 				gatsbyImageData(
 					layout: FIXED
@@ -328,7 +282,7 @@ export const queryAlimentacao = graphql`
 				)
 			}
 		}
-		alimentacao08b: file(relativePath: { eq: "alimentacao-08-b.png" }) {
+		alimentacao06b: file(relativePath: { eq: "alimentacao-06-b.jpg" }) {
 			childrenImageSharp {
 				gatsbyImageData(
 					layout: FIXED
@@ -339,7 +293,53 @@ export const queryAlimentacao = graphql`
 				)
 			}
 		}
-		cardVerseAlimentacao: file(relativePath: { eq: "card-alimentacao.png" }) {
+
+		alimentacao07a: file(relativePath: { eq: "alimentacao-07-a.jpg" }) {
+			childrenImageSharp {
+				gatsbyImageData(
+					layout: FIXED
+					quality: 100
+					width: 165
+					height: 165
+					formats: [PNG]
+				)
+			}
+		}
+		alimentacao07b: file(relativePath: { eq: "alimentacao-07-b.jpg" }) {
+			childrenImageSharp {
+				gatsbyImageData(
+					layout: FIXED
+					width: 165
+					quality: 100
+					height: 165
+					formats: [PNG]
+				)
+			}
+		}
+
+		alimentacao08a: file(relativePath: { eq: "alimentacao-08-a.jpg" }) {
+			childrenImageSharp {
+				gatsbyImageData(
+					layout: FIXED
+					quality: 100
+					width: 165
+					height: 165
+					formats: [PNG]
+				)
+			}
+		}
+		alimentacao08b: file(relativePath: { eq: "alimentacao-08-b.jpg" }) {
+			childrenImageSharp {
+				gatsbyImageData(
+					layout: FIXED
+					quality: 100
+					width: 165
+					height: 165
+					formats: [PNG]
+				)
+			}
+		}
+		cardVerseAlimentacao: file(relativePath: { eq: "card-alimentacao.jpg" }) {
 			childrenImageSharp {
 				gatsbyImageData(
 					layout: FIXED

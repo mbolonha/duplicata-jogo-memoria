@@ -4,7 +4,7 @@ RUN npm i gatsby-cli -g
 
 WORKDIR /app
 
-COPY . ./app
+COPY . ./
 
 RUN npm i
 
