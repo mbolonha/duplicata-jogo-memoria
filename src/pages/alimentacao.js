@@ -1,6 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import Layout from '@Layout'
+import Layout from '../modules/layout'
 
 import CardAa from '../../static/images/alimentacao-01-a.svg'
 import CardAb from '../../static/images/alimentacao-01-b.svg'
