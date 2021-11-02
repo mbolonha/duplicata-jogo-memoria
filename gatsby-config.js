@@ -32,17 +32,7 @@ module.exports = {
 	plugins: [
 		'gatsby-plugin-sass',
 		'gatsby-plugin-image',
-		{
-			resolve: `gatsby-plugin-sharp`,
-			options: {
-				defaults: {
-					quality: 100,
-				},
-				failOnError: false,
-				stripMetadata: true,
-				defaultQuality: 100,
-			},
-		},
+		'gatsby-plugin-sharp',
 		`gatsby-transformer-sharp`,
 		`gatsby-plugin-offline`,
 		`gatsby-plugin-react-helmet`,
