@@ -2,13 +2,6 @@ import React from 'react'
 import { graphql, Link } from 'gatsby'
 
 import Layout from '../modules/layout'
-import AlimentacaoIcon from '../../static/images/alimentacao-icon.svg'
-import AtividadeIcon from '../../static/images/atividade-icon.svg'
-import BemEstarIcon from '../../static/images/bem-estar-icon.svg'
-import GlicemiaIcon from '../../static/images/glicemia-icon.svg'
-import HabitosIcon from '../../static/images/habitos-icon.svg'
-import PrevencaoIcon from '../../static/images/prevencao-icon.svg'
-import TratamentoIcon from '../../static/images/tratamento-icon.svg'
 
 const IndexPage = ({ data }) => {
 	return (

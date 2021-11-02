@@ -34,7 +34,7 @@ const IndexPage = ({ data }) => {
 			>
 				<Layout type="HEADER" />
 				<div className="index-first-row">
-					<Layout type="BLOCK_IMAGE" opt={{ queryCard: data.logotipoIndex }} />
+					{/* <Layout type="BLOCK_IMAGE" opt={{ queryCard: data.logotipoIndex }} /> */}
 					<p className="index-paragraph">
 						Acesse abaixo os jogos da memória e aprenda tópicos relacionados à
 						Diabetes.
@@ -76,7 +76,7 @@ const IndexPage = ({ data }) => {
 					</div>
 					<div className="carousel-logos">
 						<h2 className="heading-logos">Nossos Parceiros</h2>
-						<Carousel showThumbs={false}>
+						{/* <Carousel showThumbs={false}>
 							<div>
 								<Layout
 									type="BLOCK_IMAGE"
@@ -107,7 +107,7 @@ const IndexPage = ({ data }) => {
 							<div>
 								<Layout type="BLOCK_IMAGE" opt={{ queryCard: data.sanofi }} />
 							</div>
-						</Carousel>
+						</Carousel> */}
 					</div>
 				</div>
 			</Layout>
@@ -129,74 +129,74 @@ const IndexPage = ({ data }) => {
 }
 export default IndexPage
 
-export const queryIndex = graphql`
-	query imgsIndex {
-		logotipoIndex: file(relativePath: { eq: "logotipo-jogo-memoria-02.jpg" }) {
-			childrenImageSharp {
-				gatsbyImageData(
-					layout: FIXED
-					width: 224
-					quality: 100
-					formats: [AUTO, WEBP, PNG]
-				)
-			}
-		}
-		astrazeneca: file(
-			relativePath: { eq: "astrazeneca-diabetes-logotipo.jpg" }
-		) {
-			childrenImageSharp {
-				gatsbyImageData(
-					layout: FIXED
-					height: 80
-					quality: 100
-					formats: [AUTO, WEBP, PNG]
-				)
-			}
-		}
-		bayer: file(relativePath: { eq: "bayer-logotipo.jpg" }) {
-			childrenImageSharp {
-				gatsbyImageData(
-					layout: FIXED
-					height: 70
-					quality: 100
-					formats: [AUTO, WEBP, PNG]
-				)
-			}
-		}
-		bd: file(relativePath: { eq: "bd-logotipo.jpg" }) {
-			childrenImageSharp {
-				gatsbyImageData(
-					layout: FIXED
-					height: 80
-					quality: 100
-					formats: [AUTO, WEBP, PNG]
-				)
-			}
-		}
-		boehringer: file(relativePath: { eq: "boehringer-logotipo.jpg" }) {
-			childrenImageSharp {
-				gatsbyImageData(layout: FIXED, height: 130)
-			}
-		}
-		novartis: file(relativePath: { eq: "novartis-logotipo.jpg" }) {
-			childrenImageSharp {
-				gatsbyImageData(layout: FIXED, height: 30)
-			}
-		}
-		nordisk: file(relativePath: { eq: "novo-nordisk-logotipo.jpg" }) {
-			childrenImageSharp {
-				gatsbyImageData(layout: FIXED, height: 70)
-			}
-		}
-		roche: file(relativePath: { eq: "roche-logotipo.jpg" }) {
-			childrenImageSharp {
-				gatsbyImageData(layout: FIXED, height: 45)
-			}
-		}
-		sanofi: file(relativePath: { eq: "sanofi-logotipo.jpg" }) {
-			childrenImageSharp {
-				gatsbyImageData(layout: FIXED, height: 80)
-			}
-		}
-	}
-`
+// export const queryIndex = graphql`
+// 	query imgsIndex {
+// 		logotipoIndex: file(relativePath: { eq: "logotipo-jogo-memoria-02.jpg" }) {
+// 			childrenImageSharp {
+// 				gatsbyImageData(
+// 					layout: FIXED
+// 					width: 224
+// 					quality: 100
+// 					formats: [AUTO, WEBP, PNG]
+// 				)
+// 			}
+// 		}
+// 		astrazeneca: file(
+// 			relativePath: { eq: "astrazeneca-diabetes-logotipo.jpg" }
+// 		) {
+// 			childrenImageSharp {
+// 				gatsbyImageData(
+// 					layout: FIXED
+// 					height: 80
+// 					quality: 100
+// 					formats: [AUTO, WEBP, PNG]
+// 				)
+// 			}
+// 		}
+// 		bayer: file(relativePath: { eq: "bayer-logotipo.jpg" }) {
+// 			childrenImageSharp {
+// 				gatsbyImageData(
+// 					layout: FIXED
+// 					height: 70
+// 					quality: 100
+// 					formats: [AUTO, WEBP, PNG]
+// 				)
+// 			}
+// 		}
+// 		bd: file(relativePath: { eq: "bd-logotipo.jpg" }) {
+// 			childrenImageSharp {
+// 				gatsbyImageData(
+// 					layout: FIXED
+// 					height: 80
+// 					quality: 100
+// 					formats: [AUTO, WEBP, PNG]
+// 				)
+// 			}
+// 		}
+// 		boehringer: file(relativePath: { eq: "boehringer-logotipo.jpg" }) {
+// 			childrenImageSharp {
+// 				gatsbyImageData(layout: FIXED, height: 130)
+// 			}
+// 		}
+// 		novartis: file(relativePath: { eq: "novartis-logotipo.jpg" }) {
+// 			childrenImageSharp {
+// 				gatsbyImageData(layout: FIXED, height: 30)
+// 			}
+// 		}
+// 		nordisk: file(relativePath: { eq: "novo-nordisk-logotipo.jpg" }) {
+// 			childrenImageSharp {
+// 				gatsbyImageData(layout: FIXED, height: 70)
+// 			}
+// 		}
+// 		roche: file(relativePath: { eq: "roche-logotipo.jpg" }) {
+// 			childrenImageSharp {
+// 				gatsbyImageData(layout: FIXED, height: 45)
+// 			}
+// 		}
+// 		sanofi: file(relativePath: { eq: "sanofi-logotipo.jpg" }) {
+// 			childrenImageSharp {
+// 				gatsbyImageData(layout: FIXED, height: 80)
+// 			}
+// 		}
+// 	}
+// `

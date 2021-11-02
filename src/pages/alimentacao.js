@@ -1,57 +1,68 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import Layout from '../modules/layout'
+import Layout from '@Layout'
+
+import CardAa from '../../static/images/alimentacao-01-a.svg'
+import CardAb from '../../static/images/alimentacao-01-b.svg'
+
+import CardBa from '../../static/images/alimentacao-02-a.svg'
+import CardBb from '../../static/images/alimentacao-02-b.svg'
+
+import CardCa from '../../static/images/alimentacao-03-a.svg'
+import CardCb from '../../static/images/alimentacao-03-b.svg'
+
+import CardDa from '../../static/images/alimentacao-04-a.svg'
+import CardDb from '../../static/images/alimentacao-04-b.svg'
+
+import CardFa from '../../static/images/alimentacao-05-a.svg'
+import CardFb from '../../static/images/alimentacao-05-b.svg'
+
+import CardEa from '../../static/images/alimentacao-06-a.svg'
+import CardEb from '../../static/images/alimentacao-06-b.svg'
+
+import CardGa from '../../static/images/alimentacao-07-a.svg'
+import CardGb from '../../static/images/alimentacao-07-b.svg'
+
+import CardHa from '../../static/images/alimentacao-08-a.svg'
+import CardHb from '../../static/images/alimentacao-08-b.svg'
+
+// Verso da carta
+import CardVerse from '../../static/images/card-alimentacao.svg'
 
 // Formatando a página
 const IndexPage = ({ data }) => {
 	const firstElementsArray = [
 		{
 			type: 'Carda',
-			image: (
-				<Layout type="BLOCK_IMAGE" opt={{ queryCard: data.alimentacaoaa }} />
-			),
+			image: <CardAa />,
 		},
 		{
 			type: 'Cardb',
-			image: (
-				<Layout type="BLOCK_IMAGE" opt={{ queryCard: data.alimentacaoba }} />
-			),
+			image: <CardBa />,
 		},
 		{
 			type: 'Cardc',
-			image: (
-				<Layout type="BLOCK_IMAGE" opt={{ queryCard: data.alimentacaoca }} />
-			),
+			image: <CardCa />,
 		},
 		{
 			type: 'Cardd',
-			image: (
-				<Layout type="BLOCK_IMAGE" opt={{ queryCard: data.alimentacaoda }} />
-			),
+			image: <CardDa />,
 		},
 		{
 			type: 'Carde',
-			image: (
-				<Layout type="BLOCK_IMAGE" opt={{ queryCard: data.alimentacaoea }} />
-			),
+			image: <CardEa />,
 		},
 		{
 			type: 'Cardf',
-			image: (
-				<Layout type="BLOCK_IMAGE" opt={{ queryCard: data.alimentacaofa }} />
-			),
+			image: <CardFa />,
 		},
 		{
 			type: 'Cardg',
-			image: (
-				<Layout type="BLOCK_IMAGE" opt={{ queryCard: data.alimentacaoga }} />
-			),
+			image: <CardGa />,
 		},
 		{
 			type: 'Cardh',
-			image: (
-				<Layout type="BLOCK_IMAGE" opt={{ queryCard: data.alimentacaoha }} />
-			),
+			image: <CardHa />,
 		},
 	]
 	// segunda lista de cartas
@@ -59,57 +70,41 @@ const IndexPage = ({ data }) => {
 	const secondElementsArray = [
 		{
 			type: 'Carda',
-			image: (
-				<Layout type="BLOCK_IMAGE" opt={{ queryCard: data.alimentacaoab }} />
-			),
+			image: <CardAb />,
 		},
 		{
 			type: 'Cardb',
-			image: (
-				<Layout type="BLOCK_IMAGE" opt={{ queryCard: data.alimentacaobb }} />
-			),
+			image: <CardBb />,
 		},
 		{
 			type: 'Cardc',
-			image: (
-				<Layout type="BLOCK_IMAGE" opt={{ queryCard: data.alimentacaocb }} />
-			),
+			image: <CardCb />,
 		},
 		{
 			type: 'Cardd',
-			image: (
-				<Layout type="BLOCK_IMAGE" opt={{ queryCard: data.alimentacaodb }} />
-			),
+			image: <CardDb />,
 		},
 		{
 			type: 'Carde',
-			image: (
-				<Layout type="BLOCK_IMAGE" opt={{ queryCard: data.alimentacaoeb }} />
-			),
+			image: <CardEb />,
 		},
 		{
 			type: 'Cardf',
-			image: (
-				<Layout type="BLOCK_IMAGE" opt={{ queryCard: data.alimentacaofb }} />
-			),
+			image: <CardFb />,
 		},
 		{
 			type: 'Cardg',
-			image: (
-				<Layout type="BLOCK_IMAGE" opt={{ queryCard: data.alimentacaogb }} />
-			),
+			image: <CardGb />,
 		},
 		{
 			type: 'Cardh',
-			image: (
-				<Layout type="BLOCK_IMAGE" opt={{ queryCard: data.alimentacaohb }} />
-			),
+			image: <CardHb />,
 		},
 	]
 	return (
 		// titleSeo = Título da página atual - $title::gatsby-config
 		// titleSeo é seguido por title::gatsby-config
-		<Layout type="BODY" opt={{ titleSeo: `Alimentação` }}>
+		<Layout type="BODY" opt={{ titleSeo: `DMDD título aqui` }}>
 			<Layout
 				// é um construtor tipo os do WP mas aqui
 				type="ROW"
@@ -125,128 +120,13 @@ const IndexPage = ({ data }) => {
 					type="MEMORYGAME"
 					opt={{
 						title: 'Alimentação',
-						cardVerse: (
-							<Layout
-								type="BLOCK_IMAGE"
-								opt={{ queryCard: data.cardVerseAlimentacao }}
-							/>
-						),
+						cardVerse: <CardVerse />,
 						firstElementsArray,
 						secondElementsArray,
 					}}
 				/>
 			</Layout>
-
-			<Layout
-				// é um construtor tipo os do WP mas aqui
-				type="ROW"
-				opt={{
-					isBoxed: true,
-					classes: 'footer-gray',
-					alignTo: 'center',
-					bgColor: '#2f2f2f',
-				}}
-			>
-				<Layout type="FOOTER" />
-			</Layout>
 		</Layout>
 	)
 }
 export default IndexPage
-
-export const queryAlimentacao = graphql`
-	query imgsAlimentacao {
-		alimentacaoaa: file(relativePath: { eq: "alimentacao-01-a.jpg" }) {
-			childrenImageSharp {
-				gatsbyImageData(layout: FIXED, width: 165, height: 165, quality: 100)
-			}
-		}
-		alimentacaoab: file(relativePath: { eq: "alimentacao-01-b.jpg" }) {
-			childrenImageSharp {
-				gatsbyImageData(layout: FIXED, width: 165, height: 165, quality: 100)
-			}
-		}
-
-		alimentacaoba: file(relativePath: { eq: "alimentacao-02-a.jpg" }) {
-			childrenImageSharp {
-				gatsbyImageData(layout: FIXED, width: 165, height: 165, quality: 100)
-			}
-		}
-		alimentacaobb: file(relativePath: { eq: "alimentacao-02-b.jpg" }) {
-			childrenImageSharp {
-				gatsbyImageData(layout: FIXED, width: 165, quality: 100, height: 165)
-			}
-		}
-
-		alimentacaoca: file(relativePath: { eq: "alimentacao-03-a.jpg" }) {
-			childrenImageSharp {
-				gatsbyImageData(layout: FIXED, width: 165, height: 165, quality: 100)
-			}
-		}
-		alimentacaocb: file(relativePath: { eq: "alimentacao-03-b.jpg" }) {
-			childrenImageSharp {
-				gatsbyImageData(layout: FIXED, width: 165, quality: 100, height: 165)
-			}
-		}
-
-		alimentacaoda: file(relativePath: { eq: "alimentacao-04-a.jpg" }) {
-			childrenImageSharp {
-				gatsbyImageData(layout: FIXED, width: 165, quality: 100, height: 165)
-			}
-		}
-		alimentacaodb: file(relativePath: { eq: "alimentacao-04-b.jpg" }) {
-			childrenImageSharp {
-				gatsbyImageData(layout: FIXED, quality: 100, width: 165, height: 165)
-			}
-		}
-
-		alimentacaoea: file(relativePath: { eq: "alimentacao-05-a.jpg" }) {
-			childrenImageSharp {
-				gatsbyImageData(layout: FIXED, quality: 100, width: 165, height: 165)
-			}
-		}
-		alimentacaoeb: file(relativePath: { eq: "alimentacao-05-b.jpg" }) {
-			childrenImageSharp {
-				gatsbyImageData(layout: FIXED, width: 165, quality: 100, height: 165)
-			}
-		}
-
-		alimentacaofa: file(relativePath: { eq: "alimentacao-06-a.jpg" }) {
-			childrenImageSharp {
-				gatsbyImageData(layout: FIXED, quality: 100, width: 165, height: 165)
-			}
-		}
-		alimentacaofb: file(relativePath: { eq: "alimentacao-06-b.jpg" }) {
-			childrenImageSharp {
-				gatsbyImageData(layout: FIXED, quality: 100, width: 165, height: 165)
-			}
-		}
-
-		alimentacaoga: file(relativePath: { eq: "alimentacao-07-a.jpg" }) {
-			childrenImageSharp {
-				gatsbyImageData(layout: FIXED, quality: 100, width: 165, height: 165)
-			}
-		}
-		alimentacaogb: file(relativePath: { eq: "alimentacao-07-b.jpg" }) {
-			childrenImageSharp {
-				gatsbyImageData(layout: FIXED, width: 165, quality: 100, height: 165)
-			}
-		}
-
-		alimentacaoha: file(relativePath: { eq: "alimentacao-08-a.jpg" }) {
-			childrenImageSharp {
-				gatsbyImageData(layout: FIXED, quality: 100, width: 165, height: 165)
-			}
-		}
-		alimentacaohb: file(relativePath: { eq: "alimentacao-08-b.jpg" }) {
-			childrenImageSharp {
-				gatsbyImageData(layout: FIXED, quality: 100, width: 165, height: 165)
-			}
-		}
-		cardVerseAlimentacao: file(relativePath: { eq: "card-alimentacao.jpg" }) {
-			childrenImageSharp {
-				gatsbyImageData(layout: FIXED, quality: 100, width: 165, height: 165)
-			}
-		}
-	}
-`
