@@ -11,7 +11,7 @@ module.exports = {
 		description: `O Jogo da Memória é um app desenvolvido para você SEO aqui.`,
 		author: `@VisualStudio`,
 		siteUrl: `https://diadodiabetes.intest.com.br/`,
-		image: `https://diadodiabetes.intest.com.br/theimage.jpg`,
+		// image: `https://diadodiabetes.intest.com.br/theimage.jpg`,
 		author: {
 			name: 'Visual Studio',
 			minibio: `A Visual Studio é a melhor empresa do Brasil.`,
@@ -68,18 +68,18 @@ module.exports = {
 				extensions: ['js', 'scss'],
 			},
 		},
-		// {
-		// 	resolve: `gatsby-plugin-manifest`,
-		// 	options: {
-		// 		name: `Diabetes Brasil`,
-		// 		short_name: `Diabetes Brasil`,
-		// 		start_url: `/`,
-		// 		background_color: `#fff`,
-		// 		theme_color: `#eb412c`,
-		// 		display: `fullscreen`,
-		// 		icon: `${__dirname}/static/assets/images/diabetes-brasil-favicon.svg`, // This path is relative to the root of the site.
-		// 	},
-		// },
+		{
+			resolve: `gatsby-plugin-manifest`,
+			options: {
+				name: `Diabetes Brasil`,
+				short_name: `Diabetes Brasil`,
+				start_url: `/`,
+				background_color: `#fff`,
+				theme_color: `#eb412c`,
+				display: `fullscreen`,
+				icon: `${__dirname}/static/assets/images/diabetes-brasil-favicon.svg`, // This path is relative to the root of the site.
+			},
+		},
 		{
 			resolve: `gatsby-plugin-google-fonts`,
 			options: {
