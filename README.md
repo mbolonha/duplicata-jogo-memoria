@@ -2,7 +2,7 @@
 
 [![Ambiente de testes - diadodiabetes.intest.com.br](https://github.com/studiovisual/diabetes-brasil-jogo-da-memoria/actions/workflows/develop.yaml/badge.svg?branch=develop)](https://github.com/studiovisual/diabetes-brasil-jogo-da-memoria/actions/workflows/develop.yaml)
 
-## 🚀 Para iniciar localmente
+## 🚀 Para iniciar localmente.
 
 0.  **Pré-requisitos.**
 
