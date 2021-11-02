@@ -12,7 +12,6 @@ function SeoContainer({ frontmatter = {}, description, lang, meta, title }) {
 						title
 						description
 						siteUrl
-						image
 						author {
 							name
 						}
@@ -44,7 +43,7 @@ function SeoContainer({ frontmatter = {}, description, lang, meta, title }) {
 			siteAuthor={site.siteMetadata.author}
 			meta={meta}
 			siteUrl={site.siteMetadata.siteUrl}
-			image={site.siteMetadata.image}
+			// image={site.siteMetadata.image}
 			author={site.siteMetadata.author}
 			organization={site.siteMetadata.organization}
 			social={site.siteMetadata.social}
