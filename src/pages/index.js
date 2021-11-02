@@ -1,6 +1,6 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
-import Layout from '@Layout'
+import Layout from '../modules/layout'
 import AlimentacaoIcon from '../../static/images/alimentacao-icon.svg'
 import AtividadeIcon from '../../static/images/atividade-icon.svg'
 import BemEstarIcon from '../../static/images/bem-estar-icon.svg'
@@ -175,52 +175,27 @@ export const queryIndex = graphql`
 		}
 		boehringer: file(relativePath: { eq: "boehringer-logotipo.jpg" }) {
 			childrenImageSharp {
-				gatsbyImageData(
-					layout: FIXED
-					height: 130
-					quality: 100
-					formats: [AUTO, WEBP, JPG]
-				)
+				gatsbyImageData(layout: FIXED, height: 130)
 			}
 		}
 		novartis: file(relativePath: { eq: "novartis-logotipo.jpg" }) {
 			childrenImageSharp {
-				gatsbyImageData(
-					layout: FIXED
-					height: 30
-					quality: 100
-					formats: [AUTO, WEBP, JPG]
-				)
+				gatsbyImageData(layout: FIXED, height: 30)
 			}
 		}
 		nordisk: file(relativePath: { eq: "novo-nordisk-logotipo.jpg" }) {
 			childrenImageSharp {
-				gatsbyImageData(
-					layout: FIXED
-					height: 70
-					quality: 100
-					formats: [AUTO, WEBP, JPG]
-				)
+				gatsbyImageData(layout: FIXED, height: 70)
 			}
 		}
 		roche: file(relativePath: { eq: "roche-logotipo.jpg" }) {
 			childrenImageSharp {
-				gatsbyImageData(
-					layout: FIXED
-					height: 45
-					quality: 100
-					formats: [AUTO, WEBP, JPG]
-				)
+				gatsbyImageData(layout: FIXED, height: 45)
 			}
 		}
 		sanofi: file(relativePath: { eq: "sanofi-logotipo.jpg" }) {
 			childrenImageSharp {
-				gatsbyImageData(
-					layout: FIXED
-					height: 80
-					quality: 100
-					formats: [AUTO, WEBP, JPG]
-				)
+				gatsbyImageData(layout: FIXED, height: 80)
 			}
 		}
 	}

@@ -1,6 +1,6 @@
 import React from 'react'
 
-import LayoutContext, { LayoutProvider } from '@Layout/services/LayoutContext'
+import LayoutContext, { LayoutProvider } from '../services/LayoutContext'
 import Row from '../components/Row'
 // import { Page__Settings } from '../config/'
 // import useSetLocation from '@tools/useSetLocation'

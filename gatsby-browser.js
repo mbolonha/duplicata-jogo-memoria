@@ -1,6 +1,6 @@
 import React from 'react'
 import './src/scss/styles.scss'
-import { GlobalProvider } from '@Layout/services/context'
+import { GlobalProvider } from './src/modules/layout/services/context'
 export const wrapRootElement = ({ element }) => (
 	<GlobalProvider>{element}</GlobalProvider>
 )

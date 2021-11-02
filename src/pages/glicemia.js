@@ -1,6 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import Layout from '@Layout'
+import Layout from '../modules/layout'
 
 // Formatando a página
 const IndexPage = ({ data }) => {

@@ -1,8 +1,4 @@
-require('dotenv').config({
-	path: `.env.${process.env.NODE_ENV}`,
-})
-
-const path = require('path')
+require('dotenv').config()
 const { credits } = require('./files-credits')
 
 module.exports = {
@@ -48,7 +44,7 @@ module.exports = {
 			resolve: `gatsby-source-filesystem`,
 			options: {
 				name: `images`,
-				path: `/app/static/images/`,
+				path: `${__dirname}/static/images/`,
 			},
 		},
 		{
@@ -57,22 +53,6 @@ module.exports = {
 				rule: {
 					include: /images/,
 				},
-			},
-		},
-		{
-			resolve: `gatsby-plugin-alias-imports`,
-			options: {
-				alias: {
-					'@AtomicBlock': path.resolve(__dirname, 'src/modules/atomic-block'),
-					'@BlockBuilder': path.resolve(__dirname, 'src/modules/block-builder'),
-					'@CQM': path.resolve(__dirname, 'src/modules/cqm'),
-					'@Null': path.resolve(__dirname, 'src/modules/null'),
-					'@Layout': path.resolve(__dirname, 'src/modules/layout'),
-					'@assets': path.resolve(__dirname, 'static'),
-					'@tools': path.resolve(__dirname, 'src/tools'),
-					'@styles': path.resolve(__dirname, 'src/styles'),
-				},
-				extensions: ['js', 'scss'],
 			},
 		},
 		{
