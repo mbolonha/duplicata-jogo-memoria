@@ -14,11 +14,18 @@ import WhatsIcon from '../../static/images/whats-icon.svg'
 import InstagramIcon from '../../static/images/instagram-icon.svg'
 import ShareIcon from '../../static/images/share-icon.svg'
 import JogoMemoriaIcon from '../../static/images/jogodamemoria-logotipo.svg'
+import {
+	FacebookShareButton,
+	TelegramShareButton,
+	TwitterShareButton,
+	WhatsappShareButton,
+} from 'react-share'
 
 import 'react-responsive-carousel/lib/styles/carousel.min.css' // requires a loader
 import { Carousel } from 'react-responsive-carousel'
 
 const IndexPage = ({ data }) => {
+	console.log(data.site.siteMetadata.title)
 	return (
 		// titleSeo = Título da página atual - $title::gatsby-config
 		// titleSeo é seguido por title::gatsby-config
@@ -68,11 +75,33 @@ const IndexPage = ({ data }) => {
 						<div className="wrapper-buttons">
 							<span>Compartilhe</span>
 							<div className="modal-share-button">
-								<FacebookIcon />
-								<TwitterIcon />
-								<WhatsIcon />
+								<FacebookShareButton
+									quote="Veja que incrível!"
+									url={data.site.siteMetadata.siteUrl}
+									title={data.site.siteMetadata.title}
+								>
+									<FacebookIcon />
+								</FacebookShareButton>
+								<TwitterShareButton
+									url={data.site.siteMetadata.siteUrl}
+									title={data.site.siteMetadata.title}
+								>
+									<TwitterIcon />
+								</TwitterShareButton>
+
+								<WhatsappShareButton
+									url={data.site.siteMetadata.siteUrl}
+									title={data.site.siteMetadata.title}
+								>
+									<WhatsIcon />
+								</WhatsappShareButton>
 								<InstagramIcon />
-								<ShareIcon />
+								<TelegramShareButton
+									url={data.site.siteMetadata.siteUrl}
+									title={data.site.siteMetadata.title}
+								>
+									<ShareIcon />
+								</TelegramShareButton>
 							</div>
 						</div>
 					</div>
@@ -119,74 +148,14 @@ const IndexPage = ({ data }) => {
 }
 export default IndexPage
 
-// export const queryIndex = graphql`
-// 	query imgsIndex {
-// 		logotipoIndex: file(relativePath: { eq: "logotipo-jogo-memoria-02.jpg" }) {
-// 			childrenImageSharp {
-// 				gatsbyImageData(
-// 					layout: FIXED
-// 					width: 224
-// 					quality: 100
-// 					formats: [AUTO, WEBP, PNG]
-// 				)
-// 			}
-// 		}
-// 		astrazeneca: file(
-// 			relativePath: { eq: "astrazeneca-diabetes-logotipo.jpg" }
-// 		) {
-// 			childrenImageSharp {
-// 				gatsbyImageData(
-// 					layout: FIXED
-// 					height: 80
-// 					quality: 100
-// 					formats: [AUTO, WEBP, PNG]
-// 				)
-// 			}
-// 		}
-// 		bayer: file(relativePath: { eq: "bayer-logotipo.jpg" }) {
-// 			childrenImageSharp {
-// 				gatsbyImageData(
-// 					layout: FIXED
-// 					height: 70
-// 					quality: 100
-// 					formats: [AUTO, WEBP, PNG]
-// 				)
-// 			}
-// 		}
-// 		bd: file(relativePath: { eq: "bd-logotipo.jpg" }) {
-// 			childrenImageSharp {
-// 				gatsbyImageData(
-// 					layout: FIXED
-// 					height: 80
-// 					quality: 100
-// 					formats: [AUTO, WEBP, PNG]
-// 				)
-// 			}
-// 		}
-// 		boehringer: file(relativePath: { eq: "boehringer-logotipo.jpg" }) {
-// 			childrenImageSharp {
-// 				gatsbyImageData(layout: FIXED, height: 130)
-// 			}
-// 		}
-// 		novartis: file(relativePath: { eq: "novartis-logotipo.jpg" }) {
-// 			childrenImageSharp {
-// 				gatsbyImageData(layout: FIXED, height: 30)
-// 			}
-// 		}
-// 		nordisk: file(relativePath: { eq: "novo-nordisk-logotipo.jpg" }) {
-// 			childrenImageSharp {
-// 				gatsbyImageData(layout: FIXED, height: 70)
-// 			}
-// 		}
-// 		roche: file(relativePath: { eq: "roche-logotipo.jpg" }) {
-// 			childrenImageSharp {
-// 				gatsbyImageData(layout: FIXED, height: 45)
-// 			}
-// 		}
-// 		sanofi: file(relativePath: { eq: "sanofi-logotipo.jpg" }) {
-// 			childrenImageSharp {
-// 				gatsbyImageData(layout: FIXED, height: 80)
-// 			}
-// 		}
-// 	}
-// `
+export const queryAtividade = graphql`
+	query {
+		site {
+			siteMetadata {
+				title
+				description
+				siteUrl
+			}
+		}
+	}
+`
