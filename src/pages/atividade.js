@@ -3,56 +3,66 @@ import { graphql } from 'gatsby'
 
 import Layout from '../modules/layout'
 
+import CardVerse from '../../static/images/card-bem-estar.svg'
+
+import CardAa from '../../static/images/bem-estar-01-a.svg'
+import CardAb from '../../static/images/bem-estar-01-b.svg'
+
+import CardBa from '../../static/images/bem-estar-02-a.svg'
+import CardBb from '../../static/images/bem-estar-02-b.svg'
+
+import CardCa from '../../static/images/bem-estar-03-a.svg'
+import CardCb from '../../static/images/bem-estar-03-b.svg'
+
+import CardDa from '../../static/images/bem-estar-04-a.svg'
+import CardDb from '../../static/images/bem-estar-04-b.svg'
+
+import CardFa from '../../static/images/bem-estar-05-a.svg'
+import CardFb from '../../static/images/bem-estar-05-b.svg'
+
+import CardEa from '../../static/images/bem-estar-06-a.svg'
+import CardEb from '../../static/images/bem-estar-06-b.svg'
+
+import CardGa from '../../static/images/bem-estar-07-a.svg'
+import CardGb from '../../static/images/bem-estar-07-b.svg'
+
+import CardHa from '../../static/images/bem-estar-08-a.svg'
+import CardHb from '../../static/images/bem-estar-08-b.svg'
+
 // Formatando a página
 const AtividadePage = ({ data }) => {
 	const firstElementsArray = [
 		{
 			type: 'Carda',
-			image: (
-				<Layout type="BLOCK_IMAGE" opt={{ queryCard: data.atividadeaa }} />
-			),
+			image: <CardAa />,
 		},
 		{
 			type: 'Cardb',
-			image: (
-				<Layout type="BLOCK_IMAGE" opt={{ queryCard: data.atividadeba }} />
-			),
+			image: <CardBa />,
 		},
 		{
 			type: 'Cardc',
-			image: (
-				<Layout type="BLOCK_IMAGE" opt={{ queryCard: data.atividadeca }} />
-			),
+			image: <CardCa />,
 		},
 		{
 			type: 'Cardd',
-			image: (
-				<Layout type="BLOCK_IMAGE" opt={{ queryCard: data.atividadeda }} />
-			),
+			image: <CardDa />,
 		},
 		{
 			type: 'Carde',
-			image: (
-				<Layout type="BLOCK_IMAGE" opt={{ queryCard: data.atividadeea }} />
-			),
+			image: <CardFa />,
 		},
 		{
 			type: 'Cardf',
-			image: (
-				<Layout type="BLOCK_IMAGE" opt={{ queryCard: data.atividadefa }} />
-			),
+			image: <CardEa />,
 		},
 		{
 			type: 'Cardg',
-			image: (
-				<Layout type="BLOCK_IMAGE" opt={{ queryCard: data.atividadega }} />
-			),
+			image: <CardGa />,
 		},
 		{
 			type: 'Cardh',
-			image: (
-				<Layout type="BLOCK_IMAGE" opt={{ queryCard: data.atividadeha }} />
-			),
+			image: <CardHa />,
 		},
 	]
 	// segunda lista de cartas
@@ -60,51 +70,35 @@ const AtividadePage = ({ data }) => {
 	const secondElementsArray = [
 		{
 			type: 'Carda',
-			image: (
-				<Layout type="BLOCK_IMAGE" opt={{ queryCard: data.atividadeab }} />
-			),
+			image: <CardAb />,
 		},
 		{
 			type: 'Cardb',
-			image: (
-				<Layout type="BLOCK_IMAGE" opt={{ queryCard: data.atividadebb }} />
-			),
+			image: <CardBb />,
 		},
 		{
 			type: 'Cardc',
-			image: (
-				<Layout type="BLOCK_IMAGE" opt={{ queryCard: data.atividadecb }} />
-			),
+			image: <CardCb />,
 		},
 		{
 			type: 'Cardd',
-			image: (
-				<Layout type="BLOCK_IMAGE" opt={{ queryCard: data.atividadedb }} />
-			),
+			image: <CardDb />,
 		},
 		{
 			type: 'Carde',
-			image: (
-				<Layout type="BLOCK_IMAGE" opt={{ queryCard: data.atividadeeb }} />
-			),
+			image: <CardFb />,
 		},
 		{
 			type: 'Cardf',
-			image: (
-				<Layout type="BLOCK_IMAGE" opt={{ queryCard: data.atividadefb }} />
-			),
+			image: <CardEb />,
 		},
 		{
 			type: 'Cardg',
-			image: (
-				<Layout type="BLOCK_IMAGE" opt={{ queryCard: data.atividadegb }} />
-			),
+			image: <CardGb />,
 		},
 		{
 			type: 'Cardh',
-			image: (
-				<Layout type="BLOCK_IMAGE" opt={{ queryCard: data.atividadehb }} />
-			),
+			image: <CardHb />,
 		},
 	]
 	return (
@@ -136,12 +130,7 @@ const AtividadePage = ({ data }) => {
 					type="MEMORYGAME"
 					opt={{
 						title: 'Atividade Física',
-						cardVerse: (
-							<Layout
-								type="BLOCK_IMAGE"
-								opt={{ queryCard: data.cardVerseAlimentacao }}
-							/>
-						),
+						cardVerse: <CardVerse />,
 						firstElementsArray,
 						secondElementsArray,
 					}}
@@ -166,98 +155,6 @@ export default AtividadePage
 
 export const queryAtividade = graphql`
 	query {
-		atividadeaa: file(relativePath: { eq: "atividade-01-a.png" }) {
-			childrenImageSharp {
-				gatsbyImageData(layout: FIXED, width: 165, height: 165, quality: 100)
-			}
-		}
-		atividadeab: file(relativePath: { eq: "atividade-01-b.png" }) {
-			childrenImageSharp {
-				gatsbyImageData(layout: FIXED, width: 165, height: 165, quality: 100)
-			}
-		}
-
-		atividadeba: file(relativePath: { eq: "atividade-02-a.png" }) {
-			childrenImageSharp {
-				gatsbyImageData(layout: FIXED, width: 165, height: 165, quality: 100)
-			}
-		}
-		atividadebb: file(relativePath: { eq: "atividade-02-b.png" }) {
-			childrenImageSharp {
-				gatsbyImageData(layout: FIXED, width: 165, quality: 100, height: 165)
-			}
-		}
-
-		atividadeca: file(relativePath: { eq: "atividade-03-a.png" }) {
-			childrenImageSharp {
-				gatsbyImageData(layout: FIXED, width: 165, height: 165, quality: 100)
-			}
-		}
-		atividadecb: file(relativePath: { eq: "atividade-03-b.png" }) {
-			childrenImageSharp {
-				gatsbyImageData(layout: FIXED, width: 165, quality: 100, height: 165)
-			}
-		}
-
-		atividadeda: file(relativePath: { eq: "atividade-04-a.png" }) {
-			childrenImageSharp {
-				gatsbyImageData(layout: FIXED, width: 165, quality: 100, height: 165)
-			}
-		}
-		atividadedb: file(relativePath: { eq: "atividade-04-b.png" }) {
-			childrenImageSharp {
-				gatsbyImageData(layout: FIXED, quality: 100, width: 165, height: 165)
-			}
-		}
-
-		atividadeea: file(relativePath: { eq: "atividade-05-a.png" }) {
-			childrenImageSharp {
-				gatsbyImageData(layout: FIXED, quality: 100, width: 165, height: 165)
-			}
-		}
-		atividadeeb: file(relativePath: { eq: "atividade-05-b.png" }) {
-			childrenImageSharp {
-				gatsbyImageData(layout: FIXED, width: 165, quality: 100, height: 165)
-			}
-		}
-
-		atividadefa: file(relativePath: { eq: "atividade-06-a.png" }) {
-			childrenImageSharp {
-				gatsbyImageData(layout: FIXED, quality: 100, width: 165, height: 165)
-			}
-		}
-		atividadefb: file(relativePath: { eq: "atividade-06-b.png" }) {
-			childrenImageSharp {
-				gatsbyImageData(layout: FIXED, quality: 100, width: 165, height: 165)
-			}
-		}
-
-		atividadega: file(relativePath: { eq: "atividade-07-a.png" }) {
-			childrenImageSharp {
-				gatsbyImageData(layout: FIXED, quality: 100, width: 165, height: 165)
-			}
-		}
-		atividadegb: file(relativePath: { eq: "atividade-07-b.png" }) {
-			childrenImageSharp {
-				gatsbyImageData(layout: FIXED, width: 165, quality: 100, height: 165)
-			}
-		}
-
-		atividadeha: file(relativePath: { eq: "atividade-08-a.png" }) {
-			childrenImageSharp {
-				gatsbyImageData(layout: FIXED, quality: 100, width: 165, height: 165)
-			}
-		}
-		atividadehb: file(relativePath: { eq: "atividade-08-b.png" }) {
-			childrenImageSharp {
-				gatsbyImageData(layout: FIXED, quality: 100, width: 165, height: 165)
-			}
-		}
-		cardVerseatividade: file(relativePath: { eq: "card-atividade.png" }) {
-			childrenImageSharp {
-				gatsbyImageData(layout: FIXED, quality: 100, width: 165, height: 165)
-			}
-		}
 		logotipoImg: file(relativePath: { eq: "diabetes-brasil-logo.png" }) {
 			childrenImageSharp {
 				gatsbyImageData(layout: FIXED, width: 135)
