@@ -1,5 +1,4 @@
 import React from 'react'
-import { graphql, Link } from 'gatsby'
 
 import Layout from '../modules/layout'
 
@@ -22,6 +21,18 @@ const IndexPage = ({ data }) => {
 				<div className="index-first-row">
 					<p className="index-paragraph">Erro 404</p>
 				</div>
+			</Layout>
+			<Layout
+				// é um construtor tipo os do WP mas aqui
+				type="ROW"
+				opt={{
+					isBoxed: true,
+					classes: 'footer-gray',
+					alignTo: 'center',
+					bgColor: '#2f2f2f',
+				}}
+			>
+				<Layout type="FOOTER" />
 			</Layout>
 		</Layout>
 	)
