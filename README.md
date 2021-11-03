@@ -4,7 +4,7 @@
 
 ## 🚀 Para iniciar localmente
 
-0.  **Pré-requisitos**
+0.  **Pré-requisitos.**
 
     Este jogo da memória foi construído usando o boilerplate do autor Milton Bolonha,
     usado para fins comerciais explorados pela Studio Visual.
