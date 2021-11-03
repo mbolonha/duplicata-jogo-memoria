@@ -41,6 +41,9 @@ jobs:
     needs: build
     runs-on: ubuntu-20.04
     steps:
+      - name: Checkout do repositório
+        uses: actions/checkout@v2
+
       - name: Set outputs
         id: vars
         run: echo "::set-output name=sha_short::$(git rev-parse --short HEAD)"
