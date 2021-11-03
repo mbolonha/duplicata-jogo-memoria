@@ -3,33 +3,33 @@ header {
 
 	nav.main-nav {
 		position: fixed;
-		z-index: 9;
-		top: 81px;
+		z-index: 99;
+		// visibility: hidden;
+		// opacity: 0;
+		top: 0px;
 		left: 0;
 		width: 100%;
 		margin: 0;
 		display: flex;
-		visibility: hidden;
-		justify-content: space-around;
-		background-color: $grayscale_200__color;
-		border-top: 3px solid $additional__color;
-		border-bottom: 3px solid $additional__color;
-		box-shadow: $brown__shadowBox;
-		opacity: 0;
+		justify-content: center;
+		// background-color: $grayscale_200__color;
+		// border-top: 3px solid $additional__color;
+		// border-bottom: 3px solid $additional__color;
+		// box-shadow: $brown__shadowBox;
 		transition: visibility 0.2s, opacity 0.3s ease-in-out;
-		&:before {
-			border-top: 1px solid $border_tick;
-			width: 100%;
-			position: absolute;
-			content: '';
-		}
-		&:after {
-			border-bottom: 1px solid $border_tick;
-			width: 100%;
-			position: absolute;
-			content: '';
-			bottom: 0;
-		}
+		// &:before {
+		// 	border-top: 1px solid $border_tick;
+		// 	width: 100%;
+		// 	position: absolute;
+		// 	content: '';
+		// }
+		// &:after {
+		// 	border-bottom: 1px solid $border_tick;
+		// 	width: 100%;
+		// 	position: absolute;
+		// 	content: '';
+		// 	bottom: 0;
+		// }
 		&.menu-state-visible {
 			opacity: 1;
 			visibility: visible;
@@ -45,7 +45,6 @@ header {
 			border-bottom: 1px solid $color__light-grey;
 			ul.nav-menus {
 				overflow: scroll;
-				padding: 0px;
 
 				li.nav-links {
 					text-align: center;
@@ -70,8 +69,17 @@ header {
 ul.nav-menus,
 ul.footer-menu {
 	flex: 0 1 auto;
-	padding: 30px 0 40px;
+	border: 1px solid #dddddd;
+	background: white;
+	&:hover {
+		background-color: $brand__color;
+	}
 
+	border-top: 2px solid $brand__color;
+	min-height: 45px;
+	padding: 0 15px;
+	line-height: 45px;
+	padding: 0 8.2px;
 	li.nav-links,
 	li.footer-links {
 		padding: 3px 0;
@@ -81,16 +89,19 @@ ul.footer-menu {
 			// font-size: $xs__fontSize;
 			// font-family: 'Cantata One';
 			font-family: $main__font;
-			font-size: 14px;
+			// font-size: 14px;
 		}
 		&:first-of-type {
 			a.nav-main-link,
 			a.footer-link {
 				font-weight: 900;
-				margin-bottom: 20px;
+				// margin-bottom: 20px;
 				display: block;
 				// color: $light_brown__bgColor;
-				font-size: $xs__fontSize;
+				font-size: 11px;
+				color: #5e5e5e;
+				// font-size: 16px;
+				text-transform: uppercase;
 			}
 		}
 	}

@@ -8,24 +8,14 @@ import GlicemiaIcon from '../../static/images/glicemia-icon.svg'
 import HabitosIcon from '../../static/images/habitos-icon.svg'
 import PrevencaoIcon from '../../static/images/prevencao-icon.svg'
 import TratamentoIcon from '../../static/images/tratamento-icon.svg'
-import FacebookIcon from '../../static/images/face-icon.svg'
-import TwitterIcon from '../../static/images/twitter-icon.svg'
-import WhatsIcon from '../../static/images/whats-icon.svg'
-import InstagramIcon from '../../static/images/instagram-icon.svg'
-import ShareIcon from '../../static/images/share-icon.svg'
+
 import JogoMemoriaIcon from '../../static/images/jogodamemoria-logotipo.svg'
-import {
-	FacebookShareButton,
-	TelegramShareButton,
-	TwitterShareButton,
-	WhatsappShareButton,
-} from 'react-share'
 
 import 'react-responsive-carousel/lib/styles/carousel.min.css' // requires a loader
 import { Carousel } from 'react-responsive-carousel'
 
 const IndexPage = ({ data }) => {
-	console.log(data.site.siteMetadata.title)
+	// console.log(data.site.siteMetadata.title)
 	return (
 		// titleSeo = Título da página atual - $title::gatsby-config
 		// titleSeo é seguido por title::gatsby-config
@@ -72,38 +62,13 @@ const IndexPage = ({ data }) => {
 						Tratamento <TratamentoIcon />
 					</Link>
 					<div className="index-share-btn">
-						<div className="wrapper-buttons">
-							<span>Compartilhe</span>
-							<div className="modal-share-button">
-								<FacebookShareButton
-									quote="Veja que incrível!"
-									url={data.site.siteMetadata.siteUrl}
-									title={data.site.siteMetadata.title}
-								>
-									<FacebookIcon />
-								</FacebookShareButton>
-								<TwitterShareButton
-									url={data.site.siteMetadata.siteUrl}
-									title={data.site.siteMetadata.title}
-								>
-									<TwitterIcon />
-								</TwitterShareButton>
-
-								<WhatsappShareButton
-									url={data.site.siteMetadata.siteUrl}
-									title={data.site.siteMetadata.title}
-								>
-									<WhatsIcon />
-								</WhatsappShareButton>
-								<InstagramIcon />
-								<TelegramShareButton
-									url={data.site.siteMetadata.siteUrl}
-									title={data.site.siteMetadata.title}
-								>
-									<ShareIcon />
-								</TelegramShareButton>
-							</div>
-						</div>
+						<Layout
+							type="BLOCK_SHARE"
+							opt={{
+								title: data.site.siteMetadata.title,
+								url: data.site.siteMetadata.siteUrl,
+							}}
+						/>
 					</div>
 					<div className="carousel-logos">
 						<h2 className="heading-logos">Nossos Parceiros</h2>

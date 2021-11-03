@@ -4,6 +4,7 @@ import HeaderContainer from './HeaderContainer'
 import FooterContainer from './FooterContainer'
 import RowContainer from './RowContainer'
 import BlockImageContainer from './BlockImageContainer'
+import BlockShareContainer from './BlockShareContainer'
 // import MainContainer from './MainContainer'
 import MemoryGameContainer from './MemoryGameContainer'
 const LayoutResolver = ({
@@ -24,6 +25,8 @@ const LayoutResolver = ({
 				return <FooterContainer />
 			case 'BLOCK_IMAGE':
 				return <BlockImageContainer opt={opt} />
+			case 'BLOCK_SHARE':
+				return <BlockShareContainer opt={opt} />
 			case 'HEADER':
 				return <HeaderContainer heroData={opt} logo={logo} />
 

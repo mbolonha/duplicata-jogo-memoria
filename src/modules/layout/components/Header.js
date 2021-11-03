@@ -1,17 +1,21 @@
 import React from 'react'
+import { Link } from 'gatsby'
+
 import Logo from '../../../../static/images/diabetes-brasil-logo.svg'
 import MenuHamburgerIcon from '../../../../static/images/menu-hamburger.svg'
 import MenuContainer from '../containers/MenuContainer'
 const Header = ({ refState, handleRefState }) => {
 	return (
 		<header>
+			<MenuContainer refState={refState} handleRefState={handleRefState} />
+
 			<div className="main-header">
 				<div className="header-columns">
-					<a href="/" className="logo-link">
-						<Logo style={{ display: 'block', height: '50px' }} />
-					</a>
+					<Link to="/" className="logo-link">
+						<Logo style={{ display: 'block', height: '75px' }} />
+					</Link>
 				</div>
-				<div className="header-columns toggle-menu desktop-only">
+				<div className="header-columns toggle-menu">
 					<input
 						type="checkbox"
 						id="check-toggle-icon"
@@ -27,8 +31,6 @@ const Header = ({ refState, handleRefState }) => {
 					</label>
 				</div>
 			</div>
-
-			<MenuContainer refState={refState} handleRefState={handleRefState} />
 		</header>
 	)
 }
