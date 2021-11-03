@@ -1,4 +1,5 @@
 import React from 'react'
+import { graphql } from 'gatsby'
 import Layout from '../modules/layout'
 
 import CardVerse from '../../static/images/card-habitos.svg'
@@ -150,3 +151,13 @@ const HabitosPage = ({ data }) => {
 	)
 }
 export default HabitosPage
+
+export const queryAtividade = graphql`
+	query {
+		logotipoImg: file(relativePath: { eq: "diabetes-brasil-logo.png" }) {
+			childrenImageSharp {
+				gatsbyImageData(layout: FIXED, width: 135)
+			}
+		}
+	}
+`
