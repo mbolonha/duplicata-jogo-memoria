@@ -12,7 +12,7 @@ header {
 		padding-top: 55px;
 		padding-bottom: 32px;
 		display: flex;
-		width: 92%;
+		width: 95%;
 		align-content: center;
 		justify-content: space-between;
 		margin: 0 auto;
@@ -26,7 +26,9 @@ header {
 			p strong {
 				color: $cta__color;
 			}
-
+			.logo-link {
+				margin-right: 25px;
+			}
 			.logo-link h1 {
 				// color: $verylight_brown__bgColor;
 				font-family: $main__font;

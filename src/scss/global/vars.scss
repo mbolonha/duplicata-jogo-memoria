@@ -35,11 +35,13 @@ $color__light-grey: #999999;
 // SPACES
 
 // Breakpoints
+// screen vars
+$header__height: 121px;
 $widescreen__size: 1170px;
 $tablet__size: 768px;
 $tabletHack__size: 769px;
 $boxed__maxWidth: 375px;
-$boxedDesktop__maxWidth: 760px;
+$boxedDesktop__maxWidth: 960px;
 $boxedMobile__maxWidth: 375px;
 $desktopIndexButtons__maxWidth: 520px;
 $mobileIndexButtons__maxWidth: 295px;
@@ -55,11 +57,6 @@ $m__space: 24pt;
 // $l__radius: 10px;
 // $xl__radius: 15px;
 // $xxl__radius: 50%;
-
-// screen vars
-$header__height: 121px;
-$widescreen__size: 1170px;
-$tablet__size: 768px;
 
 // typograph
 $main__font: 'Mulish', Arial, sans-serif;

@@ -17,7 +17,17 @@ const IndexPage = ({ data }) => {
 					bgColor: '#fff',
 				}}
 			>
-				<Layout type="HEADER" />
+				<Layout
+					type="HEADER"
+					opt={{
+						logoHeader: (
+							<Layout
+								type="BLOCK_IMAGE"
+								opt={{ queryCard: data.logotipoImg }}
+							/>
+						),
+					}}
+				/>
 				<div className="index-first-row">
 					<p className="index-paragraph">Erro 404</p>
 				</div>

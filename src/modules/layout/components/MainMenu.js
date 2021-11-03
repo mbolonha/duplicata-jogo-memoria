@@ -3,6 +3,7 @@ import { Link } from 'gatsby'
 
 const MainMenu = ({ wrapperRef, isVisibleClass }) => (
 	<nav ref={wrapperRef} className={' main-nav menu-state-' + isVisibleClass}>
+		{/* // <nav ref={wrapperRef} className={' main-nav'}> */}
 		<ul className="nav-menus">
 			<li className="nav-links">
 				<Link className="nav-main-link" to="/">
