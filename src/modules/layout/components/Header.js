@@ -5,6 +5,9 @@ import MenuHamburgerIcon from '../../../../static/images/menu-hamburger.svg'
 import MenuContainer from '../containers/MenuContainer'
 const Header = ({ refState, handleRefState, data, logoComponent }) => {
 	console.log(data)
+	const logotipoHeader = logoComponent || (
+		<Logo style={{ display: 'block', height: '75px' }} />
+	)
 	return (
 		<header>
 			<MenuContainer refState={refState} handleRefState={handleRefState} />
@@ -13,7 +16,7 @@ const Header = ({ refState, handleRefState, data, logoComponent }) => {
 				<div className="header-columns">
 					<Link to="/" className="logo-link">
 						{/* <Logo style={{ display: 'block', height: '75px' }} /> */}
-						{logoComponent}
+						{logotipoHeader}
 					</Link>
 				</div>
 				<div className="header-columns toggle-menu">
