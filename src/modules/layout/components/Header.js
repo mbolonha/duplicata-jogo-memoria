@@ -1,10 +1,10 @@
 import React from 'react'
-import { Link } from 'gatsby'
-
+import { graphql, Link } from 'gatsby'
 import Logo from '../../../../static/images/diabetes-brasil-logo.svg'
 import MenuHamburgerIcon from '../../../../static/images/menu-hamburger.svg'
 import MenuContainer from '../containers/MenuContainer'
-const Header = ({ refState, handleRefState }) => {
+const Header = ({ refState, handleRefState, data, logoComponent }) => {
+	console.log(data)
 	return (
 		<header>
 			<MenuContainer refState={refState} handleRefState={handleRefState} />
@@ -12,7 +12,8 @@ const Header = ({ refState, handleRefState }) => {
 			<div className="main-header">
 				<div className="header-columns">
 					<Link to="/" className="logo-link">
-						<Logo style={{ display: 'block', height: '75px' }} />
+						{/* <Logo style={{ display: 'block', height: '75px' }} /> */}
+						{logoComponent}
 					</Link>
 				</div>
 				<div className="header-columns toggle-menu">
