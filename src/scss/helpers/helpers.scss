@@ -573,3 +573,11 @@ body {
 .carousel .slider-wrapper.axis-horizontal .slider .slide {
 	align-self: center;
 }
+
+.gatsby-image-wrapper[data-main-image] {
+	transform: translateZ(0);
+	-webkit-transform: translateZ(0);
+	transition: opacity 0.25s linear;
+	-webkit-transition: opacity 0.25s linear;
+	will-change: opacity;
+}

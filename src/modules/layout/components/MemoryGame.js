@@ -9,25 +9,12 @@ import TwitterIcon from '../../../../static/images/twitter-icon.svg'
 import WhatsIcon from '../../../../static/images/whats-icon.svg'
 import InstagramIcon from '../../../../static/images/instagram-icon.svg'
 import ShareIcon from '../../../../static/images/share-icon.svg'
-import {
-	// DialogActions,
-	DialogContent,
-	// p,
-	// Button,
-	DialogTitle,
-} from '@material-ui/core'
-// import {
-// 	DialogActions,
-// 	DialogContent,
-// 	p,
-// 	Button,
-// 	DialogTitle,
-// } from '@material-ui/core'
+import { DialogContent, DialogTitle } from '@material-ui/core'
+
 import CardContainer from '../containers/CardContainer'
 
 const MemoryGame = ({
 	cards,
-	counter,
 	DialogMigrate,
 	shouldDisableAllCards,
 	showModal,
@@ -38,8 +25,6 @@ const MemoryGame = ({
 	setOpen,
 	moves,
 	setShowModal,
-	stopTimer,
-	playTimer,
 	finalCounter,
 	title,
 	cardVerse,
@@ -49,7 +34,6 @@ const MemoryGame = ({
 		{/* <button onClick={() => playTimer()}>Play Aqui</button>
 		<button onClick={() => stopTimer()}>Stop Aqui</button>
 */}
-		{/* <button onClick={() => setShowModal(true)}>Abrir Aqui</button> */}
 		<div className="second-row-for-now">
 			<button className="circle-shadow" onClick={() => navigate(-1)}>
 				<ArrowRightIcon />
