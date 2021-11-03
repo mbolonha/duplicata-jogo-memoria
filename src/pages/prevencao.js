@@ -114,7 +114,17 @@ const PrevencaoPage = ({ data }) => {
 					bgColor: '#fff',
 				}}
 			>
-				<Layout type="HEADER" />
+				<Layout
+					type="HEADER"
+					opt={{
+						logoHeader: (
+							<Layout
+								type="BLOCK_IMAGE"
+								opt={{ queryCard: data.logotipoImg }}
+							/>
+						),
+					}}
+				/>
 				<Layout
 					type="MEMORYGAME"
 					opt={{

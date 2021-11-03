@@ -121,7 +121,17 @@ const AlimentacaoPage = ({ data }) => {
 					bgColor: '#fff',
 				}}
 			>
-				<Layout type="HEADER" />
+				<Layout
+					type="HEADER"
+					opt={{
+						logoHeader: (
+							<Layout
+								type="BLOCK_IMAGE"
+								opt={{ queryCard: data.logotipoImg }}
+							/>
+						),
+					}}
+				/>
 				<Layout
 					type="MEMORYGAME"
 					opt={{
@@ -246,6 +256,11 @@ export const queryAlimentacao = graphql`
 		cardVerseAlimentacao: file(relativePath: { eq: "card-alimentacao.png" }) {
 			childrenImageSharp {
 				gatsbyImageData(layout: FIXED, quality: 100, width: 165, height: 165)
+			}
+		}
+		logotipoImg: file(relativePath: { eq: "diabetes-brasil-logo.png" }) {
+			childrenImageSharp {
+				gatsbyImageData(layout: FIXED, width: 135)
 			}
 		}
 	}

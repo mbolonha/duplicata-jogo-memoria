@@ -10,14 +10,13 @@ const Header = ({ refState, handleRefState, data, logoComponent }) => {
 	)
 	return (
 		<header>
-			<MenuContainer refState={refState} handleRefState={handleRefState} />
-
 			<div className="main-header">
 				<div className="header-columns">
 					<Link to="/" className="logo-link">
 						{/* <Logo style={{ display: 'block', height: '75px' }} /> */}
 						{logotipoHeader}
 					</Link>
+					<MenuContainer refState={refState} handleRefState={handleRefState} />
 				</div>
 				<div className="header-columns toggle-menu">
 					<input
@@ -29,8 +28,8 @@ const Header = ({ refState, handleRefState, data, logoComponent }) => {
 						htmlFor="check-toggle-icon"
 						className={`menu-wrapper ${refState ? 'active' : 'not-active'}`}
 					>
-						<div className="menu-bar-icon">
-							<MenuHamburgerIcon className="hamburger-icon" />
+						<div className="menu-bar-icon mobile-only">
+							<MenuHamburgerIcon className="hamburger-icon " />
 						</div>
 					</label>
 				</div>
