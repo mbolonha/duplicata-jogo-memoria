@@ -574,7 +574,7 @@ body {
 	align-self: center;
 }
 
-.gatsby-image-wrapper[data-main-image] {
+.gatsby-image-wrapper [data-main-image] {
 	transform: translateZ(0);
 	-webkit-transform: translateZ(0);
 	transition: opacity 0.25s linear;
