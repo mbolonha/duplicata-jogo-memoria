@@ -3,31 +3,31 @@ import { graphql } from 'gatsby'
 
 import Layout from '../modules/layout'
 
-import CardVerse from '../../static/images/card-atividade.svg'
+import CardVerse from '../../static/images/card-bem-estar.svg'
 
-import CardAa from '../../static/images/atividade-01-a.svg'
-import CardAb from '../../static/images/atividade-01-b.svg'
+import CardAa from '../../static/images/bem-estar-01-a.svg'
+import CardAb from '../../static/images/bem-estar-01-b.svg'
 
-import CardBa from '../../static/images/atividade-02-a.svg'
-import CardBb from '../../static/images/atividade-02-b.svg'
+import CardBa from '../../static/images/bem-estar-02-a.svg'
+import CardBb from '../../static/images/bem-estar-02-b.svg'
 
-import CardCa from '../../static/images/atividade-03-a.svg'
-import CardCb from '../../static/images/atividade-03-b.svg'
+import CardCa from '../../static/images/bem-estar-03-a.svg'
+import CardCb from '../../static/images/bem-estar-03-b.svg'
 
-import CardDa from '../../static/images/atividade-04-a.svg'
-import CardDb from '../../static/images/atividade-04-b.svg'
+import CardDa from '../../static/images/bem-estar-04-a.svg'
+import CardDb from '../../static/images/bem-estar-04-b.svg'
 
-import CardFa from '../../static/images/atividade-05-a.svg'
-import CardFb from '../../static/images/atividade-05-b.svg'
+import CardFa from '../../static/images/bem-estar-05-a.svg'
+import CardFb from '../../static/images/bem-estar-05-b.svg'
 
-import CardEa from '../../static/images/atividade-06-a.svg'
-import CardEb from '../../static/images/atividade-06-b.svg'
+import CardEa from '../../static/images/bem-estar-06-a.svg'
+import CardEb from '../../static/images/bem-estar-06-b.svg'
 
-import CardGa from '../../static/images/atividade-07-a.svg'
-import CardGb from '../../static/images/atividade-07-b.svg'
+import CardGa from '../../static/images/bem-estar-07-a.svg'
+import CardGb from '../../static/images/bem-estar-07-b.svg'
 
-import CardHa from '../../static/images/atividade-08-a.svg'
-import CardHb from '../../static/images/atividade-08-b.svg'
+import CardHa from '../../static/images/bem-estar-08-a.svg'
+import CardHb from '../../static/images/bem-estar-08-b.svg'
 
 // Formatando a página
 const AtividadePage = ({ data }) => {
