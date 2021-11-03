@@ -48,3 +48,20 @@ const IndexPage = ({ data }) => {
 	)
 }
 export default IndexPage
+
+export const queryAtividade = graphql`
+	query {
+		site {
+			siteMetadata {
+				title
+				description
+				siteUrl
+			}
+		}
+		logotipoImg: file(relativePath: { eq: "diabetes-brasil-logo.png" }) {
+			childrenImageSharp {
+				gatsbyImageData(layout: FIXED, width: 135)
+			}
+		}
+	}
+`
