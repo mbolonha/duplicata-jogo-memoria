@@ -2,35 +2,34 @@ import React from 'react'
 
 import Layout from '../modules/layout'
 
-import CardAa from '../../static/images/alimentacao-01-a.svg'
-import CardAb from '../../static/images/alimentacao-01-b.svg'
+import CardVerse from '../../static/images/card-glicemia.svg'
 
-import CardBa from '../../static/images/alimentacao-02-a.svg'
-import CardBb from '../../static/images/alimentacao-02-b.svg'
+import CardAa from '../../static/images/glicemia-01-a.svg'
+import CardAb from '../../static/images/glicemia-01-b.svg'
 
-import CardCa from '../../static/images/alimentacao-03-a.svg'
-import CardCb from '../../static/images/alimentacao-03-b.svg'
+import CardBa from '../../static/images/glicemia-02-a.svg'
+import CardBb from '../../static/images/glicemia-02-b.svg'
 
-import CardDa from '../../static/images/alimentacao-04-a.svg'
-import CardDb from '../../static/images/alimentacao-04-b.svg'
+import CardCa from '../../static/images/glicemia-03-a.svg'
+import CardCb from '../../static/images/glicemia-03-b.svg'
 
-import CardFa from '../../static/images/alimentacao-05-a.svg'
-import CardFb from '../../static/images/alimentacao-05-b.svg'
+import CardDa from '../../static/images/glicemia-04-a.svg'
+import CardDb from '../../static/images/glicemia-04-b.svg'
 
-import CardEa from '../../static/images/alimentacao-06-a.svg'
-import CardEb from '../../static/images/alimentacao-06-b.svg'
+import CardFa from '../../static/images/glicemia-05-a.svg'
+import CardFb from '../../static/images/glicemia-05-b.svg'
 
-import CardGa from '../../static/images/alimentacao-07-a.svg'
-import CardGb from '../../static/images/alimentacao-07-b.svg'
+import CardEa from '../../static/images/glicemia-06-a.svg'
+import CardEb from '../../static/images/glicemia-06-b.svg'
 
-import CardHa from '../../static/images/alimentacao-08-a.svg'
-import CardHb from '../../static/images/alimentacao-08-b.svg'
+import CardGa from '../../static/images/glicemia-07-a.svg'
+import CardGb from '../../static/images/glicemia-07-b.svg'
 
-// Verso da carta
-import CardVerse from '../../static/images/card-alimentacao.svg'
+import CardHa from '../../static/images/glicemia-08-a.svg'
+import CardHb from '../../static/images/glicemia-08-b.svg'
 
 // Formatando a página
-const AlimentacaoPage = ({ data }) => {
+const GlicemiaPage = ({ data }) => {
 	const firstElementsArray = [
 		{
 			type: 'Carda',
@@ -50,11 +49,11 @@ const AlimentacaoPage = ({ data }) => {
 		},
 		{
 			type: 'Carde',
-			image: <CardEa />,
+			image: <CardFa />,
 		},
 		{
 			type: 'Cardf',
-			image: <CardFa />,
+			image: <CardEa />,
 		},
 		{
 			type: 'Cardg',
@@ -86,11 +85,11 @@ const AlimentacaoPage = ({ data }) => {
 		},
 		{
 			type: 'Carde',
-			image: <CardEb />,
+			image: <CardFb />,
 		},
 		{
 			type: 'Cardf',
-			image: <CardFb />,
+			image: <CardEb />,
 		},
 		{
 			type: 'Cardg',
@@ -104,7 +103,7 @@ const AlimentacaoPage = ({ data }) => {
 	return (
 		// titleSeo = Título da página atual - $title::gatsby-config
 		// titleSeo é seguido por title::gatsby-config
-		<Layout type="BODY" opt={{ titleSeo: `DMDD título aqui` }}>
+		<Layout type="BODY" opt={{ titleSeo: `Glicemia` }}>
 			<Layout
 				// é um construtor tipo os do WP mas aqui
 				type="ROW"
@@ -119,7 +118,7 @@ const AlimentacaoPage = ({ data }) => {
 				<Layout
 					type="MEMORYGAME"
 					opt={{
-						title: 'Alimentação',
+						title: 'Glicemia',
 						cardVerse: <CardVerse />,
 						firstElementsArray,
 						secondElementsArray,
@@ -141,4 +140,4 @@ const AlimentacaoPage = ({ data }) => {
 		</Layout>
 	)
 }
-export default AlimentacaoPage
+export default GlicemiaPage
