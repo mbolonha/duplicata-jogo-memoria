@@ -244,6 +244,8 @@ body {
 .card {
 	transition: 0.3s;
 	transform-style: preserve-3d;
+	-webkit-transform-style: preserve-3d;
+
 	// width: 100%;
 	// border: 1px solid red;
 	// height: 50px;
@@ -271,11 +273,13 @@ body {
 		height: 100%;
 		&.card-back-face {
 			transform: rotateY(180deg);
+			-webkit-transform: rotateY(180deg);
 		}
 	}
 
 	&.is-flipped {
 		transform: rotateY(180deg);
+		-webkit-transform: rotateY(180deg);
 	}
 
 	// &.is-inactive {
