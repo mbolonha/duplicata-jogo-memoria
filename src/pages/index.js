@@ -30,7 +30,17 @@ const IndexPage = ({ data }) => {
 					bgColor: '#fff',
 				}}
 			>
-				<Layout type="HEADER" />
+				<Layout
+					type="HEADER"
+					opt={{
+						logoHeader: (
+							<Layout
+								type="BLOCK_IMAGE"
+								opt={{ queryCard: data.logotipoImg }}
+							/>
+						),
+					}}
+				/>
 				<div className="index-first-row">
 					<JogoMemoriaIcon />
 					{/* <Layout type="BLOCK_IMAGE" opt={{ queryCard: data.logotipoIndex }} /> */}
@@ -120,6 +130,11 @@ export const queryAtividade = graphql`
 				title
 				description
 				siteUrl
+			}
+		}
+		logotipoImg: file(relativePath: { eq: "diabetes-brasil-logo.png" }) {
+			childrenImageSharp {
+				gatsbyImageData(layout: FIXED, width: 135)
 			}
 		}
 	}
