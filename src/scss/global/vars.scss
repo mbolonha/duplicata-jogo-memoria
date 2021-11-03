@@ -13,6 +13,7 @@ $brand_white__color: #fff;
 $black__color: #1b1b1b;
 
 // $grayscale_100__color: #fcfcfc;
+$grayscale_200__color: #ececec;
 $grayscale_300__color: #e3e3e3;
 $grayscale_600__color: #a3a3a3;
 
@@ -23,8 +24,8 @@ $btn_brown__not_active: $brand__color;
 
 $ribbon_top__color: $brand__color;
 
-$brown__shadowBox: 0px 10px 15px 0px rgba(51, 14, 3, 0.5);
-$border_tick: #8a6248;
+$brown__shadowBox: 0px 10px 40px rgba(22, 22, 22, 0.25);
+$border_tick: rgb(235 65 44 / 30%);
 $color__light-grey: #999999;
 
 .row_color__Additional {

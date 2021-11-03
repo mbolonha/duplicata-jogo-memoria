@@ -1,5 +1,4 @@
 import React from 'react'
-
 import Layout from '../modules/layout'
 
 import CardVerse from '../../static/images/card-glicemia.svg'

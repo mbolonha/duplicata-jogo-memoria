@@ -11,7 +11,7 @@ header {
 		display: flex;
 		visibility: hidden;
 		justify-content: space-around;
-		background-color: $cta__color;
+		background-color: $grayscale_200__color;
 		border-top: 3px solid $additional__color;
 		border-bottom: 3px solid $additional__color;
 		box-shadow: $brown__shadowBox;
@@ -78,8 +78,10 @@ ul.footer-menu {
 		a.nav-main-link,
 		a.footer-link {
 			// color: $dark_brown__bgColor;
-			font-size: $xs__fontSize;
-			font-family: 'Cantata One';
+			// font-size: $xs__fontSize;
+			// font-family: 'Cantata One';
+			font-family: $main__font;
+			font-size: 14px;
 		}
 		&:first-of-type {
 			a.nav-main-link,

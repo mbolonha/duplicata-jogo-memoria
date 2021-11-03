@@ -1,5 +1,4 @@
 import React from 'react'
-import { graphql } from 'gatsby'
 import Layout from '../modules/layout'
 
 import CardAa from '../../static/images/tratamento-01-a.svg'
