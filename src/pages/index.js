@@ -13,6 +13,7 @@ import TwitterIcon from '../../static/images/twitter-icon.svg'
 import WhatsIcon from '../../static/images/whats-icon.svg'
 import InstagramIcon from '../../static/images/instagram-icon.svg'
 import ShareIcon from '../../static/images/share-icon.svg'
+import JogoMemoriaIcon from '../../static/images/jogodamemoria-logotipo.svg'
 
 import 'react-responsive-carousel/lib/styles/carousel.min.css' // requires a loader
 import { Carousel } from 'react-responsive-carousel'
@@ -34,6 +35,7 @@ const IndexPage = ({ data }) => {
 			>
 				<Layout type="HEADER" />
 				<div className="index-first-row">
+					<JogoMemoriaIcon />
 					{/* <Layout type="BLOCK_IMAGE" opt={{ queryCard: data.logotipoIndex }} /> */}
 					<p className="index-paragraph">
 						Acesse abaixo os jogos da memória e aprenda tópicos relacionados à
@@ -76,38 +78,26 @@ const IndexPage = ({ data }) => {
 					</div>
 					<div className="carousel-logos">
 						<h2 className="heading-logos">Nossos Parceiros</h2>
-						{/* <Carousel showThumbs={false}>
+						<Carousel showThumbs={false}>
 							<div>
-								<Layout
-									type="BLOCK_IMAGE"
-									opt={{ queryCard: data.astrazeneca }}
-								/>
+								<JogoMemoriaIcon />
 							</div>
 							<div>
-								<Layout type="BLOCK_IMAGE" opt={{ queryCard: data.bayer }} />
+								<JogoMemoriaIcon />
 							</div>
 							<div>
-								<Layout type="BLOCK_IMAGE" opt={{ queryCard: data.bd }} />
+								<JogoMemoriaIcon />
 							</div>
 							<div>
-								<Layout
-									type="BLOCK_IMAGE"
-									opt={{ queryCard: data.boehringer }}
-								/>
+								<JogoMemoriaIcon />
 							</div>
 							<div>
-								<Layout type="BLOCK_IMAGE" opt={{ queryCard: data.novartis }} />
+								<JogoMemoriaIcon />
 							</div>
 							<div>
-								<Layout type="BLOCK_IMAGE" opt={{ queryCard: data.nordisk }} />
+								<JogoMemoriaIcon />
 							</div>
-							<div>
-								<Layout type="BLOCK_IMAGE" opt={{ queryCard: data.roche }} />
-							</div>
-							<div>
-								<Layout type="BLOCK_IMAGE" opt={{ queryCard: data.sanofi }} />
-							</div>
-						</Carousel> */}
+						</Carousel>
 					</div>
 				</div>
 			</Layout>
