@@ -7,14 +7,14 @@ const MainMenu = ({ wrapperRef, isVisibleClass }) => (
 		<ul className="nav-menus">
 			<li className="nav-links">
 				<Link className="nav-main-link" to="/">
-					Home
+					Ir Para p Site
 				</Link>
 			</li>
 		</ul>
 
 		<ul className="nav-menus">
 			<li className="nav-links">
-				<Link className="nav-main-link" to="/">
+				<Link className="nav-main-link" to="https://adj.org.br/quem-somos/">
 					Quem Somos
 				</Link>
 			</li>
