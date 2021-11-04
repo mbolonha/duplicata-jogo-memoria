@@ -2,66 +2,40 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../modules/layout'
 
-import CardVerse from '../../static/images/card-habitos.svg'
-
-import CardAa from '../../static/images/habitos-01-a.svg'
-import CardAb from '../../static/images/habitos-01-b.svg'
-
-import CardBa from '../../static/images/habitos-02-a.svg'
-import CardBb from '../../static/images/habitos-02-b.svg'
-
-import CardCa from '../../static/images/habitos-03-a.svg'
-import CardCb from '../../static/images/habitos-03-b.svg'
-
-import CardDa from '../../static/images/habitos-04-a.svg'
-import CardDb from '../../static/images/habitos-04-b.svg'
-
-import CardFa from '../../static/images/habitos-05-a.svg'
-import CardFb from '../../static/images/habitos-05-b.svg'
-
-import CardEa from '../../static/images/habitos-06-a.svg'
-import CardEb from '../../static/images/habitos-06-b.svg'
-
-import CardGa from '../../static/images/habitos-07-a.svg'
-import CardGb from '../../static/images/habitos-07-b.svg'
-
-import CardHa from '../../static/images/habitos-08-a.svg'
-import CardHb from '../../static/images/habitos-08-b.svg'
-
 // Formatando a página
 const HabitosPage = ({ data }) => {
 	const firstElementsArray = [
 		{
 			type: 'Carda',
-			image: <CardAa />,
+			image: <Layout type="BLOCK_IMAGE" opt={{ queryCard: data.habitos01a }} />,
 		},
 		{
 			type: 'Cardb',
-			image: <CardBa />,
+			image: <Layout type="BLOCK_IMAGE" opt={{ queryCard: data.habitos02a }} />,
 		},
 		{
 			type: 'Cardc',
-			image: <CardCa />,
+			image: <Layout type="BLOCK_IMAGE" opt={{ queryCard: data.habitos03a }} />,
 		},
 		{
 			type: 'Cardd',
-			image: <CardDa />,
+			image: <Layout type="BLOCK_IMAGE" opt={{ queryCard: data.habitos04a }} />,
 		},
 		{
 			type: 'Carde',
-			image: <CardFa />,
+			image: <Layout type="BLOCK_IMAGE" opt={{ queryCard: data.habitos05a }} />,
 		},
 		{
 			type: 'Cardf',
-			image: <CardEa />,
+			image: <Layout type="BLOCK_IMAGE" opt={{ queryCard: data.habitos06a }} />,
 		},
 		{
 			type: 'Cardg',
-			image: <CardGa />,
+			image: <Layout type="BLOCK_IMAGE" opt={{ queryCard: data.habitos07a }} />,
 		},
 		{
 			type: 'Cardh',
-			image: <CardHa />,
+			image: <Layout type="BLOCK_IMAGE" opt={{ queryCard: data.habitos08a }} />,
 		},
 	]
 	// segunda lista de cartas
@@ -69,35 +43,35 @@ const HabitosPage = ({ data }) => {
 	const secondElementsArray = [
 		{
 			type: 'Carda',
-			image: <CardAb />,
+			image: <Layout type="BLOCK_IMAGE" opt={{ queryCard: data.habitos01b }} />,
 		},
 		{
 			type: 'Cardb',
-			image: <CardBb />,
+			image: <Layout type="BLOCK_IMAGE" opt={{ queryCard: data.habitos02b }} />,
 		},
 		{
 			type: 'Cardc',
-			image: <CardCb />,
+			image: <Layout type="BLOCK_IMAGE" opt={{ queryCard: data.habitos03b }} />,
 		},
 		{
 			type: 'Cardd',
-			image: <CardDb />,
+			image: <Layout type="BLOCK_IMAGE" opt={{ queryCard: data.habitos04b }} />,
 		},
 		{
 			type: 'Carde',
-			image: <CardFb />,
+			image: <Layout type="BLOCK_IMAGE" opt={{ queryCard: data.habitos05b }} />,
 		},
 		{
 			type: 'Cardf',
-			image: <CardEb />,
+			image: <Layout type="BLOCK_IMAGE" opt={{ queryCard: data.habitos06b }} />,
 		},
 		{
 			type: 'Cardg',
-			image: <CardGb />,
+			image: <Layout type="BLOCK_IMAGE" opt={{ queryCard: data.habitos07b }} />,
 		},
 		{
 			type: 'Cardh',
-			image: <CardHb />,
+			image: <Layout type="BLOCK_IMAGE" opt={{ queryCard: data.habitos08b }} />,
 		},
 	]
 	return (
@@ -129,7 +103,9 @@ const HabitosPage = ({ data }) => {
 					type="MEMORYGAME"
 					opt={{
 						title: 'Bons Hábitos',
-						cardVerse: <CardVerse />,
+						cardVerse: (
+							<Layout type="BLOCK_IMAGE" opt={{ queryCard: data.cardVerse }} />
+						),
 						firstElementsArray,
 						secondElementsArray,
 					}}
@@ -157,6 +133,91 @@ export const queryAtividade = graphql`
 		logotipoImg: file(relativePath: { eq: "diabetes-brasil-logo.png" }) {
 			childrenImageSharp {
 				gatsbyImageData(layout: FIXED, width: 115, placeholder: NONE)
+			}
+		}
+		habitos01a: file(relativePath: { eq: "habitos-01-a.png" }) {
+			childrenImageSharp {
+				gatsbyImageData(layout: FIXED, quality: 100, width: 165, height: 165)
+			}
+		}
+		habitos01b: file(relativePath: { eq: "habitos-01-b.png" }) {
+			childrenImageSharp {
+				gatsbyImageData(layout: FIXED, quality: 100, width: 165, height: 165)
+			}
+		}
+		habitos02a: file(relativePath: { eq: "habitos-02-a.png" }) {
+			childrenImageSharp {
+				gatsbyImageData(layout: FIXED, quality: 100, width: 165, height: 165)
+			}
+		}
+		habitos02b: file(relativePath: { eq: "habitos-02-b.png" }) {
+			childrenImageSharp {
+				gatsbyImageData(layout: FIXED, quality: 100, width: 165, height: 165)
+			}
+		}
+		habitos03a: file(relativePath: { eq: "habitos-03-a.png" }) {
+			childrenImageSharp {
+				gatsbyImageData(layout: FIXED, quality: 100, width: 165, height: 165)
+			}
+		}
+		habitos03b: file(relativePath: { eq: "habitos-03-b.png" }) {
+			childrenImageSharp {
+				gatsbyImageData(layout: FIXED, quality: 100, width: 165, height: 165)
+			}
+		}
+		habitos04a: file(relativePath: { eq: "habitos-04-a.png" }) {
+			childrenImageSharp {
+				gatsbyImageData(layout: FIXED, quality: 100, width: 165, height: 165)
+			}
+		}
+		habitos04b: file(relativePath: { eq: "habitos-04-b.png" }) {
+			childrenImageSharp {
+				gatsbyImageData(layout: FIXED, quality: 100, width: 165, height: 165)
+			}
+		}
+		habitos05a: file(relativePath: { eq: "habitos-05-a.png" }) {
+			childrenImageSharp {
+				gatsbyImageData(layout: FIXED, quality: 100, width: 165, height: 165)
+			}
+		}
+		habitos05b: file(relativePath: { eq: "habitos-05-b.png" }) {
+			childrenImageSharp {
+				gatsbyImageData(layout: FIXED, quality: 100, width: 165, height: 165)
+			}
+		}
+		habitos06a: file(relativePath: { eq: "habitos-06-a.png" }) {
+			childrenImageSharp {
+				gatsbyImageData(layout: FIXED, quality: 100, width: 165, height: 165)
+			}
+		}
+		habitos06b: file(relativePath: { eq: "habitos-06-b.png" }) {
+			childrenImageSharp {
+				gatsbyImageData(layout: FIXED, quality: 100, width: 165, height: 165)
+			}
+		}
+		habitos07a: file(relativePath: { eq: "habitos-07-a.png" }) {
+			childrenImageSharp {
+				gatsbyImageData(layout: FIXED, quality: 100, width: 165, height: 165)
+			}
+		}
+		habitos07b: file(relativePath: { eq: "habitos-07-b.png" }) {
+			childrenImageSharp {
+				gatsbyImageData(layout: FIXED, quality: 100, width: 165, height: 165)
+			}
+		}
+		habitos08a: file(relativePath: { eq: "habitos-08-a.png" }) {
+			childrenImageSharp {
+				gatsbyImageData(layout: FIXED, quality: 100, width: 165, height: 165)
+			}
+		}
+		habitos08b: file(relativePath: { eq: "habitos-08-b.png" }) {
+			childrenImageSharp {
+				gatsbyImageData(layout: FIXED, quality: 100, width: 165, height: 165)
+			}
+		}
+		cardVerse: file(relativePath: { eq: "card-habitos.png" }) {
+			childrenImageSharp {
+				gatsbyImageData(layout: FIXED, quality: 100, width: 165, height: 165)
 			}
 		}
 	}

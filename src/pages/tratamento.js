@@ -2,30 +2,6 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../modules/layout'
 
-import CardAa from '../../static/images/tratamento-01-a.svg'
-import CardAb from '../../static/images/tratamento-01-b.svg'
-
-import CardBa from '../../static/images/tratamento-02-a.svg'
-import CardBb from '../../static/images/tratamento-02-b.svg'
-
-import CardCa from '../../static/images/tratamento-03-a.svg'
-import CardCb from '../../static/images/tratamento-03-b.svg'
-
-import CardDa from '../../static/images/tratamento-04-a.svg'
-import CardDb from '../../static/images/tratamento-04-b.svg'
-
-import CardFa from '../../static/images/tratamento-05-a.svg'
-import CardFb from '../../static/images/tratamento-05-b.svg'
-
-import CardEa from '../../static/images/tratamento-06-a.svg'
-import CardEb from '../../static/images/tratamento-06-b.svg'
-
-import CardGa from '../../static/images/tratamento-07-a.svg'
-import CardGb from '../../static/images/tratamento-07-b.svg'
-
-import CardHa from '../../static/images/tratamento-08-a.svg'
-import CardHb from '../../static/images/tratamento-08-b.svg'
-
 // Verso da carta
 import CardVerse from '../../static/images/card-tratamento.svg'
 // Formatando a página
@@ -33,35 +9,51 @@ const TratamentoPage = ({ data }) => {
 	const firstElementsArray = [
 		{
 			type: 'Carda',
-			image: <CardAa />,
+			image: (
+				<Layout type="BLOCK_IMAGE" opt={{ queryCard: data.tratamento01a }} />
+			),
 		},
 		{
 			type: 'Cardb',
-			image: <CardBa />,
+			image: (
+				<Layout type="BLOCK_IMAGE" opt={{ queryCard: data.tratamento02a }} />
+			),
 		},
 		{
 			type: 'Cardc',
-			image: <CardCa />,
+			image: (
+				<Layout type="BLOCK_IMAGE" opt={{ queryCard: data.tratamento03a }} />
+			),
 		},
 		{
 			type: 'Cardd',
-			image: <CardDa />,
+			image: (
+				<Layout type="BLOCK_IMAGE" opt={{ queryCard: data.tratamento04a }} />
+			),
 		},
 		{
 			type: 'Carde',
-			image: <CardEa />,
+			image: (
+				<Layout type="BLOCK_IMAGE" opt={{ queryCard: data.tratamento05a }} />
+			),
 		},
 		{
 			type: 'Cardf',
-			image: <CardFa />,
+			image: (
+				<Layout type="BLOCK_IMAGE" opt={{ queryCard: data.tratamento06a }} />
+			),
 		},
 		{
 			type: 'Cardg',
-			image: <CardGa />,
+			image: (
+				<Layout type="BLOCK_IMAGE" opt={{ queryCard: data.tratamento07a }} />
+			),
 		},
 		{
 			type: 'Cardh',
-			image: <CardHa />,
+			image: (
+				<Layout type="BLOCK_IMAGE" opt={{ queryCard: data.tratamento08a }} />
+			),
 		},
 	]
 	// segunda lista de cartas
@@ -69,35 +61,51 @@ const TratamentoPage = ({ data }) => {
 	const secondElementsArray = [
 		{
 			type: 'Carda',
-			image: <CardAb />,
+			image: (
+				<Layout type="BLOCK_IMAGE" opt={{ queryCard: data.tratamento01b }} />
+			),
 		},
 		{
 			type: 'Cardb',
-			image: <CardBb />,
+			image: (
+				<Layout type="BLOCK_IMAGE" opt={{ queryCard: data.tratamento02b }} />
+			),
 		},
 		{
 			type: 'Cardc',
-			image: <CardCb />,
+			image: (
+				<Layout type="BLOCK_IMAGE" opt={{ queryCard: data.tratamento03b }} />
+			),
 		},
 		{
 			type: 'Cardd',
-			image: <CardDb />,
+			image: (
+				<Layout type="BLOCK_IMAGE" opt={{ queryCard: data.tratamento04b }} />
+			),
 		},
 		{
 			type: 'Carde',
-			image: <CardEb />,
+			image: (
+				<Layout type="BLOCK_IMAGE" opt={{ queryCard: data.tratamento05b }} />
+			),
 		},
 		{
 			type: 'Cardf',
-			image: <CardFb />,
+			image: (
+				<Layout type="BLOCK_IMAGE" opt={{ queryCard: data.tratamento06b }} />
+			),
 		},
 		{
 			type: 'Cardg',
-			image: <CardGb />,
+			image: (
+				<Layout type="BLOCK_IMAGE" opt={{ queryCard: data.tratamento07b }} />
+			),
 		},
 		{
 			type: 'Cardh',
-			image: <CardHb />,
+			image: (
+				<Layout type="BLOCK_IMAGE" opt={{ queryCard: data.tratamento08b }} />
+			),
 		},
 	]
 	return (
@@ -129,7 +137,9 @@ const TratamentoPage = ({ data }) => {
 					type="MEMORYGAME"
 					opt={{
 						title: 'Tratamento',
-						cardVerse: <CardVerse />,
+						cardVerse: (
+							<Layout type="BLOCK_IMAGE" opt={{ queryCard: data.cardVerse }} />
+						),
 						firstElementsArray,
 						secondElementsArray,
 					}}
@@ -157,6 +167,91 @@ export const queryAtividade = graphql`
 		logotipoImg: file(relativePath: { eq: "diabetes-brasil-logo.png" }) {
 			childrenImageSharp {
 				gatsbyImageData(layout: FIXED, width: 115, placeholder: NONE)
+			}
+		}
+		tratamento01a: file(relativePath: { eq: "tratamento-01-a.png" }) {
+			childrenImageSharp {
+				gatsbyImageData(layout: FIXED, quality: 100, width: 165, height: 165)
+			}
+		}
+		tratamento01b: file(relativePath: { eq: "tratamento-01-b.png" }) {
+			childrenImageSharp {
+				gatsbyImageData(layout: FIXED, quality: 100, width: 165, height: 165)
+			}
+		}
+		tratamento02a: file(relativePath: { eq: "tratamento-02-a.png" }) {
+			childrenImageSharp {
+				gatsbyImageData(layout: FIXED, quality: 100, width: 165, height: 165)
+			}
+		}
+		tratamento02b: file(relativePath: { eq: "tratamento-02-b.png" }) {
+			childrenImageSharp {
+				gatsbyImageData(layout: FIXED, quality: 100, width: 165, height: 165)
+			}
+		}
+		tratamento03a: file(relativePath: { eq: "tratamento-03-a.png" }) {
+			childrenImageSharp {
+				gatsbyImageData(layout: FIXED, quality: 100, width: 165, height: 165)
+			}
+		}
+		tratamento03b: file(relativePath: { eq: "tratamento-03-b.png" }) {
+			childrenImageSharp {
+				gatsbyImageData(layout: FIXED, quality: 100, width: 165, height: 165)
+			}
+		}
+		tratamento04a: file(relativePath: { eq: "tratamento-04-a.png" }) {
+			childrenImageSharp {
+				gatsbyImageData(layout: FIXED, quality: 100, width: 165, height: 165)
+			}
+		}
+		tratamento04b: file(relativePath: { eq: "tratamento-04-b.png" }) {
+			childrenImageSharp {
+				gatsbyImageData(layout: FIXED, quality: 100, width: 165, height: 165)
+			}
+		}
+		tratamento05a: file(relativePath: { eq: "tratamento-05-a.png" }) {
+			childrenImageSharp {
+				gatsbyImageData(layout: FIXED, quality: 100, width: 165, height: 165)
+			}
+		}
+		tratamento05b: file(relativePath: { eq: "tratamento-05-b.png" }) {
+			childrenImageSharp {
+				gatsbyImageData(layout: FIXED, quality: 100, width: 165, height: 165)
+			}
+		}
+		tratamento06a: file(relativePath: { eq: "tratamento-06-a.png" }) {
+			childrenImageSharp {
+				gatsbyImageData(layout: FIXED, quality: 100, width: 165, height: 165)
+			}
+		}
+		tratamento06b: file(relativePath: { eq: "tratamento-06-b.png" }) {
+			childrenImageSharp {
+				gatsbyImageData(layout: FIXED, quality: 100, width: 165, height: 165)
+			}
+		}
+		tratamento07a: file(relativePath: { eq: "tratamento-07-a.png" }) {
+			childrenImageSharp {
+				gatsbyImageData(layout: FIXED, quality: 100, width: 165, height: 165)
+			}
+		}
+		tratamento07b: file(relativePath: { eq: "tratamento-07-b.png" }) {
+			childrenImageSharp {
+				gatsbyImageData(layout: FIXED, quality: 100, width: 165, height: 165)
+			}
+		}
+		tratamento08a: file(relativePath: { eq: "tratamento-08-a.png" }) {
+			childrenImageSharp {
+				gatsbyImageData(layout: FIXED, quality: 100, width: 165, height: 165)
+			}
+		}
+		tratamento08b: file(relativePath: { eq: "tratamento-08-b.png" }) {
+			childrenImageSharp {
+				gatsbyImageData(layout: FIXED, quality: 100, width: 165, height: 165)
+			}
+		}
+		cardVerse: file(relativePath: { eq: "card-tratamento.png" }) {
+			childrenImageSharp {
+				gatsbyImageData(layout: FIXED, quality: 100, width: 165, height: 165)
 			}
 		}
 	}
