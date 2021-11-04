@@ -119,15 +119,11 @@ const InsertHTML = ({ type, params, opt, children, bgOpt, bgImg }) => {
 							</ul>
 						)
 					case 'divisor':
-						// console.log('bgOpt.theme_colors')
-						// console.log(bgImg.datas || null)
 						let refImage = null
 						if (bgOpt.background) {
 							refImage = getImage(bgOpt.background.datas)
 						}
 						elementClass = elementClass ? elementClass : ''
-						// console.log('opt.boxed')
-						// console.log(opt.boxed)
 						return (
 							<div
 								className={`${rowWidth} ${elementClass} align-to-${
@@ -143,8 +139,6 @@ const InsertHTML = ({ type, params, opt, children, bgOpt, bgImg }) => {
 									backgroundImage: bgImg,
 								}}
 							>
-								{/* bgImg.alignTo==='top' ? {bottom:0} : {top:0}} */}
-								{/* {console.log(bgImg)} */}
 								{bgImg ? (
 									<GatsbyImage
 										image={refImage}

@@ -5,11 +5,6 @@ import { navigate } from 'gatsby'
 import Layout from '../../layout'
 import ArrowRightIcon from '../../../../static/images/icon-arrow-right.svg'
 import CloseButton from '../../../../static/images/close-button.svg'
-import FacebookIcon from '../../../../static/images/face-icon.svg'
-import TwitterIcon from '../../../../static/images/twitter-icon.svg'
-import WhatsIcon from '../../../../static/images/whats-icon.svg'
-import InstagramIcon from '../../../../static/images/instagram-icon.svg'
-import ShareIcon from '../../../../static/images/share-icon.svg'
 import { DialogContent, DialogTitle } from '@material-ui/core'
 
 import CardContainer from '../containers/CardContainer'
@@ -102,16 +97,6 @@ const MemoryGame = ({
 								Se você gostou do jogo,
 								<br />
 								compartilhe com seus amigos.
-								{/* <div className="wrapper-buttons">
-									<span>Compartilhe</span>
-									<div className="modal-share-button">
-										<FacebookIcon />
-										<TwitterIcon />
-										<WhatsIcon />
-										<InstagramIcon />
-										<ShareIcon />
-									</div>
-								</div> */}
 								<div className="index-share-btn modal-share">
 									<Layout
 										type="BLOCK_SHARE"

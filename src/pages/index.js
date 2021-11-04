@@ -13,11 +13,10 @@ import 'react-responsive-carousel/lib/styles/carousel.min.css' // requires a loa
 import { Carousel } from 'react-responsive-carousel'
 
 const IndexPage = ({ data }) => {
-	console.log(data.site.siteMetadata.title)
 	return (
 		// titleSeo = Título da página atual - $title::gatsby-config
 		// titleSeo é seguido por title::gatsby-config
-		<Layout type="BODY" opt={{ titleSeo: `Página Inicial` }}>
+		<Layout type="BODY" opt={{ titleSeo: `Jogo da Memória` }}>
 			<Layout
 				// é um construtor tipo os do WP mas aqui
 				type="ROW"

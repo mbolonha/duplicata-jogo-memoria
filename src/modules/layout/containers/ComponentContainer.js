@@ -13,7 +13,6 @@ import {
 
 const ComponentContainer = ({ opt }) => {
 	const handle = useFullScreenHandle()
-	console.log(opt.bgImg.style)
 	return (
 		<>
 			<div className="bg-nav-gray">
