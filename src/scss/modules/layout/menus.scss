@@ -8,7 +8,10 @@ header {
 		// opacity: 0;
 		top: 0px;
 		left: 0;
-		width: 100%;
+		width: 82%;
+		@media (max-width: $tablet__size) {
+			width: 100%;
+		}
 		margin: 0;
 		display: flex;
 		justify-content: center;
@@ -34,6 +37,7 @@ header {
 			&.menu-state-visible {
 				opacity: 1;
 				visibility: visible;
+				margin-top: -58px;
 			}
 			&.menu-state-not-visible {
 				opacity: 0;
@@ -46,19 +50,26 @@ header {
 			border-bottom: 1px solid $color__light-grey;
 			ul.nav-menus {
 				overflow: scroll;
-
+				display: inline-table;
 				li.nav-links {
+					place-content: stretch;
+					place-items: center;
+					white-space: nowrap;
 					text-align: center;
 					padding: 10px 0;
 					border-top: 1px solid $color__light-grey;
-
+					justify-content: center;
+					display: grid;
 					&:first-of-type {
-						background-color: $color__light-grey;
+						// background-color: $color__light-grey;
+						border: 0;
 						line-height: 40px;
 						padding: 0;
 
 						a.nav-main-link {
 							margin-bottom: 0;
+							line-height: 45px;
+							display: contents;
 						}
 					}
 				}
@@ -70,7 +81,11 @@ header {
 ul.nav-menus,
 ul.footer-menu {
 	flex: 0 1 auto;
-	border: 1px solid #dddddd;
+	border-right: 1px solid #dddddd;
+	border-bottom: 1px solid #dddddd;
+	&:first-of-type {
+		border-left: 1px solid #dddddd;
+	}
 	background: white;
 	display: flex;
 	align-items: center;
@@ -78,11 +93,15 @@ ul.footer-menu {
 		background-color: $brand__color;
 	}
 
+	@media (max-width: $tablet__size) {
+		border-bottom: 0;
+	}
+
 	border-top: 2px solid $brand__color;
 	min-height: 45px;
 	padding: 0 15px;
 	line-height: 45px;
-	padding: 0 8.2px;
+	padding: 0 10px;
 	li.nav-links,
 	li.footer-links {
 		padding: 3px 0;
@@ -97,6 +116,7 @@ ul.footer-menu {
 		&:first-of-type {
 			a.nav-main-link,
 			a.footer-link {
+				display: contents;
 				font-weight: 900;
 				line-height: 17px;
 				text-align: center;
@@ -105,11 +125,14 @@ ul.footer-menu {
 				color: #5e5e5e;
 				text-transform: uppercase;
 				max-width: 80px;
+				// @media (max-width: $tablet__size) {
+				// 	max-width: 100%;
+				// }
 			}
 		}
 	}
 }
 
-.header-columns {
-	width: 100%;
-}
+// .header-columns {
+// 	width: 100%;
+// }
