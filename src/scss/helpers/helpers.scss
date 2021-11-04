@@ -294,9 +294,9 @@ body {
 }
 body {
 	.card.is-flipped {
-		transform: rotateY(0deg);
-		-webkit-transform: rotateY(0deg);
-		// z-index: 2;
+		transform: rotateY(180deg);
+		-webkit-transform: rotateY(180deg);
+		z-index: 2;
 	}
 }
 .card-back-face .gatsby-image-wrapper img,
