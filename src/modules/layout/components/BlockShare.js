@@ -16,7 +16,9 @@ import {
 
 const BlockImage = ({ opt }) => {
 	// const image = getImage(opt.queryCard.childrenImageSharp[0])
-	const { siteUrl, title } = opt
+	const { url, title } = opt
+	console.log('optoptoptoptoptoptoptoptoptoptoptopt')
+	console.log(opt)
 	return (
 		<>
 			<div className="wrapper-buttons">
@@ -24,20 +26,20 @@ const BlockImage = ({ opt }) => {
 				<div className="modal-share-button">
 					<FacebookShareButton
 						quote="Veja que incrível!"
-						url={siteUrl}
+						url={url}
 						title={title}
 					>
 						<FacebookIcon />
 					</FacebookShareButton>
-					<TwitterShareButton url={siteUrl} title={title}>
+					<TwitterShareButton url={url} title={title}>
 						<TwitterIcon />
 					</TwitterShareButton>
 
-					<WhatsappShareButton url={siteUrl} title={title}>
+					<WhatsappShareButton url={url} title={title}>
 						<WhatsIcon />
 					</WhatsappShareButton>
 
-					<TelegramShareButton url={siteUrl} title={title}>
+					<TelegramShareButton url={url} title={title}>
 						<ShareIcon />
 					</TelegramShareButton>
 				</div>
