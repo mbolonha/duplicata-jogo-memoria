@@ -295,14 +295,16 @@ body {
 
 body {
 	.card.is-flipped {
-		.card-back-face {
-			transform: rotateY(180deg);
-			-webkit-transform: rotateY(180deg);
+		.card-face.card-back-face {
+			transform: rotateY(180deg) !important;
+			-webkit-transform: rotateY(180deg) !important;
 			// z-index: 2;
+			border: 1px solid red;
 		}
-		.card-front-face {
-			transform: rotateY(0deg);
-			-webkit-transform: rotateY(0deg);
+		.card-face.card-font-face {
+			transform: rotateY(0) !important;
+			-webkit-transform: rotateY(0) !important;
+			border: 1px solid rebeccapurple;
 			// z-index: 2;
 		}
 	}
