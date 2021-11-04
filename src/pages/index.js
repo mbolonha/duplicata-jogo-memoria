@@ -84,23 +84,51 @@ const IndexPage = ({ data }) => {
 						<h2 className="heading-logos">Nossos Parceiros</h2>
 						<Carousel showThumbs={false}>
 							<div>
-								<JogoMemoriaIcon />
+								<Layout
+									type="BLOCK_IMAGE"
+									opt={{ queryCard: data.astrazeneca }}
+								/>
 							</div>
+
 							<div>
-								<JogoMemoriaIcon />
+								<Layout type="BLOCK_IMAGE" opt={{ queryCard: data.bayer }} />
 							</div>
+
 							<div>
-								<JogoMemoriaIcon />
+								<Layout type="BLOCK_IMAGE" opt={{ queryCard: data.bd }} />
 							</div>
+
 							<div>
-								<JogoMemoriaIcon />
+								<Layout
+									type="BLOCK_IMAGE"
+									opt={{ queryCard: data.boehringer }}
+								/>
 							</div>
+
 							<div>
-								<JogoMemoriaIcon />
+								<Layout type="BLOCK_IMAGE" opt={{ queryCard: data.novartis }} />
 							</div>
+
 							<div>
-								<JogoMemoriaIcon />
+								<Layout type="BLOCK_IMAGE" opt={{ queryCard: data.nordisk }} />
 							</div>
+
+							<div>
+								<Layout type="BLOCK_IMAGE" opt={{ queryCard: data.roche }} />
+							</div>
+
+							<div>
+								<Layout type="BLOCK_IMAGE" opt={{ queryCard: data.sanofi }} />
+							</div>
+
+							{/* astrazeneca
+bayer
+bd
+boehringer
+novartis
+nordisk
+roche
+sanofi */}
 						</Carousel>
 					</div>
 				</div>
@@ -135,6 +163,73 @@ export const queryAtividade = graphql`
 		logotipoImg: file(relativePath: { eq: "diabetes-brasil-logo.png" }) {
 			childrenImageSharp {
 				gatsbyImageData(layout: FIXED, width: 115, placeholder: NONE)
+			}
+		}
+		astrazeneca: file(
+			relativePath: { eq: "astrazeneca-diabetes-logotipo.png" }
+		) {
+			childrenImageSharp {
+				gatsbyImageData(layout: FIXED, height: 80, placeholder: NONE)
+			}
+		}
+		bayer: file(relativePath: { eq: "bayer-logotipo.png" }) {
+			childrenImageSharp {
+				gatsbyImageData(layout: FIXED, height: 70, placeholder: NONE)
+			}
+		}
+		bd: file(relativePath: { eq: "bd-logotipo.png" }) {
+			childrenImageSharp {
+				gatsbyImageData(layout: FIXED, height: 80, placeholder: NONE)
+			}
+		}
+		boehringer: file(relativePath: { eq: "boehringer-logotipo.jpg" }) {
+			childrenImageSharp {
+				gatsbyImageData(
+					layout: FIXED
+					height: 130
+					placeholder: NONE
+					quality: 100
+				)
+			}
+		}
+		novartis: file(relativePath: { eq: "novartis-logotipo.jpg" }) {
+			childrenImageSharp {
+				gatsbyImageData(
+					layout: FIXED
+					height: 30
+					placeholder: NONE
+					quality: 100
+				)
+			}
+		}
+		nordisk: file(relativePath: { eq: "novo-nordisk-logotipo.jpg" }) {
+			childrenImageSharp {
+				gatsbyImageData(
+					layout: FIXED
+					height: 70
+					placeholder: NONE
+					quality: 100
+				)
+			}
+		}
+		roche: file(relativePath: { eq: "roche-logotipo.jpg" }) {
+			childrenImageSharp {
+				gatsbyImageData(
+					layout: FIXED
+					height: 45
+					placeholder: NONE
+					quality: 100
+				)
+			}
+		}
+		sanofi: file(relativePath: { eq: "sanofi-logotipo.jpg" }) {
+			childrenImageSharp {
+				gatsbyImageData(
+					layout: FIXED
+					height: 80
+					placeholder: NONE
+					quality: 100
+				)
 			}
 		}
 	}
