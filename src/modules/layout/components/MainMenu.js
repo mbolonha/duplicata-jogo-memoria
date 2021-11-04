@@ -1,9 +1,7 @@
 import React from 'react'
-import { Link } from 'gatsby'
 
 const MainMenu = ({ wrapperRef, isVisibleClass }) => (
 	<nav ref={wrapperRef} className={' main-nav menu-state-' + isVisibleClass}>
-		{/* // <nav ref={wrapperRef} className={' main-nav'}> */}
 		<ul className="nav-menus">
 			<li className="nav-links">
 				<a className="nav-main-link" href="https://adj.org.br/">
