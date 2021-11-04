@@ -295,6 +295,8 @@ body {
 
 body {
 	.card.is-flipped {
+		transform: rotateY(0) !important;
+		-webkit-transform: rotateY(0) !important;
 		.card-face.card-back-face {
 			transform: rotateY(180deg) !important;
 			-webkit-transform: rotateY(180deg) !important;
