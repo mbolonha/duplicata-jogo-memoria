@@ -292,7 +292,13 @@ body {
 	// opacity: 0;
 	// }
 }
-
+body {
+	.card.is-flipped {
+		transform: rotateY(0deg);
+		-webkit-transform: rotateY(0deg);
+		// z-index: 2;
+	}
+}
 .card-back-face .gatsby-image-wrapper img,
 .card-font-face .gatsby-image-wrapper img {
 	width: 100%;
