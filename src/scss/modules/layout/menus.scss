@@ -51,6 +51,8 @@ header {
 			ul.nav-menus {
 				overflow: scroll;
 				display: inline-table;
+				width: 100%;
+				max-width: 355px;
 				li.nav-links {
 					place-content: stretch;
 					place-items: center;
