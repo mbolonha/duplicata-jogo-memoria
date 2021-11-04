@@ -79,15 +79,10 @@ const RowContainer = ({
 		value_bgColor: opt.bgColor,
 		background: opt.bgImg,
 	}
-	// console.log(defaultBgColor)
 	return (
 		<LayoutProvider>
 			<LayoutContext.Consumer>
 				{(value) => {
-					// const handleLocation = setLocation ? setLocation : locationDefault
-					// toggleLocation
-					// console.log( 'zzzzzzimmmmmmmm' )
-					// console.log(value)
 					return (
 						<>
 							<Row

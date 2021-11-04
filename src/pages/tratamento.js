@@ -2,9 +2,6 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../modules/layout'
 
-// Verso da carta
-import CardVerse from '../../static/images/card-tratamento.svg'
-// Formatando a página
 const TratamentoPage = ({ data }) => {
 	const firstElementsArray = [
 		{
@@ -109,11 +106,8 @@ const TratamentoPage = ({ data }) => {
 		},
 	]
 	return (
-		// titleSeo = Título da página atual - $title::gatsby-config
-		// titleSeo é seguido por title::gatsby-config
-		<Layout type="BODY" opt={{ titleSeo: `Prevenção` }}>
+		<Layout type="BODY" opt={{ titleSeo: `Tratamento` }}>
 			<Layout
-				// é um construtor tipo os do WP mas aqui
 				type="ROW"
 				opt={{
 					isBoxed: true,
@@ -146,7 +140,6 @@ const TratamentoPage = ({ data }) => {
 				/>
 			</Layout>
 			<Layout
-				// é um construtor tipo os do WP mas aqui
 				type="ROW"
 				opt={{
 					isBoxed: true,

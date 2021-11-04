@@ -9,17 +9,14 @@ import HabitosIcon from '../../static/images/habitos-icon.svg'
 import PrevencaoIcon from '../../static/images/prevencao-icon.svg'
 import TratamentoIcon from '../../static/images/tratamento-icon.svg'
 
-import JogoMemoriaIcon from '../../static/images/jogodamemoria-logotipo.svg'
-
 import 'react-responsive-carousel/lib/styles/carousel.min.css' // requires a loader
 import { Carousel } from 'react-responsive-carousel'
 
 const IndexPage = ({ data }) => {
-	console.log(data.site.siteMetadata.title)
 	return (
 		// titleSeo = Título da página atual - $title::gatsby-config
 		// titleSeo é seguido por title::gatsby-config
-		<Layout type="BODY" opt={{ titleSeo: `Página Inicial` }}>
+		<Layout type="BODY" opt={{ titleSeo: `Jogo da Memória` }}>
 			<Layout
 				// é um construtor tipo os do WP mas aqui
 				type="ROW"
@@ -42,7 +39,6 @@ const IndexPage = ({ data }) => {
 					}}
 				/>
 				<div className="index-first-row">
-					{/* <JogoMemoriaIcon /> */}
 					<Layout
 						type="BLOCK_IMAGE"
 						opt={{ queryCard: data.logotipoJogoMemoria }}
@@ -123,22 +119,12 @@ const IndexPage = ({ data }) => {
 							<div>
 								<Layout type="BLOCK_IMAGE" opt={{ queryCard: data.sanofi }} />
 							</div>
-
-							{/* astrazeneca
-bayer
-bd
-boehringer
-novartis
-nordisk
-roche
-sanofi */}
 						</Carousel>
 					</div>
 				</div>
 			</Layout>
 
 			<Layout
-				// é um construtor tipo os do WP mas aqui
 				type="ROW"
 				opt={{
 					isBoxed: true,

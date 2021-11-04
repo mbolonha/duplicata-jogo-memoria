@@ -3,7 +3,6 @@ import { graphql } from 'gatsby'
 
 import Layout from '../modules/layout'
 
-// Formatando a página
 const AlimentacaoPage = ({ data }) => {
 	const firstElementsArray = [
 		{
@@ -108,11 +107,8 @@ const AlimentacaoPage = ({ data }) => {
 		},
 	]
 	return (
-		// titleSeo = Título da página atual - $title::gatsby-config
-		// titleSeo é seguido por title::gatsby-config
-		<Layout type="BODY" opt={{ titleSeo: `DMDD título aqui` }}>
+		<Layout type="BODY" opt={{ titleSeo: `Alimentação` }}>
 			<Layout
-				// é um construtor tipo os do WP mas aqui
 				type="ROW"
 				opt={{
 					isBoxed: true,
@@ -148,7 +144,6 @@ const AlimentacaoPage = ({ data }) => {
 				/>
 			</Layout>
 			<Layout
-				// é um construtor tipo os do WP mas aqui
 				type="ROW"
 				opt={{
 					isBoxed: true,

@@ -2,7 +2,6 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../modules/layout'
 
-// Formatando a página
 const HabitosPage = ({ data }) => {
 	const firstElementsArray = [
 		{
@@ -112,7 +111,6 @@ const HabitosPage = ({ data }) => {
 				/>
 			</Layout>
 			<Layout
-				// é um construtor tipo os do WP mas aqui
 				type="ROW"
 				opt={{
 					isBoxed: true,

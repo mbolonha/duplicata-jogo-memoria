@@ -1,10 +1,9 @@
 import React from 'react'
-import { graphql, Link } from 'gatsby'
+import { Link } from 'gatsby'
 import Logo from '../../../../static/images/diabetes-brasil-logo.svg'
 import MenuHamburgerIcon from '../../../../static/images/menu-hamburger.svg'
 import MenuContainer from '../containers/MenuContainer'
 const Header = ({ refState, handleRefState, data, logoComponent }) => {
-	console.log(data)
 	const logotipoHeader = logoComponent || (
 		<Logo style={{ display: 'block', height: '75px' }} />
 	)
@@ -14,7 +13,6 @@ const Header = ({ refState, handleRefState, data, logoComponent }) => {
 			<div className={' main-header main-header-' + menuActive}>
 				<div className="header-columns">
 					<Link to="/" className={' logo-link logo-link-' + menuActive}>
-						{/* <Logo style={{ display: 'block', height: '75px' }} /> */}
 						{logotipoHeader}
 					</Link>
 				</div>

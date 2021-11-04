@@ -1,16 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
-// import { StaticImage } from 'gatsby-plugin-image'
-// import FooterMainMenuContainer from '../containers/FooterMainMenuContainer'
-
 const Footer = ({ socialIcons, logoImg, refState, handleRefState }) => {
-	// const { instagram } = socialIcons
-	// const { facebook } = socialIcons
-	// const { linkedin } = socialIcons
-	// const { pinterest } = socialIcons
-	// const { footerMenuzim } = socialIcons
-	// console.log(footerMenuzim.childImageSharp.fixed.src)
 	return (
 		<>
 			<footer>

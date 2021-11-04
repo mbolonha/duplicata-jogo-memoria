@@ -11,8 +11,6 @@ const useListenOutsideEvents = ({
 	resize,
 }) => {
 	function handleClickOutside(event) {
-		// console.log("props:")
-		// console.log(handleRefState)
 		const refElement = wrapperRef.current
 		const isntClickOverlay = event.target.id !== 'ref-overlay'
 		const isClickInside = outsideClick
