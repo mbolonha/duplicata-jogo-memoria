@@ -16,7 +16,7 @@ header {
 		align-content: center;
 		justify-content: space-between;
 		margin: 0 auto;
-
+		max-width: 870px;
 		@media (max-width: $tablet__size) {
 			width: 100%;
 			&.main-header-visible {
