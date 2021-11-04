@@ -8,7 +8,7 @@ const BlockImage = ({ opt }) => {
 	return (
 		<>
 			{/* <h1>Image Here</h1> */}
-			<GatsbyImage image={image} alt="Card" />
+			<GatsbyImage image={image} alt="Card" placeholder="blurred" />
 		</>
 	)
 }
