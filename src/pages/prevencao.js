@@ -3,66 +3,56 @@ import { graphql } from 'gatsby'
 
 import Layout from '../modules/layout'
 
-import CardAa from '../../static/images/prevencao-01-a.svg'
-import CardAb from '../../static/images/prevencao-01-b.svg'
-
-import CardBa from '../../static/images/prevencao-02-a.svg'
-import CardBb from '../../static/images/prevencao-02-b.svg'
-
-import CardCa from '../../static/images/prevencao-03-a.svg'
-import CardCb from '../../static/images/prevencao-03-b.svg'
-
-import CardDa from '../../static/images/prevencao-04-a.svg'
-import CardDb from '../../static/images/prevencao-04-b.svg'
-
-import CardFa from '../../static/images/prevencao-05-a.svg'
-import CardFb from '../../static/images/prevencao-05-b.svg'
-
-import CardEa from '../../static/images/prevencao-06-a.svg'
-import CardEb from '../../static/images/prevencao-06-b.svg'
-
-import CardGa from '../../static/images/prevencao-07-a.svg'
-import CardGb from '../../static/images/prevencao-07-b.svg'
-
-import CardHa from '../../static/images/prevencao-08-a.svg'
-import CardHb from '../../static/images/prevencao-08-b.svg'
-
-// Verso da carta
-import CardVerse from '../../static/images/card-prevencao.svg'
 // Formatando a página
 const PrevencaoPage = ({ data }) => {
 	const firstElementsArray = [
 		{
 			type: 'Carda',
-			image: <CardAa />,
+			image: (
+				<Layout type="BLOCK_IMAGE" opt={{ queryCard: data.prevencao01a }} />
+			),
 		},
 		{
 			type: 'Cardb',
-			image: <CardBa />,
+			image: (
+				<Layout type="BLOCK_IMAGE" opt={{ queryCard: data.prevencao02a }} />
+			),
 		},
 		{
 			type: 'Cardc',
-			image: <CardCa />,
+			image: (
+				<Layout type="BLOCK_IMAGE" opt={{ queryCard: data.prevencao03a }} />
+			),
 		},
 		{
 			type: 'Cardd',
-			image: <CardDa />,
+			image: (
+				<Layout type="BLOCK_IMAGE" opt={{ queryCard: data.prevencao04a }} />
+			),
 		},
 		{
 			type: 'Carde',
-			image: <CardEa />,
+			image: (
+				<Layout type="BLOCK_IMAGE" opt={{ queryCard: data.prevencao05a }} />
+			),
 		},
 		{
 			type: 'Cardf',
-			image: <CardFa />,
+			image: (
+				<Layout type="BLOCK_IMAGE" opt={{ queryCard: data.prevencao06a }} />
+			),
 		},
 		{
 			type: 'Cardg',
-			image: <CardGa />,
+			image: (
+				<Layout type="BLOCK_IMAGE" opt={{ queryCard: data.prevencao07a }} />
+			),
 		},
 		{
 			type: 'Cardh',
-			image: <CardHa />,
+			image: (
+				<Layout type="BLOCK_IMAGE" opt={{ queryCard: data.prevencao08a }} />
+			),
 		},
 	]
 	// segunda lista de cartas
@@ -70,35 +60,51 @@ const PrevencaoPage = ({ data }) => {
 	const secondElementsArray = [
 		{
 			type: 'Carda',
-			image: <CardAb />,
+			image: (
+				<Layout type="BLOCK_IMAGE" opt={{ queryCard: data.prevencao01b }} />
+			),
 		},
 		{
 			type: 'Cardb',
-			image: <CardBb />,
+			image: (
+				<Layout type="BLOCK_IMAGE" opt={{ queryCard: data.prevencao02b }} />
+			),
 		},
 		{
 			type: 'Cardc',
-			image: <CardCb />,
+			image: (
+				<Layout type="BLOCK_IMAGE" opt={{ queryCard: data.prevencao03b }} />
+			),
 		},
 		{
 			type: 'Cardd',
-			image: <CardDb />,
+			image: (
+				<Layout type="BLOCK_IMAGE" opt={{ queryCard: data.prevencao04b }} />
+			),
 		},
 		{
 			type: 'Carde',
-			image: <CardEb />,
+			image: (
+				<Layout type="BLOCK_IMAGE" opt={{ queryCard: data.prevencao05b }} />
+			),
 		},
 		{
 			type: 'Cardf',
-			image: <CardFb />,
+			image: (
+				<Layout type="BLOCK_IMAGE" opt={{ queryCard: data.prevencao06b }} />
+			),
 		},
 		{
 			type: 'Cardg',
-			image: <CardGb />,
+			image: (
+				<Layout type="BLOCK_IMAGE" opt={{ queryCard: data.prevencao07b }} />
+			),
 		},
 		{
 			type: 'Cardh',
-			image: <CardHb />,
+			image: (
+				<Layout type="BLOCK_IMAGE" opt={{ queryCard: data.prevencao08b }} />
+			),
 		},
 	]
 	return (
@@ -130,7 +136,9 @@ const PrevencaoPage = ({ data }) => {
 					type="MEMORYGAME"
 					opt={{
 						title: 'Prevenção',
-						cardVerse: <CardVerse />,
+						cardVerse: (
+							<Layout type="BLOCK_IMAGE" opt={{ queryCard: data.cardVerse }} />
+						),
 						firstElementsArray,
 						secondElementsArray,
 					}}
@@ -158,6 +166,91 @@ export const queryAtividade = graphql`
 		logotipoImg: file(relativePath: { eq: "diabetes-brasil-logo.png" }) {
 			childrenImageSharp {
 				gatsbyImageData(layout: FIXED, width: 115, placeholder: NONE)
+			}
+		}
+		prevencao01a: file(relativePath: { eq: "prevencao-01-a.png" }) {
+			childrenImageSharp {
+				gatsbyImageData(layout: FIXED, quality: 100, width: 165, height: 165)
+			}
+		}
+		prevencao01b: file(relativePath: { eq: "prevencao-01-b.png" }) {
+			childrenImageSharp {
+				gatsbyImageData(layout: FIXED, quality: 100, width: 165, height: 165)
+			}
+		}
+		prevencao02a: file(relativePath: { eq: "prevencao-02-a.png" }) {
+			childrenImageSharp {
+				gatsbyImageData(layout: FIXED, quality: 100, width: 165, height: 165)
+			}
+		}
+		prevencao02b: file(relativePath: { eq: "prevencao-02-b.png" }) {
+			childrenImageSharp {
+				gatsbyImageData(layout: FIXED, quality: 100, width: 165, height: 165)
+			}
+		}
+		prevencao03a: file(relativePath: { eq: "prevencao-03-a.png" }) {
+			childrenImageSharp {
+				gatsbyImageData(layout: FIXED, quality: 100, width: 165, height: 165)
+			}
+		}
+		prevencao03b: file(relativePath: { eq: "prevencao-03-b.png" }) {
+			childrenImageSharp {
+				gatsbyImageData(layout: FIXED, quality: 100, width: 165, height: 165)
+			}
+		}
+		prevencao04a: file(relativePath: { eq: "prevencao-04-a.png" }) {
+			childrenImageSharp {
+				gatsbyImageData(layout: FIXED, quality: 100, width: 165, height: 165)
+			}
+		}
+		prevencao04b: file(relativePath: { eq: "prevencao-04-b.png" }) {
+			childrenImageSharp {
+				gatsbyImageData(layout: FIXED, quality: 100, width: 165, height: 165)
+			}
+		}
+		prevencao05a: file(relativePath: { eq: "prevencao-05-a.png" }) {
+			childrenImageSharp {
+				gatsbyImageData(layout: FIXED, quality: 100, width: 165, height: 165)
+			}
+		}
+		prevencao05b: file(relativePath: { eq: "prevencao-05-b.png" }) {
+			childrenImageSharp {
+				gatsbyImageData(layout: FIXED, quality: 100, width: 165, height: 165)
+			}
+		}
+		prevencao06a: file(relativePath: { eq: "prevencao-06-a.png" }) {
+			childrenImageSharp {
+				gatsbyImageData(layout: FIXED, quality: 100, width: 165, height: 165)
+			}
+		}
+		prevencao06b: file(relativePath: { eq: "prevencao-06-b.png" }) {
+			childrenImageSharp {
+				gatsbyImageData(layout: FIXED, quality: 100, width: 165, height: 165)
+			}
+		}
+		prevencao07a: file(relativePath: { eq: "prevencao-07-a.png" }) {
+			childrenImageSharp {
+				gatsbyImageData(layout: FIXED, quality: 100, width: 165, height: 165)
+			}
+		}
+		prevencao07b: file(relativePath: { eq: "prevencao-07-b.png" }) {
+			childrenImageSharp {
+				gatsbyImageData(layout: FIXED, quality: 100, width: 165, height: 165)
+			}
+		}
+		prevencao08a: file(relativePath: { eq: "prevencao-08-a.png" }) {
+			childrenImageSharp {
+				gatsbyImageData(layout: FIXED, quality: 100, width: 165, height: 165)
+			}
+		}
+		prevencao08b: file(relativePath: { eq: "prevencao-08-b.png" }) {
+			childrenImageSharp {
+				gatsbyImageData(layout: FIXED, quality: 100, width: 165, height: 165)
+			}
+		}
+		cardVerse: file(relativePath: { eq: "card-prevencao.png" }) {
+			childrenImageSharp {
+				gatsbyImageData(layout: FIXED, quality: 100, width: 165, height: 165)
 			}
 		}
 	}
