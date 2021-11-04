@@ -2,7 +2,6 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../modules/layout'
 
-// Formatando a página
 const GlicemiaPage = ({ data }) => {
 	const firstElementsArray = [
 		{
@@ -107,11 +106,8 @@ const GlicemiaPage = ({ data }) => {
 		},
 	]
 	return (
-		// titleSeo = Título da página atual - $title::gatsby-config
-		// titleSeo é seguido por title::gatsby-config
 		<Layout type="BODY" opt={{ titleSeo: `Glicemia` }}>
 			<Layout
-				// é um construtor tipo os do WP mas aqui
 				type="ROW"
 				opt={{
 					isBoxed: true,
@@ -144,7 +140,6 @@ const GlicemiaPage = ({ data }) => {
 				/>
 			</Layout>
 			<Layout
-				// é um construtor tipo os do WP mas aqui
 				type="ROW"
 				opt={{
 					isBoxed: true,

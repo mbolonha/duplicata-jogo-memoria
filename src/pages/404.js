@@ -5,11 +5,8 @@ import Layout from '../modules/layout'
 
 const IndexPage = ({ data }) => {
 	return (
-		// titleSeo = Título da página atual - $title::gatsby-config
-		// titleSeo é seguido por title::gatsby-config
-		<Layout type="BODY" opt={{ titleSeo: `DMDD título aqui` }}>
+		<Layout type="BODY" opt={{ titleSeo: `404 - Erro` }}>
 			<Layout
-				// é um construtor tipo os do WP mas aqui
 				type="ROW"
 				opt={{
 					isBoxed: true,
@@ -30,11 +27,15 @@ const IndexPage = ({ data }) => {
 					}}
 				/>
 				<div className="index-first-row">
+					<Layout
+						type="BLOCK_IMAGE"
+						opt={{ queryCard: data.logotipoJogoMemoria }}
+					/>
 					<p className="index-paragraph">Erro 404</p>
+					<br />
 				</div>
 			</Layout>
 			<Layout
-				// é um construtor tipo os do WP mas aqui
 				type="ROW"
 				opt={{
 					isBoxed: true,
@@ -61,7 +62,24 @@ export const queryAtividade = graphql`
 		}
 		logotipoImg: file(relativePath: { eq: "diabetes-brasil-logo.png" }) {
 			childrenImageSharp {
-				gatsbyImageData(layout: FIXED, width: 115, placeholder: NONE)
+				gatsbyImageData(
+					layout: FIXED
+					width: 115
+					placeholder: NONE
+					quality: 100
+				)
+			}
+		}
+		logotipoJogoMemoria: file(
+			relativePath: { eq: "logotipo-jogodamemoria.png" }
+		) {
+			childrenImageSharp {
+				gatsbyImageData(
+					layout: FIXED
+					width: 224
+					placeholder: NONE
+					quality: 100
+				)
 			}
 		}
 	}
