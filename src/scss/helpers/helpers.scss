@@ -610,3 +610,15 @@ body {
 	-webkit-transition: opacity 0.25s linear;
 	will-change: opacity;
 }
+
+.modal-share {
+	max-width: 244px;
+	@media (max-width: 768px) {
+		max-width: 216px;
+	}
+}
+a.modal-pink-index {
+	padding: 0;
+	height: 44px;
+	width: 241px;
+}

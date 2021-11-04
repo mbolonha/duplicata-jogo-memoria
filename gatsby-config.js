@@ -4,18 +4,18 @@ const { credits } = require('./files-credits')
 module.exports = {
 	siteMetadata: {
 		title: 'Jogo da Memória',
-		description: `O Jogo da Memória é um app desenvolvido para você SEO aqui.`,
+		description: `O Jogo da Memória é um app desenvolvido pela ADJ Diabetes Brasil.`,
 		author: `@VisualStudio`,
 		siteUrl: `https://diadodiabetes.intest.com.br/`,
-		// image: `https://diadodiabetes.intest.com.br/theimage.jpg`,
+		image: `${__dirname}/static/images/diabetes-brasil-logo.png`,
 		author: {
 			name: 'Visual Studio',
-			minibio: `A Visual Studio é a melhor empresa do Brasil.`,
+			minibio: `Agência Especializada em WordPress. Especialista em WordPress, Projetos Digitais, Soluções Web, Marketing Digital e Consultoria Digital.`,
 		},
 		organization: {
-			name: 'ADJ - Diabetes Brasil',
+			name: 'ADJ Diabetes Brasil',
 			url: 'https://adj.org.br/',
-			// logo: `${__dirname}/static/images/diabetes-brasil-logo.svg`,
+			logo: `${__dirname}/static/images/diabetes-brasil-logo.png`,
 		},
 		social: {
 			instagram: 'https://www.instagram.com/adjdiabetesbrasil/',
@@ -30,16 +30,9 @@ module.exports = {
 		'gatsby-plugin-image',
 		'gatsby-plugin-sharp',
 		`gatsby-transformer-sharp`,
-		// `gatsby-plugin-offline`,
+		`gatsby-plugin-offline`,
 		`gatsby-plugin-react-helmet`,
 		`gatsby-plugin-catch-links`,
-		// {
-		// 	resolve: `gatsby-source-filesystem`,
-		// 	options: {
-		// 		name: `uploads`,
-		// 		path: `${__dirname}/static/assets/images`,
-		// 	},
-		// },
 		{
 			resolve: `gatsby-source-filesystem`,
 			options: {
@@ -58,8 +51,8 @@ module.exports = {
 		{
 			resolve: `gatsby-plugin-manifest`,
 			options: {
-				name: `Diabetes Brasil`,
-				short_name: `Diabetes Brasil`,
+				name: `ADJ Diabetes Brasil`,
+				short_name: `ADJ Diabetes Brasil`,
 				start_url: `/`,
 				background_color: `#fff`,
 				theme_color: `#eb412c`,

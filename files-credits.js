@@ -1,3 +1,3 @@
-const credits = `<a href='https://www.freepik.com/photos/business'>Business photo created by aleksandarlittlewolf - www.freepik.com</a>`
+const credits = `no license credits found`
 
 module.exports = { credits }

@@ -1,7 +1,8 @@
 import React from 'react'
+import { Link } from 'gatsby'
 import Container from '@material-ui/core/Container'
 import { navigate } from 'gatsby'
-
+import Layout from '../../layout'
 import ArrowRightIcon from '../../../../static/images/icon-arrow-right.svg'
 import CloseButton from '../../../../static/images/close-button.svg'
 import FacebookIcon from '../../../../static/images/face-icon.svg'
@@ -34,6 +35,7 @@ const MemoryGame = ({
 		{/* <button onClick={() => playTimer()}>Play Aqui</button>
 		<button onClick={() => stopTimer()}>Stop Aqui</button>
 */}
+		{/* <button onClick={() => setShowModal(true)}>Fechar Aqui</button> */}
 		<div className="second-row-for-now">
 			<button className="circle-shadow" onClick={() => navigate(-1)}>
 				<ArrowRightIcon />
@@ -100,7 +102,7 @@ const MemoryGame = ({
 								Se você gostou do jogo,
 								<br />
 								compartilhe com seus amigos.
-								<div className="wrapper-buttons">
+								{/* <div className="wrapper-buttons">
 									<span>Compartilhe</span>
 									<div className="modal-share-button">
 										<FacebookIcon />
@@ -109,6 +111,15 @@ const MemoryGame = ({
 										<InstagramIcon />
 										<ShareIcon />
 									</div>
+								</div> */}
+								<div className="index-share-btn modal-share">
+									<Layout
+										type="BLOCK_SHARE"
+										opt={{
+											title: 'data.site.siteMetadata.title',
+											url: 'data.site.siteMetadata.siteUrl',
+										}}
+									/>
 								</div>
 							</p>
 						</DialogContent>
@@ -123,12 +134,13 @@ const MemoryGame = ({
 							>
 								Jogar próximo tema
 							</button>
-							<button
+							<Link
 								onClick={handleRestart}
-								className="button-restart pink-button"
+								className="button-restart pink-button modal-pink-index"
+								to="/"
 							>
 								Visualizar todos os temas
-							</button>
+							</Link>
 						</div>
 					</div>
 				</DialogMigrate>
