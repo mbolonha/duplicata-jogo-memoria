@@ -282,8 +282,8 @@ body {
 	}
 
 	&.is-flipped {
-		transform: rotateY(0deg);
-		-webkit-transform: rotateY(0deg);
+		transform: rotateY(180deg);
+		-webkit-transform: rotateY(180deg);
 		z-index: 2;
 	}
 
@@ -292,11 +292,19 @@ body {
 	// opacity: 0;
 	// }
 }
+
 body {
 	.card.is-flipped {
-		transform: rotateY(180deg);
-		-webkit-transform: rotateY(180deg);
-		z-index: 2;
+		.card-back-face {
+			transform: rotateY(180deg);
+			-webkit-transform: rotateY(180deg);
+			// z-index: 2;
+		}
+		.card-front-face {
+			transform: rotateY(0deg);
+			-webkit-transform: rotateY(0deg);
+			// z-index: 2;
+		}
 	}
 }
 .card-back-face .gatsby-image-wrapper img,
