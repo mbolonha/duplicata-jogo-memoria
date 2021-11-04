@@ -42,8 +42,11 @@ const IndexPage = ({ data }) => {
 					}}
 				/>
 				<div className="index-first-row">
-					<JogoMemoriaIcon />
-					{/* <Layout type="BLOCK_IMAGE" opt={{ queryCard: data.logotipoIndex }} /> */}
+					{/* <JogoMemoriaIcon /> */}
+					<Layout
+						type="BLOCK_IMAGE"
+						opt={{ queryCard: data.logotipoJogoMemoria }}
+					/>
 					<p className="index-paragraph">
 						Acesse abaixo os jogos da memória e aprenda tópicos relacionados à
 						Diabetes.
@@ -162,7 +165,24 @@ export const queryAtividade = graphql`
 		}
 		logotipoImg: file(relativePath: { eq: "diabetes-brasil-logo.png" }) {
 			childrenImageSharp {
-				gatsbyImageData(layout: FIXED, width: 115, placeholder: NONE)
+				gatsbyImageData(
+					layout: FIXED
+					width: 115
+					placeholder: NONE
+					quality: 100
+				)
+			}
+		}
+		logotipoJogoMemoria: file(
+			relativePath: { eq: "logotipo-jogodamemoria.png" }
+		) {
+			childrenImageSharp {
+				gatsbyImageData(
+					layout: FIXED
+					width: 224
+					placeholder: NONE
+					quality: 100
+				)
 			}
 		}
 		astrazeneca: file(
