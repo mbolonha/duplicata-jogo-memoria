@@ -15,7 +15,7 @@ import 'react-responsive-carousel/lib/styles/carousel.min.css' // requires a loa
 import { Carousel } from 'react-responsive-carousel'
 
 const IndexPage = ({ data }) => {
-	// console.log(data.site.siteMetadata.title)
+	console.log(data.site.siteMetadata.title)
 	return (
 		// titleSeo = Título da página atual - $title::gatsby-config
 		// titleSeo é seguido por title::gatsby-config
