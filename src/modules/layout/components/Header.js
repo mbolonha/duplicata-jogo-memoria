@@ -8,16 +8,17 @@ const Header = ({ refState, handleRefState, data, logoComponent }) => {
 	const logotipoHeader = logoComponent || (
 		<Logo style={{ display: 'block', height: '75px' }} />
 	)
+	const menuActive = refState ? 'visible' : 'not-visible'
 	return (
 		<header>
-			<div className="main-header">
+			<div className={' main-header main-header-' + menuActive}>
 				<div className="header-columns">
-					<Link to="/" className="logo-link">
+					<Link to="/" className={' logo-link logo-link-' + menuActive}>
 						{/* <Logo style={{ display: 'block', height: '75px' }} /> */}
 						{logotipoHeader}
 					</Link>
-					<MenuContainer refState={refState} handleRefState={handleRefState} />
 				</div>
+				<MenuContainer refState={refState} handleRefState={handleRefState} />
 				<div className="header-columns toggle-menu">
 					<input
 						type="checkbox"

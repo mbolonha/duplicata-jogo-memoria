@@ -6,67 +6,73 @@ const MainMenu = ({ wrapperRef, isVisibleClass }) => (
 		{/* // <nav ref={wrapperRef} className={' main-nav'}> */}
 		<ul className="nav-menus">
 			<li className="nav-links">
-				<Link className="nav-main-link" to="/">
-					Ir Para p Site
-				</Link>
+				<a className="nav-main-link" href="https://adj.org.br/">
+					Ir Para <br className="desktop-only" />o Site
+				</a>
 			</li>
 		</ul>
 
 		<ul className="nav-menus">
 			<li className="nav-links">
-				<Link className="nav-main-link" to="https://adj.org.br/quem-somos/">
+				<a className="nav-main-link" href="https://adj.org.br/quem-somos/">
 					Quem Somos
-				</Link>
+				</a>
 			</li>
 		</ul>
 
 		<ul className="nav-menus">
 			<li className="nav-links">
-				<Link className="nav-main-link" to="/">
+				<a className="nav-main-link" href="https://adj.org.br/viver-bem/">
 					Viver Bem
-				</Link>
+				</a>
 			</li>
 		</ul>
 		<ul className="nav-menus">
 			<li className="nav-links">
-				<Link className="nav-main-link" to="/">
+				<a className="nav-main-link" href="https://adj.org.br/fique-ligado/">
 					Fique Ligado
-				</Link>
+				</a>
 			</li>
 		</ul>
 		<ul className="nav-menus">
 			<li className="nav-links">
-				<Link className="nav-main-link" to="/">
+				<a
+					className="nav-main-link"
+					href="https://adj.org.br/profissional-e-gestor-de-saude/"
+				>
 					Profissional e Gestor
-				</Link>
+				</a>
 			</li>
 		</ul>
 		<ul className="nav-menus">
 			<li className="nav-links">
-				<Link className="nav-main-link" to="/">
+				<a className="nav-main-link" href="https://adj.org.br/faca-parte/">
 					Faça Parte
-				</Link>
+				</a>
 			</li>
 		</ul>
 		<ul className="nav-menus">
 			<li className="nav-links">
-				<Link className="nav-main-link" to="/">
+				<a className="nav-main-link" href="https://adj.org.br/em-dia/">
 					Em Dia
-				</Link>
+				</a>
 			</li>
 		</ul>
 		<ul className="nav-menus">
 			<li className="nav-links">
-				<Link className="nav-main-link" to="/">
+				<a
+					className="nav-main-link"
+					href="https://adj.org.br/faca-parte/faca-sua-doacao/"
+				>
 					Doações
-				</Link>
+				</a>
 			</li>
 		</ul>
 		<ul className="nav-menus">
 			<li className="nav-links">
-				<Link className="nav-main-link" to="/">
+				<a className="nav-main-link" href="https://adj.org.br/contatos/">
 					Contatos
-				</Link>
+				</a>
 			</li>
 		</ul>
 	</nav>

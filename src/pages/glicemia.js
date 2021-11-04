@@ -156,7 +156,7 @@ export const queryAtividade = graphql`
 	query {
 		logotipoImg: file(relativePath: { eq: "diabetes-brasil-logo.png" }) {
 			childrenImageSharp {
-				gatsbyImageData(layout: FIXED, width: 135)
+				gatsbyImageData(layout: FIXED, width: 135, placeholder: NONE)
 			}
 		}
 	}
