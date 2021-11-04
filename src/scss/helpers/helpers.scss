@@ -527,13 +527,16 @@ body {
 	font-family: $second__font;
 	padding: 0 33px;
 	font-weight: 800;
-
-	max-width: 402px;
+	max-width: 300px;
+	@media (min-width: 769px) {
+		max-width: 402px;
+	}
 	margin: 13px auto 0;
 	width: 100%;
 }
 .carousel-logos {
 	width: 100%;
+	margin: 0 auto;
 	h2.heading-logos {
 		font-family: $main__font;
 		font-size: 16px;
